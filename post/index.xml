@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | ansesu</title>
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
+      <title>Posts</title>
+      <link>/post/</link>
+    </image>
+    
+    <item>
+      <title>Primeira postagem</title>
+      <link>/post/primeira-postagem/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/primeira-postagem/</guid>
+      <description>&lt;p&gt;Este site foi confeccionado com objetivo de manter um registro sobre meu progresso acadêmico, além de conter algumas postagens sobre assuntos que considero interessante. As opiniões aqui expressas não necessariamente estão associadas ao 
+&lt;a href=&#34;http://complex.pfi.uem.br&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ComplexLab&lt;/a&gt; e podem ter cunho pessoal.&lt;/p&gt;
+&lt;p&gt;Uma curiosidade: o nome deste &lt;em&gt;site&lt;/em&gt;, ansesu, se origina das iniciais do meu nome: &lt;strong&gt;An&lt;/strong&gt;dré &lt;strong&gt;Se&lt;/strong&gt;iji &lt;strong&gt;Su&lt;/strong&gt;nahara, uma vez que a abreviação tem um significado não muito conveniente em inglês (rs).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Andre S. Sunahara | ansesu</title>
+    <link>/author/andre-s.-sunahara/</link>
+      <atom:link href="/author/andre-s.-sunahara/index.xml" rel="self" type="application/rss+xml" />
+    <description>Andre S. Sunahara</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
+      <title>Andre S. Sunahara</title>
+      <link>/author/andre-s.-sunahara/</link>
+    </image>
+    
+    <item>
+      <title>City size and the spreading of COVID-19 in Brazil</title>
+      <link>/publication/preprint/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/preprint/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
