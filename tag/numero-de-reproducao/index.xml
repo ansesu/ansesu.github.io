@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>COVID-19 | ansesu</title>
-    <link>/tag/covid-19/</link>
-      <atom:link href="/tag/covid-19/index.xml" rel="self" type="application/rss+xml" />
-    <description>COVID-19</description>
+    <title>Número de reprodução | ansesu</title>
+    <link>/tag/numero-de-reproducao/</link>
+      <atom:link href="/tag/numero-de-reproducao/index.xml" rel="self" type="application/rss+xml" />
+    <description>Número de reprodução</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
-      <title>COVID-19</title>
-      <link>/tag/covid-19/</link>
+      <title>Número de reprodução</title>
+      <link>/tag/numero-de-reproducao/</link>
     </image>
     
     <item>
@@ -136,22 +136,6 @@ T. Bailey, C. T. Codeço, &lt;em&gt;A modelling approach for correcting reportin
 &lt;p&gt;&lt;a name=&#34;r0-wuhan&#34;&gt; [6] S. Abbott, J. Hellewell, J. Munday, S. Funk, &lt;em&gt;The transmissibility of novel Coronavirus in the early stages of the 2019-20 outbreak in Wuhan: Exploring initial point-source exposure sizes and durations using scenario analysis&lt;/em&gt;. 
 &lt;a href=&#34;https://doi.org/10.1186/1741-7015-7-30&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wellcome Open Research 5, 17 (2020).&lt;/a&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>City size and the spreading of COVID-19 in Brazil</title>
-      <link>/publication/preprint/</link>
-      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Observatório COVID-19 Maringá</title>
-      <link>/project/observatorio-covid/</link>
-      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/project/observatorio-covid/</guid>
-      <description></description>
     </item>
     
   </channel>
