@@ -96,7 +96,7 @@ Como já mencionamos, este modelo difere daquele para o número de reprodução 
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p&gt;A figura abaixo mostra a evolução temporal das variáveis presentes no modelo generativo: i) o número de confirmados (em cinza); ii) o número de confirmados esperado (em roxo); iii) o número de confirmados esperado supondo testagem uniforme (em azul); iv) o número esperado de infectados (em verde).&lt;/p&gt;
+&lt;p&gt;A figura abaixo mostra a evolução temporal das variáveis presentes no modelo generativo: i) o número de confirmados (em cinza); ii) o número de confirmados esperado (em roxo); iii) o número de confirmados esperado supondo testagem uniforme (em azul); iv) o número de infectados esperado (em verde).&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%&#34;&gt;
  &lt;iframe
