@@ -5,7 +5,7 @@
     <link>/author/</link>
       <atom:link href="/author/index.xml" rel="self" type="application/rss+xml" />
     <description>ansesu</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language>
     <image>
       <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
       <title>ansesu</title>
@@ -130,7 +130,7 @@ Seguindo o procedimento proposto pelos sites
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p&gt;A figura abaixo mostra a evolução temporal das variáveis presentes no modelo generativo: i) o número de confirmados (em cinza); ii) o número de confirmados esperado (em roxo); iii) o número de confirmados esperado supondo testagem uniforme (em azul); iv) o número de infectados esperado (em verde).&lt;/p&gt;
+&lt;p&gt;A figura abaixo mostra a evolução temporal das variáveis presentes no modelo generativo: i) o número de confirmados (em cinza); ii) o número de confirmados esperado (em verde); iii) o número de confirmados esperado supondo testagem uniforme (em laranja); iv) o número de infectados esperado (em roxo).&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%&#34;&gt;
  &lt;iframe
