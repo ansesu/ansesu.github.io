@@ -286,7 +286,7 @@
     
       <meta property="article:published_time" content="2020-07-07T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-07-07T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-07-15T00:00:00&#43;00:00">
   
 
   
@@ -315,7 +315,7 @@
   "headline": "Uma alternativa para o cálculo do número de reprodução em Maringá",
   
   "datePublished": "2020-07-07T00:00:00Z",
-  "dateModified": "2020-07-07T00:00:00Z",
+  "dateModified": "2020-07-15T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -649,7 +649,7 @@
     
 
   
-  <span >André</span>
+  <span ><a href="/author/">André</a></span>
   </div>
   
   
@@ -659,8 +659,10 @@
     
     
       
+          Última atualização em
+      
     
-    Jul 7, 2020
+    Jul 15, 2020
   </span>
   
 
@@ -669,7 +671,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    11 minutos de leitura
+    12 minutos de leitura
   </span>
   
 
@@ -744,10 +746,9 @@
   <div class="article-container">
 
     <div class="article-style">
-      <blockquote>
-<p>Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.</p>
-</blockquote>
-<p>O número de reprodução é o número esperado de infecções decorrentes de um indivíduo que se tornou infeccioso no tempo $t$. Do ponto de vista da saúde pública, é de interesse que esse número permaneça abaixo do limiar epidêmico ($R=1$), o que indica que a epidemia está desacelerando. O número de reprodução básico $R_0$ é a estimativa para essa quantidade no início da epidemia, quando a população inteira está suscetível à doença. Porém, ao passo que parcela da população ganha imunidade e medidas de intervenção são tomadas, o número de reprodução básico não tem mais validade e a atenção muda para o cálculo do que chamamos de número de reprodução que varia no tempo $R(t)$. Como exemplo, é possível citar os números de reprodução instantâneo e efetivo.</p>
+      <p>Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.</p>
+<p>O número de reprodução é o número esperado de infecções decorrentes de um indivíduo que se tornou infeccioso no tempo $t$. Do ponto de vista da saúde pública, é de interesse que esse número permaneça abaixo do limiar epidêmico ($R=1$), o que indica que a epidemia está desacelerando. O número de reprodução básico $R_0$ é a estimativa para essa quantidade no início da epidemia, quando a população inteira está suscetível à doença. Porém, ao passo que parcela da população ganha imunidade e medidas de intervenção são tomadas, o número de reprodução básico não tem mais validade e a atenção muda para o cálculo do que chamamos de número de reprodução que varia no tempo $R(t)$. Como exemplo, é possível citar os números de reprodução instantâneo e efetivo. Como se bem sabe, nenhum modelo é perfeito visto que sempre existem suposições e hipóteses necessárias para que a modelagem seja realizada. Além disso, existe uma limitação inerente da natureza do dado que, sendo mais ou menos detalhado, impacta na qualidade do modelo. A seguir, vou discorrer um pouco sobre a implementação que fizemos desses dois modelos para o caso de Maringá e sobre a limitação de dados públicos disponíveis nesse caso.</p>
+<h2 id="número-de-reprodução-efetivo">Número de reprodução efetivo</h2>
 <p>Anteriormente, no <em>website</em> 
 <a href="http://complex.pfi.uem.br/covid" target="_blank" rel="noopener">Observatório COVID-19 Maringá</a>, calculamos o número de reprodução instantâneo $R_{inst}(t)$ utilizando o pacote EpiEstim do R 
 <a href="#EpiEstim">[1]</a>. Uma breve explicação sobre esse modelo se encontra no final desta postagem. Em poucas palavras, ele estima o número de reprodução instântaneo por meio do padrão de transmissibilidade do vírus nos últimos dias. Ao acompanhar a evolução da COVID-19 em Maringá, percebemos que as estimativas desse parâmetro poderiam estar atrasadas em alguns dias. Isso acontece devido à natureza dos dados disponibilizados pela Secretaria Municipal de Saúde de Maringá, uma vez que utilizamos dados dos casos confirmados diários de COVID-19. Disso, dois principais problemas decorrem:</p>
@@ -802,7 +803,8 @@ de acordo com
 $$
 \text{testes} = \text{número de confirmados diário} + \text{número de encerrados diário}\ .
 $$
-Como já mencionamos, este modelo difere daquele para o número de reprodução instantâneo, pois gera a curva inteira de infecção de acordo com os dados e, assim, tem como condição que a curva seja quasi-contínua. Estimativas com novos dados diários mudam as estimativas de datas anteriores e, ao atualizar todas as estimativas com novas informações, considero que é um modelo que pode ser considerado mais honesto. Além disso, incorporamos as soluções para os dois problemas anteriormente constatados. Dessa forma, o número de reprodução estimado deve representar a situação atual de infectividade da COVID-19 de maneira mais próxima da realidade. Amostramos esse modelo utilizando o pacote PyMC3 do Python.</p>
+Como já mencionamos, este modelo difere daquele para o número de reprodução instantâneo, pois gera a curva inteira de infecção de acordo com os dados e, assim, tem como condição que a curva seja quasi-contínua. Estimativas com novos dados diários mudam as estimativas de datas anteriores e, ao atualizar todas as estimativas com novas informações, considero que é um modelo que pode ser considerado mais honesto. Além disso, incorporamos as soluções para os dois problemas anteriormente constatados. Dessa forma, o número de reprodução estimado deve representar a situação atual de infectividade da COVID-19 de maneira mais próxima da realidade. Amostramos esse modelo utilizando o pacote 
+<a href="https://docs.pymc.io/" target="_blank" rel="noopener">PyMC3</a> do Python.</p>
 <h2 id="número-de-reprodução-instantâneo">Número de reprodução instantâneo</h2>
 <p>Como mencionado anteriormente, o número de reprodução básico $R_0$ do modelo SIR é uma propriedade da fase inicial da epidemia e indica o número de casos secundários médio que decorrem de um indivíduo infectado. Nesse período inicial, existe um regime exponencial de crescimento para o número de infectados $I(t)$. No entanto, em estágios mais avançados da epidemia, essa suposição não é mais verdadeira, sendo necessária a adoção de modelos alternativos. Uma opção é a escolha de abordagens que levam em conta o perfil de infectividade dos contaminados, também conhecidos como modelos <em>time-since-infection</em> 
 <a href="#time-since-infection">[5]</a>. A partir deles, é possível calcular o número de reprodução instantaneamente no tempo $t$, que apresenta a mesma interpretação do número de reprodução básico, porém tem validade para qualquer momento da epidemia. Para isso, podemos modelar a transmissão de COVID-19 como um processo de Poisson por meio de uma abordagem Bayesiana. O número de reprodução instantâneo pode ser descrito como
@@ -830,8 +832,10 @@ Seguindo o procedimento proposto pelos sites
 <a href="https://epiforecasts.io/" target="_blank" rel="noopener">epiforecasts.io</a> e 
 <a href="https://covid19br.github.io/" target="_blank" rel="noopener">covid19br</a>, consideramos que o perfil de infectividade é uma distribuição Gamma com média de 4.8 dias e desvio padrão de 2.3 dias, valores estimados em 
 <a href="#serial-covid">[3]</a> e utilizados por esses dois sites. Além disso, atribuímos incerteza ao perfil de infectividade amostrando a média e o desvio padrão de distribuições normais truncadas centradas nos valores descritos anteriormente para um total de 500 repetições. Consideramos que $R_{inst}(t)$ apresenta uma distribuição Gamma como priori, com média 2.6 e desvio padrão 2, o que leva em consideração estimativas do número de reprodução básico em Wuhan no começo da epidemia 
-<a href="#r0-wuhan">[6]</a>. Por fim, para a janela temporal $\tau$, adotamos o tempo $\tau=7$ dias uma vez que a série temporal de casos por COVID-19 aparenta uma periodicidade semanal. O resultado está representado na 
-<a href="#rt_instantaneo">figura acima</a>.</p>
+<a href="#r0-wuhan">[6]</a>. Por fim, para a janela temporal $\tau$, adotamos o tempo $\tau=7$ dias uma vez que a série temporal de casos por COVID-19 aparenta uma periodicidade semanal. Aplicamos esse modelo utilizando o pacote 
+<a href="https://github.com/mrc-ide/EpiEstim" target="_blank" rel="noopener">EpiEstim</a> do R.</p>
+<p>Só lembrando: nesse modelo, consideramos que o número de infectados diário apresenta a mesma interpretação do número de confirmados diário. Sabemos, porém, que existe um atraso na confirmação dos casos. Desde o dia em que a pessoa é infectada, leva-se um tempo para o vírus incubar (cerca de cinco dias) e os sintomas se manifestarem. Além disso, também pode existir um atraso de notificação e de espera pelos resultados dos testes. Esses problemas seriam resolvidos se tivéssemos os dados referentes ao atraso de notificação e de data do começo dos sintomas para cada caso confirmado, a fim de realizar medidas de nowcasting 
+<a href="#nowcast">[2]</a>. Além disso, o modelo não leva em consideração o volume de testagem variável (isto é, que o número de testes varia diariamente), o que pode causar uma subestimação do número de reprodução instantâneo. Ainda assim, acredito que as estimativas do número de reprodução instantâneo podem transmitir informações importantes sobre o avanço da epidemia (mesmo que com atraso). Diferentemente do número de reprodução efetivo, as estimativas são mais sensíveis às variações mais recentes dos números de casos confirmados diários uma vez que não existe a condição de que a curva seja quasi-contínua.</p>
 <h2 id="resultados">Resultados</h2>
 <p>As figuras abaixo mostram, respectivamente, estimativas para o número de reprodução efetivo $R_{ef}(t)$ e instantâneo $R_{inst}(t)$ seguindo os procedimentos aqui descritos.</p>
 <!-- One of the constraints of the model is that this curve be connected and smooth. So, if new data suggests that Rt should be higher, it will pull up previous values so that the newest point is connected. Imagine a rope lying on the ground. If you pick up the end of that rope, the rope needs to slope up to your hand. The same thing is roughly happening with the model. If all of a sudden a testing center releases far more tests than were expected, the Rt curve increases which drags up previous values of Rt. Since case data is staggered in its arrival, a bunch of new cases will sometimes rewrite its view of history given the new data. This is the most honest representation of the situation although it can feel disorienting if you don’t understand why it’s happening. -->
@@ -863,7 +867,9 @@ Seguindo o procedimento proposto pelos sites
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p>O código para reprodução dessa análise está disponível em <a href="https://github.com/ansesu/rtlive_maringa.git">https://github.com/ansesu/rtlive_maringa.git</a>. Além disso, o código-base e maiores detalhes sobre o modelo podem ser encontrados no repositório original <a href="https://github.com/rtcovidlive/covid-model/">https://github.com/rtcovidlive/covid-model/</a>.</p>
+<p>O código para reprodução dessa análise está disponível em 
+<a href="https://github.com/ansesu/rtlive_maringa.git" target="_blank" rel="noopener">ansesu/rt_livemaringa</a>. O código-base e maiores detalhes sobre o modelo podem ser encontrados no repositório original 
+<a href="https://github.com/rtcovidlive/covid-model/" target="_blank" rel="noopener">rtcovidlive/covid-model</a>.</p>
 <h2 id="recursos-interessantes">Recursos interessantes</h2>
 <ul>
 <li>
@@ -1056,8 +1062,6 @@ T. Bailey, C. T. Codeço, <em>A modelling approach for correcting reporting dela
       <li><a href="/project/observatorio-covid/">Observatório COVID-19 Maringá</a></li>
       
       <li><a href="/publication/preprint/">City size and the spreading of COVID-19 in Brazil</a></li>
-      
-      <li><a href="/post/primeira-postagem/">Primeira postagem</a></li>
       
     </ul>
   </div>

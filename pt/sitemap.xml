@@ -4,11 +4,21 @@
   
   <url>
     <loc>/author/andre/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
                 href="/en/author/andre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -19,7 +29,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,7 +44,7 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -49,7 +59,7 @@
   
   <url>
     <loc>/tag/covid-19/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -64,7 +74,7 @@
   
   <url>
     <loc>/tag/maringa/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -79,12 +89,12 @@
   
   <url>
     <loc>/tag/numero-de-reproducao/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -99,7 +109,7 @@
   
   <url>
     <loc>/post/rt-live-maringa/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -115,6 +125,11 @@
                 hreflang="pt"
                 href="/publication-type/3/"
                 />
+  </url>
+  
+  <url>
+    <loc>/post/primeira-postagem/</loc>
+    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
   </url>
   
   <url>
@@ -238,11 +253,6 @@
   </url>
   
   <url>
-    <loc>/post/primeira-postagem/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tag/primeiro-post/</loc>
     <lastmod>2020-07-03T22:34:02-03:00</lastmod>
   </url>
@@ -294,7 +304,16 @@
   
   <url>
     <loc>/author/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/andre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/andre/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -348,20 +367,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/publication/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/%E5%90%B3%E6%81%A9%E9%81%94/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/%E5%90%B3%E6%81%A9%E9%81%94/"
                 />
   </url>
   

@@ -43,6 +43,16 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="/en/author/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="/en/author/andre/"
                 />
   </url>
@@ -284,7 +294,16 @@
   
   <url>
     <loc>/en/author/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/andre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/andre/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -338,20 +357,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/en/publication/"
-                />
-  </url>
-  
-  <url>
-    <loc>/en/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/%E5%90%B3%E6%81%A9%E9%81%94/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/%E5%90%B3%E6%81%A9%E9%81%94/"
                 />
   </url>
   
