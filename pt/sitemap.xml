@@ -3,13 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/author/andre/</loc>
+    <loc>/author/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/andre/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,11 +14,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/author/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/andre/"
                 />
   </url>
   
@@ -303,30 +293,6 @@
   </url>
   
   <url>
-    <loc>/author/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/andre/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/andre/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/"
-                />
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -338,6 +304,11 @@
                 hreflang="pt"
                 href="/categories/"
                 />
+  </url>
+  
+  <url>
+    <loc>/author/nelson-bighetti/</loc>
+    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
   </url>
   
   <url>
