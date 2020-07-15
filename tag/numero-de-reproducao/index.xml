@@ -133,8 +133,8 @@ Seguindo o procedimento proposto pelos sites
 &lt;a href=&#34;https://epiforecasts.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;epiforecasts.io&lt;/a&gt; e 
 &lt;a href=&#34;https://covid19br.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;covid19br&lt;/a&gt;, consideramos que o perfil de infectividade é uma distribuição Gamma com média de 4.8 dias e desvio padrão de 2.3 dias, valores estimados em 
 &lt;a href=&#34;#serial-covid&#34;&gt;[3]&lt;/a&gt; e utilizados por esses dois sites. Além disso, atribuímos incerteza ao perfil de infectividade amostrando a média e o desvio padrão de distribuições normais truncadas centradas nos valores descritos anteriormente para um total de 500 repetições. Consideramos que $R_{inst}(t)$ apresenta uma distribuição Gamma como priori, com média 2.6 e desvio padrão 2, o que leva em consideração estimativas do número de reprodução básico em Wuhan no começo da epidemia 
-&lt;a href=&#34;#r0-wuhan&#34;&gt;[6]&lt;/a&gt;. Por fim, para a janela temporal $\tau$, adotamos o tempo $\tau=7$ dias uma vez que a série temporal de casos por COVID-19 aparenta uma periodicidade semanal. O resultado está representado pela 
-&lt;a href=&#34;#rt_instantaneo&#34;&gt;figura&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;#r0-wuhan&#34;&gt;[6]&lt;/a&gt;. Por fim, para a janela temporal $\tau$, adotamos o tempo $\tau=7$ dias uma vez que a série temporal de casos por COVID-19 aparenta uma periodicidade semanal. O resultado está representado na 
+&lt;a href=&#34;#rt_instantaneo&#34;&gt;figura acima&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;recursos-interessantes&#34;&gt;Recursos interessantes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
