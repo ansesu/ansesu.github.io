@@ -297,6 +297,21 @@
   </url>
   
   <url>
+    <loc>/en/post/</loc>
+    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/"
+                />
+  </url>
+  
+  <url>
     <loc>/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -335,21 +350,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/en/experience/"
-                />
-  </url>
-  
-  <url>
-    <loc>/en/post/</loc>
-    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/"
                 />
   </url>
   
