@@ -17,8 +17,8 @@
       <link>/en/post/python-pep8/</link>
       <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/en/post/python-pep8/</guid>
-      <description>&lt;p&gt;Recently, I had to go back to some code from my master&amp;rsquo;s degree analysis. I realized the code was bad written and hard to read. To solve this problem, I decided to study the best practices when coding in Python. In this way, this post is kind of a cheatsheet for future reference. I intend to update this page as I progress my studying. I used the PEP 8 from the official website 
-&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt; as resource. The PEPs, Python Enhancement Proposals, are documents created with the purpose of instruct Python users regarding standards, new features, processes or environments 
+      <description>&lt;p&gt;Recently, I had to go back to some code from my master&amp;rsquo;s degree analysis. I realized the code was bad written and hard to read. To solve this problem, I decided to study the best styling practices when coding in Python. In this way, this post is kind of a cheatsheet for future reference. I intend to keep updating this page as I progress my studying. I used the PEP 8 from the official website 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt; as resource. The PEPs, Python Enhancement Proposals, are documents created with the purpose of instructing Python users regarding standards, new features, processes or environments 
 &lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Specifically, the PEP 8 points out the style standards for Python users in order the code to be easily readable 
 &lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. So, here we go!&lt;/p&gt;
 &lt;h2 id=&#34;code-layout&#34;&gt;Code layout&lt;/h2&gt;
