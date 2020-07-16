@@ -13,6 +13,42 @@
     </image>
     
     <item>
+      <title>PEP8 - Melhores práticas de estilo de programação em Python</title>
+      <link>/post/python-pep8/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/python-pep8/</guid>
+      <description>&lt;p&gt;Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Acabei percebendo que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi tentar entender quais são as melhores práticas de programação em Python. Esse post é, então, uma &lt;em&gt;colinha&lt;/em&gt; pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar no estudo. Usei como referência o PEP 8 do site oficial 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt;. As PEPs, &lt;em&gt;Python Enhancement Proposals&lt;/em&gt;, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
+&lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
+&lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. Então, vamos lá!&lt;/p&gt;
+&lt;h2 id=&#34;code-layout&#34;&gt;Code layout&lt;/h2&gt;
+&lt;h3 id=&#34;indentação&#34;&gt;Indentação&lt;/h3&gt;
+&lt;p&gt;Padrão: 4 espaços por nível de indentação&lt;/p&gt;
+&lt;!-- Continuation lines should align wrapped elements either vertically using Python&#39;s implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line: --&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Alinhamento com o delimitador inicial (.
+foo = long_function_name(var_one, var_two,
+                         var_three, var_four)
+
+# Adição de 4 espaços (nível adicional de indentação) para distinguir os argumentos do resto.
+def long_function_name(
+        var_one, var_two, var_three,
+        var_four):
+    print(var_one)
+
+# Indentação flutuante deve adicionar um nível.
+foo = long_function_name(
+    var_one, var_two,
+    var_three, var_four)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;&lt;a name=&#34;pep1&#34;&gt; [1] 
+&lt;a href=&#34;https://www.python.org/dev/peps/pep-0001/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PEP 1 &amp;ndash; PEP Purpose and Guidelines.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;pep8&#34;&gt; [2] 
+&lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PEP 8 &amp;ndash; Style Guide for Python Code.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Uma alternativa para o cálculo do número de reprodução em Maringá</title>
       <link>/post/rt-live-maringa/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>

@@ -33,6 +33,66 @@
   </url>
   
   <url>
+    <loc>/tag/pep8/</loc>
+    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/pep8/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/pep8/"
+                />
+  </url>
+  
+  <url>
+    <loc>/post/python-pep8/</loc>
+    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/python-pep8/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/post/python-pep8/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/python/</loc>
+    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/python/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tags/"
+                />
+  </url>
+  
+  <url>
     <loc>/tag/covid-19/</loc>
     <lastmod>2020-07-15T17:20:05-03:00</lastmod>
     <xhtml:link
@@ -65,21 +125,6 @@
   <url>
     <loc>/tag/numero-de-reproducao/</loc>
     <lastmod>2020-07-15T17:20:05-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tags/"
-                />
   </url>
   
   <url>

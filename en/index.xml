@@ -5,12 +5,48 @@
     <link>/en/</link>
       <atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
     <description>ansesu</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
       <title>ansesu</title>
       <link>/en/</link>
     </image>
+    
+    <item>
+      <title>PEP8 - Best practices in styling for Python programming</title>
+      <link>/en/post/python-pep8/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/en/post/python-pep8/</guid>
+      <description>&lt;p&gt;Recently, I had to go back to some code from my master&amp;rsquo;s degree analysis. I realized the code was bad written and hard to read. To solve this problem, I decided to study the best practices when coding in Python. In this way, this post is kind of a cheatsheet for future reference. I intend to update this page as I progress my studying. I used the PEP 8 from the official website 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt; as resource. The PEPs, Python Enhancement Proposals, are documents created with the purpose of instruct Python users regarding standards, new features, processes or environments 
+&lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Specifically, the PEP 8 points out the style standards for Python users in order the code to be easily readable 
+&lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. So, here we go!&lt;/p&gt;
+&lt;h2 id=&#34;code-layout&#34;&gt;Code layout&lt;/h2&gt;
+&lt;h3 id=&#34;indentation&#34;&gt;Indentation&lt;/h3&gt;
+&lt;p&gt;Standard: 4 spaces per indentation level&lt;/p&gt;
+&lt;!-- Continuation lines should align wrapped elements either vertically using Python&#39;s implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line: --&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Opening delimiter alignment.
+foo = long_function_name(var_one, var_two,
+                         var_three, var_four)
+
+# Addition of 4 spaces (an extra level of indentation) to distinguish arguments from the rest.
+def long_function_name(
+        var_one, var_two, var_three,
+        var_four):
+    print(var_one)
+
+# Hanging indents should add a level.
+foo = long_function_name(
+    var_one, var_two,
+    var_three, var_four)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a name=&#34;pep1&#34;&gt; [1] 
+&lt;a href=&#34;https://www.python.org/dev/peps/pep-0001/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PEP 1 &amp;ndash; PEP Purpose and Guidelines.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;pep8&#34;&gt; [2] 
+&lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PEP 8 &amp;ndash; Style Guide for Python Code.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>City size and the spreading of COVID-19 in Brazil</title>

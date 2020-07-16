@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog | ansesu</title>
-    <link>/en/post/</link>
-      <atom:link href="/en/post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <title>PEP8 | ansesu</title>
+    <link>/en/tag/pep8/</link>
+      <atom:link href="/en/tag/pep8/index.xml" rel="self" type="application/rss+xml" />
+    <description>PEP8</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
-      <title>Blog</title>
-      <link>/en/post/</link>
+      <title>PEP8</title>
+      <link>/en/tag/pep8/</link>
     </image>
     
     <item>
@@ -45,56 +45,6 @@ foo = long_function_name(
 &lt;a href=&#34;https://www.python.org/dev/peps/pep-0001/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PEP 1 &amp;ndash; PEP Purpose and Guidelines.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a name=&#34;pep8&#34;&gt; [2] 
 &lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PEP 8 &amp;ndash; Style Guide for Python Code.&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>First post</title>
-      <link>/en/post/my-first-post/</link>
-      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/en/post/my-first-post/</guid>
-      <description>&lt;p&gt;This website was created in order to keep track of my academic progress, and with the intention of posting about matters that I may find interesting. The perspectives here shown are not necessarily associated with the 
-&lt;a href=&#34;http://complex.pfi.uem.br&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ComplexLab&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Fun fact: this website, ansesu, is name after the initials of &lt;strong&gt;An&lt;/strong&gt;dré &lt;strong&gt;Se&lt;/strong&gt;iji &lt;strong&gt;Su&lt;/strong&gt;nahara, since its abbreviation may sound a little rude.&lt;/p&gt;
-&lt;p&gt;The photo shown below pictures me and my 
-&lt;a href=&#34;http://complex.pfi.uem.br&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ComplexLab&lt;/a&gt; friends at the time of my dissertation defense.&lt;/p&gt;
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-msc-dissertation-defense---20200227&#34;&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/my-first-post/img/defesa_hu5910ff6be4dc984ae595bde3e38121b8_77445_2000x2000_fit_q90_lanczos.jpeg&#34; data-caption=&#34;MSc. dissertation defense - 2020/02/27&#34;&gt;
-
-
-  &lt;img data-src=&#34;/en/post/my-first-post/img/defesa_hu5910ff6be4dc984ae595bde3e38121b8_77445_2000x2000_fit_q90_lanczos.jpeg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1156&#34; height=&#34;868&#34;&gt;
-&lt;/a&gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    MSc. dissertation defense - 2020/02/27
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-
 </description>
     </item>
     
