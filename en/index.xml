@@ -238,6 +238,19 @@ foo = long_function_name(
         
       
     
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2015_eq.jpg&#34; data-caption=&#34;Tempos de Engenharia Química - 2015&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2015_eq_hu0b0718cdde0f526511eacf7bd9c508c8_917009_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;316&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
   &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2016_guatapara.jpg&#34; data-caption=&#34;Guatapará - 2016&#34;&gt;
   &lt;img data-src=&#34;/en/gallery/album/2016_guatapara_huf96db882147fd6f87120987cb393dd4b_122662_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
