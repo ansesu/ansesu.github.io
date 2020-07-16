@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | ansesu</title>
+    <title>Blog | ansesu</title>
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Posts</description>
+    <description>Blog</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language>
     <image>
       <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
-      <title>Posts</title>
+      <title>Blog</title>
       <link>/post/</link>
     </image>
     

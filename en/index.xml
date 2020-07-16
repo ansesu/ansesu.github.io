@@ -78,5 +78,957 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Contact</title>
+      <link>/en/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/en/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>/en/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/en/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gallery</title>
+      <link>/en/gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/en/gallery/</guid>
+      <description>&lt;!-- 
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_akihabara.jpg&#34; data-caption=&#34;Akihabara - Tokyo - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_akihabara_hu2535ce107883d0fd3e6034038ee42cea_388472_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;310&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_fuji_embaixo.jpg&#34; data-caption=&#34;Mount Fuji - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_fuji_embaixo_hu2535ce107883d0fd3e6034038ee42cea_262402_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_fuji_lago.jpg&#34; data-caption=&#34;Mount Fuji - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_fuji_lago_hu2535ce107883d0fd3e6034038ee42cea_143875_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_fuji_zcima.jpg&#34; data-caption=&#34;Mount Fuji - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_fuji_zcima_hu2535ce107883d0fd3e6034038ee42cea_155276_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_inuyama.jpg&#34; data-caption=&#34;Inuyama - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_inuyama_hu2535ce107883d0fd3e6034038ee42cea_446045_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_kyoto.jpg&#34; data-caption=&#34;Kyoto - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_kyoto_hu2535ce107883d0fd3e6034038ee42cea_442739_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_sapporo.jpg&#34; data-caption=&#34;Sapporo - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_sapporo_hu5318e049bc157202232793f0a5723999_328901_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;267&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2016_guatapara.jpg&#34; data-caption=&#34;Guatapará - 2016&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2016_guatapara_huf96db882147fd6f87120987cb393dd4b_122662_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2016_lidakai.jpg&#34; data-caption=&#34;Lida Kai - 2016&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2016_lidakai_hu2535ce107883d0fd3e6034038ee42cea_342918_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2016_rinkan.jpg&#34; data-caption=&#34;Summer Camp - Maringá - 2016&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2016_rinkan_hu2535ce107883d0fd3e6034038ee42cea_336489_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_kochi1.jpg&#34; data-caption=&#34;Homestay - Kochi - Japan - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_kochi1_hu784a1a47d50c84f20d0916fd6e4d6f9c_253010_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_kochi2.jpg&#34; data-caption=&#34;Yosakoi Festival - Kochi - Japan - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_kochi2_hu1408cdcb13e99183de3f628036033a6a_228517_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_kochi3.jpg&#34; data-caption=&#34;Global Leadership Forum - Kochi - Japan - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_kochi3_hu3dfb8d9f0168a2c641110fcd5dd9b3d6_450739_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_kochi4.jpg&#34; data-caption=&#34;Sakamoto Ryoma Museum - Kochi - Japan - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_kochi4_hud672a56291e02440299ccdbf37eecbee_222743_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_m1.jpg&#34; data-caption=&#34;M1 - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_m1_hu47244139c5c91f7ebdf724ea29f09c63_455033_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_tcc.jpg&#34; data-caption=&#34;Undergraduate thesis defense - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_tcc_huab486c41e7f0d2ce4979e3b3b375cd4d_393574_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_aoki_1.JPG&#34; data-caption=&#34;Aoki family - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_aoki_1_hu9aff5ba1ab65bbbd195bdde75ed826fb_1744423_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_aoki_2.JPG&#34; data-caption=&#34;Aoki family - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_aoki_2_hu47a97bb825edd6c5b6048caefb4a0c72_1887300_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_fuji_frio.jpg&#34; data-caption=&#34;Freezing at the summit of Mount Fuji - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_fuji_frio_hu5388793e5488ae12af44a9e7031c4a48_322454_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_hibaralake.jpg&#34; data-caption=&#34;Hibarako Camp - Fukushima - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_hibaralake_hubcb6af9ea66991be0646d270c2548590_300318_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_hibaralake2.jpg&#34; data-caption=&#34;Hibarako Camp - Fukushima - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_hibaralake2_huab59712d76532083f72b077dc00aff2c_16398640_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_ise.jpg&#34; data-caption=&#34;Course - Ise - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_ise_hu94145a259d30ade1949483de6ce7153d_353093_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_itakura.jpg&#34; data-caption=&#34;Itakura Sensei - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_itakura_hu6425c4390f35b69bdaa3607a4ed015b4_577586_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_patinando.jpg&#34; data-caption=&#34;Ice skating with friends - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_patinando_hua2d6260c1e8aaf002149bd4de8289964_216965_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_sede_syd.jpg&#34; data-caption=&#34;Shuyodan head office - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_sede_syd_hu748b01d1d2ee0b56bee6ef300579ec7e_356612_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_soba.JPG&#34; data-caption=&#34;Making Japanese noodles (soba) -  Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_soba_hu0d6f09400fcd8a7c5349630960fc46d5_714207_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_tanino.jpg&#34; data-caption=&#34;Tanino Sensei - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_tanino_hu57e6fb3b40a70c4902b47ff408da851f_470846_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;412&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_volunteer_fukushima.JPG&#34; data-caption=&#34;Volunteer action in Fukushima - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_volunteer_fukushima_huab59712d76532083f72b077dc00aff2c_20345662_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_wakuwaku.JPG&#34; data-caption=&#34;Waku Waku Camp - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_wakuwaku_hu36e867e7db4bdc4cf7986e743dca0000_2471508_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_z_familia.jpg&#34; data-caption=&#34;Family - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_z_familia_hu1fe715c949925c950d314aea78eaa8d1_447834_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;412&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_zz_maringa.jpg&#34; data-caption=&#34;Maringá - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_zz_maringa_huaafca8bace5638fdaa95dc217d186f2b_148846_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2020_defesa.jpeg&#34; data-caption=&#34;Dissertation defense - 2020&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2020_defesa_hu5910ff6be4dc984ae595bde3e38121b8_77445_0x190_resize_q90_lanczos.jpeg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2020_defesa2.jpeg&#34; data-caption=&#34;Dissertation defense - 2020&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2020_defesa2_hu19ca5c37b71c13fc10b7e0f5e5f6b151_90058_0x190_resize_q90_lanczos.jpeg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2020_thais.jpeg&#34; data-caption=&#34;Thaís&amp;amp;rsquo; birthday - 2020&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2020_thais_hu66a215bba188bf9b9c4996d07b02113b_95051_0x190_resize_q90_lanczos.jpeg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;411&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;
+ --&gt;
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_akihabara.jpg&#34; data-caption=&#34;Akihabara - Tokyo - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_akihabara_hu2535ce107883d0fd3e6034038ee42cea_388472_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;310&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_fuji_embaixo.jpg&#34; data-caption=&#34;Mount Fuji - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_fuji_embaixo_hu2535ce107883d0fd3e6034038ee42cea_262402_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_fuji_lago.jpg&#34; data-caption=&#34;Mount Fuji - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_fuji_lago_hu2535ce107883d0fd3e6034038ee42cea_143875_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_fuji_zcima.jpg&#34; data-caption=&#34;Mount Fuji - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_fuji_zcima_hu2535ce107883d0fd3e6034038ee42cea_155276_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_inuyama.jpg&#34; data-caption=&#34;Inuyama - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_inuyama_hu2535ce107883d0fd3e6034038ee42cea_446045_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_kyoto.jpg&#34; data-caption=&#34;Kyoto - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_kyoto_hu2535ce107883d0fd3e6034038ee42cea_442739_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2014_sapporo.jpg&#34; data-caption=&#34;Sapporo - Japan - 2014&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2014_sapporo_hu5318e049bc157202232793f0a5723999_328901_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;267&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2016_guatapara.jpg&#34; data-caption=&#34;Guatapará - 2016&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2016_guatapara_huf96db882147fd6f87120987cb393dd4b_122662_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2016_lidakai.jpg&#34; data-caption=&#34;Lida Kai - 2016&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2016_lidakai_hu2535ce107883d0fd3e6034038ee42cea_342918_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2016_rinkan.jpg&#34; data-caption=&#34;Summer Camp - Maringá - 2016&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2016_rinkan_hu2535ce107883d0fd3e6034038ee42cea_336489_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_kochi1.jpg&#34; data-caption=&#34;Homestay - Kochi - Japan - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_kochi1_hu784a1a47d50c84f20d0916fd6e4d6f9c_253010_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_kochi2.jpg&#34; data-caption=&#34;Yosakoi Festival - Kochi - Japan - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_kochi2_hu1408cdcb13e99183de3f628036033a6a_228517_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_kochi3.jpg&#34; data-caption=&#34;Global Leadership Forum - Kochi - Japan - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_kochi3_hu3dfb8d9f0168a2c641110fcd5dd9b3d6_450739_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_kochi4.jpg&#34; data-caption=&#34;Sakamoto Ryoma Museum - Kochi - Japan - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_kochi4_hud672a56291e02440299ccdbf37eecbee_222743_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_m1.jpg&#34; data-caption=&#34;M1 - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_m1_hu47244139c5c91f7ebdf724ea29f09c63_455033_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2017_tcc.jpg&#34; data-caption=&#34;Undergraduate thesis defense - 2017&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2017_tcc_huab486c41e7f0d2ce4979e3b3b375cd4d_393574_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_aoki_1.JPG&#34; data-caption=&#34;Aoki family - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_aoki_1_hu9aff5ba1ab65bbbd195bdde75ed826fb_1744423_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_aoki_2.JPG&#34; data-caption=&#34;Aoki family - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_aoki_2_hu47a97bb825edd6c5b6048caefb4a0c72_1887300_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_fuji_frio.jpg&#34; data-caption=&#34;Freezing at the summit of Mount Fuji - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_fuji_frio_hu5388793e5488ae12af44a9e7031c4a48_322454_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_hibaralake.jpg&#34; data-caption=&#34;Hibarako Camp - Fukushima - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_hibaralake_hubcb6af9ea66991be0646d270c2548590_300318_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_hibaralake2.jpg&#34; data-caption=&#34;Hibarako Camp - Fukushima - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_hibaralake2_huab59712d76532083f72b077dc00aff2c_16398640_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_ise.jpg&#34; data-caption=&#34;Course - Ise - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_ise_hu94145a259d30ade1949483de6ce7153d_353093_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_itakura.jpg&#34; data-caption=&#34;Itakura Sensei - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_itakura_hu6425c4390f35b69bdaa3607a4ed015b4_577586_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_patinando.jpg&#34; data-caption=&#34;Ice skating with friends - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_patinando_hua2d6260c1e8aaf002149bd4de8289964_216965_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_sede_syd.jpg&#34; data-caption=&#34;Shuyodan head office - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_sede_syd_hu748b01d1d2ee0b56bee6ef300579ec7e_356612_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_soba.JPG&#34; data-caption=&#34;Making Japanese noodles (soba) -  Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_soba_hu0d6f09400fcd8a7c5349630960fc46d5_714207_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_tanino.jpg&#34; data-caption=&#34;Tanino Sensei - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_tanino_hu57e6fb3b40a70c4902b47ff408da851f_470846_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;412&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_volunteer_fukushima.JPG&#34; data-caption=&#34;Volunteer action in Fukushima - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_volunteer_fukushima_huab59712d76532083f72b077dc00aff2c_20345662_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_wakuwaku.JPG&#34; data-caption=&#34;Waku Waku Camp - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_wakuwaku_hu36e867e7db4bdc4cf7986e743dca0000_2471508_0x190_resize_q90_lanczos.JPG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_z_familia.jpg&#34; data-caption=&#34;Family - Japan - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_z_familia_hu1fe715c949925c950d314aea78eaa8d1_447834_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;412&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_zz_maringa.jpg&#34; data-caption=&#34;Maringá - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_zz_maringa_huaafca8bace5638fdaa95dc217d186f2b_148846_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2020_defesa.jpeg&#34; data-caption=&#34;Dissertation defense - 2020&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2020_defesa_hu5910ff6be4dc984ae595bde3e38121b8_77445_0x190_resize_q90_lanczos.jpeg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2020_defesa2.jpeg&#34; data-caption=&#34;Dissertation defense - 2020&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2020_defesa2_hu19ca5c37b71c13fc10b7e0f5e5f6b151_90058_0x190_resize_q90_lanczos.jpeg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2020_thais.jpeg&#34; data-caption=&#34;Thaís&amp;amp;rsquo; birthday - 2020&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2020_thais_hu66a215bba188bf9b9c4996d07b02113b_95051_0x190_resize_q90_lanczos.jpeg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;411&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
