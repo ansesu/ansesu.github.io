@@ -293,6 +293,20 @@
   </url>
   
   <url>
+    <loc>/gallery/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/gallery/"
+                />
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2020-07-15T17:20:05-03:00</lastmod>
     <xhtml:link
@@ -346,20 +360,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/experience/"
-                />
-  </url>
-  
-  <url>
-    <loc>/gallery/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/gallery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/gallery/"
                 />
   </url>
   
