@@ -690,7 +690,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 minutos de leitura
+    3 minutos de leitura
   </span>
   
 
@@ -730,24 +730,79 @@
 <a href="https://www.python.org/" target="_blank" rel="noopener">python.org</a>. As PEPs, <em>Python Enhancement Proposals</em>, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
 <a href="#pep1">[1]</a>. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
 <a href="#pep8">[2]</a>. Então, vamos lá!</p>
+<p>(O código aqui mostrado foi copiado da referência 
+<a href="#pep8">[2]</a>)</p>
 <h2 id="code-layout">Code layout</h2>
 <h3 id="indentação">Indentação</h3>
 <p>Padrão: 4 espaços por nível de indentação</p>
 <!-- Continuation lines should align wrapped elements either vertically using Python's implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line: -->
-<pre><code class="language-python"># Alinhamento com o delimitador inicial (.
+<p>Algumas maneiras corretas de utilizar:</p>
+<pre><code class="language-python"># Alinhamento com o delimitador inicial &quot;(&quot;.
 foo = long_function_name(var_one, var_two,
                          var_three, var_four)
 
-# Adição de 4 espaços (nível adicional de indentação) para distinguir os argumentos do resto.
+# Adição de 4 espaços (um nível adicional de indentação) para distinguir a função de seus argumentos.
 def long_function_name(
         var_one, var_two, var_three,
         var_four):
     print(var_one)
 
-# Indentação flutuante deve adicionar um nível.
+# A indentação flutuante deve sempre adicionar um nível. 
+# No exemplo abaixo, não há um nível anterior, porém, ainda assim adicionamos um nível.
 foo = long_function_name(
     var_one, var_two,
-    var_three, var_four)
+    var_three, var_four
+)
+</code></pre>
+<p>Porém, em algumas ocasiões, é necessário escolher qual das opções é mais adequada para situação:</p>
+<pre><code class="language-python"># Errado. Não é possível distinguir os argumentos e o conteúdo da função.
+def long_function_name(
+    var_one, var_two, var_three,
+    var_four):
+    print(var_one)
+# Correto.
+def long_function_name(var_one, var_two, 
+                        var_three, var_four):
+	print(var_one)
+</code></pre>
+<h4 id="indentação-estrutura-condicional-if">Indentação: estrutura condicional if</h4>
+<p>Quando um condicional <em>if</em> é muito longo, pode ser que haja um problema ao quebrá-lo em múltiplas linhas:</p>
+<pre><code class="language-python">if (this_is_one_thing and
+    that_is_another_thing):
+    do_something()
+</code></pre>
+<p>Não conseguimos distinguir o condicional e seu conteúdo justamente porque a parte &ldquo;if (&rdquo; contém quatro caracteres. Duas possíveis opções são:</p>
+<pre><code class="language-python"># Adicione um comentário entre as linhas.
+if (this_is_one_thing and
+    that_is_another_thing):
+    # Since both conditions are true, we can frobnicate.
+    do_something()
+
+# Adicione uma indentação na próxima linha do condicional.
+if (this_is_one_thing
+        and that_is_another_thing):
+    do_something()
+</code></pre>
+<h4 id="indentação-colcheteparênteseschaves">Indentação: colchete/parênteses/chaves</h4>
+<p>Além disso, o colchete/parênteses/chaves que fecha uma construção em multi-linha pode se alinhar com o primeiro caractere (não-espaço) da última linha da lista</p>
+<pre><code class="language-python">my_list = [
+    1, 2, 3,
+    4, 5, 6,
+    ]
+result = some_function_that_takes_arguments(
+    'a', 'b', 'c',
+    'd', 'e', 'f',
+    )
+</code></pre>
+<p>ou alinhar com o primeiro caractere da linha que inicia a lista:</p>
+<pre><code class="language-python">my_list = [
+    1, 2, 3,
+    4, 5, 6,
+]
+result = some_function_that_takes_arguments(
+    'a', 'b', 'c',
+    'd', 'e', 'f',
+)
 </code></pre>
 <h2 id="referências">Referências</h2>
 <p><a name="pep1"> [1] 

@@ -21,24 +21,79 @@
 &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt;. As PEPs, &lt;em&gt;Python Enhancement Proposals&lt;/em&gt;, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
 &lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
 &lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. Então, vamos lá!&lt;/p&gt;
+&lt;p&gt;(O código aqui mostrado foi copiado da referência 
+&lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;code-layout&#34;&gt;Code layout&lt;/h2&gt;
 &lt;h3 id=&#34;indentação&#34;&gt;Indentação&lt;/h3&gt;
 &lt;p&gt;Padrão: 4 espaços por nível de indentação&lt;/p&gt;
 &lt;!-- Continuation lines should align wrapped elements either vertically using Python&#39;s implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line: --&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Alinhamento com o delimitador inicial (.
+&lt;p&gt;Algumas maneiras corretas de utilizar:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Alinhamento com o delimitador inicial &amp;quot;(&amp;quot;.
 foo = long_function_name(var_one, var_two,
                          var_three, var_four)
 
-# Adição de 4 espaços (nível adicional de indentação) para distinguir os argumentos do resto.
+# Adição de 4 espaços (um nível adicional de indentação) para distinguir a função de seus argumentos.
 def long_function_name(
         var_one, var_two, var_three,
         var_four):
     print(var_one)
 
-# Indentação flutuante deve adicionar um nível.
+# A indentação flutuante deve sempre adicionar um nível. 
+# No exemplo abaixo, não há um nível anterior, porém, ainda assim adicionamos um nível.
 foo = long_function_name(
     var_one, var_two,
-    var_three, var_four)
+    var_three, var_four
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Porém, em algumas ocasiões, é necessário escolher qual das opções é mais adequada para situação:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Errado. Não é possível distinguir os argumentos e o conteúdo da função.
+def long_function_name(
+    var_one, var_two, var_three,
+    var_four):
+    print(var_one)
+# Correto.
+def long_function_name(var_one, var_two, 
+                        var_three, var_four):
+	print(var_one)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;indentação-estrutura-condicional-if&#34;&gt;Indentação: estrutura condicional if&lt;/h4&gt;
+&lt;p&gt;Quando um condicional &lt;em&gt;if&lt;/em&gt; é muito longo, pode ser que haja um problema ao quebrá-lo em múltiplas linhas:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (this_is_one_thing and
+    that_is_another_thing):
+    do_something()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Não conseguimos distinguir o condicional e seu conteúdo justamente porque a parte &amp;ldquo;if (&amp;rdquo; contém quatro caracteres. Duas possíveis opções são:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Adicione um comentário entre as linhas.
+if (this_is_one_thing and
+    that_is_another_thing):
+    # Since both conditions are true, we can frobnicate.
+    do_something()
+
+# Adicione uma indentação na próxima linha do condicional.
+if (this_is_one_thing
+        and that_is_another_thing):
+    do_something()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;indentação-colcheteparênteseschaves&#34;&gt;Indentação: colchete/parênteses/chaves&lt;/h4&gt;
+&lt;p&gt;Além disso, o colchete/parênteses/chaves que fecha uma construção em multi-linha pode se alinhar com o primeiro caractere (não-espaço) da última linha da lista&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;my_list = [
+    1, 2, 3,
+    4, 5, 6,
+    ]
+result = some_function_that_takes_arguments(
+    &#39;a&#39;, &#39;b&#39;, &#39;c&#39;,
+    &#39;d&#39;, &#39;e&#39;, &#39;f&#39;,
+    )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ou alinhar com o primeiro caractere da linha que inicia a lista:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;my_list = [
+    1, 2, 3,
+    4, 5, 6,
+]
+result = some_function_that_takes_arguments(
+    &#39;a&#39;, &#39;b&#39;, &#39;c&#39;,
+    &#39;d&#39;, &#39;e&#39;, &#39;f&#39;,
+)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
 &lt;p&gt;&lt;a name=&#34;pep1&#34;&gt; [1] 

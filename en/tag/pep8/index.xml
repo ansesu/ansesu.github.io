@@ -21,11 +21,14 @@
 &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt; as resource. The PEPs, Python Enhancement Proposals, are documents created with the purpose of instructing Python users regarding standards, new features, processes or environments 
 &lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Specifically, PEP 8 points out the style standards for Python users, in order the code to be easily readable 
 &lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. So, here we go!&lt;/p&gt;
+&lt;p&gt;(The code was copied and pasted from 
+&lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt; although the commments and explanation may be different)&lt;/p&gt;
 &lt;h2 id=&#34;code-layout&#34;&gt;Code layout&lt;/h2&gt;
 &lt;h3 id=&#34;indentation&#34;&gt;Indentation&lt;/h3&gt;
 &lt;p&gt;Standard: 4 spaces per indentation level&lt;/p&gt;
 &lt;!-- Continuation lines should align wrapped elements either vertically using Python&#39;s implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line: --&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Opening delimiter alignment.
+&lt;p&gt;Some possible ways to write:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Opening delimiter alignment &amp;quot;(&amp;quot;.
 foo = long_function_name(var_one, var_two,
                          var_three, var_four)
 
@@ -39,6 +42,56 @@ def long_function_name(
 foo = long_function_name(
     var_one, var_two,
     var_three, var_four)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, in some cases, you may choose which option is more adequate to the situation:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Wrong. Further indentation required as indentation is not distinguishable.
+def long_function_name(
+    var_one, var_two, var_three,
+    var_four):
+    print(var_one)
+# Correct.
+def long_function_name(var_one, var_two, 
+                        var_three, var_four):
+    print(var_one)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;indentation-if-statement&#34;&gt;Indentation: if-statement&lt;/h5&gt;
+&lt;p&gt;When the conditional part of an if-statement is too long, there may be a problem when breaking it into multiple lines:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (this_is_one_thing and
+    that_is_another_thing):
+    do_something()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It is not possible to distinguish the statement and its content exactly because &amp;ldquo;if (&amp;rdquo; contains four characters. Two possible options are:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Add a comment between lines.
+if (this_is_one_thing and
+    that_is_another_thing):
+    # Since both conditions are true, we can frobnicate.
+    do_something()
+
+# Add some extra indentation on the conditional continuation line.
+if (this_is_one_thing
+        and that_is_another_thing):
+    do_something()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;indentation-bracebracketparenthesis&#34;&gt;Indentation: brace/bracket/parenthesis&lt;/h5&gt;
+&lt;p&gt;The brace/bracket/parenthesis on multiline constructs should line up with the first non-whitespace character of the last line of the list:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;my_list = [
+    1, 2, 3,
+    4, 5, 6,
+    ]
+result = some_function_that_takes_arguments(
+    &#39;a&#39;, &#39;b&#39;, &#39;c&#39;,
+    &#39;d&#39;, &#39;e&#39;, &#39;f&#39;,
+    )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or align with the first character of the line that starts the multiline construct:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;my_list = [
+    1, 2, 3,
+    4, 5, 6,
+]
+result = some_function_that_takes_arguments(
+    &#39;a&#39;, &#39;b&#39;, &#39;c&#39;,
+    &#39;d&#39;, &#39;e&#39;, &#39;f&#39;,
+)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;p&gt;&lt;a name=&#34;pep1&#34;&gt; [1] 

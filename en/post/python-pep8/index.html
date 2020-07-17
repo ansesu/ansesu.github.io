@@ -688,7 +688,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -728,11 +728,14 @@
 <a href="https://www.python.org/" target="_blank" rel="noopener">python.org</a> as resource. The PEPs, Python Enhancement Proposals, are documents created with the purpose of instructing Python users regarding standards, new features, processes or environments 
 <a href="#pep1">[1]</a>. Specifically, PEP 8 points out the style standards for Python users, in order the code to be easily readable 
 <a href="#pep8">[2]</a>. So, here we go!</p>
+<p>(The code was copied and pasted from 
+<a href="#pep8">[2]</a> although the commments and explanation may be different)</p>
 <h2 id="code-layout">Code layout</h2>
 <h3 id="indentation">Indentation</h3>
 <p>Standard: 4 spaces per indentation level</p>
 <!-- Continuation lines should align wrapped elements either vertically using Python's implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line: -->
-<pre><code class="language-python"># Opening delimiter alignment.
+<p>Some possible ways to write:</p>
+<pre><code class="language-python"># Opening delimiter alignment &quot;(&quot;.
 foo = long_function_name(var_one, var_two,
                          var_three, var_four)
 
@@ -746,6 +749,56 @@ def long_function_name(
 foo = long_function_name(
     var_one, var_two,
     var_three, var_four)
+</code></pre>
+<p>However, in some cases, you may choose which option is more adequate to the situation:</p>
+<pre><code class="language-python"># Wrong. Further indentation required as indentation is not distinguishable.
+def long_function_name(
+    var_one, var_two, var_three,
+    var_four):
+    print(var_one)
+# Correct.
+def long_function_name(var_one, var_two, 
+                        var_three, var_four):
+    print(var_one)
+</code></pre>
+<h5 id="indentation-if-statement">Indentation: if-statement</h5>
+<p>When the conditional part of an if-statement is too long, there may be a problem when breaking it into multiple lines:</p>
+<pre><code class="language-python">if (this_is_one_thing and
+    that_is_another_thing):
+    do_something()
+</code></pre>
+<p>It is not possible to distinguish the statement and its content exactly because &ldquo;if (&rdquo; contains four characters. Two possible options are:</p>
+<pre><code class="language-python"># Add a comment between lines.
+if (this_is_one_thing and
+    that_is_another_thing):
+    # Since both conditions are true, we can frobnicate.
+    do_something()
+
+# Add some extra indentation on the conditional continuation line.
+if (this_is_one_thing
+        and that_is_another_thing):
+    do_something()
+</code></pre>
+<h5 id="indentation-bracebracketparenthesis">Indentation: brace/bracket/parenthesis</h5>
+<p>The brace/bracket/parenthesis on multiline constructs should line up with the first non-whitespace character of the last line of the list:</p>
+<pre><code class="language-python">my_list = [
+    1, 2, 3,
+    4, 5, 6,
+    ]
+result = some_function_that_takes_arguments(
+    'a', 'b', 'c',
+    'd', 'e', 'f',
+    )
+</code></pre>
+<p>or align with the first character of the line that starts the multiline construct:</p>
+<pre><code class="language-python">my_list = [
+    1, 2, 3,
+    4, 5, 6,
+]
+result = some_function_that_takes_arguments(
+    'a', 'b', 'c',
+    'd', 'e', 'f',
+)
 </code></pre>
 <h2 id="references">References</h2>
 <p><a name="pep1"> [1] 
