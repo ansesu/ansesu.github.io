@@ -372,6 +372,19 @@ result = some_function_that_takes_arguments(
         
       
     
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_tapioca.jpg&#34; data-caption=&#34;Japan&amp;amp;rsquo;s tapioca - 2019&#34;&gt;
+  &lt;img data-src=&#34;/en/gallery/album/2019_tapioca_hu0dc0ef7ffdcacfb2e13fa0a834efa80b_265290_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
   &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2019_zz_maringa.jpg&#34; data-caption=&#34;Maringá - 2019&#34;&gt;
   &lt;img data-src=&#34;/en/gallery/album/2019_zz_maringa_huaafca8bace5638fdaa95dc217d186f2b_148846_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
