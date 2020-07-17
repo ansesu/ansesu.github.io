@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/en/author/</loc>
+    <lastmod>2020-07-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/"
+                />
+  </url>
+  
+  <url>
     <loc>/en/</loc>
     <lastmod>2020-07-16T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -29,6 +44,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="/en/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/post/</loc>
+    <lastmod>2020-07-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/"
                 />
   </url>
   
@@ -94,7 +124,7 @@
   
   <url>
     <loc>/en/publication-type/3/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -109,7 +139,7 @@
   
   <url>
     <loc>/en/author/andre-s.-sunahara/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -124,7 +154,7 @@
   
   <url>
     <loc>/en/tag/cities/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -139,7 +169,7 @@
   
   <url>
     <loc>/en/publication/preprint/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -154,7 +184,7 @@
   
   <url>
     <loc>/en/tag/complex-systems/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -169,7 +199,7 @@
   
   <url>
     <loc>/en/tag/covid-19/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -184,17 +214,17 @@
   
   <url>
     <loc>/en/tag/first-post/</loc>
-    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
+    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/en/post/my-first-post/</loc>
-    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
+    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/en/author/haroldo-v.-ribeiro/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -209,7 +239,7 @@
   
   <url>
     <loc>/en/author/jack-sutton/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -224,7 +254,7 @@
   
   <url>
     <loc>/en/tag/maringa/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -239,7 +269,7 @@
   
   <url>
     <loc>/en/project/observatorio-covid/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -254,7 +284,7 @@
   
   <url>
     <loc>/en/author/matjaz-perc/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -269,7 +299,7 @@
   
   <url>
     <loc>/en/project/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -284,7 +314,7 @@
   
   <url>
     <loc>/en/publication_types/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -298,8 +328,23 @@
   </url>
   
   <url>
+    <loc>/en/publication/</loc>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/publication/"
+                />
+  </url>
+  
+  <url>
     <loc>/en/author/quentin-s.-hanley/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -309,21 +354,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/en/author/quentin-s.-hanley/"
-                />
-  </url>
-  
-  <url>
-    <loc>/en/author/</loc>
-    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/"
                 />
   </url>
   
@@ -338,21 +368,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/en/gallery/"
-                />
-  </url>
-  
-  <url>
-    <loc>/en/post/</loc>
-    <lastmod>2020-07-15T17:20:05-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/"
                 />
   </url>
   
@@ -395,21 +410,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/en/experience/"
-                />
-  </url>
-  
-  <url>
-    <loc>/en/publication/</loc>
-    <lastmod>2020-07-03T22:34:02-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/publication/"
                 />
   </url>
   
