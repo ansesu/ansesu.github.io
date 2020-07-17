@@ -373,20 +373,6 @@
   </url>
   
   <url>
-    <loc>/gallery/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/gallery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/gallery/"
-                />
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -425,6 +411,20 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/experience/"
+                />
+  </url>
+  
+  <url>
+    <loc>/gallery/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/gallery/"
                 />
   </url>
   

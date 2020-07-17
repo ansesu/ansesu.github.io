@@ -336,7 +336,23 @@ T. Bailey, C. T. Codeço, &lt;em&gt;A modelling approach for correcting reportin
     </item>
     
     <item>
-      <title></title>
+      <title>Contato</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Experiência</title>
+      <link>/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Galeria</title>
       <link>/gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/gallery/</guid>
@@ -605,22 +621,6 @@ T. Bailey, C. T. Codeço, &lt;em&gt;A modelling approach for correcting reportin
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Contato</title>
-      <link>/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/contact/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Experiência</title>
-      <link>/experience/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/experience/</guid>
-      <description></description>
     </item>
     
   </channel>
