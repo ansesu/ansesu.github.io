@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.">
+  <meta name="description" content="Lista de Conteúdos  Número de reprodução efetivo Número de reprodução instantâneo Resultados Recursos interessantes Referências   Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista.">
 
   
   <link rel="alternate" hreflang="pt" href="/post/rt-live-maringa/">
@@ -280,7 +280,7 @@
   <meta property="og:site_name" content="ansesu">
   <meta property="og:url" content="/post/rt-live-maringa/">
   <meta property="og:title" content="Uma alternativa para o cálculo do número de reprodução em Maringá | ansesu">
-  <meta property="og:description" content="Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="Lista de Conteúdos  Número de reprodução efetivo Número de reprodução instantâneo Resultados Recursos interessantes Referências   Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="pt">
   
     
@@ -325,7 +325,7 @@
       "url": "/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros."
+  "description": "Lista de Conteúdos  Número de reprodução efetivo Número de reprodução instantâneo Resultados Recursos interessantes Referências   Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista."
 }
 </script>
 
@@ -671,7 +671,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    12 minutos de leitura
+    13 minutos de leitura
   </span>
   
 
@@ -746,7 +746,17 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.</p>
+      <h2>Lista de Conteúdos</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#número-de-reprodução-efetivo">Número de reprodução efetivo</a></li>
+    <li><a href="#número-de-reprodução-instantâneo">Número de reprodução instantâneo</a></li>
+    <li><a href="#resultados">Resultados</a></li>
+    <li><a href="#recursos-interessantes">Recursos interessantes</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav>
+<p>Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.</p>
 <p>O número de reprodução é o número esperado de infecções decorrentes de um indivíduo que se tornou infeccioso no tempo $t$. Do ponto de vista da saúde pública, é de interesse que esse número permaneça abaixo do limiar epidêmico ($R=1$), o que indica que a epidemia está desacelerando. O número de reprodução básico $R_0$ é a estimativa para essa quantidade no início da epidemia, quando a população inteira está suscetível à doença. Porém, ao passo que parcela da população ganha imunidade e medidas de intervenção são tomadas, o número de reprodução básico não tem mais validade e a atenção muda para o cálculo do que chamamos de número de reprodução que varia no tempo $R(t)$. Como exemplo, é possível citar os números de reprodução instantâneo e efetivo. Como se bem sabe, nenhum modelo é perfeito visto que sempre existem suposições e hipóteses necessárias para que a modelagem seja realizada. Além disso, existe uma limitação inerente da natureza do dado que, sendo mais ou menos detalhado, impacta na qualidade do modelo. A seguir, vou discorrer um pouco sobre a implementação que fizemos desses dois modelos para o caso de Maringá e sobre a limitação de dados públicos disponíveis nesse caso.</p>
 <h2 id="número-de-reprodução-efetivo">Número de reprodução efetivo</h2>
 <p>Anteriormente, no <em>website</em> 
