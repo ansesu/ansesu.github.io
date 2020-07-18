@@ -139,10 +139,10 @@ result = some_function_that_takes_arguments(
 
 
 
-&lt;figure id=&#34;figure-exemplo-de-código-com-a-ferramenta--hl-ruler-hl--do-jupyter-notebook-extensions&#34;&gt;
+&lt;figure id=&#34;figure-exemplo-de-código-com-a-ferramenta-ruler-do-jupyter-notebook-extensions&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Exemplo de código com a ferramenta {{&amp;amp;lt; hl &amp;amp;gt;}}ruler{{&amp;amp;lt; /hl &amp;amp;gt;}} do Jupyter Notebook Extensions.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Exemplo de código com a ferramenta ruler do Jupyter Notebook Extensions.&#34;&gt;
 
 
   &lt;img data-src=&#34;/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;833&#34; height=&#34;580&#34;&gt;
@@ -152,7 +152,7 @@ result = some_function_that_takes_arguments(
   
   
   &lt;figcaption&gt;
-    Exemplo de código com a ferramenta {{&amp;lt; hl &amp;gt;}}ruler{{&amp;lt; /hl &amp;gt;}} do Jupyter Notebook Extensions.
+    Exemplo de código com a ferramenta ruler do Jupyter Notebook Extensions.
   &lt;/figcaption&gt;
 
 
