@@ -17,13 +17,26 @@
       <link>/post/python-pep8/</link>
       <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/post/python-pep8/</guid>
-      <description>&lt;p&gt;Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Acabei percebendo que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi tentar entender quais são as melhores práticas de programação em Python. Esse post é, então, uma &lt;em&gt;colinha&lt;/em&gt; pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar no estudo. Usei como referência o PEP 8 do site oficial 
+      <description>&lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#layout-do-código&#34;&gt;Layout do código&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#indentação&#34;&gt;Indentação&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#espaço-ou-tab&#34;&gt;Espaço ou tab?&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#tamanho-máximo-da-linha&#34;&gt;Tamanho máximo da linha&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#referências&#34;&gt;Referências&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python. Esse post é, então, uma &lt;em&gt;colinha&lt;/em&gt; pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar na minha pesquisa. Usei como referência o PEP 8 do site oficial 
 &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt;. As PEPs, &lt;em&gt;Python Enhancement Proposals&lt;/em&gt;, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
 &lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
 &lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. Então, vamos lá!&lt;/p&gt;
 &lt;p&gt;(O código aqui mostrado foi copiado da referência 
 &lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;)&lt;/p&gt;
-&lt;h2 id=&#34;code-layout&#34;&gt;Code layout&lt;/h2&gt;
+&lt;h2 id=&#34;layout-do-código&#34;&gt;Layout do código&lt;/h2&gt;
 &lt;h3 id=&#34;indentação&#34;&gt;Indentação&lt;/h3&gt;
 &lt;p&gt;Padrão: 4 espaços por nível de indentação&lt;/p&gt;
 &lt;!-- Continuation lines should align wrapped elements either vertically using Python&#39;s implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line: --&gt;
@@ -57,12 +70,12 @@ def long_function_name(var_one, var_two,
 	print(var_one)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;indentação-estrutura-condicional-if&#34;&gt;Indentação: estrutura condicional if&lt;/h4&gt;
-&lt;p&gt;Quando um condicional &lt;em&gt;if&lt;/em&gt; é muito longo, pode ser que haja um problema ao quebrá-lo em múltiplas linhas:&lt;/p&gt;
+&lt;p&gt;Quando um condicional &lt;span class=&#34;markup-quote&#34;&gt;if&lt;/span&gt; é muito longo, pode ser que haja um problema ao quebrá-lo em múltiplas linhas:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (this_is_one_thing and
     that_is_another_thing):
     do_something()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Não conseguimos distinguir o condicional e seu conteúdo justamente porque a parte &amp;ldquo;if (&amp;rdquo; contém quatro caracteres. Duas possíveis opções são:&lt;/p&gt;
+&lt;p&gt;Não conseguimos distinguir o condicional e seu conteúdo justamente porque a parte &lt;span class=&#34;markup-quote&#34;&gt;if (&lt;/span&gt; contém quatro caracteres. Duas possíveis opções são:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Adicione um comentário entre as linhas.
 if (this_is_one_thing and
     that_is_another_thing):
@@ -94,6 +107,61 @@ result = some_function_that_takes_arguments(
     &#39;a&#39;, &#39;b&#39;, &#39;c&#39;,
     &#39;d&#39;, &#39;e&#39;, &#39;f&#39;,
 )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;espaço-ou-tab&#34;&gt;Espaço ou tab?&lt;/h3&gt;
+&lt;p&gt;Padrão: espaços são preferíveis a tabs.&lt;/p&gt;
+&lt;p&gt;No caso em que a indentação de algum código já está em tab, pode se usar tab para casar os padrões. Porém, começando um projeto do zero, é usar espaços (quatro)!&lt;/p&gt;
+&lt;h3 id=&#34;tamanho-máximo-da-linha&#34;&gt;Tamanho máximo da linha&lt;/h3&gt;
+&lt;p&gt;Padrão: limite de 79 caracteres por linha (no geral). Para docstrings e comentários, o tamanho máximo deve ser limitado a 72 caracteres.&lt;/p&gt;
+&lt;p&gt;Achei meio estranho limitar o tamanho da linha em 79 caracteres, mas o PEP 8 menciona dois motivos pelos quais essa escolha pode ser interessante (além da padronização):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Esse tamanho permite abrir dois códigos lado a lado, o que ajuda em revisões, por exemplo;&lt;/li&gt;
+&lt;li&gt;Certos editores tem um tamanho de linha máxima de 80 caracteres. Tamanhos maiores do que esse &amp;ldquo;estragariam&amp;rdquo; a formatação do código, tornando-o de difícil leitura. Assim, o limite de 79 caracteres é um limite seguro (por um caractere).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Porém, para uma equipe que prefere linhas mais longas e possui um código que é exclusivamente/primariamente mantido por ela, se chegarem a um consenso, não há problema em aumentar o tamanho da linha para até 99 caracteres.&lt;/p&gt;
+&lt;p&gt;Para auxiliar na padronização, o 
+&lt;a href=&#34;https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jupyter Noteboook Extensions&lt;/a&gt; conta com uma ferramenta chamada &lt;span class=&#34;markup-quote&#34;&gt;ruler&lt;/span&gt; para mostrar uma linha vertical no limite imposto pelo próprio usuário. Abaixo uma figura de um pedaço do meu código mostrando essa ferramenta.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-exemplo-de-código-com-a-ferramenta--hl-ruler-hl--do-jupyter-notebook-extensions&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Exemplo de código com a ferramenta {{&amp;amp;lt; hl &amp;amp;gt;}}ruler{{&amp;amp;lt; /hl &amp;amp;gt;}} do Jupyter Notebook Extensions.&#34;&gt;
+
+
+  &lt;img data-src=&#34;/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;833&#34; height=&#34;580&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Exemplo de código com a ferramenta {{&amp;lt; hl &amp;gt;}}ruler{{&amp;lt; /hl &amp;gt;}} do Jupyter Notebook Extensions.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Para quebrar linhas, recomenda-se encapsular a expressão dentro de parênteses, chaves ou colchetes. Quando isso não é aplicável, é possível também usar a barra invertida para quebrar linhas, mas esse é o menos preferível. Por exemplo, quando se declara &lt;span class=&#34;markup-quote&#34;&gt;with&lt;/span&gt; ou &lt;span class=&#34;markup-quote&#34;&gt;assert&lt;/span&gt;, não é possível usar a continuação implícita:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;with open(&#39;/path/to/some/file/you/want/to/read&#39;) as file_1, \
+     open(&#39;/path/to/some/file/being/written&#39;, &#39;w&#39;) as file_2:
+    file_2.write(file_1.read())
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
 &lt;p&gt;&lt;a name=&#34;pep1&#34;&gt; [1] 

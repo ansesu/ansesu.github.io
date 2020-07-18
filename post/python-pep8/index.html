@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Acabei percebendo que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi tentar entender quais são as melhores práticas de programação em Python.">
+  <meta name="description" content="Lista de Conteúdos  Layout do código  Indentação Espaço ou tab? Tamanho máximo da linha   Referências   Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado.">
 
   
   <link rel="alternate" hreflang="en" href="/en/post/python-pep8/">
@@ -282,13 +282,13 @@
   <meta property="og:site_name" content="ansesu">
   <meta property="og:url" content="/post/python-pep8/">
   <meta property="og:title" content="PEP8 - Melhores práticas de estilo em Python | ansesu">
-  <meta property="og:description" content="Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Acabei percebendo que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi tentar entender quais são as melhores práticas de programação em Python."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="Lista de Conteúdos  Layout do código  Indentação Espaço ou tab? Tamanho máximo da linha   Referências   Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="pt">
   
     
       <meta property="article:published_time" content="2020-07-16T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-07-17T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-07-18T00:00:00&#43;00:00">
   
 
   
@@ -317,7 +317,7 @@
   "headline": "PEP8 - Melhores práticas de estilo em Python",
   
   "datePublished": "2020-07-16T00:00:00Z",
-  "dateModified": "2020-07-17T00:00:00Z",
+  "dateModified": "2020-07-18T00:00:00Z",
   
   "publisher": {
     "@type": "Organization",
@@ -327,7 +327,7 @@
       "url": "/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Acabei percebendo que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi tentar entender quais são as melhores práticas de programação em Python."
+  "description": "Lista de Conteúdos  Layout do código  Indentação Espaço ou tab? Tamanho máximo da linha   Referências   Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado."
 }
 </script>
 
@@ -681,7 +681,7 @@
           Última atualização em
       
     
-    Jul 17, 2020
+    Jul 18, 2020
   </span>
   
 
@@ -690,7 +690,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 minutos de leitura
+    4 minutos de leitura
   </span>
   
 
@@ -726,13 +726,26 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Acabei percebendo que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi tentar entender quais são as melhores práticas de programação em Python. Esse post é, então, uma <em>colinha</em> pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar no estudo. Usei como referência o PEP 8 do site oficial 
+      <h2>Lista de Conteúdos</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#layout-do-código">Layout do código</a>
+      <ul>
+        <li><a href="#indentação">Indentação</a></li>
+        <li><a href="#espaço-ou-tab">Espaço ou tab?</a></li>
+        <li><a href="#tamanho-máximo-da-linha">Tamanho máximo da linha</a></li>
+      </ul>
+    </li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav>
+<p>Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python. Esse post é, então, uma <em>colinha</em> pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar na minha pesquisa. Usei como referência o PEP 8 do site oficial 
 <a href="https://www.python.org/" target="_blank" rel="noopener">python.org</a>. As PEPs, <em>Python Enhancement Proposals</em>, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
 <a href="#pep1">[1]</a>. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
 <a href="#pep8">[2]</a>. Então, vamos lá!</p>
 <p>(O código aqui mostrado foi copiado da referência 
 <a href="#pep8">[2]</a>)</p>
-<h2 id="code-layout">Code layout</h2>
+<h2 id="layout-do-código">Layout do código</h2>
 <h3 id="indentação">Indentação</h3>
 <p>Padrão: 4 espaços por nível de indentação</p>
 <!-- Continuation lines should align wrapped elements either vertically using Python's implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line: -->
@@ -766,12 +779,12 @@ def long_function_name(var_one, var_two,
 	print(var_one)
 </code></pre>
 <h4 id="indentação-estrutura-condicional-if">Indentação: estrutura condicional if</h4>
-<p>Quando um condicional <em>if</em> é muito longo, pode ser que haja um problema ao quebrá-lo em múltiplas linhas:</p>
+<p>Quando um condicional <span class="markup-quote">if</span> é muito longo, pode ser que haja um problema ao quebrá-lo em múltiplas linhas:</p>
 <pre><code class="language-python">if (this_is_one_thing and
     that_is_another_thing):
     do_something()
 </code></pre>
-<p>Não conseguimos distinguir o condicional e seu conteúdo justamente porque a parte &ldquo;if (&rdquo; contém quatro caracteres. Duas possíveis opções são:</p>
+<p>Não conseguimos distinguir o condicional e seu conteúdo justamente porque a parte <span class="markup-quote">if (</span> contém quatro caracteres. Duas possíveis opções são:</p>
 <pre><code class="language-python"># Adicione um comentário entre as linhas.
 if (this_is_one_thing and
     that_is_another_thing):
@@ -803,6 +816,61 @@ result = some_function_that_takes_arguments(
     'a', 'b', 'c',
     'd', 'e', 'f',
 )
+</code></pre>
+<h3 id="espaço-ou-tab">Espaço ou tab?</h3>
+<p>Padrão: espaços são preferíveis a tabs.</p>
+<p>No caso em que a indentação de algum código já está em tab, pode se usar tab para casar os padrões. Porém, começando um projeto do zero, é usar espaços (quatro)!</p>
+<h3 id="tamanho-máximo-da-linha">Tamanho máximo da linha</h3>
+<p>Padrão: limite de 79 caracteres por linha (no geral). Para docstrings e comentários, o tamanho máximo deve ser limitado a 72 caracteres.</p>
+<p>Achei meio estranho limitar o tamanho da linha em 79 caracteres, mas o PEP 8 menciona dois motivos pelos quais essa escolha pode ser interessante (além da padronização):</p>
+<ul>
+<li>Esse tamanho permite abrir dois códigos lado a lado, o que ajuda em revisões, por exemplo;</li>
+<li>Certos editores tem um tamanho de linha máxima de 80 caracteres. Tamanhos maiores do que esse &ldquo;estragariam&rdquo; a formatação do código, tornando-o de difícil leitura. Assim, o limite de 79 caracteres é um limite seguro (por um caractere).</li>
+</ul>
+<p>Porém, para uma equipe que prefere linhas mais longas e possui um código que é exclusivamente/primariamente mantido por ela, se chegarem a um consenso, não há problema em aumentar o tamanho da linha para até 99 caracteres.</p>
+<p>Para auxiliar na padronização, o 
+<a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/" target="_blank" rel="noopener">Jupyter Noteboook Extensions</a> conta com uma ferramenta chamada <span class="markup-quote">ruler</span> para mostrar uma linha vertical no limite imposto pelo próprio usuário. Abaixo uma figura de um pedaço do meu código mostrando essa ferramenta.</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-exemplo-de-código-com-a-ferramenta--hl-ruler-hl--do-jupyter-notebook-extensions">
+
+
+  <a data-fancybox="" href="/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png" data-caption="Exemplo de código com a ferramenta {{&amp;lt; hl &amp;gt;}}ruler{{&amp;lt; /hl &amp;gt;}} do Jupyter Notebook Extensions.">
+
+
+  <img data-src="/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="833" height="580">
+</a>
+
+
+  
+  
+  <figcaption>
+    Exemplo de código com a ferramenta {{&lt; hl &gt;}}ruler{{&lt; /hl &gt;}} do Jupyter Notebook Extensions.
+  </figcaption>
+
+
+</figure>
+
+<p>Para quebrar linhas, recomenda-se encapsular a expressão dentro de parênteses, chaves ou colchetes. Quando isso não é aplicável, é possível também usar a barra invertida para quebrar linhas, mas esse é o menos preferível. Por exemplo, quando se declara <span class="markup-quote">with</span> ou <span class="markup-quote">assert</span>, não é possível usar a continuação implícita:</p>
+<pre><code class="language-python">with open('/path/to/some/file/you/want/to/read') as file_1, \
+     open('/path/to/some/file/being/written', 'w') as file_2:
+    file_2.write(file_1.read())
 </code></pre>
 <h2 id="referências">Referências</h2>
 <p><a name="pep1"> [1] 

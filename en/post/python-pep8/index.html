@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Recently, I had to go back to some code from my master&rsquo;s degree. I realized the code was bad written and hard to read. To solve this problem, I decided to study the best styling practices when coding in Python.">
+  <meta name="description" content="Table of Contents  Code layout  Indentation Space or tab? Maximum line length   References   Recently, I had to go back to some code from my master&rsquo;s degree.">
 
   
   <link rel="alternate" hreflang="pt" href="/post/python-pep8/">
@@ -282,13 +282,13 @@
   <meta property="og:site_name" content="ansesu">
   <meta property="og:url" content="/en/post/python-pep8/">
   <meta property="og:title" content="PEP8 - Best practices in styling for Python programming | ansesu">
-  <meta property="og:description" content="Recently, I had to go back to some code from my master&rsquo;s degree. I realized the code was bad written and hard to read. To solve this problem, I decided to study the best styling practices when coding in Python."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="Table of Contents  Code layout  Indentation Space or tab? Maximum line length   References   Recently, I had to go back to some code from my master&rsquo;s degree."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-07-16T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-07-17T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-07-18T00:00:00&#43;00:00">
   
 
   
@@ -317,7 +317,7 @@
   "headline": "PEP8 - Best practices in styling for Python programming",
   
   "datePublished": "2020-07-16T00:00:00Z",
-  "dateModified": "2020-07-17T00:00:00Z",
+  "dateModified": "2020-07-18T00:00:00Z",
   
   "publisher": {
     "@type": "Organization",
@@ -327,7 +327,7 @@
       "url": "/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Recently, I had to go back to some code from my master\u0026rsquo;s degree. I realized the code was bad written and hard to read. To solve this problem, I decided to study the best styling practices when coding in Python."
+  "description": "Table of Contents  Code layout  Indentation Space or tab? Maximum line length   References   Recently, I had to go back to some code from my master\u0026rsquo;s degree."
 }
 </script>
 
@@ -681,7 +681,7 @@
           Last updated on
       
     
-    Jul 17, 2020
+    Jul 18, 2020
   </span>
   
 
@@ -690,7 +690,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    4 min read
   </span>
   
 
@@ -726,7 +726,20 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Recently, I had to go back to some code from my master&rsquo;s degree. I realized the code was bad written and hard to read. To solve this problem, I decided to study the best styling practices when coding in Python. This post is therefore kind of a cheatsheet for future reference. I intend to keep updating this page as I progress my studies. I used the PEP 8 from the official website 
+      <h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#code-layout">Code layout</a>
+      <ul>
+        <li><a href="#indentation">Indentation</a></li>
+        <li><a href="#space-or-tab">Space or tab?</a></li>
+        <li><a href="#maximum-line-length">Maximum line length</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+<p>Recently, I had to go back to some code from my master&rsquo;s degree. I realized the code was bad written and hard to read. In order to solve this problem, I decided to study what are considered the best styling practices when coding in Python. This post is therefore kind of a cheatsheet for future reference. I intend to keep updating this page as I progress my research in that matter. I used the PEP 8 from the official website 
 <a href="https://www.python.org/" target="_blank" rel="noopener">python.org</a> as resource. The PEPs, Python Enhancement Proposals, are documents created with the purpose of instructing Python users regarding standards, new features, processes or environments 
 <a href="#pep1">[1]</a>. Specifically, PEP 8 points out the style standards for Python users, in order the code to be easily readable 
 <a href="#pep8">[2]</a>. So, here we go!</p>
@@ -769,7 +782,7 @@ def long_function_name(var_one, var_two,
     that_is_another_thing):
     do_something()
 </code></pre>
-<p>It is not possible to distinguish the statement and its content exactly because &ldquo;if (&rdquo; contains four characters. Two possible options are:</p>
+<p>It is not possible to distinguish the statement and its content exactly because <span class="markup-quote">if (</span> contains four characters. Two possible options are:</p>
 <pre><code class="language-python"># Add a comment between lines.
 if (this_is_one_thing and
     that_is_another_thing):
@@ -801,6 +814,61 @@ result = some_function_that_takes_arguments(
     'a', 'b', 'c',
     'd', 'e', 'f',
 )
+</code></pre>
+<h3 id="space-or-tab">Space or tab?</h3>
+<p>Standard: spaces are preferred over tabs.</p>
+<p>If a code&rsquo;s indentation default method is tab, you can use tab to match the current style. However, when starting a project, spaces (four) all the way!</p>
+<h3 id="maximum-line-length">Maximum line length</h3>
+<p>Standard: 79 characters maximum line width. For docstrings and comments, the maximum width should be up to 72 characters.</p>
+<p>I thought it was a little strange to limit line width up to 79 characters, but PEP 8 gives two good reasons for choosing this threshold (besides standardization):</p>
+<ul>
+<li>This length may allow opening two codes side by side, which, in turn, is useful when reviewing them for example;</li>
+<li>Some text editors have default wrapping of up to 80 characters horizontally. Sizes bigger than that may disrupt the code visual structure, making it harder to read. Therefore, the maximum line width of 79 characters is a safe limit (by one character).</li>
+</ul>
+<p>However, for teams that prefer longer lines, and are working in a code exclusively/primarly maintained by them, if a consensus is established, there is no problem in increasing the line width up to 99 characters.</p>
+<p>To help standardization, 
+<a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/" target="_blank" rel="noopener">Jupyter Noteboook Extensions</a> offer an tool called <span class="markup-quote">ruler</span> that shows a vertical line indicating the character threshold as specified by the user. The figure below shows a piece of my code and the <span class="markup-quote">ruler</span> tool enabled.</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-code-example-with-the--hl-ruler-hl--tool-from-jupyter-notebook-extensions">
+
+
+  <a data-fancybox="" href="/en/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png" data-caption="Code example with the {{&amp;lt; hl &amp;gt;}}ruler{{&amp;lt; /hl &amp;gt;}} tool from Jupyter Notebook Extensions.">
+
+
+  <img data-src="/en/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="833" height="580">
+</a>
+
+
+  
+  
+  <figcaption>
+    Code example with the {{&lt; hl &gt;}}ruler{{&lt; /hl &gt;}} tool from Jupyter Notebook Extensions.
+  </figcaption>
+
+
+</figure>
+
+<p>In order to break lines, it is recommended to encapsulate the expressions inside parenthesis, braces or brackets. When this option is not available, it is possible to use backslashes to break lines (although this is the least preferable option). For instance, when declaring a <span class="markup-quote">with</span> or <span class="markup-quote">assert</span> statement, implicit continuation is not possible, then we can use backslashes</p>
+<pre><code class="language-python">with open('/path/to/some/file/you/want/to/read') as file_1, \
+     open('/path/to/some/file/being/written', 'w') as file_2:
+    file_2.write(file_1.read())
 </code></pre>
 <h2 id="references">References</h2>
 <p><a name="pep1"> [1] 

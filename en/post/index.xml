@@ -17,7 +17,20 @@
       <link>/en/post/python-pep8/</link>
       <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/en/post/python-pep8/</guid>
-      <description>&lt;p&gt;Recently, I had to go back to some code from my master&amp;rsquo;s degree. I realized the code was bad written and hard to read. To solve this problem, I decided to study the best styling practices when coding in Python. This post is therefore kind of a cheatsheet for future reference. I intend to keep updating this page as I progress my studies. I used the PEP 8 from the official website 
+      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#code-layout&#34;&gt;Code layout&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#indentation&#34;&gt;Indentation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#space-or-tab&#34;&gt;Space or tab?&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#maximum-line-length&#34;&gt;Maximum line length&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;Recently, I had to go back to some code from my master&amp;rsquo;s degree. I realized the code was bad written and hard to read. In order to solve this problem, I decided to study what are considered the best styling practices when coding in Python. This post is therefore kind of a cheatsheet for future reference. I intend to keep updating this page as I progress my research in that matter. I used the PEP 8 from the official website 
 &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt; as resource. The PEPs, Python Enhancement Proposals, are documents created with the purpose of instructing Python users regarding standards, new features, processes or environments 
 &lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Specifically, PEP 8 points out the style standards for Python users, in order the code to be easily readable 
 &lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. So, here we go!&lt;/p&gt;
@@ -60,7 +73,7 @@ def long_function_name(var_one, var_two,
     that_is_another_thing):
     do_something()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It is not possible to distinguish the statement and its content exactly because &amp;ldquo;if (&amp;rdquo; contains four characters. Two possible options are:&lt;/p&gt;
+&lt;p&gt;It is not possible to distinguish the statement and its content exactly because &lt;span class=&#34;markup-quote&#34;&gt;if (&lt;/span&gt; contains four characters. Two possible options are:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Add a comment between lines.
 if (this_is_one_thing and
     that_is_another_thing):
@@ -92,6 +105,61 @@ result = some_function_that_takes_arguments(
     &#39;a&#39;, &#39;b&#39;, &#39;c&#39;,
     &#39;d&#39;, &#39;e&#39;, &#39;f&#39;,
 )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;space-or-tab&#34;&gt;Space or tab?&lt;/h3&gt;
+&lt;p&gt;Standard: spaces are preferred over tabs.&lt;/p&gt;
+&lt;p&gt;If a code&amp;rsquo;s indentation default method is tab, you can use tab to match the current style. However, when starting a project, spaces (four) all the way!&lt;/p&gt;
+&lt;h3 id=&#34;maximum-line-length&#34;&gt;Maximum line length&lt;/h3&gt;
+&lt;p&gt;Standard: 79 characters maximum line width. For docstrings and comments, the maximum width should be up to 72 characters.&lt;/p&gt;
+&lt;p&gt;I thought it was a little strange to limit line width up to 79 characters, but PEP 8 gives two good reasons for choosing this threshold (besides standardization):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This length may allow opening two codes side by side, which, in turn, is useful when reviewing them for example;&lt;/li&gt;
+&lt;li&gt;Some text editors have default wrapping of up to 80 characters horizontally. Sizes bigger than that may disrupt the code visual structure, making it harder to read. Therefore, the maximum line width of 79 characters is a safe limit (by one character).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, for teams that prefer longer lines, and are working in a code exclusively/primarly maintained by them, if a consensus is established, there is no problem in increasing the line width up to 99 characters.&lt;/p&gt;
+&lt;p&gt;To help standardization, 
+&lt;a href=&#34;https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jupyter Noteboook Extensions&lt;/a&gt; offer an tool called &lt;span class=&#34;markup-quote&#34;&gt;ruler&lt;/span&gt; that shows a vertical line indicating the character threshold as specified by the user. The figure below shows a piece of my code and the &lt;span class=&#34;markup-quote&#34;&gt;ruler&lt;/span&gt; tool enabled.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-code-example-with-the--hl-ruler-hl--tool-from-jupyter-notebook-extensions&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Code example with the {{&amp;amp;lt; hl &amp;amp;gt;}}ruler{{&amp;amp;lt; /hl &amp;amp;gt;}} tool from Jupyter Notebook Extensions.&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/python-pep8/img/ruler_jupyter_hu25c5c2ff0017a65e26589dbedbef0d7b_72447_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;833&#34; height=&#34;580&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Code example with the {{&amp;lt; hl &amp;gt;}}ruler{{&amp;lt; /hl &amp;gt;}} tool from Jupyter Notebook Extensions.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;In order to break lines, it is recommended to encapsulate the expressions inside parenthesis, braces or brackets. When this option is not available, it is possible to use backslashes to break lines (although this is the least preferable option). For instance, when declaring a &lt;span class=&#34;markup-quote&#34;&gt;with&lt;/span&gt; or &lt;span class=&#34;markup-quote&#34;&gt;assert&lt;/span&gt; statement, implicit continuation is not possible, then we can use backslashes&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;with open(&#39;/path/to/some/file/you/want/to/read&#39;) as file_1, \
+     open(&#39;/path/to/some/file/being/written&#39;, &#39;w&#39;) as file_2:
+    file_2.write(file_1.read())
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;p&gt;&lt;a name=&#34;pep1&#34;&gt; [1] 
