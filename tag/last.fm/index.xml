@@ -223,7 +223,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: Evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: Evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.&lt;p/&gt;
 &lt;p&gt;Por fim, utilizei o 
 &lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; para confeccionar um gráfico de corrida de barras (que, por sinal, bem famoso nas redes sociais atualmente). Essa é uma maneira alternativa de visualizar a evolução temporal da quantidade de músicas ouvidas por artista, pois acompanhamos o número de reproduções acumulado.&lt;/p&gt;
 &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117094&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117094/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;

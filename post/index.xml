@@ -223,7 +223,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: Evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: Evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.&lt;p/&gt;
 &lt;p&gt;Por fim, utilizei o 
 &lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; para confeccionar um gráfico de corrida de barras (que, por sinal, bem famoso nas redes sociais atualmente). Essa é uma maneira alternativa de visualizar a evolução temporal da quantidade de músicas ouvidas por artista, pois acompanhamos o número de reproduções acumulado.&lt;/p&gt;
 &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117094&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117094/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;
@@ -512,6 +512,7 @@ Seguindo o procedimento proposto pelos sites
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: evolução temporal do $R_{ef}(t)$ em Maringá.&lt;p/&gt;
 &lt;a name=&#34;rt_instantaneo&#34;&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%&#34;&gt;
@@ -521,6 +522,7 @@ Seguindo o procedimento proposto pelos sites
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: evolução temporal do $R_{inst}(t)$ em Maringá.&lt;p/&gt;,
 &lt;p&gt;A figura abaixo mostra a evolução temporal das variáveis presentes no modelo generativo: i) o número de confirmados (em cinza); ii) o número de confirmados esperado (em verde); iii) o número de confirmados esperado supondo testagem uniforme (em laranja); iv) o número de infectados esperado (em roxo).&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%&#34;&gt;
@@ -530,6 +532,7 @@ Seguindo o procedimento proposto pelos sites
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: evolução temporal das variáveis presentes no modelo generativo em Maringá.&lt;p/&gt;
 &lt;p&gt;O código para reprodução dessa análise está disponível em 
 &lt;a href=&#34;https://github.com/ansesu/rtlive_maringa.git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ansesu/rt_livemaringa&lt;/a&gt;. O código-base e maiores detalhes sobre o modelo podem ser encontrados no repositório original 
 &lt;a href=&#34;https://github.com/rtcovidlive/covid-model/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rtcovidlive/covid-model&lt;/a&gt;.&lt;/p&gt;
