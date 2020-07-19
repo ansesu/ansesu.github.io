@@ -17,11 +17,7 @@
       <link>/post/lastfm-2019/</link>
       <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/post/lastfm-2019/</guid>
-      <description>&lt;meta charset=&#34;utf-8&#34;&gt;
-&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@5&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-lite@4&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-embed@6&#34;&gt;&lt;/script&gt;
-&lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
+      <description>&lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#visão-geral&#34;&gt;Visão geral&lt;/a&gt;&lt;/li&gt;
@@ -145,7 +141,7 @@
         style=&#34;position:absolute; top:0; left: 0;&#34;&gt;
     &lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34; &gt;Figura: número de músicas em cada período do dia em 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: número de músicas em cada período do dia em 2019.&lt;p/&gt;
 &lt;p&gt;A figura abaixo mostra a quantidade de músicas escutadas em cada mês de 2019. Em julho e agosto, estive no Japão para participar de um curso de verão e, por isso, não tive muito tempo para escutar músicas.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -155,7 +151,7 @@
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: número de músicas em cada mês de 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: número de músicas em cada mês de 2019.&lt;p/&gt;
 &lt;p&gt;A figura abaixo mostra a quantidade de músicas escutadas em cada dia da semana em 2019. Como mencionei anteriormente, costumo ouvir música quando estou fazendo alguma atividade, então a quantidade é naturalmente maior nos dias de semana. Especialmente, nas segundas acho que sou mais produtivo.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -165,7 +161,7 @@
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: número de músicas em cada dia da semana em 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: número de músicas em cada dia da semana em 2019.&lt;p/&gt;
 &lt;p&gt;Também resolvi analisar as maiores sequências escutando o mesmo artista ou música. Geralmente, deixo o player no modo aleatório (que acho não ser tão aleatório assim), então, uma sequência indica que estou gostando bastante daquele artista ou música (em outras palavras, viciado neles). Essa é uma prática que estou tentando mudar esse ano: ouvir mais músicas em sequência de artistas individualmente, o que tenho até que conseguido. A figura abaixo mostra as maiores sequências de reproduções do mesmo artista em 2019. Em especial, no final de 2018 descobri a banda Vulfpeck (muito boa por sinal) e acabei a escutando bastante. Essa foi minha maior sequência em 2019. Outras menções honrosas: Foster the People (sempre) e Beach Fossils, esta apresentada pelo colega de laboratório Gustavo.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -185,7 +181,7 @@
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: Sequências escutando a mesma música em 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: Sequências escutando a mesma música em 2019.&lt;p/&gt;
 &lt;p&gt;Em seguida, decidi investigar o comportamento da entropia de Shannon da distribuição dos artistas que ouço. A entropia normalizada de Shannon é descrita pela equação 
 &lt;a href=&#34;#entropy&#34;&gt;[1]&lt;/a&gt;
 $$
@@ -200,7 +196,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: Diversidade dos artistas que escutei em cada semana de 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: Diversidade dos artistas que escutei em cada semana de 2019.&lt;p/&gt;
 &lt;p&gt;A figura abaixo mostra a entropia para cada dia da semana em 2019. Os dias da semana apresentam valores menores de entropia, o que pode indicar que ouço algum tipo mais específico de música (e consequentemente de um grupo de artistas) quando estou realizando minhas atividades.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -210,7 +206,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: Diversidade dos artistas que escutei em cada dia da semana de 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: Diversidade dos artistas que escutei em cada dia da semana de 2019.&lt;p/&gt;
 &lt;p&gt;Navegando pela internet, achei um tipo de gráfico bem massa chamado &lt;em&gt;stream wave chart&lt;/em&gt;. Inclusive, você pode fazer o seu próprio gráfico pelo 
 &lt;a href=&#34;https://savas.ca/lastwave/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;site&lt;/a&gt;, basta inserir o nome de usuário da sua conta no last.fm. Esse tipo de gráfico indica a evolução temporal do volume de músicas (dado pela área colorida) de determinado artista em uma janela temporal. Achei legal e tentei fazer o meu próprio &lt;em&gt;stream chart&lt;/em&gt;. Os gráficos acima foram feitos por meio do pacote 
 &lt;a href=&#34;https://docs.bokeh.org/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt; do Python. Porém, não há suporte para o &lt;em&gt;stream chart&lt;/em&gt; no Bokeh. Então, tive que procurar alternativas, e acabei encontrando o pacote 

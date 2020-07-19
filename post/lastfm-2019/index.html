@@ -676,6 +676,9 @@
   
   
   
+  <span class="middot-divider"></span>
+  <a href="/post/lastfm-2019/#disqus_thread"></a>
+  
 
   
   
@@ -705,11 +708,7 @@
   <div class="article-container">
 
     <div class="article-style">
-      <meta charset="utf-8">
-<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-<h2>Lista de Conteúdos</h2>
+      <h2>Lista de Conteúdos</h2>
 <nav id="TableOfContents">
   <ul>
     <li><a href="#visão-geral">Visão geral</a></li>
@@ -833,7 +832,7 @@
         style="position:absolute; top:0; left: 0;">
     </iframe>
 </div>
-<p style="text-align: center; font-size: 16px" >Figura: número de músicas em cada período do dia em 2019.<p/>
+<p style="text-align: center" >Figura: número de músicas em cada período do dia em 2019.<p/>
 <p>A figura abaixo mostra a quantidade de músicas escutadas em cada mês de 2019. Em julho e agosto, estive no Japão para participar de um curso de verão e, por isso, não tive muito tempo para escutar músicas.</p>
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -843,7 +842,7 @@
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center; font-size: 16px">Figura: número de músicas em cada mês de 2019.<p/>
+<p style="text-align: center">Figura: número de músicas em cada mês de 2019.<p/>
 <p>A figura abaixo mostra a quantidade de músicas escutadas em cada dia da semana em 2019. Como mencionei anteriormente, costumo ouvir música quando estou fazendo alguma atividade, então a quantidade é naturalmente maior nos dias de semana. Especialmente, nas segundas acho que sou mais produtivo.</p>
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -853,7 +852,7 @@
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center; font-size: 16px">Figura: número de músicas em cada dia da semana em 2019.<p/>
+<p style="text-align: center">Figura: número de músicas em cada dia da semana em 2019.<p/>
 <p>Também resolvi analisar as maiores sequências escutando o mesmo artista ou música. Geralmente, deixo o player no modo aleatório (que acho não ser tão aleatório assim), então, uma sequência indica que estou gostando bastante daquele artista ou música (em outras palavras, viciado neles). Essa é uma prática que estou tentando mudar esse ano: ouvir mais músicas em sequência de artistas individualmente, o que tenho até que conseguido. A figura abaixo mostra as maiores sequências de reproduções do mesmo artista em 2019. Em especial, no final de 2018 descobri a banda Vulfpeck (muito boa por sinal) e acabei a escutando bastante. Essa foi minha maior sequência em 2019. Outras menções honrosas: Foster the People (sempre) e Beach Fossils, esta apresentada pelo colega de laboratório Gustavo.</p>
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -873,7 +872,7 @@
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center; font-size: 16px">Figura: Sequências escutando a mesma música em 2019.<p/>
+<p style="text-align: center">Figura: Sequências escutando a mesma música em 2019.<p/>
 <p>Em seguida, decidi investigar o comportamento da entropia de Shannon da distribuição dos artistas que ouço. A entropia normalizada de Shannon é descrita pela equação 
 <a href="#entropy">[1]</a>
 $$
@@ -888,7 +887,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center; font-size: 16px">Figura: Diversidade dos artistas que escutei em cada semana de 2019.<p/>
+<p style="text-align: center">Figura: Diversidade dos artistas que escutei em cada semana de 2019.<p/>
 <p>A figura abaixo mostra a entropia para cada dia da semana em 2019. Os dias da semana apresentam valores menores de entropia, o que pode indicar que ouço algum tipo mais específico de música (e consequentemente de um grupo de artistas) quando estou realizando minhas atividades.</p>
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -898,7 +897,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center; font-size: 16px">Figura: Diversidade dos artistas que escutei em cada dia da semana de 2019.<p/>
+<p style="text-align: center">Figura: Diversidade dos artistas que escutei em cada dia da semana de 2019.<p/>
 <p>Navegando pela internet, achei um tipo de gráfico bem massa chamado <em>stream wave chart</em>. Inclusive, você pode fazer o seu próprio gráfico pelo 
 <a href="https://savas.ca/lastwave/" target="_blank" rel="noopener">site</a>, basta inserir o nome de usuário da sua conta no last.fm. Esse tipo de gráfico indica a evolução temporal do volume de músicas (dado pela área colorida) de determinado artista em uma janela temporal. Achei legal e tentei fazer o meu próprio <em>stream chart</em>. Os gráficos acima foram feitos por meio do pacote 
 <a href="https://docs.bokeh.org/en/latest/index.html" target="_blank" rel="noopener">Bokeh</a> do Python. Porém, não há suporte para o <em>stream chart</em> no Bokeh. Então, tive que procurar alternativas, e acabei encontrando o pacote 
@@ -1190,9 +1189,28 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
 
 <section id="comments">
   
-    <div id="commento"></div>
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "https-ansesu-github-io" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-<script src="https://cdn.commento.io/js/commento.js" defer></script>
 
   
 </section>
@@ -1329,6 +1347,8 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
     
 
     
+    
+    <script id="dsq-count-scr" src="https://https-ansesu-github-io.disqus.com/count.js" async></script>
     
 
     
