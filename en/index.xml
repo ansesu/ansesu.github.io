@@ -18,9 +18,9 @@
       <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/en/post/lastfm-2019/</guid>
       <description>&lt;p&gt;
-&lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; is a social network in which users can keep track of their own musical activity through the so called scrobbles (the act of tracking your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.&lt;/p&gt;
-&lt;p&gt;Here, I realize a statistical analysis of 
-&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last.fm profile&lt;/a&gt; in 2019 (and who knows turn it an annual thing). I start by using 
+&lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; is a social network in which users can keep track of their own musical activity through the so called scrobbles (the log of your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.&lt;/p&gt;
+&lt;p&gt;Here, I perform a statistical analysis of 
+&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last.fm profile&lt;/a&gt; in 2019 (and who knows turn this an annual thing). I start by using 
 &lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this tool&lt;/a&gt; to export my profile&amp;rsquo;s listening history. Then, I use Python language to parse data and make some visualizations. My code is available at: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;. So, here we go! First of all, some numbers that summarize my 2019.&lt;/p&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -31,7 +31,7 @@
     &lt;li&gt;&lt;a href=&#34;#my-2019-most-listened-albums&#34;&gt;My 2019 most listened albums&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#my-2019-most-listened-new-artists&#34;&gt;My 2019 most listened new artists&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#visualizations&#34;&gt;Visualizations&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#referências&#34;&gt;Referências&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -124,7 +124,7 @@
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figure: number of songs listened in each month of 2019.&lt;p/&gt;
-&lt;p&gt;The figure below shows the number of songs listened in each day of the week in 2019. As mentioned before, I usually listen to music when I performing some activity, so the count is naturally higher in weekdays. Specially, I believe my productivity is higher on Mondays.&lt;/p&gt;
+&lt;p&gt;The figure below shows the number of songs listened in each day of the week in 2019. As mentioned before, I usually listen to music when I am performing some activity, so the count is naturally higher in weekdays. Specially, I believe my productivity is higher on Mondays.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
  &lt;iframe
@@ -134,7 +134,7 @@
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figure: number of songs listened in each day of the week in 2019.&lt;p/&gt;
-&lt;p&gt;I also analyzed the listening streaks for artists and songs. I tend to listen to music in shuffle mode (which doesn&amp;rsquo;t seem random at all), so, a long streak indicates that I am actually addicted to that specific artist or song. The figure below shows the listening streaks for artists in 2019. At the end of 2018, I found a amazing band called Vulfpeck (which I strongly recommend) and ended up listening to it a lot in 2019. This was my biggest 2019 artist streak. Other honorable mentions: Foster the People (all the way!) and Beach Fossils, this last one presented by my lab colleague Gustavo.&lt;/p&gt;
+&lt;p&gt;I also analyzed the listening streaks for artists and songs. I tend to listen to music in shuffle mode, so, a long streak indicates that I am actually addicted to that specific artist or song. The figure below shows the listening streaks for artists in 2019. At the end of 2018, I found a amazing band called Vulfpeck (which I strongly recommend) and ended up listening to it a lot in 2019. This was my biggest 2019 artist streak. Other honorable mentions: Foster the People (all the way!) and Beach Fossils, this last one presented by my lab colleague Gustavo.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
  &lt;iframe
@@ -169,7 +169,7 @@ where $n$ is the total number of artists and $P_i$ is the fraction of songs from
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figure: Diversity of artist (as measured by Shannon entropy) in each week of 2019.&lt;p/&gt;
-The figure below shows the entropy for each day of the week in 2019. Weekdays present smaller values of entropy, what may suggest that I tend to listen to a specific kind of music (and consequently of artists) when I am performing my activities. 
+The figure below shows the entropy for each day of the week in 2019. Weekdays present smaller values of entropy, what may suggest that I tend to listen to a specific kind of music (and consequently of artist) when I am performing my activities. 
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
  &lt;iframe
@@ -179,10 +179,10 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figure: Diversity of artist (as measured by Shannon entropy) in each day of the week in 2019.&lt;p/&gt;
-&lt;p&gt;Browsing the internet, I found a cool visualization called stream wave chart. This kind of figure shows the temporal evolution of the volume of songs listened (given by a filled area) of a specific artist. I found it really awesome and tried to make my stream chart. The above figures were all made in the Python package 
-&lt;a href=&#34;https://docs.bokeh.org/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt;. But it turns out that this kind of visualization is not available in Bokeh. I searched for some alternatives and found out the 
-&lt;a href=&#34;https://altair-viz.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Altair&lt;/a&gt; package (also from Python). Then, I selected all the artists with at least 30 reproductions in 2019, which yielded a set of 21 unique artists. The figure below shows the evolution of my reproduction volume in 2019.
-Actually, you can do your own last.fm wave chart in a non-pythonic way by using this 
+&lt;p&gt;Browsing the internet, I found a cool visualization called 
+&lt;a href=&#34;https://datavizcatalogue.com/methods/images/top_images/SVG/stream_graph.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stream wave chart&lt;/a&gt;. This kind of figure shows the temporal evolution of the volume of songs listened (given by a filled area) of a set of specific artists. I found it really awesome and tried to make my own stream chart. The above figures were all made using the Python package 
+&lt;a href=&#34;https://docs.bokeh.org/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt;. But it turns out this kind of visualization is not available on Bokeh. I searched for some alternatives and found out the 
+&lt;a href=&#34;https://altair-viz.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Altair&lt;/a&gt; package (also from Python). Then, I selected all the artists with at least 30 reproductions in 2019, which yielded a set of 21 unique artists. The figure below shows the evolution of my reproduction volume in 2019. You can click on the names to select a specific artist. Also, you can do your own last.fm wave chart in a non-pythonic way by using this 
 &lt;a href=&#34;https://savas.ca/lastwave/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;site&lt;/a&gt; (try it out!).&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:35%; position:relative; display:block; width: 100%; max-width: 600px; margin: 0 auto;&#34;&gt;
@@ -194,9 +194,9 @@ Actually, you can do your own last.fm wave chart in a non-pythonic way by using 
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figure: Temporal evolution of the volume of reproductions of top artists in 2019.&lt;p/&gt;
 &lt;p&gt;Finally, I used 
-&lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; app to make a bar chart race (which has been really popular in social media recently). This is an alternative to visualize the temporal evolution of listening history, but, this time, considering the cumulative number of reproductions.&lt;/p&gt;
+&lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; app to make a bar chart race (which has been really popular in social media recently). This is an alternative to visualize the temporal evolution of the listening history, but, this time, considering the cumulative number of reproductions.&lt;/p&gt;
 &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117094&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117094/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;
-&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;p&gt;&lt;a name=&#34;entropy&#34;&gt; [1] Shannon, Claude E., &lt;em&gt;A Mathematical Theory of Communication&lt;/em&gt;. 
 &lt;a href=&#34;https://doi.org/10.1002%2Fj.1538-7305.1948.tb01338.x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bell System Technical Journal. 27 (3): 379–423 (1948)&lt;/a&gt;&lt;/p&gt;
 &lt;!-- &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117110&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117110/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt; --&gt;
