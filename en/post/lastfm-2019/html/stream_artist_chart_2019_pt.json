@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 400, "height": 300,
+  "data": {"url": "teste.json"},
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "yearmonth", "field": "date", "type": "temporal",
+      "axis": {"domain": false, "format": "%m", "tickSize": 0}
+    },
+    "y": {
+      "aggregate": "sum", "field": "count_", "type": "quantitative",
+      "axis": null,
+      "stack": "center"
+    },
+    "color": {"field":"artist", "type":"nominal", "scale":{"scheme": "category20b"}}
+  }
+}

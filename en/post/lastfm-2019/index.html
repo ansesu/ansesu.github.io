@@ -1,0 +1,1432 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="last.fm is a social network in which users can keep track of their own musical activity through the so called scrobbles (the act of tracking your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble.">
+
+  
+  <link rel="alternate" hreflang="pt" href="/post/lastfm-2019/">
+  
+  <link rel="alternate" hreflang="en-us" href="/en/post/lastfm-2019/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171716165-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-171716165-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/en/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/en/post/lastfm-2019/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="ansesu">
+  <meta property="og:url" content="/en/post/lastfm-2019/">
+  <meta property="og:title" content="My 2019 last.fm | ansesu">
+  <meta property="og:description" content="last.fm is a social network in which users can keep track of their own musical activity through the so called scrobbles (the act of tracking your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-07-18T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-18T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/en/post/lastfm-2019/"
+  },
+  "headline": "My 2019 last.fm",
+  
+  "datePublished": "2020-07-18T00:00:00Z",
+  "dateModified": "2020-07-18T00:00:00Z",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "ansesu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "last.fm is a social network in which users can keep track of their own musical activity through the so called scrobbles (the act of tracking your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>My 2019 last.fm | ansesu</title>
+
+</head>
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/en">ansesu</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/en">ansesu</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/en"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/en/post"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/experience"><span>Experience</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/project"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/publication"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/gallery"><span>Gallery</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown i18n-dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-globe mr-1" aria-hidden="true"></i><span class="d-none d-lg-inline">English</span></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-item dropdown-item-active">
+            <span>English</span>
+          </div>
+          
+          <a class="dropdown-item" href="/post/lastfm-2019/">
+            <span>Português</span>
+          </a>
+          
+        </div>
+      </li>
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>My 2019 last.fm</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span class="font-weight-bold"><a href="/en/author/">Andre</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 18, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/en/post/lastfm-2019/#disqus_thread"></a>
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>
+<a href="https://www.last.fm/" target="_blank" rel="noopener">last.fm</a> is a social network in which users can keep track of their own musical activity through the so called scrobbles (the act of tracking your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.</p>
+<p>Here, I realize a statistical analysis of 
+<a href="http://last.fm/user/ansesu" target="_blank" rel="noopener">my last.fm profile</a> in 2019 (and who knows turn it an annual thing). I start by using 
+<a href="https://mainstream.ghan.nl/export.html" target="_blank" rel="noopener">this tool</a> to export my profile&rsquo;s listening history. Then, I use Python language to parse data and make some visualizations. My code is available at: <a href="https://github.com/ansesu/lastfm/">https://github.com/ansesu/lastfm/</a>. So, here we go! First of all, some numbers that summarize my 2019.</p>
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#my-2019-most-listened-songs">My 2019 most listened songs</a></li>
+    <li><a href="#my-2019-most-listened-artists">My 2019 most listened artists</a></li>
+    <li><a href="#my-2019-most-listened-albums">My 2019 most listened albums</a></li>
+    <li><a href="#my-2019-most-listened-new-artists">My 2019 most listened new artists</a></li>
+    <li><a href="#visualizations">Visualizations</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>
+<p>Total plays: 10,215</p>
+</li>
+<li>
+<p>Total songs: 2,270</p>
+</li>
+<li>
+<p>Total artists: 555</p>
+</li>
+<li>
+<p>Total albums: 1,027</p>
+</li>
+</ul>
+<h2 id="my-2019-most-listened-songs">My 2019 most listened songs</h2>
+<ol>
+<li>Pick U Up - Foster the People (159 plays)</li>
+<li>Imagination - Foster the People (102 plays)</li>
+<li>Style - Foster the People (65 plays)</li>
+<li>Half of the Way - Vulfpeck (61 plays)</li>
+<li>Wait For The Moment - Vulfpeck (57 plays)</li>
+<li>Worst Nites - Foster the People (52 plays)</li>
+<li>1612 - Vulfpeck (51 plays)</li>
+<li>Don&rsquo;t Stop (Color on the Walls) - Foster the People (49 plays)</li>
+<li>Goats in Trees - Foster the People (49 plays)</li>
+<li>Helena Beat - Foster the People (48 plays)</li>
+</ol>
+<h2 id="my-2019-most-listened-artists">My 2019 most listened artists</h2>
+<ol>
+<li>Vulfpeck (1785 plays)</li>
+<li>Foster the People (1711 plays)</li>
+<li>Saint Motel (427 plays)</li>
+<li>The Kooks (377 plays)</li>
+<li>Khruangbin (264 plays)</li>
+<li>Red Hot Chili Peppers (247 plays)</li>
+<li>The Strokes (201 plays)</li>
+<li>Jamiroquai (185 plays)</li>
+<li>J Rabbit (180 plays)</li>
+<li>Wednesday Campanella (162 plays)</li>
+</ol>
+<h2 id="my-2019-most-listened-albums">My 2019 most listened albums</h2>
+<ol>
+<li>Torches - Foster the People (418 plays)</li>
+<li>Supermodel - Foster the People (339 plays)</li>
+<li>Thrill of the Arts - Vulfpeck (312 plays)</li>
+<li>Sacred Hearts Club - Foster the People (302 plays)</li>
+<li>hill climber - Vulfpeck (286 plays)</li>
+<li>The Beautiful Game - Vulfpeck (280 plays)</li>
+<li>Saintmotelevision - Saint Motel (236 plays)</li>
+<li>Pick U Up - Foster the People (216 plays)</li>
+<li>Fugue State - Vulfpeck (213 plays)</li>
+<li>Mr Finish Line - Vulfpeck (194 plays)</li>
+</ol>
+<h2 id="my-2019-most-listened-new-artists">My 2019 most listened new artists</h2>
+<ol>
+<li>Theo Katzman (66 plays)</li>
+<li>Beach Fossils (64 plays)</li>
+<li>Ripe (40 plays)</li>
+<li>DJ Bean Ornish (28 plays)</li>
+<li>Breakestra (23 plays)</li>
+<li>Michael Haydn (22 plays)</li>
+<li>おかん (19 plays)</li>
+<li>Madeon (18 plays)</li>
+<li>Scary Goldings (17 plays)</li>
+<li>Ozawa Kenji (17 plays)</li>
+<li>小沢健二 (14 plays)</li>
+<li>Aqueous (12 plays)</li>
+</ol>
+<h2 id="visualizations">Visualizations</h2>
+<p>Now, I present some visualizations with some interesting statistics (at least for me). The figure below shows the number of songs listened in each period of the day in 2019. Usually, when I am programming, studying or working out, I listen to music. In this sense, the higher musical activity may be a proxy of my productivity (and the low activity shows that I normally don&rsquo;t wake up early).</p>
+<div style="padding-bottom:75%; width: 100%; height: 100%; position:relative; display: block; max-width: 900px;  max-height: 900px; margin: 0 auto;">
+    <iframe
+        width="100%" height="100%"
+        src="html/daily_hours_2019_en.html"
+        frameborder="0" scrolling="no"
+        style="position:absolute; top:0; left: 0;">
+    </iframe>
+</div>
+<p style="text-align: center" >Figure: Number of songs listened in each period of the day in 2019.<p/>
+<p>The figure below shows the number of songs listened in each month of 2019. In July and August, I traveled for some extracurricular activity and, thus, didn&rsquo;t have much time to listen to music.</p>
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
+ <iframe
+  width="100%" height="100%"
+  src="html/month_counts_2019_en.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center">Figure: number of songs listened in each month of 2019.<p/>
+<p>The figure below shows the number of songs listened in each day of the week in 2019. As mentioned before, I usually listen to music when I performing some activity, so the count is naturally higher in weekdays. Specially, I believe my productivity is higher on Mondays.</p>
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
+ <iframe
+  width="100%" height="100%"
+  src="html/weekday_counts_2019_en.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center">Figure: number of songs listened in each day of the week in 2019.<p/>
+<p>I also analyzed the listening streaks for artists and songs. I tend to listen to music in shuffle mode (which doesn&rsquo;t seem random at all), so, a long streak indicates that I am actually addicted to that specific artist or song. The figure below shows the listening streaks for artists in 2019. At the end of 2018, I found a amazing band called Vulfpeck (which I strongly recommend) and ended up listening to it a lot in 2019. This was my biggest 2019 artist streak. Other honorable mentions: Foster the People (all the way!) and Beach Fossils, this last one presented by my lab colleague Gustavo.</p>
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
+ <iframe
+  width="100%" height="100%"
+  src="html/listening_streaks_2019_en.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center; font-size: 16px">Figure: Streaks listening the same artist in 2019.<p/>
+The figure below shows my song streaks in 2019. In summary, I usually don't listen to songs on repeat.
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
+ <iframe
+  width="100%" height="100%"
+  src="html/listening_streaks_track_2019_en.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center">Figure: Streaks listening the same track in 2019.<p/>
+<p>Next, I applied the concept of Shannon entropy to the distribution of artists listened. The normalized Shanon entropy is described by the equation 
+<a href="#entropy">[1]</a>
+$$
+H = \text{Diversity} = -\dfrac{1}{\log n}\sum_i P_i \log P_i
+$$
+where $n$ is the total number of artists and $P_i$ is the fraction of songs from the $i$th artist. The entropy indicates the quantity of information contained in the probability distribution of artists. Values close to one ($\approx 1$) reveal that information is equally distributed among artists or, in other words, I listen to them in the same proportion. Conversely, values close to zero ($\approx 0$) indicate that one of the artists dominates my musical sessions. Therefore, I consider that the entropy is a kind of musical diversity (or heterogeinity) considering the artists I listen, which is different than being eclectic. The figure below shows the entropy for each week in 2019. The entropy exhibit smaller values exactly when I had my longest streaks. Also, it seems that, during a week, I tend to listen to a set of artists homogeneously.</p>
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
+ <iframe
+  width="100%" height="100%"
+  src="html/yearly_entropy_2019_en.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center">Figure: Diversity of artist (as measured by Shannon entropy) in each week of 2019.<p/>
+The figure below shows the entropy for each day of the week in 2019. Weekdays present smaller values of entropy, what may suggest that I tend to listen to a specific kind of music (and consequently of artists) when I am performing my activities. 
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
+ <iframe
+  width="100%" height="100%"
+  src="html/weekday_entropy_2019_en.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center">Figure: Diversity of artist (as measured by Shannon entropy) in each day of the week in 2019.<p/>
+<p>Browsing the internet, I found a cool visualization called stream wave chart. This kind of figure shows the temporal evolution of the volume of songs listened (given by a filled area) of a specific artist. I found it really awesome and tried to make my stream chart. The above figures were all made in the Python package 
+<a href="https://docs.bokeh.org/en/latest/index.html" target="_blank" rel="noopener">Bokeh</a>. But it turns out that this kind of visualization is not available in Bokeh. I searched for some alternatives and found out the 
+<a href="https://altair-viz.github.io/" target="_blank" rel="noopener">Altair</a> package (also from Python). Then, I selected all the artists with at least 30 reproductions in 2019, which yielded a set of 21 unique artists. The figure below shows the evolution of my reproduction volume in 2019.
+Actually, you can do your own last.fm wave chart in a non-pythonic way by using this 
+<a href="https://savas.ca/lastwave/" target="_blank" rel="noopener">site</a> (try it out!).</p>
+<div
+ style="padding-bottom:35%; position:relative; display:block; width: 100%; max-width: 600px; margin: 0 auto;">
+ <iframe
+  width="100%" height="100%"
+  src="html/stream_artist_chart_2019_en.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center">Figure: Temporal evolution of the volume of reproductions of top artists in 2019.<p/>
+<p>Finally, I used 
+<a href="https://flourish.io/" target="_blank" rel="noopener">flourish.io</a> app to make a bar chart race (which has been really popular in social media recently). This is an alternative to visualize the temporal evolution of listening history, but, this time, considering the cumulative number of reproductions.</p>
+<div class="flourish-embed flourish-bar_race" data-src="visualisation/3117094" data-url="https://flo.uri.sh/visualisation/3117094/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<h2 id="referências">Referências</h2>
+<p><a name="entropy"> [1] Shannon, Claude E., <em>A Mathematical Theory of Communication</em>. 
+<a href="https://doi.org/10.1002%2Fj.1538-7305.1948.tb01338.x" target="_blank" rel="noopener">Bell System Technical Journal. 27 (3): 379–423 (1948)</a></p>
+<!-- <div class="flourish-embed flourish-bar_race" data-src="visualisation/3117110" data-url="https://flo.uri.sh/visualisation/3117110/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div> -->
+<!-- <div class="flourish-embed flourish-bar_race" data-src="visualisation/3117159" data-url="https://flo.uri.sh/visualisation/3117159/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div> -->
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/en/tag/last.fm/">last.fm</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/en/post/lastfm-2019/&amp;text=My%202019%20last.fm" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/en/post/lastfm-2019/&amp;t=My%202019%20last.fm" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=My%202019%20last.fm&amp;body=/en/post/lastfm-2019/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/en/post/lastfm-2019/&amp;title=My%202019%20last.fm" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=My%202019%20last.fm%20/en/post/lastfm-2019/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/en/post/lastfm-2019/&amp;title=My%202019%20last.fm" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/en/author/avatar_hudde4185064148e62a7cbe29e32025252_84415_270x270_fill_q90_lanczos_center.jpg" alt="">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="/"></a></h5>
+        
+        <p class="card-text">My research interests include science of science, complex systems, statistical analysis and data visualization.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:sunaharaseiji@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/SunaharaAndre" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/ansesu" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://gitlab.com/ansesu" target="_blank" rel="noopener">
+        <i class="fab fa-gitlab"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/andre-sunahara-693069ba/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-4666-9995" target="_blank" rel="noopener">
+        <i class="fab fa-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lattes.cnpq.br/7701879821467771" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+  
+
+
+
+
+
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "https-ansesu-github-io" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+</section>
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/en/post/python-pep8/" rel="prev">PEP8 - Best practices in styling for Python programming</a>
+  </div>
+  
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/en/post/python-pep8/">PEP8 - Best practices in styling for Python programming</a></li>
+      
+      <li><a href="/en/post/my-first-post/">First post</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/en/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://https-ansesu-github-io.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

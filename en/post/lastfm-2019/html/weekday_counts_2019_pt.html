@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.1.min.js" integrity="sha384-JpP8FXbgAZLkfur7LiK3j9AGBhHNIvF742meBJrjO2ShJDhCG2I1uVvW+0DUtrmc" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="bc186cb4-bcf6-4c46-9b4f-e98e9e92f5a7" data-root-id="4311"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="4424">
+          {"ece79121-a034-434a-b5e4-bcb29c60228a":{"roots":{"references":[{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","logo":null,"tools":[{"id":"4335"}]},"id":"4328","type":"Toolbar"},{"attributes":{},"id":"4346","type":"Selection"},{"attributes":{"fill_alpha":{"value":0.85},"fill_color":{"value":"#2ca25f"},"line_alpha":{"value":0.85},"line_color":{"value":"#1f77b4"},"line_width":{"value":0},"top":{"field":"count"},"width":{"value":0.9},"x":{"field":"weekday"}},"id":"4331","type":"VBar"},{"attributes":{"text":""},"id":"4340","type":"Title"},{"attributes":{"data":{"count":[2182,1559,1452,1949,1449,914,710],"index":[0,1,2,3,4,5,6],"weekday":[0,1,2,3,4,5,6],"weekday_str_complete_en":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"weekday_str_complete_pt":["Segunda","Ter\u00e7a","Quarta","Quinta","Sexta","S\u00e1bado","Domingo"],"weekday_str_en":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"weekday_str_pt":["Seg","Ter","Qua","Qui","Sex","S\u00e1b","Dom"]},"selected":{"id":"4346"},"selection_policy":{"id":"4345"}},"id":"4329","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"4329"},"glyph":{"id":"4331"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"4332"},"selection_glyph":null,"view":{"id":"4334"}},"id":"4333","type":"GlyphRenderer"},{"attributes":{"axis":{"id":"4320"},"grid_line_color":null,"ticker":null},"id":"4323","type":"Grid"},{"attributes":{"ticks":[0,1,2,3,4,5,6]},"id":"4337","type":"FixedTicker"},{"attributes":{},"id":"4318","type":"LinearScale"},{"attributes":{},"id":"4316","type":"LinearScale"},{"attributes":{},"id":"4344","type":"BasicTickFormatter"},{"attributes":{"axis":{"id":"4324"},"dimension":1,"grid_line_color":null,"ticker":null},"id":"4327","type":"Grid"},{"attributes":{},"id":"4325","type":"BasicTicker"},{"attributes":{"source":{"id":"4329"}},"id":"4334","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#2ca25f"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"line_width":{"value":0},"top":{"field":"count"},"width":{"value":0.9},"x":{"field":"weekday"}},"id":"4332","type":"VBar"},{"attributes":{"below":[{"id":"4320"}],"center":[{"id":"4323"},{"id":"4327"}],"left":[{"id":"4324"}],"plot_height":500,"plot_width":700,"renderers":[{"id":"4333"}],"sizing_mode":"stretch_both","title":{"id":"4340"},"toolbar":{"id":"4328"},"toolbar_location":null,"x_range":{"id":"4312"},"x_scale":{"id":"4316"},"y_range":{"id":"4314"},"y_scale":{"id":"4318"}},"id":"4311","subtype":"Figure","type":"Plot"},{"attributes":{"axis_label":"Dia da semana","axis_label_text_font_size":"12pt","axis_label_text_font_style":"normal","formatter":{"id":"4344"},"major_label_overrides":{"0":"Seg","1":"Ter","2":"Qua","3":"Qui","4":"Sex","5":"S\u00e1b","6":"Dom"},"major_label_text_font_size":"10pt","ticker":{"id":"4337"}},"id":"4320","type":"LinearAxis"},{"attributes":{},"id":"4343","type":"BasicTickFormatter"},{"attributes":{"callback":null,"renderers":[{"id":"4333"}],"tooltips":[["Dia da semana","@weekday_str_complete_pt"],["Quantidade","@count{,}"]]},"id":"4335","type":"HoverTool"},{"attributes":{"end":6.5,"start":-0.5},"id":"4312","type":"DataRange1d"},{"attributes":{"start":0},"id":"4314","type":"DataRange1d"},{"attributes":{},"id":"4345","type":"UnionRenderers"},{"attributes":{"axis_label":"N\u00famero de m\u00fasicas","axis_label_text_font_size":"12pt","axis_label_text_font_style":"normal","formatter":{"id":"4343"},"major_label_text_font_size":"10pt","ticker":{"id":"4325"}},"id":"4324","type":"LinearAxis"}],"root_ids":["4311"]},"title":"Bokeh Application","version":"2.0.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('4424').textContent;
+                  var render_items = [{"docid":"ece79121-a034-434a-b5e4-bcb29c60228a","root_ids":["4311"],"roots":{"4311":"bc186cb4-bcf6-4c46-9b4f-e98e9e92f5a7"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

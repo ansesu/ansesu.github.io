@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Lista de Conteúdos  Layout do código  Indentação Espaço ou tab? Tamanho máximo da linha   Referências   Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado.">
+  <meta name="description" content="Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python.">
 
   
   <link rel="alternate" hreflang="en" href="/en/post/python-pep8/">
@@ -280,7 +280,7 @@
   <meta property="og:site_name" content="ansesu">
   <meta property="og:url" content="/post/python-pep8/">
   <meta property="og:title" content="PEP8 - Melhores práticas de estilo em Python | ansesu">
-  <meta property="og:description" content="Lista de Conteúdos  Layout do código  Indentação Espaço ou tab? Tamanho máximo da linha   Referências   Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="pt">
   
     
@@ -325,7 +325,7 @@
       "url": "/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Lista de Conteúdos  Layout do código  Indentação Espaço ou tab? Tamanho máximo da linha   Referências   Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado."
+  "description": "Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python."
 }
 </script>
 
@@ -727,7 +727,13 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2>Lista de Conteúdos</h2>
+      <p>Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python. Esse post é, então, uma <em>colinha</em> pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar na minha pesquisa. Usei como referência o PEP 8 do site oficial 
+<a href="https://www.python.org/" target="_blank" rel="noopener">python.org</a>. As PEPs, <em>Python Enhancement Proposals</em>, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
+<a href="#pep1">[1]</a>. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
+<a href="#pep8">[2]</a>. Então, vamos lá!</p>
+<p>(O código aqui mostrado foi copiado da referência 
+<a href="#pep8">[2]</a>)</p>
+<h2>Lista de Conteúdos</h2>
 <nav id="TableOfContents">
   <ul>
     <li><a href="#layout-do-código">Layout do código</a>
@@ -740,12 +746,6 @@
     <li><a href="#referências">Referências</a></li>
   </ul>
 </nav>
-<p>Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python. Esse post é, então, uma <em>colinha</em> pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar na minha pesquisa. Usei como referência o PEP 8 do site oficial 
-<a href="https://www.python.org/" target="_blank" rel="noopener">python.org</a>. As PEPs, <em>Python Enhancement Proposals</em>, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
-<a href="#pep1">[1]</a>. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
-<a href="#pep8">[2]</a>. Então, vamos lá!</p>
-<p>(O código aqui mostrado foi copiado da referência 
-<a href="#pep8">[2]</a>)</p>
 <h2 id="layout-do-código">Layout do código</h2>
 <h3 id="indentação">Indentação</h3>
 <p>Padrão: 4 espaços por nível de indentação</p>

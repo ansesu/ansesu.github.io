@@ -152,7 +152,7 @@
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figura: número de músicas em cada mês de 2019.&lt;p/&gt;
-&lt;p&gt;A figura abaixo mostra a quantidade de músicas escutadas em cada dia da semana em 2019. Como mencionei anteriormente, costumo ouvir música quando estou fazendo alguma atividade, então a quantidade é naturalmente maior nos dias de semana. Especialmente, nas segundas acho que sou mais produtivo.&lt;/p&gt;
+A figura abaixo mostra a quantidade de músicas escutadas em cada dia da semana em 2019. Como mencionei anteriormente, costumo ouvir música quando estou fazendo alguma atividade, então a quantidade é naturalmente maior nos dias de semana. Especialmente, nas segundas acho que sou mais produtivo.
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
  &lt;iframe
@@ -162,7 +162,7 @@
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figura: número de músicas em cada dia da semana em 2019.&lt;p/&gt;
-&lt;p&gt;Também resolvi analisar as maiores sequências escutando o mesmo artista ou música. Geralmente, deixo o player no modo aleatório (que acho não ser tão aleatório assim), então, uma sequência indica que estou gostando bastante daquele artista ou música (em outras palavras, viciado neles). Essa é uma prática que estou tentando mudar esse ano: ouvir mais músicas em sequência de artistas individualmente, o que tenho até que conseguido. A figura abaixo mostra as maiores sequências de reproduções do mesmo artista em 2019. Em especial, no final de 2018 descobri a banda Vulfpeck (muito boa por sinal) e acabei a escutando bastante. Essa foi minha maior sequência em 2019. Outras menções honrosas: Foster the People (sempre) e Beach Fossils, esta apresentada pelo colega de laboratório Gustavo.&lt;/p&gt;
+Também resolvi analisar as maiores sequências escutando o mesmo artista ou música. Geralmente, deixo o player no modo aleatório (que acho não ser tão aleatório assim), então, uma sequência indica que estou gostando bastante daquele artista ou música (em outras palavras, viciado neles). A figura abaixo mostra as sequências de reproduções do mesmo artista em 2019. Em especial, no final de 2018 descobri a banda Vulfpeck (muito boa por sinal) e acabei a escutando bastante. Essa foi minha maior sequência em 2019. Outras menções honrosas: Foster the People (sempre) e Beach Fossils, esta apresentada pelo colega de laboratório Gustavo. 
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
  &lt;iframe
@@ -172,7 +172,7 @@
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: Sequências escutando o mesmo artista em 2019.&lt;p/&gt;
-&lt;p&gt;A figura abaixo mostra as maiores sequências escutando a mesma música em 2019. Em resumo, não costumo ouvir músicas repetidas em sequência.&lt;/p&gt;
+A figura abaixo mostra as sequências escutando a mesma música em 2019. Em resumo, não costumo ouvir músicas repetidas em sequência.
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
  &lt;iframe
@@ -187,7 +187,7 @@
 $$
 H = \text{Diversidade} = -\dfrac{1}{\log n}\sum_i P_i \log P_i
 $$
-em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escutadas daquele artista. Qualitativamente, a entropia indica a quantidade de informação contida na distribuição de probabilidade dos artistas. Valores próximos de um ($\approx 1$) indicam que a informação está distribuída igualmente entre os artistas, isto é, os ouço na mesma proporção. Por outro lado, valores próximos de zero ($\approx 0$) indicam que um dos artistas domina minhas sessões. Por isso, considero, aqui, que a entropia é uma medida de diversidade musical (de artistas). A figura abaixo mostra a entropia em cada semana de 2019. A entropia apresenta valores menores justamente quando tive minhas maiores sequências. De resto, parece que, durante uma semana, tenho o costume de ouvir um conjunto de artistas em quantidade diversificada.&lt;/p&gt;
+em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escutadas do $i$-ésimo artista. A entropia indica a quantidade de informação contida na distribuição de probabilidade dos artistas. Valores próximos de um ($\approx 1$) indicam que a informação está distribuída igualmente entre os artistas, isto é, os ouço na mesma proporção. Por outro lado, valores próximos de zero ($\approx 0$) indicam que um dos artistas domina minhas sessões. Por isso, considero, aqui, que a entropia é uma medida de diversidade musical (de artistas que escuto - que difere do conceito de eclético). A figura abaixo mostra a entropia em cada semana de 2019. A entropia apresenta valores menores justamente quando tive minhas maiores sequências. De resto, parece que, durante uma semana, tenho o costume de ouvir vários artistas em quantidade homogênea.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
  &lt;iframe
@@ -207,10 +207,10 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figura: Diversidade dos artistas que escutei em cada dia da semana de 2019.&lt;p/&gt;
-&lt;p&gt;Navegando pela internet, achei um tipo de gráfico bem massa chamado &lt;em&gt;stream wave chart&lt;/em&gt;. Inclusive, você pode fazer o seu próprio gráfico pelo 
-&lt;a href=&#34;https://savas.ca/lastwave/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;site&lt;/a&gt;, basta inserir o nome de usuário da sua conta no last.fm. Esse tipo de gráfico indica a evolução temporal do volume de músicas (dado pela área colorida) de determinado artista em uma janela temporal. Achei legal e tentei fazer o meu próprio &lt;em&gt;stream chart&lt;/em&gt;. Os gráficos acima foram feitos por meio do pacote 
+&lt;p&gt;Navegando pela internet, achei um tipo de gráfico bem massa chamado &lt;em&gt;stream wave chart&lt;/em&gt;. Esse tipo de gráfico indica a evolução temporal do volume de músicas (dado por uma área colorida) de determinado artista em uma janela temporal. Achei legal e tentei fazer o meu próprio &lt;em&gt;stream chart&lt;/em&gt;. Os gráficos acima foram feitos por meio do pacote 
 &lt;a href=&#34;https://docs.bokeh.org/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt; do Python. Porém, não há suporte para o &lt;em&gt;stream chart&lt;/em&gt; no Bokeh. Então, tive que procurar alternativas, e acabei encontrando o pacote 
-&lt;a href=&#34;https://altair-viz.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Altair&lt;/a&gt; também do Python. Selecionei apenas os artistas com mais de 30 reproduções no ano de 2019, o que resultou em 21 artistas únicos. A figura abaixo mostra a evolução do volume de reproduções desses artistas no decorrer de 2019. Você pode clicar na legenda para selecionar um artista em específico.&lt;/p&gt;
+&lt;a href=&#34;https://altair-viz.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Altair&lt;/a&gt; também do Python. Selecionei apenas os artistas com mais de 30 reproduções no ano de 2019, o que resultou em 21 artistas únicos. A figura abaixo mostra a evolução do volume de reproduções desses artistas no decorrer de 2019. Você pode clicar na legenda para selecionar um artista em específico. Inclusive, você pode fazer o seu próprio gráfico pelo 
+&lt;a href=&#34;https://savas.ca/lastwave/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;site&lt;/a&gt;, basta inserir o nome de usuário da sua conta no last.fm.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:35%; position:relative; display:block; width: 100%; max-width: 600px; margin: 0 auto;&#34;&gt;
  &lt;iframe
@@ -221,7 +221,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figura: Evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.&lt;p/&gt;
 &lt;p&gt;Por fim, utilizei o 
-&lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; para confeccionar um gráfico de corrida de barras (que, por sinal, bem famoso nas redes sociais atualmente). Essa é uma maneira alternativa de visualizar a evolução temporal da quantidade de músicas ouvidas por artista, pois acompanhamos o número de reproduções acumulado.&lt;/p&gt;
+&lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; para confeccionar um gráfico de corrida de barras (que, por sinal, está bem famoso nas redes sociais atualmente). Essa é uma maneira alternativa de visualizar a evolução temporal da quantidade de músicas ouvidas por artista, pois acompanhamos o número de reproduções acumulado.&lt;/p&gt;
 &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117094&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117094/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;
 &lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
 &lt;p&gt;&lt;a name=&#34;entropy&#34;&gt; [1] Shannon, Claude E., &lt;em&gt;A Mathematical Theory of Communication&lt;/em&gt;. 
@@ -235,7 +235,13 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
       <link>/post/python-pep8/</link>
       <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/post/python-pep8/</guid>
-      <description>&lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
+      <description>&lt;p&gt;Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python. Esse post é, então, uma &lt;em&gt;colinha&lt;/em&gt; pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar na minha pesquisa. Usei como referência o PEP 8 do site oficial 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt;. As PEPs, &lt;em&gt;Python Enhancement Proposals&lt;/em&gt;, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
+&lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
+&lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. Então, vamos lá!&lt;/p&gt;
+&lt;p&gt;(O código aqui mostrado foi copiado da referência 
+&lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;)&lt;/p&gt;
+&lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#layout-do-código&#34;&gt;Layout do código&lt;/a&gt;
@@ -248,12 +254,6 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
     &lt;li&gt;&lt;a href=&#34;#referências&#34;&gt;Referências&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
-&lt;p&gt;Nos últimos tempos, precisei resgatar os códigos de análises que realizei durante o mestrado. Percebi que eles estão um pouco confusos e difíceis de ler. Com intuito de resolver esse problema, decidi buscar entender quais são as melhores práticas de estilo quando programando em Python. Esse post é, então, uma &lt;em&gt;colinha&lt;/em&gt; pra que eu possa sempre estar checando caso esqueça de algo. Pretendo ir atualizando essa página frequentemente na medida em que eu avançar na minha pesquisa. Usei como referência o PEP 8 do site oficial 
-&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt;. As PEPs, &lt;em&gt;Python Enhancement Proposals&lt;/em&gt;, são documentos criados para informar os usuários de Python acerca de padrões, novos atributos, seus processos ou seus ambientes 
-&lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Especificamente, a PEP 8 indica os padrões de estilo para quem programa nessa linguagem, a fim de que o código possa ser de mais fácil leitura 
-&lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. Então, vamos lá!&lt;/p&gt;
-&lt;p&gt;(O código aqui mostrado foi copiado da referência 
-&lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;layout-do-código&#34;&gt;Layout do código&lt;/h2&gt;
 &lt;h3 id=&#34;indentação&#34;&gt;Indentação&lt;/h3&gt;
 &lt;p&gt;Padrão: 4 espaços por nível de indentação&lt;/p&gt;
@@ -394,7 +394,9 @@ result = some_function_that_takes_arguments(
       <link>/post/rt-live-maringa/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/post/rt-live-maringa/</guid>
-      <description>&lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
+      <description>&lt;p&gt;Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.&lt;/p&gt;
+&lt;p&gt;O número de reprodução é o número esperado de infecções decorrentes de um indivíduo que se tornou infeccioso no tempo $t$. Do ponto de vista da saúde pública, é de interesse que esse número permaneça abaixo do limiar epidêmico ($R=1$), o que indica que a epidemia está desacelerando. O número de reprodução básico $R_0$ é a estimativa para essa quantidade no início da epidemia, quando a população inteira está suscetível à doença. Porém, ao passo que parcela da população ganha imunidade e medidas de intervenção são tomadas, o número de reprodução básico não tem mais validade e a atenção muda para o cálculo do que chamamos de número de reprodução que varia no tempo $R(t)$. Como exemplo, é possível citar os números de reprodução instantâneo e efetivo. Como se bem sabe, nenhum modelo é perfeito visto que sempre existem suposições e hipóteses necessárias para que a modelagem seja realizada. Além disso, existe uma limitação inerente da natureza do dado que, sendo mais ou menos detalhado, impacta na qualidade do modelo. A seguir, vou discorrer um pouco sobre a implementação que fizemos desses dois modelos para o caso de Maringá e sobre a limitação de dados públicos disponíveis nesse caso.&lt;/p&gt;
+&lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#número-de-reprodução-efetivo&#34;&gt;Número de reprodução efetivo&lt;/a&gt;&lt;/li&gt;
@@ -404,8 +406,6 @@ result = some_function_that_takes_arguments(
     &lt;li&gt;&lt;a href=&#34;#referências&#34;&gt;Referências&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
-&lt;p&gt;Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.&lt;/p&gt;
-&lt;p&gt;O número de reprodução é o número esperado de infecções decorrentes de um indivíduo que se tornou infeccioso no tempo $t$. Do ponto de vista da saúde pública, é de interesse que esse número permaneça abaixo do limiar epidêmico ($R=1$), o que indica que a epidemia está desacelerando. O número de reprodução básico $R_0$ é a estimativa para essa quantidade no início da epidemia, quando a população inteira está suscetível à doença. Porém, ao passo que parcela da população ganha imunidade e medidas de intervenção são tomadas, o número de reprodução básico não tem mais validade e a atenção muda para o cálculo do que chamamos de número de reprodução que varia no tempo $R(t)$. Como exemplo, é possível citar os números de reprodução instantâneo e efetivo. Como se bem sabe, nenhum modelo é perfeito visto que sempre existem suposições e hipóteses necessárias para que a modelagem seja realizada. Além disso, existe uma limitação inerente da natureza do dado que, sendo mais ou menos detalhado, impacta na qualidade do modelo. A seguir, vou discorrer um pouco sobre a implementação que fizemos desses dois modelos para o caso de Maringá e sobre a limitação de dados públicos disponíveis nesse caso.&lt;/p&gt;
 &lt;h2 id=&#34;número-de-reprodução-efetivo&#34;&gt;Número de reprodução efetivo&lt;/h2&gt;
 &lt;p&gt;Anteriormente, no &lt;em&gt;website&lt;/em&gt; 
 &lt;a href=&#34;http://complex.pfi.uem.br/covid&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Observatório COVID-19 Maringá&lt;/a&gt;, calculamos o número de reprodução instantâneo $R_{inst}(t)$ utilizando o pacote EpiEstim do R 

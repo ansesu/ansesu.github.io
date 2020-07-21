@@ -63,6 +63,51 @@
   </url>
   
   <url>
+    <loc>/en/tag/last.fm/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/last.fm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/last.fm/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/post/lastfm-2019/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/post/lastfm-2019/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/lastfm-2019/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/tags/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+  </url>
+  
+  <url>
     <loc>/en/tag/pep8/</loc>
     <lastmod>2020-07-18T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -104,21 +149,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/en/tag/python/"
-                />
-  </url>
-  
-  <url>
-    <loc>/en/tags/</loc>
-    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tags/"
                 />
   </url>
   

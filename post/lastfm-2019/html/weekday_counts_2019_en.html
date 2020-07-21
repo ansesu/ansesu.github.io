@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.1.min.js" integrity="sha384-JpP8FXbgAZLkfur7LiK3j9AGBhHNIvF742meBJrjO2ShJDhCG2I1uVvW+0DUtrmc" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="5ea2f09c-c7db-4434-8e1e-f9208ad865ff" data-root-id="1001"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1114">
+          {"cb96d6f2-e5b2-4c33-9c20-294056945364":{"roots":{"references":[{"attributes":{},"id":"1006","type":"LinearScale"},{"attributes":{"start":0},"id":"1004","type":"DataRange1d"},{"attributes":{},"id":"1032","type":"BasicTickFormatter"},{"attributes":{},"id":"1036","type":"UnionRenderers"},{"attributes":{"callback":null,"renderers":[{"id":"1023"}],"tooltips":[["Day of the week","@weekday_str_complete_en"],["Count","@count{,}"]]},"id":"1025","type":"HoverTool"},{"attributes":{"data_source":{"id":"1019"},"glyph":{"id":"1021"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1022"},"selection_glyph":null,"view":{"id":"1024"}},"id":"1023","type":"GlyphRenderer"},{"attributes":{},"id":"1008","type":"LinearScale"},{"attributes":{"axis_label":"Weekday","axis_label_text_font_size":"12pt","axis_label_text_font_style":"normal","formatter":{"id":"1034"},"major_label_overrides":{"0":"Mon","1":"Tue","2":"Wed","3":"Thu","4":"Fri","5":"Sat","6":"Sun"},"major_label_text_font_size":"10pt","ticker":{"id":"1027"}},"id":"1010","type":"LinearAxis"},{"attributes":{"source":{"id":"1019"}},"id":"1024","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.85},"fill_color":{"value":"#2ca25f"},"line_alpha":{"value":0.85},"line_color":{"value":"#1f77b4"},"line_width":{"value":0},"top":{"field":"count"},"width":{"value":0.9},"x":{"field":"weekday"}},"id":"1021","type":"VBar"},{"attributes":{},"id":"1015","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#2ca25f"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"line_width":{"value":0},"top":{"field":"count"},"width":{"value":0.9},"x":{"field":"weekday"}},"id":"1022","type":"VBar"},{"attributes":{},"id":"1035","type":"Selection"},{"attributes":{"ticks":[0,1,2,3,4,5,6]},"id":"1027","type":"FixedTicker"},{"attributes":{"text":""},"id":"1031","type":"Title"},{"attributes":{"data":{"count":[2182,1559,1452,1949,1449,914,710],"index":[0,1,2,3,4,5,6],"weekday":[0,1,2,3,4,5,6],"weekday_str_complete_en":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"weekday_str_complete_pt":["Segunda","Ter\u00e7a","Quarta","Quinta","Sexta","S\u00e1bado","Domingo"],"weekday_str_en":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"weekday_str_pt":["Seg","Ter","Qua","Qui","Sex","S\u00e1b","Dom"]},"selected":{"id":"1035"},"selection_policy":{"id":"1036"}},"id":"1019","type":"ColumnDataSource"},{"attributes":{"axis":{"id":"1010"},"grid_line_color":null,"ticker":null},"id":"1013","type":"Grid"},{"attributes":{"end":6.5,"start":-0.5},"id":"1002","type":"DataRange1d"},{"attributes":{"below":[{"id":"1010"}],"center":[{"id":"1013"},{"id":"1017"}],"left":[{"id":"1014"}],"plot_height":500,"plot_width":700,"renderers":[{"id":"1023"}],"sizing_mode":"stretch_both","title":{"id":"1031"},"toolbar":{"id":"1018"},"toolbar_location":null,"x_range":{"id":"1002"},"x_scale":{"id":"1006"},"y_range":{"id":"1004"},"y_scale":{"id":"1008"}},"id":"1001","subtype":"Figure","type":"Plot"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","logo":null,"tools":[{"id":"1025"}]},"id":"1018","type":"Toolbar"},{"attributes":{},"id":"1034","type":"BasicTickFormatter"},{"attributes":{"axis":{"id":"1014"},"dimension":1,"grid_line_color":null,"ticker":null},"id":"1017","type":"Grid"},{"attributes":{"axis_label":"Song count","axis_label_text_font_size":"12pt","axis_label_text_font_style":"normal","formatter":{"id":"1032"},"major_label_text_font_size":"10pt","ticker":{"id":"1015"}},"id":"1014","type":"LinearAxis"}],"root_ids":["1001"]},"title":"Bokeh Application","version":"2.0.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1114').textContent;
+                  var render_items = [{"docid":"cb96d6f2-e5b2-4c33-9c20-294056945364","root_ids":["1001"],"roots":{"1001":"5ea2f09c-c7db-4434-8e1e-f9208ad865ff"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

@@ -30,6 +30,8 @@
   <meta name="description" content="Lista de Conteúdos  Visão geral As músicas mais ouvidas de 2019 Os artistas mais ouvidos de 2019 Os álbuns mais ouvidos de 2019 Os artistas novos mais ouvidos de 2019 Visualizações Referências   O last.">
 
   
+  <link rel="alternate" hreflang="en" href="/en/post/lastfm-2019/">
+  
   <link rel="alternate" hreflang="pt" href="/post/lastfm-2019/">
 
   
@@ -603,6 +605,21 @@
       
 
       
+      <li class="nav-item dropdown i18n-dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-globe mr-1" aria-hidden="true"></i><span class="d-none d-lg-inline">Português</span></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-item dropdown-item-active">
+            <span>Português</span>
+          </div>
+          
+          <a class="dropdown-item" href="/en/post/lastfm-2019/">
+            <span>English</span>
+          </a>
+          
+        </div>
+      </li>
+      
 
     </ul>
 
@@ -669,7 +686,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    8 minutos de leitura
+    7 minutos de leitura
   </span>
   
 
@@ -843,7 +860,7 @@
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
 <p style="text-align: center">Figura: número de músicas em cada mês de 2019.<p/>
-<p>A figura abaixo mostra a quantidade de músicas escutadas em cada dia da semana em 2019. Como mencionei anteriormente, costumo ouvir música quando estou fazendo alguma atividade, então a quantidade é naturalmente maior nos dias de semana. Especialmente, nas segundas acho que sou mais produtivo.</p>
+A figura abaixo mostra a quantidade de músicas escutadas em cada dia da semana em 2019. Como mencionei anteriormente, costumo ouvir música quando estou fazendo alguma atividade, então a quantidade é naturalmente maior nos dias de semana. Especialmente, nas segundas acho que sou mais produtivo.
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
  <iframe
@@ -853,7 +870,7 @@
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
 <p style="text-align: center">Figura: número de músicas em cada dia da semana em 2019.<p/>
-<p>Também resolvi analisar as maiores sequências escutando o mesmo artista ou música. Geralmente, deixo o player no modo aleatório (que acho não ser tão aleatório assim), então, uma sequência indica que estou gostando bastante daquele artista ou música (em outras palavras, viciado neles). Essa é uma prática que estou tentando mudar esse ano: ouvir mais músicas em sequência de artistas individualmente, o que tenho até que conseguido. A figura abaixo mostra as maiores sequências de reproduções do mesmo artista em 2019. Em especial, no final de 2018 descobri a banda Vulfpeck (muito boa por sinal) e acabei a escutando bastante. Essa foi minha maior sequência em 2019. Outras menções honrosas: Foster the People (sempre) e Beach Fossils, esta apresentada pelo colega de laboratório Gustavo.</p>
+Também resolvi analisar as maiores sequências escutando o mesmo artista ou música. Geralmente, deixo o player no modo aleatório (que acho não ser tão aleatório assim), então, uma sequência indica que estou gostando bastante daquele artista ou música (em outras palavras, viciado neles). A figura abaixo mostra as sequências de reproduções do mesmo artista em 2019. Em especial, no final de 2018 descobri a banda Vulfpeck (muito boa por sinal) e acabei a escutando bastante. Essa foi minha maior sequência em 2019. Outras menções honrosas: Foster the People (sempre) e Beach Fossils, esta apresentada pelo colega de laboratório Gustavo. 
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
  <iframe
@@ -863,7 +880,7 @@
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
 <p style="text-align: center; font-size: 16px">Figura: Sequências escutando o mesmo artista em 2019.<p/>
-<p>A figura abaixo mostra as maiores sequências escutando a mesma música em 2019. Em resumo, não costumo ouvir músicas repetidas em sequência.</p>
+A figura abaixo mostra as sequências escutando a mesma música em 2019. Em resumo, não costumo ouvir músicas repetidas em sequência.
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
  <iframe
@@ -878,7 +895,7 @@
 $$
 H = \text{Diversidade} = -\dfrac{1}{\log n}\sum_i P_i \log P_i
 $$
-em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escutadas daquele artista. Qualitativamente, a entropia indica a quantidade de informação contida na distribuição de probabilidade dos artistas. Valores próximos de um ($\approx 1$) indicam que a informação está distribuída igualmente entre os artistas, isto é, os ouço na mesma proporção. Por outro lado, valores próximos de zero ($\approx 0$) indicam que um dos artistas domina minhas sessões. Por isso, considero, aqui, que a entropia é uma medida de diversidade musical (de artistas). A figura abaixo mostra a entropia em cada semana de 2019. A entropia apresenta valores menores justamente quando tive minhas maiores sequências. De resto, parece que, durante uma semana, tenho o costume de ouvir um conjunto de artistas em quantidade diversificada.</p>
+em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escutadas do $i$-ésimo artista. A entropia indica a quantidade de informação contida na distribuição de probabilidade dos artistas. Valores próximos de um ($\approx 1$) indicam que a informação está distribuída igualmente entre os artistas, isto é, os ouço na mesma proporção. Por outro lado, valores próximos de zero ($\approx 0$) indicam que um dos artistas domina minhas sessões. Por isso, considero, aqui, que a entropia é uma medida de diversidade musical (de artistas que escuto - que difere do conceito de eclético). A figura abaixo mostra a entropia em cada semana de 2019. A entropia apresenta valores menores justamente quando tive minhas maiores sequências. De resto, parece que, durante uma semana, tenho o costume de ouvir vários artistas em quantidade homogênea.</p>
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
  <iframe
@@ -898,10 +915,10 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
 <p style="text-align: center">Figura: Diversidade dos artistas que escutei em cada dia da semana de 2019.<p/>
-<p>Navegando pela internet, achei um tipo de gráfico bem massa chamado <em>stream wave chart</em>. Inclusive, você pode fazer o seu próprio gráfico pelo 
-<a href="https://savas.ca/lastwave/" target="_blank" rel="noopener">site</a>, basta inserir o nome de usuário da sua conta no last.fm. Esse tipo de gráfico indica a evolução temporal do volume de músicas (dado pela área colorida) de determinado artista em uma janela temporal. Achei legal e tentei fazer o meu próprio <em>stream chart</em>. Os gráficos acima foram feitos por meio do pacote 
+<p>Navegando pela internet, achei um tipo de gráfico bem massa chamado <em>stream wave chart</em>. Esse tipo de gráfico indica a evolução temporal do volume de músicas (dado por uma área colorida) de determinado artista em uma janela temporal. Achei legal e tentei fazer o meu próprio <em>stream chart</em>. Os gráficos acima foram feitos por meio do pacote 
 <a href="https://docs.bokeh.org/en/latest/index.html" target="_blank" rel="noopener">Bokeh</a> do Python. Porém, não há suporte para o <em>stream chart</em> no Bokeh. Então, tive que procurar alternativas, e acabei encontrando o pacote 
-<a href="https://altair-viz.github.io/" target="_blank" rel="noopener">Altair</a> também do Python. Selecionei apenas os artistas com mais de 30 reproduções no ano de 2019, o que resultou em 21 artistas únicos. A figura abaixo mostra a evolução do volume de reproduções desses artistas no decorrer de 2019. Você pode clicar na legenda para selecionar um artista em específico.</p>
+<a href="https://altair-viz.github.io/" target="_blank" rel="noopener">Altair</a> também do Python. Selecionei apenas os artistas com mais de 30 reproduções no ano de 2019, o que resultou em 21 artistas únicos. A figura abaixo mostra a evolução do volume de reproduções desses artistas no decorrer de 2019. Você pode clicar na legenda para selecionar um artista em específico. Inclusive, você pode fazer o seu próprio gráfico pelo 
+<a href="https://savas.ca/lastwave/" target="_blank" rel="noopener">site</a>, basta inserir o nome de usuário da sua conta no last.fm.</p>
 <div
  style="padding-bottom:35%; position:relative; display:block; width: 100%; max-width: 600px; margin: 0 auto;">
  <iframe
@@ -912,7 +929,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
 </div>
 <p style="text-align: center">Figura: Evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.<p/>
 <p>Por fim, utilizei o 
-<a href="https://flourish.io/" target="_blank" rel="noopener">flourish.io</a> para confeccionar um gráfico de corrida de barras (que, por sinal, bem famoso nas redes sociais atualmente). Essa é uma maneira alternativa de visualizar a evolução temporal da quantidade de músicas ouvidas por artista, pois acompanhamos o número de reproduções acumulado.</p>
+<a href="https://flourish.io/" target="_blank" rel="noopener">flourish.io</a> para confeccionar um gráfico de corrida de barras (que, por sinal, está bem famoso nas redes sociais atualmente). Essa é uma maneira alternativa de visualizar a evolução temporal da quantidade de músicas ouvidas por artista, pois acompanhamos o número de reproduções acumulado.</p>
 <div class="flourish-embed flourish-bar_race" data-src="visualisation/3117094" data-url="https://flo.uri.sh/visualisation/3117094/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 <h2 id="referências">Referências</h2>
 <p><a name="entropy"> [1] Shannon, Claude E., <em>A Mathematical Theory of Communication</em>. 
