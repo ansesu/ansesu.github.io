@@ -104,6 +104,7 @@
 &lt;li&gt;Aqueous (12 plays)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;visualizations&#34;&gt;Visualizations&lt;/h2&gt;
+&lt;p&gt;(The figures here shown are interactive)&lt;/p&gt;
 &lt;p&gt;Now, I present some visualizations with some interesting statistics (at least for me). The figure below shows the number of songs listened in each period of the day in 2019. Usually, when I am programming, studying or working out, I listen to music. In this sense, the higher musical activity may be a proxy of my productivity (and the low activity shows that I normally don&amp;rsquo;t wake up early).&lt;/p&gt;
 &lt;div style=&#34;padding-bottom:75%; width: 100%; height: 100%; position:relative; display: block; max-width: 900px;  max-height: 900px; margin: 0 auto;&#34;&gt;
     &lt;iframe
