@@ -181,7 +181,7 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;Figure: Diversity of artist (as measured by Shannon entropy) in each day of the week in 2019.&lt;p/&gt;
 &lt;p&gt;Browsing the internet, I found a cool visualization called 
-&lt;a href=&#34;https://datavizcatalogue.com/methods/images/top_images/SVG/stream_graph.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stream wave chart&lt;/a&gt;. This kind of figure shows the temporal evolution of the volume of songs listened (given by a filled area) of a set of specific artists. I found it really awesome and tried to make my own stream chart. The above figures were all made using the Python package 
+&lt;a href=&#34;https://datavizcatalogue.com/methods/images/top_images/SVG/stream_graph.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stream wave chart&lt;/a&gt;. This kind of figure shows the temporal evolution of the volume of songs listened (given by a color filled area) of a set of specific artists. I found it really awesome and tried to make my own stream chart. The above figures were all made using the Python package 
 &lt;a href=&#34;https://docs.bokeh.org/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt;. But it turns out this kind of visualization is not available on Bokeh. I searched for some alternatives and found out the 
 &lt;a href=&#34;https://altair-viz.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Altair&lt;/a&gt; package (also from Python). Then, I selected all the artists with at least 30 reproductions in 2019, which yielded a set of 21 unique artists. The figure below shows the evolution of my reproduction volume in 2019. You can click on the names to select a specific artist. Also, you can do your own last.fm wave chart in a non-pythonic way by using this 
 &lt;a href=&#34;https://savas.ca/lastwave/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;site&lt;/a&gt; (try it out!).&lt;/p&gt;
@@ -193,7 +193,7 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figure: Temporal evolution of the volume of reproductions of top artists in 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: Temporal evolution of the volume of reproduction of my top artists in 2019.&lt;p/&gt;
 &lt;p&gt;Finally, I used 
 &lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; app to make a bar chart race (which has been really popular in social media recently). This is an alternative to visualize the temporal evolution of the listening history, but, this time, considering the cumulative number of reproductions.&lt;/p&gt;
 &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117094&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117094/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;
