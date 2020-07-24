@@ -688,7 +688,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 minutos de leitura
+    5 minutos de leitura
   </span>
   
 
@@ -741,6 +741,8 @@
         <li><a href="#indentação">Indentação</a></li>
         <li><a href="#espaço-ou-tab">Espaço ou tab?</a></li>
         <li><a href="#tamanho-máximo-da-linha">Tamanho máximo da linha</a></li>
+        <li><a href="#operadores-binários-e-quebra-de-linha">Operadores binários e quebra de linha</a></li>
+        <li><a href="#linhas-brancas">Linhas brancas</a></li>
       </ul>
     </li>
     <li><a href="#referências">Referências</a></li>
@@ -873,6 +875,34 @@ result = some_function_that_takes_arguments(
      open('/path/to/some/file/being/written', 'w') as file_2:
     file_2.write(file_1.read())
 </code></pre>
+<h3 id="operadores-binários-e-quebra-de-linha">Operadores binários e quebra de linha</h3>
+<p>Padrão: escrever os operadores no início de uma nova linha.</p>
+<pre><code class="language-python">income = (gross_wages
+          + taxable_interest
+          + (dividends - qualified_dividends)
+          - ira_deduction
+          - student_loan_interest)
+</code></pre>
+<p>É possível melhor entender a relação entre as variáveis descritas. No caso mostrado acima, percebe-se que existem quantidades que devem ser somadas, pois indicam um crédito, e outras subtraídas uma vez que indicam um débito. A posição do operador no início é conveniente, pois a operação sendo realizada é explícita, além do que todos os operadores ficam alinhados, o que melhora a legibilidade do código.</p>
+<h3 id="linhas-brancas">Linhas brancas</h3>
+<p>Padrões:</p>
+<ul>
+<li>
+<p>O início das definições de funções e classes devem começar com duas linhas brancas;</p>
+</li>
+<li>
+<p>Definições de métodos dentro de classes devem ser envoltos de uma linha branca;</p>
+</li>
+<li>
+<p>Linhas brancas podem ser usadas para separar grupos de funções correlatas;</p>
+</li>
+<li>
+<p>Linhas brancas podem ser usadas em funções para separar seções lógicas;</p>
+</li>
+<li>
+<p>Python aceita o comando <span class="markup-quote">Ctrl+L</span> para introduzir um espaço em branco, apesar de outras ferramentas usam esses caracteres como separadores de página.</p>
+</li>
+</ul>
 <h2 id="referências">Referências</h2>
 <p><a name="pep1"> [1] 
 <a href="https://www.python.org/dev/peps/pep-0001/" target="_blank" rel="noopener">PEP 1 &ndash; PEP Purpose and Guidelines.</a></p>

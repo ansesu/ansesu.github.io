@@ -688,7 +688,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    5 min read
   </span>
   
 
@@ -741,6 +741,8 @@
         <li><a href="#indentation">Indentation</a></li>
         <li><a href="#space-or-tab">Space or tab?</a></li>
         <li><a href="#maximum-line-length">Maximum line length</a></li>
+        <li><a href="#binary-operators-and-line-breaks">Binary operators and line breaks</a></li>
+        <li><a href="#blank-lines">Blank lines</a></li>
       </ul>
     </li>
     <li><a href="#references">References</a></li>
@@ -871,6 +873,34 @@ result = some_function_that_takes_arguments(
      open('/path/to/some/file/being/written', 'w') as file_2:
     file_2.write(file_1.read())
 </code></pre>
+<h3 id="binary-operators-and-line-breaks">Binary operators and line breaks</h3>
+<p>Standard: write binary operators in the beginning of each line.</p>
+<pre><code class="language-python">income = (gross_wages
+          + taxable_interest
+          + (dividends - qualified_dividends)
+          - ira_deduction
+          - student_loan_interest)
+</code></pre>
+<p>By doing so, it is possible to better understand the relation between variables. In the case shown above, we can see there are quantities that are added, which indicates some kind of credit, whereas other variables are subtracted, indicating a debt. The operator&rsquo;s position being in the beginning of the line is therefore convenient since the operation performed (and, thus, its meaning) is explicitly displayed. Also, all operators are aligned, improving readability.</p>
+<h3 id="blank-lines">Blank lines</h3>
+<p>Standard:</p>
+<ul>
+<li>
+<p>Class and function definitions start with two blank lines;</p>
+</li>
+<li>
+<p>Method definitions inside classes are surrounded by one blank line;</p>
+</li>
+<li>
+<p>Blank lines can be used to separate groups of related functions;</p>
+</li>
+<li>
+<p>Blank lines can be used to separate logical sections in functions;</p>
+</li>
+<li>
+<p>Python understands the command <span class="markup-quote">Ctrl+L</span> as a new blank line, although this input is understood as a page break in other tools.</p>
+</li>
+</ul>
 <h2 id="references">References</h2>
 <p><a name="pep1"> [1] 
 <a href="https://www.python.org/dev/peps/pep-0001/" target="_blank" rel="noopener">PEP 1 &ndash; PEP Purpose and Guidelines.</a></p>

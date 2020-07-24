@@ -223,6 +223,8 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
         &lt;li&gt;&lt;a href=&#34;#indentation&#34;&gt;Indentation&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#space-or-tab&#34;&gt;Space or tab?&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#maximum-line-length&#34;&gt;Maximum line length&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#binary-operators-and-line-breaks&#34;&gt;Binary operators and line breaks&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#blank-lines&#34;&gt;Blank lines&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
@@ -353,6 +355,34 @@ result = some_function_that_takes_arguments(
      open(&#39;/path/to/some/file/being/written&#39;, &#39;w&#39;) as file_2:
     file_2.write(file_1.read())
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;binary-operators-and-line-breaks&#34;&gt;Binary operators and line breaks&lt;/h3&gt;
+&lt;p&gt;Standard: write binary operators in the beginning of each line.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;income = (gross_wages
+          + taxable_interest
+          + (dividends - qualified_dividends)
+          - ira_deduction
+          - student_loan_interest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By doing so, it is possible to better understand the relation between variables. In the case shown above, we can see there are quantities that are added, which indicates some kind of credit, whereas other variables are subtracted, indicating a debt. The operator&amp;rsquo;s position being in the beginning of the line is therefore convenient since the operation performed (and, thus, its meaning) is explicitly displayed. Also, all operators are aligned, improving readability.&lt;/p&gt;
+&lt;h3 id=&#34;blank-lines&#34;&gt;Blank lines&lt;/h3&gt;
+&lt;p&gt;Standard:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Class and function definitions start with two blank lines;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Method definitions inside classes are surrounded by one blank line;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Blank lines can be used to separate groups of related functions;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Blank lines can be used to separate logical sections in functions;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Python understands the command &lt;span class=&#34;markup-quote&#34;&gt;Ctrl+L&lt;/span&gt; as a new blank line, although this input is understood as a page break in other tools.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;p&gt;&lt;a name=&#34;pep1&#34;&gt; [1] 
 &lt;a href=&#34;https://www.python.org/dev/peps/pep-0001/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PEP 1 &amp;ndash; PEP Purpose and Guidelines.&lt;/a&gt;&lt;/p&gt;
