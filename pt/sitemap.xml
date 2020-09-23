@@ -3,23 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/author/</loc>
-    <lastmod>2020-07-24T00:00:00+00:00</lastmod>
+    <loc>/publication-type/2/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/andre-s.-sunahara/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/author/"
+                href="/en/author/andre-s.-sunahara/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="/author/"
+                href="/author/andre-s.-sunahara/"
                 />
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-07-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,7 +39,7 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2020-07-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -44,6 +49,176 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/cities/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/cities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/cities/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/journal-article/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/complex-systems/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/complex-systems/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/complex-systems/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/covid-19/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/covid-19/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/covid-19/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/haroldo-v.-ribeiro/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/haroldo-v.-ribeiro/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/haroldo-v.-ribeiro/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/jack-sutton/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/jack-sutton/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/jack-sutton/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/matjaz-perc/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/matjaz-perc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/matjaz-perc/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/publication_types/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/publication/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/quentin-s.-hanley/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/quentin-s.-hanley/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/quentin-s.-hanley/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/</loc>
+    <lastmod>2020-07-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/"
                 />
   </url>
   
@@ -93,21 +268,6 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-07-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>/tag/pep8/</loc>
     <lastmod>2020-07-24T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -149,21 +309,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/tag/python/"
-                />
-  </url>
-  
-  <url>
-    <loc>/tag/covid-19/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tag/covid-19/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tag/covid-19/"
                 />
   </url>
   
@@ -218,36 +363,6 @@
   </url>
   
   <url>
-    <loc>/author/andre-s.-sunahara/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/andre-s.-sunahara/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/andre-s.-sunahara/"
-                />
-  </url>
-  
-  <url>
-    <loc>/tag/cities/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tag/cities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tag/cities/"
-                />
-  </url>
-  
-  <url>
     <loc>/publication/preprint/</loc>
     <lastmod>2020-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -259,66 +374,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/publication/preprint/"
-                />
-  </url>
-  
-  <url>
-    <loc>/tag/complex-systems/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tag/complex-systems/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tag/complex-systems/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/haroldo-v.-ribeiro/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/haroldo-v.-ribeiro/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/haroldo-v.-ribeiro/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/jack-sutton/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/jack-sutton/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/jack-sutton/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/matjaz-perc/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/matjaz-perc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/matjaz-perc/"
                 />
   </url>
   
@@ -354,51 +409,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/project/"
-                />
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/publication_types/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/publication_types/"
-                />
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/publication/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/quentin-s.-hanley/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/quentin-s.-hanley/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/quentin-s.-hanley/"
                 />
   </url>
   

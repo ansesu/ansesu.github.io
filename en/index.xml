@@ -714,7 +714,7 @@ result = some_function_that_takes_arguments(
         
       
     
-  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2020_thais.jpeg&#34; data-caption=&#34;Thaís&amp;amp;rsquo; birthday - 2020&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;/en/gallery/album/2020_thais.jpeg&#34; data-caption=&#34;Thaís&amp;#39; birthday - 2020&#34;&gt;
   &lt;img data-src=&#34;/en/gallery/album/2020_thais_hu66a215bba188bf9b9c4996d07b02113b_95051_0x190_resize_q90_lanczos.jpeg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;411&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publicações | ansesu</title>
-    <link>/publication/</link>
-      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
-    <description>Publicações</description>
+    <title>2 | ansesu</title>
+    <link>/publication-type/2/</link>
+      <atom:link href="/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Wed, 23 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
-      <title>Publicações</title>
-      <link>/publication/</link>
+      <title>2</title>
+      <link>/publication-type/2/</link>
     </image>
     
     <item>
@@ -17,14 +17,6 @@
       <link>/publication/journal-article/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
       <guid>/publication/journal-article/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>City size and the spreading of COVID-19 in Brazil</title>
-      <link>/publication/preprint/</link>
-      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint/</guid>
       <description></description>
     </item>
     
