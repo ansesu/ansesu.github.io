@@ -5,6 +5,16 @@
   <url>
     <loc>/publication-type/2/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/publication-type/2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/publication-type/2/"
+                />
   </url>
   
   <url>
@@ -70,6 +80,16 @@
   <url>
     <loc>/publication/journal-article/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/publication/journal-article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/publication/journal-article/"
+                />
   </url>
   
   <url>
@@ -343,38 +363,8 @@
   </url>
   
   <url>
-    <loc>/publication-type/3/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/publication-type/3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/publication-type/3/"
-                />
-  </url>
-  
-  <url>
     <loc>/post/primeira-postagem/</loc>
     <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/preprint/</loc>
-    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/publication/preprint/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/publication/preprint/"
-                />
   </url>
   
   <url>
