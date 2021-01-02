@@ -15,7 +15,7 @@
 			}
 			.content {
 			    display: block;
-			    position: absolute;
+			    position: relative;
 			    top: 0;
 			    left: 0;
 			}
@@ -67,13 +67,12 @@
 			button {
 				display: block;
 				position:relative;
-				right: 0%;
-				bottom: 100%;
 			}
 		</style>
 	</head>
+	<button onclick="reloadchart()">Reload</button>	
 	<div id="chart" style="z-index: -1000"> </div>
-	<button onclick="reloadchart()">Reload</button>
+
 	<body>
 		<script type="text/javascript">
 
@@ -85,7 +84,7 @@
 
 			function makeChart() {
 				//Margin
-				const margin = { top: 95, right: 150, bottom: 0, left: 0 };
+				const margin = { top: 55, right: 150, bottom: 0, left: 0 };
 
 				//Width and height
 				const width = 960 - margin.left - margin.right;

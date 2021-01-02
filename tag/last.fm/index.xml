@@ -116,7 +116,7 @@
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figura: número de músicas em cada período do dia em 2020.&lt;p/&gt;
 &lt;div
- style=&#34;padding-bottom:38.5%; position:relative; display:block; width: 100%&#34;&gt;
+ style=&#34;padding-bottom:41.5%; position:relative; display:block; width: 100%&#34;&gt;
  &lt;iframe
   width=&#34;100%&#34; height=&#34;100%&#34;
   src=&#34;fig/months_and_days.html&#34;
@@ -125,7 +125,7 @@
 &lt;/div&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figura: número de músicas em cada mês (dia da semana) de 2020.&lt;p/&gt;
 &lt;div
- style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
+ style=&#34;padding-bottom:68.5%; position:relative; display:block; width: 100%&#34;&gt;
  &lt;iframe
   width=&#34;100%&#34; height=&#34;100%&#34;
   src=&#34;fig/streaks.html&#34;
