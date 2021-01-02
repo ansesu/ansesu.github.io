@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
 		<style type="text/css">
 			.chart {
-			    display: inline-block;
+			    display: block;
 			    position: relative;
 			    width: 100%;
 			    padding-bottom: 100%;
@@ -14,7 +14,7 @@
 			    overflow: hidden;
 			}
 			.content {
-			    display: inline-block;
+			    display: block;
 			    position: absolute;
 			    top: 0;
 			    left: 0;
@@ -44,14 +44,18 @@
 	            padding: .5%;
 	        }			
 			button {
+				display: inline-block;
 				position:relative;
 				z-index: 1000;
 				font-size: 20px;
-			}			 
+			}			
+			div {
+				display: block;
+			} 
 			.legend {
 				font-size: 10px;
 				font-family: Helvetica;
-			}			       
+			}		       
 		</style>
 	</head>
 
