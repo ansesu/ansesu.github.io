@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Barchart race</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+		    text{
+				font-size: 16px;
+				font-family: Helvetica, sans-serif;
+		    }
+		    text.title{
+				font-size: 24px;
+				font-weight: 500;
+	   		}
+			text.caption{
+				font-weight: 400;
+				font-size: 14px;
+				fill: #777777;
+			}
+			text.label{
+				font-weight: 600;
+			}
+
+			text.valueLabel{
+				font-weight: 300;
+			}
+
+			text.dateText{
+				font-size: 30px;
+				font-weight: 700;
+				opacity: 0.25;
+			}      
+			.tick text {
+				fill: #777777;
+			}
+			.xAxis .tick:nth-child(2) text {
+				text-anchor: start;
+			}
+			.tick line {
+				shape-rendering: CrispEdges;
+				stroke: #dddddd;
+			}
+			.tick line.origin{
+				stroke: #aaaaaa;
+			}
+			path.domain{
+				display: none;
+			}			
+			button {
+				position:relative;
+				 right: 0%;
+				 bottom: 100%;
+			}
+		</style>
+	</head>
+	<div id="chart" style="z-index: -1000"> </div>
+	<button onclick="reloadchart()">Reload</button>
+	<body>
+		<script type="text/javascript">
+
+			makeChart();
+
+			function reloadchart() {
+				document.location.reload()
+			}
+
+			function makeChart() {
+				//Margin
+				const margin = { top: 95, right: 150, bottom: 0, left: 0 };
+
+				//Width and height
+				const width = 960 - margin.left - margin.right;
+				const height = 600 - margin.top - margin.bottom;
+
+				// Top elements consider
+				var top_n = 12;
+
+				//SVG			
+				const svg = d3.select('#chart')
+							  .append('svg')
+							    .attr("class", "content")
+							    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+							    .attr("preserveAspectRatio", "xMidYMid meet")
+				var g = svg.append("g")
+				   			 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+				var tickDuration = 250;
+
+				let barPadding = height/(top_n*5);
+
+				//For converting data
+				var parseTime = d3.timeParse("%Y-%m-%d"),
+					formatValue = d3.format(","),
+					formatAsDate = d3.timeFormat("%d/%m/%Y");
+
+			    let title = g.append('text')
+						      .attr('class', 'title')
+						      .attr('y', -30)
+						      .html('Number of scrobbles per artist from ansesu in 2020');
+			     	    
+			    let date = + new Date(2019,0,1);
+
+				d3.csv("data/barchart_data.csv")
+				  .then(function(data) {	
+
+					///Parse data and sort values by date
+					data.forEach(d => {
+					    d.value = parseInt(d.value);
+					    d.lastValue = parseInt(d.lastValue);
+					    d.date = parseTime(d.date);
+					    d.colour = d3.hsl(Math.random()*360,0.75,0.75);
+				  	});
+					data.forEach (d => {
+						d.date = +d.date;
+					});
+					Dates = Array.from(data, function (d) {return d.date;} );				
+					uniqueDates = Dates.filter((v, i, a) => a.indexOf(v) === i);           
+				    var maxDate = d3.max(data, d => d.date)
+
+					let dateSlice = data.filter(d => d.date == date && !isNaN(d.value))
+									 	 .sort((a,b) => b.value - a.value)
+									 	 .slice(0, top_n);	
+						
+					dateSlice.forEach((d,i) => d.rank = i);		
+
+					let x = d3.scaleLinear()
+							   .domain([0, d3.max(dateSlice, d => d.value)])
+							   .range([0, width]);
+
+					let y = d3.scaleLinear()
+							   .domain([top_n, 0])
+							   .range([height, 0]);
+					let xAxis = d3.axisTop()
+							       .scale(x)
+							       .ticks(width > 500 ? 5:2)
+							       .tickSize(-height)
+							       .tickFormat(d => d3.format(',')(d));
+					g.append('g')
+					  .attr('class', 'axis xAxis')
+					  .call(xAxis)
+					  .selectAll('.tick line')
+					  .classed('origin', d => d == 0);			
+					g.selectAll('rect.bar')
+					  .data(dateSlice, d => d.name)
+					  .enter()
+					  .append('rect')
+					  .attr('class', 'bar')
+					  .attr('x', x(0)+1)
+					  .attr('width', d => x(d.value))
+					  .attr('y', d => y(d.rank)+5)
+					  .attr('height', y(1)-y(0)-barPadding)
+					  .style('fill', d => d.colour);
+
+					g.selectAll('text.label')
+					  .data(dateSlice, d => d.name)
+					  .enter()
+					  .append('text')
+					  .attr('class', 'label')
+					  .style("font-variant-numeric", "tabular-nums")
+					  .attr('x', d => x(d.value)+5)
+					  .attr('y', d => y(d.rank)-5+((y(1)-y(0))/2)+1)
+					  .style('text-anchor', 'start')
+					  .html(d => d.name);
+
+					g.selectAll('text.valueLabel')
+					  .data(dateSlice, d => d.name)
+					  .enter()
+					  .append('text')
+					  .attr('class', 'valueLabel')
+					  .style("font-variant-numeric", "tabular-nums")
+					  .attr('x', d => x(d.value)+5)
+					  .attr('y', d => y(d.rank)+15+((y(1)-y(0))/2)+1)
+					  .text(d => d3.format(',.0f')(d.lastValue));
+
+					let dateText = g.append('text')
+									 .attr('class', 'dateText')
+									 .attr('x', width)
+									 .attr('y', height-25)
+									 .style('text-anchor', 'end')
+									 .html(formatAsDate(new Date(date)))
+									 .call(halo, 10);
+
+					let i = 0;
+
+					let ticker = d3.interval(e => {						
+						dateSlice = data.filter(d => d.date === +date && !isNaN(d.value))
+										 .sort((a,b) => b.value - a.value)
+										 .slice(0, top_n);	
+
+						dateSlice.forEach((d,i) => d.rank = i);
+						
+						x.domain([0, d3.max(dateSlice, d => d.value)]); 
+
+						g.select('.xAxis')
+						  .transition()
+						  .duration(tickDuration)
+						  .ease(d3.easeLinear)
+						  .call(xAxis);
+
+						let bars = g.selectAll('.bar').data(dateSlice, d => d.name);
+
+						bars
+							.enter()
+							.append('rect')
+							 .attr('class', d => `bar ${d.name.replace(/\s/g,'_')}`)
+							 .attr('x', x(0)+1)
+							 .attr( 'width', d => x(d.value))
+							 .attr('y', d => y(top_n+1)+5)
+							 .attr('height', y(1)-y(0)-barPadding)
+							 .style('fill', d => d.colour)
+							 .transition()
+							   .duration(tickDuration)
+							   .ease(d3.easeLinear)
+							   .attr('y', d => y(d.rank)+5);
+						  
+						bars
+							.transition()
+							  .duration(tickDuration)
+							  .ease(d3.easeLinear)
+							  .attr('width', d => x(d.value))
+							  .attr('y', d => y(d.rank)+5);
+							    
+						bars
+							.exit()
+							.transition()
+							  .duration(tickDuration)
+							  .ease(d3.easeLinear)
+							  .attr('width', d => x(d.value))
+							  .attr('y', d => y(top_n+1)+5)
+						 	 .remove();
+
+						let labels = g.selectAll('.label')
+						 				 .data(dateSlice, d => d.name);
+
+						labels
+							.enter()
+							.append('text')
+							 .attr('class', 'label')
+							 .attr('x', d => x(d.value)+5)
+							 .attr('y', d => y(top_n+1)-5+((y(1)-y(0))/2))
+							 .style('text-anchor', 'start')
+							 .html(d => d.name)    
+							 .transition()
+							   .duration(tickDuration)
+							   .ease(d3.easeLinear)
+							   .attr('y', d => y(d.rank)-5+((y(1)-y(0))/2)+1);
+							     
+
+						labels
+							.transition()
+							 .duration(tickDuration)
+							 .ease(d3.easeLinear)
+							 .attr('x', d => x(d.value)+5)
+							 .attr('y', d => y(d.rank)-5+((y(1)-y(0))/2)+1);
+
+						labels
+							  .exit()
+							  .transition()
+							    .duration(tickDuration)
+							    .ease(d3.easeLinear)
+							    .attr('x', d => x(d.value)+5)
+							    .attr('y', d => y(top_n+1)-5)
+							    .remove();
+							 
+
+
+						let valueLabels = g.selectAll('.valueLabel').data(dateSlice, d => d.name);
+
+						valueLabels
+								  .enter()
+								  .append('text')
+								   .attr('class', 'valueLabel')
+								   .attr('x', d => x(d.value)+5)
+								   .attr('y', d => y(top_n+1)+15)
+								   .text(d => d3.format(',.0f')(d.lastValue))
+								   .transition()
+								     .duration(tickDuration)
+								     .ease(d3.easeLinear)
+								     .attr('y', d => y(d.rank)+15+((y(1)-y(0))/2)+1);
+						    
+						valueLabels
+								  .transition()
+								   .duration(tickDuration)
+								   .ease(d3.easeLinear)
+								   .attr('x', d => x(d.value)+5)
+								   .attr('y', d => y(d.rank)+15+((y(1)-y(0))/2)+1)
+								   .tween("text", function(d) {
+								      let i = d3.interpolateRound(d.lastValue, d.value);
+								      return function(t) {
+								        this.textContent = d3.format(',')(i(t));
+								     };
+								   });
+
+
+						valueLabels
+								.exit()
+								.transition()
+								  .duration(tickDuration)
+								  .ease(d3.easeLinear)
+								  .attr('x', d => x(d.value)+5)
+								  .attr('y', d => y(top_n+1)+15)
+								  .remove();
+
+						dateText.html(formatAsDate(new Date(date)));
+
+						if (date == maxDate) {
+							ticker.stop();
+						}
+						i = i +1;
+						date = uniqueDates[i];
+
+					}, tickDuration);
+
+				});
+				const halo = function(text, strokeWidth) {
+				text.select(function() { return this.parentNode.insertBefore(this.cloneNode(true), this); })
+					.style('fill', '#ffffff')
+					 .style( 'stroke','#ffffff')
+					 .style('stroke-width', strokeWidth)
+					 .style('stroke-linejoin', 'round')
+					 .style('opacity', 1);
+				}   
+			}
+		</script>
+	</body>
+</html>

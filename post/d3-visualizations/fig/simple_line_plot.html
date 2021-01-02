@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Número de casos confirmados de COVID-19 em Maringá</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			.axis-title {
+				font-size: 15px;
+				font-family: Helvetica;
+			}	
+			.axis {
+				font-size: 12px;
+				font-family: Helvetica;
+			}	
+			.line {
+				fill: none;
+				stroke: #252525;
+				stroke-width: 2.5;
+			}
+		    .tooltip {
+		        fill: white;
+		        stroke: #000;
+		    }
+		    .focus .tooltip-confirmed {
+		    	font-family: Helvetica;
+		    	font-size: 10px;
+		    }
+		    .focus .tooltip-date {
+		    	font-family: Helvetica;
+		    	font-size: 10px;
+		    	font-weight: bold;
+		    }
+			.overlay {
+			  fill: none;
+			  pointer-events: all;
+			}
+			.focus circle {
+			  fill: #F1F3F3;
+			  stroke: #252525;
+			  stroke-width: 1px;
+			}
+			.focus text {
+			  font-size: 8px;
+			}
+			.hover-line {
+			  stroke: #737373;
+			  stroke-width: 0.75px;
+			}			
+		</style>
+	</head>
+
+	<div id="chart"></div>
+
+	<body>
+		<script type="text/javascript">
+			//Margin
+			const margin = { top: 10, right: 0, bottom: 30, left: 65 };
+
+			//Width and height
+			const width = 600 - margin.left - margin.right;
+			const height = 400 - margin.top - margin.bottom;
+
+			//For converting data
+			var parseTime = d3.timeParse("%d/%m/%Y"),
+				formatValue = d3.format(","),
+				formatAsMonth = d3.timeFormat("%m/%y"),
+				formatAsDate = d3.timeFormat("%d/%m/%Y");
+
+			//Load in the data			
+			d3.csv("data/confirmed_maringa_data.csv")
+			  .then(function(data) {	
+
+				///Parse data and sort values by date
+			    data.forEach(function(d) {
+			    	d.Date = parseTime(d.Date);
+			    	d.Confirmed = parseInt(d.Confirmed);
+			    });
+		        data.sort(function(a, b) {
+		            return a.Date - b.Date;
+		        });
+
+		        //Get median of confirmed cases
+		        median = d3.median(data, function(d) { return d.Confirmed; })
+
+				//Create scale functions
+				xScale = d3.scaleTime()
+							.domain([
+								d3.min(data, function(d) { return d.Date; }),
+								d3.max(data, function(d) { return d.Date; })
+							])
+							   .range([0, width]);
+				yScale = d3.scaleLinear()
+							.domain([
+								d3.min(data, function(d) { return d.Confirmed; }),
+								d3.max(data, function(d) { return d.Confirmed; })
+							])
+							.range([height, 0]);	
+
+				//Create SVG element in chart id element
+				const svg = d3.select('#chart')
+				              .append('svg')
+				               .attr("class", "content")
+				               .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+				               .attr("preserveAspectRatio", "xMidYMid meet")
+
+				var g = svg.append("g")
+				            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+				//Create axis
+				var xAxis = d3.axisBottom(xScale)
+							  .ticks(7)
+							  .tickFormat(formatAsMonth)
+							  .tickSize(3);
+				var yAxis = d3.axisLeft(yScale)
+							  .ticks(7)
+							  .tickSize(3);
+
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0," + height + ")")
+				  .call(xAxis)
+				  .select(".domain")
+				  .attr("stroke","#252525")
+				  .attr("stroke-width","0");
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0,0)")
+				  .call(yAxis)
+				  .select(".domain")
+				  .attr("stroke","#252525")
+				  .attr("stroke-width","1");
+				g.selectAll(".tick")
+				 .selectAll("line")
+				  .attr("stroke-width","1");
+
+ 				//Create axis label
+			    g.append("text")
+			      .attr("class", "axis-title")
+			      .attr("transform", "rotate(-90)")
+			      .style("text-anchor", "middle")
+			      .attr("y",-65)
+			      .attr("x",-height/2)
+			      .attr("dy", ".71em")
+			      .text("Número de casos confirmados de COVID-19");
+
+				//Create line
+				var line = d3.line()
+							 .x(function(d) { return xScale(d.Date); })
+							 .y(function(d) { return yScale(d.Confirmed); });
+
+				g.append("path")
+				  .attr("class", "line")
+				  .datum(data)
+				  .attr("d", line);
+
+				//Create tooltip
+			    var focus = g.append("g")
+			                  .attr("class", "focus");
+
+			    focus.append("path") 
+			          .attr("class", "hover-line")
+
+			    focus.append("text")
+			    	  .attr("class", "tooltip-confirmed")
+			    focus.append("text")
+			    	  .attr("class", "tooltip-date")
+
+			    focus.append("circle")
+			          .attr("r", 3);
+
+			    svg.append("rect")
+			    	.attr("class", "overlay")
+			        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+			        .attr("width", width)
+			        .attr("height", height)
+			        .on("mouseover", function() {
+			        	focus.style("display", null); 
+			        })
+			        .on("mouseout", function() { 			        	
+			        	focus.style("display", "none"); 
+			        })
+			        .on("mousemove", event => mousemove(event));
+
+			    function mousemove(event) {
+			    	var x0 = xScale.invert(d3.pointer(event)[0]),
+			            bisectDate = d3.bisector(function(d) { return d.Date; }).left,
+			            i = bisectDate(data, x0, 1),
+			            d0 = data[i - 1],
+			            d1 = data[i],
+			            dTrue = x0 - d0.Date > d1.Date - x0 ? d1 : d0; // if is true, d1, if is false d0
+			        xDate = dTrue.Date;
+			        d3.select(".hover-line")
+			           .attr("d", function() {
+			           		var dVar = "M" + 0 + "," + (-yScale(dTrue.Confirmed));
+			            	dVar += " " + 0 + "," + (height - yScale(dTrue.Confirmed));
+			            	return dVar;
+			           })
+					focus.select(".tooltip-confirmed").text(function() { return formatValue(dTrue.Confirmed); });
+					focus.select(".tooltip-date").text(function() { return formatAsDate(xDate); });			        
+					focus.attr("transform", "translate(" + xScale(xDate) + "," + yScale(dTrue.Confirmed) + ")");
+
+					if (dTrue.Confirmed > data[Math.round(data.length-data.length*.46)].Confirmed) {
+						focus.select(".tooltip-confirmed")
+					 	      .attr("y", height*.95-yScale(dTrue.Confirmed))
+					 	      .attr("text-anchor", "end")
+					 	      .attr("x", -5);
+					    focus.select(".tooltip-date")
+					 	      .attr("y", height*.92-yScale(dTrue.Confirmed))
+					 	      .attr("text-anchor", "end")
+					 	      .attr("x", -5);
+					} else {
+						focus.select(".tooltip-confirmed")
+							  .attr("y", height*.6-yScale(dTrue.Confirmed))
+							  .attr("text-anchor", "start")
+							  .attr("x", 5);
+						focus.select(".tooltip-date")
+							  .attr("y", height*.57-yScale(dTrue.Confirmed))
+							  .attr("text-anchor", "start")
+							  .attr("x", 5);
+			        }
+			    }
+			});
+		</script>
+	</body>
+</html>

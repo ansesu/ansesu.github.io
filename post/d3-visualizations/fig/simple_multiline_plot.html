@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ocupação dos leitos hospitalares de Maringá</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			.overlay {
+			  fill: none;
+			  pointer-events: all;
+			}
+			.legend {
+				font-size: 12px;
+				font-family: Helvetica;
+			}
+			.axis {
+				font-size: 12px;
+				font-family: Helvetica;
+			}	
+			.axis-title {
+				font-size: 15px;
+				font-family: Helvetica;
+			}	
+			.line {
+				fill: none;
+				stroke: #252525;
+				stroke-width: 1.5;
+			}
+			.focus-per-line {
+				font-size: 10px;
+				font-family: Helvetica;
+			}
+			.focus .tooltip-date {
+				font-size: 10px;
+				font-weight: bold;
+				font-family: Helvetica;
+			}			
+			.focus-per-line .circle {
+			     fill: #F1F3F3;
+			     stroke-width: 1px;
+			}
+			.hover-line {
+			  stroke: #737373;
+			  stroke-width: 0.75px;
+			}
+		</style>
+	</head>
+
+	<div id="chart"></div>
+
+	<body>
+		<script type="text/javascript">
+			//Margin
+			const margin = { top: 10, right: 0, bottom: 30, left: 60 };
+
+			//Width and Height
+			const width = 600 - margin.left - margin.right;
+			const height = 400 - margin.top - margin.bottom;
+
+			var xScale, yScale;  //Empty, for now
+
+			//For converting data
+			var parseTime = d3.timeParse("%d/%m/%Y"),
+				formatAsMonth = d3.timeFormat("%m/%y"),
+				formatAsDate = d3.timeFormat("%d/%m/%Y");
+
+			//Create categorical color scale
+			var color = d3.scaleOrdinal(['#1b9e77', '#e7298a', '#7570b3']);
+
+			//Load in the data
+			d3.csv("data/occupancy_maringa_data.csv")
+			  .then(function(data) {			
+				//Assign a color to each occupancy columns
+			    color.domain(Object.keys(data[0]).slice(1, 4));
+
+			    //Parse data
+			    data.forEach(function(d) {
+			    	d.Date = parseTime(d.Date);
+			     	d.Enfermaria = parseFloat(d.Enfermaria.replace(',','.'));
+			     	d.UTI = parseFloat(d.UTI.replace(',','.'));
+			     	d["UTI neonatal"] = parseFloat(d["UTI neonatal"].replace(',','.'));			      
+			     	d.Enfermaria_total = parseInt(d.Enfermaria_total);
+			     	d.UTI_total = parseInt(d.UTI_total);
+			     	d["UTI neonatal_total"] = parseInt(d["UTI neonatal_total"]);
+			    });
+
+				//Get median of dates
+				median = d3.median(data, function(d) { return d.Date; })
+
+				//Create categories (for each line plot)
+			    var categories = color.domain().map(function(name) {
+			    	return {
+			    		name: name,
+			        	values: data.map(function(d) {
+			            	return {
+			                	Date: d.Date,
+			            		Occupancy: parseFloat(d[name])
+			          		};
+			        	})
+			        };
+			    });
+
+			    //Sort dates
+		        data.sort(function(a, b) {
+		            return a.Date - b.Date;
+		        });
+
+				//Create scale functions
+				xScale = d3.scaleTime()
+							.domain(d3.extent(data, function(d) { return d.Date; }))
+							.range([0, width]);
+				yScale = d3.scaleLinear()
+							.domain([0,100])
+							.range([height, 0]);	
+
+				//Create SVG element
+				const svg = d3.select('#chart')
+				  .append('svg')
+				   .attr("class", "content")
+				   .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+				   .attr("preserveAspectRatio", "xMidYMid meet")
+				    
+				var g = svg.append("g")
+				            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+				//Create legend
+			    var legend = g.selectAll('g')
+			                  .data(categories)
+			                  .enter().append('g')
+			                   .attr('class', 'legend');
+			    legend.append('rect')
+			           .attr('x', 10)
+			           .attr('y', function(d, i) {
+			           		return i * 15;
+			      	   })
+			    	   .attr('width', 10)
+			    	   .attr('height', 10)
+			           .style('fill', function(d) {
+			           		return color(d.name);
+			           });
+			    legend.append('text')
+			           .attr('x', 25)
+			           .attr('y', function(d, i) {
+			      		    return (i * 15)+10;
+			           })
+			           .text(function(d) {
+			        		return d.name;
+			      	   });
+
+			    //Create axis
+				var xAxis = d3.axisBottom(xScale)
+							  .ticks(7)
+							  .tickFormat(formatAsMonth)
+							  .tickSize(3);
+				var yAxis = d3.axisLeft(yScale)
+							  .ticks(7)
+							  .tickSize(3);
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0," + height + ")")
+				  .call(xAxis)
+				  .select(".domain")
+				   .attr("stroke","#252525")
+				   .attr("stroke-width","0");
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0,0)")
+				  .call(yAxis)
+				  .select(".domain")
+				   .attr("stroke","#252525")
+				   .attr("stroke-width","1");
+				g.selectAll(".tick")
+				 .selectAll("line")
+				  .attr("stroke-width","1");
+
+				//Create axis label
+			    g.append("text")
+			      .attr("class", "axis-title")
+			      .attr("transform", "rotate(-90)")
+			      .style("text-anchor", "middle")
+			      .attr("y",-50)
+			      .attr("x",-height/2)
+			      .attr("dy", ".71em")
+			      .text("Ocupação dos leitos hospitalares (%)");
+
+				//Create each category object
+				var category = g.selectAll(".category")
+			                    .data(categories)
+			                    .enter().append("g")
+			                     .attr("class", "category");
+
+				//Create lines
+				var line = d3.line()
+							 .x( function(d) { return xScale(d.Date); })
+							 .y( function(d) { return yScale(d.Occupancy); });
+
+				category.append("path")
+					     .attr("class", "line")
+				         .attr("d", function(d) {
+				         	return line(d.values);
+				         })
+				         .style("stroke", function(d) {
+				         	return color(d.name);
+				         });
+
+				// Create tooltip
+			    var focus = g.append("g")
+			                  .attr("class", "focus");
+
+			    focus.append("path")
+			          .attr("class", "hover-line")
+
+			    focus.append("text")
+			          .attr("class", "tooltip-date");
+
+			    var lines = document.getElementsByClassName('line');
+			    var focusPerLine = focus.selectAll('.focus-per-line')
+			                            .data(categories)
+			                            .enter().append("g")
+			                             .attr("class", "focus-per-line");		
+
+			    focusPerLine.append("circle") 
+			                .attr("class", "circle")
+			                .attr("r", 3)
+			                .style("stroke", function(d) {
+			                	return color(d.name);
+			                });  
+
+			    focusPerLine.append("text") // Value
+			    			.append("class", "tooltip-value")
+
+			    svg.append('rect') 
+			        .attr("class", "overlay")
+			        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+			        .attr('width', width)
+			        .attr('height', height)
+			        .on("mouseover", function() {
+			          	focus.style("display", null); 
+			        })
+			        .on("mouseout", function() { 			        	
+			          	focus.style("display", "none"); 
+			        })
+			        .on('mousemove', event => mousemove(event));
+
+			    function mousemove(event) { // mouse moving over canvas
+			        var mouse = d3.pointer(event),
+			            x0 = xScale.invert(mouse[0]),
+			            bisectDate = d3.bisector(function(d) { return d.Date; }).left,
+			            i = bisectDate(data, x0, 1),
+			            d0 = data[i - 1],
+			            d1 = data[i],
+			            dTrue = x0 - d0.Date > d1.Date - x0 ? d1 : d0,
+			            idx = x0 - d0.Date > d1.Date - x0 ? i : i-1,
+			        xDate = dTrue.Date;
+			        d3.select(".hover-line")
+			           .attr("d", function() {
+			           		var dVar = "M" + xScale(xDate) + "," + height;
+			            	dVar += " " + xScale(xDate) + "," + 0;
+			           		return dVar;
+			           });
+		            d3.select('.tooltip-date')
+		               .text(formatAsDate(xDate))
+		               .attr("text-anchor", function() {
+		               		if (xDate > median) {
+		               			return "end";
+		               		} else {
+		               			return "start";
+		               		}
+		               	})
+		               .attr("dx", function() {
+		               		if (xDate > median) {
+		               			return xScale(xDate)-5;
+		               		} else {
+		               			return xScale(xDate)+5;
+		               		}
+		               	})
+		              .attr("y", height - 15 - 3*11);
+			        d3.selectAll(".focus-per-line")
+			           .attr("transform", function(d, i) {
+		           		var totalOccupancy = function(){
+		            		total = data[idx][d.name+"_total"];
+		            		if (Number.isNaN(total)) {
+		            			return "";
+		            		} else {
+		            			return " (" + Math.round(data[idx][d.name]*total/100)+ "/" + total + ")";
+		            		}
+			            }
+			       		d3.select(this).select('.focus-per-line text')
+			               .text(d.name + ": " + data[idx][d.name].toFixed(2) + "%" + totalOccupancy())
+			               .attr("text-anchor", function() {
+				              	if (xDate > median) {
+				              		return "end";
+				              	} else {
+				              		return "start";
+				              	}
+				            })
+			               .attr("x", function() {
+				              	if (xDate > median) {
+				              		return -5;
+				              	} else {
+				              		return 5;
+				              	}
+				           })
+			               .attr("y", height - yScale(data[idx][d.name]) - 12.5 - (2-i)*12)
+			               .attr("fill", color(d.name));
+			       		return "translate(" + xScale(xDate) + "," + yScale(data[idx][d.name]) +")";
+			         });
+			    };
+			});
+		</script>
+	</body>
+</html>

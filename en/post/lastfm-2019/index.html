@@ -728,8 +728,9 @@
       <p>
 <a href="https://www.last.fm/" target="_blank" rel="noopener">last.fm</a> is a social network in which users can keep track of their own musical activity through the so called scrobbles (the log of your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.</p>
 <p>Here, I perform a statistical analysis of 
-<a href="http://last.fm/user/ansesu" target="_blank" rel="noopener">my last.fm profile</a> in 2019 (and who knows turn this an annual thing). I start by using 
-<a href="https://mainstream.ghan.nl/export.html" target="_blank" rel="noopener">this tool</a> to export my profile&rsquo;s listening history. Then, I use Python language to parse data and make some visualizations. My code is available at: <a href="https://github.com/ansesu/lastfm/">https://github.com/ansesu/lastfm/</a>. So, here we go! First of all, some numbers that summarize my 2019.</p>
+<a href="http://last.fm/user/ansesu" target="_blank" rel="noopener">my last.fm profile</a> in 2019 (and who knows turn this an annual thing). I start by using the 
+<a href="https://mainstream.ghan.nl/export.html" target="_blank" rel="noopener">Last.fm data export tool</a> to extract my profile&rsquo;s listening history. Then, I use the 
+<a href="https://www.python.org/" target="_blank" rel="noopener">Python</a> language to parse data and make some visualizations. My code is available at: <a href="https://github.com/ansesu/lastfm/">https://github.com/ansesu/lastfm/</a>. So, here we go! First of all, some numbers that summarize my 2019.</p>
 <h2>Table of Contents</h2>
 <nav id="TableOfContents">
   <ul>
@@ -822,7 +823,7 @@
         style="position:absolute; top:0; left: 0;">
     </iframe>
 </div>
-<p style="text-align: center" >Figure: Number of songs listened in each period of the day in 2019.<p/>
+<p style="text-align: center" >Figure: number of songs listened in each period of the day in 2019.<p/>
 <p>The figure below shows the number of songs listened in each month of 2019. In July and August, I traveled for some extracurricular activity and, thus, didn&rsquo;t have much time to listen to music.</p>
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -852,7 +853,7 @@
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center; font-size: 16px">Figure: Streaks listening the same artist in 2019.<p/>
+<p style="text-align: center; font-size: 16px">Figure: streaks listening the same artist in 2019.<p/>
 The figure below shows my song streaks in 2019. In summary, I usually don't listen to songs on repeat.
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -862,7 +863,7 @@ The figure below shows my song streaks in 2019. In summary, I usually don't list
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center">Figure: Streaks listening the same track in 2019.<p/>
+<p style="text-align: center">Figure: streaks listening the same track in 2019.<p/>
 <p>Next, I applied the concept of Shannon entropy to the distribution of artists listened. The normalized Shanon entropy is described by the equation 
 <a href="#entropy">[1]</a>
 $$
@@ -877,7 +878,7 @@ where $n$ is the total number of artists and $P_i$ is the fraction of songs from
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center">Figure: Diversity of artist (as measured by Shannon entropy) in each week of 2019.<p/>
+<p style="text-align: center">Figure: diversity of artist (as measured by Shannon entropy) in each week of 2019.<p/>
 The figure below shows the entropy for each day of the week in 2019. Weekdays present smaller values of entropy, what may suggest that I tend to listen to a specific kind of music (and consequently of artist) when I am performing my activities. 
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -887,7 +888,7 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center">Figure: Diversity of artist (as measured by Shannon entropy) in each day of the week in 2019.<p/>
+<p style="text-align: center">Figure: diversity of artist (as measured by Shannon entropy) in each day of the week in 2019.<p/>
 <p>Browsing the internet, I found a cool visualization called 
 <a href="https://datavizcatalogue.com/methods/images/top_images/SVG/stream_graph.svg" target="_blank" rel="noopener">stream wave chart</a>. This kind of figure shows the temporal evolution of the volume of songs listened (given by a color filled area) of a set of specific artists. I found it really awesome and tried to make my own stream chart. The above figures were all made using the Python package 
 <a href="https://docs.bokeh.org/en/latest/index.html" target="_blank" rel="noopener">Bokeh</a>. But it turns out this kind of visualization is not available on Bokeh. I searched for some alternatives and found out the 
@@ -901,7 +902,7 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center">Figure: Temporal evolution of the volume of reproduction of my top artists in 2019.<p/>
+<p style="text-align: center">Figure: temporal evolution of the volume of reproduction of my top artists in 2019.<p/>
 <p>Finally, I used 
 <a href="https://flourish.io/" target="_blank" rel="noopener">flourish.io</a> app to make a bar chart race (which has been really popular in social media recently). This is an alternative to visualize the temporal evolution of the listening history, but, this time, considering the cumulative number of reproductions.</p>
 <div class="flourish-embed flourish-bar_race" data-src="visualisation/3117094" data-url="https://flo.uri.sh/visualisation/3117094/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
@@ -922,6 +923,10 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
 <div class="article-tags">
   
   <a class="badge badge-light" href="/en/tag/last.fm/">last.fm</a>
+  
+  <a class="badge badge-light" href="/en/tag/python/">Python</a>
+  
+  <a class="badge badge-light" href="/en/tag/visualization/">Visualization</a>
   
 </div>
 
@@ -1216,6 +1221,13 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
   
   
   <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/en/post/lastfm-2020/" rel="next">My 2020 last.fm</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
     <a href="/en/post/python-pep8/" rel="prev">PEP8 - Best practices in styling for Python programming</a>
   </div>
@@ -1233,6 +1245,10 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
   <div class="article-widget content-widget-hr">
     <h3>Related</h3>
     <ul>
+      
+      <li><a href="/en/post/lastfm-2020/">My 2020 last.fm</a></li>
+      
+      <li><a href="/en/post/d3-visualizations/">Data visualization with d3.js</a></li>
       
       <li><a href="/en/post/python-pep8/">PEP8 - Best practices in styling for Python programming</a></li>
       

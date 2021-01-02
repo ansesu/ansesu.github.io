@@ -5,12 +5,154 @@
     <link>/en/tag/last.fm/</link>
       <atom:link href="/en/tag/last.fm/index.xml" rel="self" type="application/rss+xml" />
     <description>last.fm</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
       <title>last.fm</title>
       <link>/en/tag/last.fm/</link>
     </image>
+    
+    <item>
+      <title>My 2020 last.fm</title>
+      <link>/en/post/lastfm-2020/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/en/post/lastfm-2020/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; is a social network in which users can keep track of their own musical activity through the so called scrobbles (the log of your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.&lt;/p&gt;
+&lt;p&gt;Here, I perform a statistical analysis of 
+&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last.fm profile&lt;/a&gt; in 2020. I start by using the 
+&lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Last.fm data export tool&lt;/a&gt; to extract my profile&amp;rsquo;s listening history. I use the 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python&lt;/a&gt; to parse data and the package 
+&lt;a href=&#34;https://d3js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3.js&lt;/a&gt; to make some visualizations. My code is available at: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2019-most-listened-songs&#34;&gt;My 2019 most listened songs&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2020-most-listened-artists&#34;&gt;My 2020 most listened artists&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2020-most-listened-albums&#34;&gt;My 2020 most listened albums&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2020-most-listened-new-artists&#34;&gt;My 2020 most listened new artists&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#visualizations&#34;&gt;Visualizations&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Total plays: 8,682&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total songs: 2,297&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total artists: 580&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total albums: 1,079&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;my-2019-most-listened-songs&#34;&gt;My 2019 most listened songs&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;リセット - Taichi Mukai (121 plays)&lt;/li&gt;
+&lt;li&gt;Sou Babu - Babu Santana (81 plays)&lt;/li&gt;
+&lt;li&gt;道 - Taichi Mukai (71 plays)&lt;/li&gt;
+&lt;li&gt;In a Sweat ! - Yuki Hayashi (66 plays)&lt;/li&gt;
+&lt;li&gt;Catch up, latency - UNISON SQUARE GARDEN (58 plays)&lt;/li&gt;
+&lt;li&gt;Golden - Cory Wong (54 plays)&lt;/li&gt;
+&lt;li&gt;Kenni and the Jets - The Fearless Flyers (52 plays)&lt;/li&gt;
+&lt;li&gt;Starting Line - Cory Wong (50 plays)&lt;/li&gt;
+&lt;li&gt;AmarElo (Sample: Sujeito de Sorte - Belchior) - Emicida (47 plays)&lt;/li&gt;
+&lt;li&gt;Companion Pass - Cory Wong (45 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2020-most-listened-artists&#34;&gt;My 2020 most listened artists&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Foster the People (978 plays)&lt;/li&gt;
+&lt;li&gt;Cory Wong (462 plays)&lt;/li&gt;
+&lt;li&gt;Vulfpeck (411 plays)&lt;/li&gt;
+&lt;li&gt;Emicida (308 plays)&lt;/li&gt;
+&lt;li&gt;Phoenix (224 plays)&lt;/li&gt;
+&lt;li&gt;Yuki Hayashi (218 plays)&lt;/li&gt;
+&lt;li&gt;The Kooks (212 plays)&lt;/li&gt;
+&lt;li&gt;Taichi Mukai (204 plays)&lt;/li&gt;
+&lt;li&gt;Red Hot Chili Peppers (140 plays)&lt;/li&gt;
+&lt;li&gt;Tame Impala (127 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2020-most-listened-albums&#34;&gt;My 2020 most listened albums&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Torches - Foster the People (294 plays)&lt;/li&gt;
+&lt;li&gt;AmarElo - Emicida (246 plays)&lt;/li&gt;
+&lt;li&gt;TVアニメ「風が強く吹いている」オリジナルサウンドトラック - Yuki Hayashi (200 plays)&lt;/li&gt;
+&lt;li&gt;Motivational Music For The Syncopated Soul - Cory Wong (168 plays)&lt;/li&gt;
+&lt;li&gt;Supermodel - Foster the People (166 plays)&lt;/li&gt;
+&lt;li&gt;Sacred Hearts Club - Foster the People (162 plays)&lt;/li&gt;
+&lt;li&gt;Pure - Taichi Mukai (100 plays)&lt;/li&gt;
+&lt;li&gt;Frozen 2 (Original Motion Picture Soundtrack/Deluxe Edition) - Kristen Bell (97 plays)&lt;/li&gt;
+&lt;li&gt;Thrill of the Arts - Vulfpeck (84 plays)&lt;/li&gt;
+&lt;li&gt;The Battle of Los Angeles - Rage Against the Machine (82 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2020-most-listened-new-artists&#34;&gt;My 2020 most listened new artists&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Emicida (308 plays)&lt;/li&gt;
+&lt;li&gt;Yuki Hayashi (218 plays)&lt;/li&gt;
+&lt;li&gt;Taichi Mukai (204 plays)&lt;/li&gt;
+&lt;li&gt;Babu Santana (83 plays)&lt;/li&gt;
+&lt;li&gt;OKAMOTO&amp;rsquo;S (80 plays)&lt;/li&gt;
+&lt;li&gt;Self (66 plays)&lt;/li&gt;
+&lt;li&gt;UNISON SQUARE GARDEN (58 plays)&lt;/li&gt;
+&lt;li&gt;Public Enemy (52 plays)&lt;/li&gt;
+&lt;li&gt;Fitz and the Tantrums (47 plays)&lt;/li&gt;
+&lt;li&gt;Gen Hoshino (42 plays)&lt;/li&gt;
+&lt;li&gt;Pomplamoose (37 plays)&lt;/li&gt;
+&lt;li&gt;Romes (36 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;visualizations&#34;&gt;Visualizations&lt;/h2&gt;
+&lt;p&gt;(The figures here shown are interactive)&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:50%; position:relative; display:block; width: 50%;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/hours.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position: absolute; top:0; right:-50%; text-anchor:center&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: number of songs listened in each period of the day in 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:38.5%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/months_and_days.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: number of songs listened in each month (day of the week) in 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/streaks.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: streaks listening the same artist (track) in 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:56%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/stream_chart.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: temporal evolution of the volume of reproduction of my top 10 artists in 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/barchart_race.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: bar chart race for artists with more than 30 reproductions in 2020.&lt;p/&gt;
+</description>
+    </item>
     
     <item>
       <title>My 2019 last.fm</title>
@@ -20,8 +162,9 @@
       <description>&lt;p&gt;
 &lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; is a social network in which users can keep track of their own musical activity through the so called scrobbles (the log of your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.&lt;/p&gt;
 &lt;p&gt;Here, I perform a statistical analysis of 
-&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last.fm profile&lt;/a&gt; in 2019 (and who knows turn this an annual thing). I start by using 
-&lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this tool&lt;/a&gt; to export my profile&amp;rsquo;s listening history. Then, I use Python language to parse data and make some visualizations. My code is available at: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;. So, here we go! First of all, some numbers that summarize my 2019.&lt;/p&gt;
+&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last.fm profile&lt;/a&gt; in 2019 (and who knows turn this an annual thing). I start by using the 
+&lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Last.fm data export tool&lt;/a&gt; to extract my profile&amp;rsquo;s listening history. Then, I use the 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python&lt;/a&gt; language to parse data and make some visualizations. My code is available at: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;. So, here we go! First of all, some numbers that summarize my 2019.&lt;/p&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -114,7 +257,7 @@
         style=&#34;position:absolute; top:0; left: 0;&#34;&gt;
     &lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figure: Number of songs listened in each period of the day in 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: number of songs listened in each period of the day in 2019.&lt;p/&gt;
 &lt;p&gt;The figure below shows the number of songs listened in each month of 2019. In July and August, I traveled for some extracurricular activity and, thus, didn&amp;rsquo;t have much time to listen to music.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -144,7 +287,7 @@
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figure: Streaks listening the same artist in 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figure: streaks listening the same artist in 2019.&lt;p/&gt;
 The figure below shows my song streaks in 2019. In summary, I usually don&#39;t listen to songs on repeat.
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -154,7 +297,7 @@ The figure below shows my song streaks in 2019. In summary, I usually don&#39;t 
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figure: Streaks listening the same track in 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: streaks listening the same track in 2019.&lt;p/&gt;
 &lt;p&gt;Next, I applied the concept of Shannon entropy to the distribution of artists listened. The normalized Shanon entropy is described by the equation 
 &lt;a href=&#34;#entropy&#34;&gt;[1]&lt;/a&gt;
 $$
@@ -169,7 +312,7 @@ where $n$ is the total number of artists and $P_i$ is the fraction of songs from
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figure: Diversity of artist (as measured by Shannon entropy) in each week of 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: diversity of artist (as measured by Shannon entropy) in each week of 2019.&lt;p/&gt;
 The figure below shows the entropy for each day of the week in 2019. Weekdays present smaller values of entropy, what may suggest that I tend to listen to a specific kind of music (and consequently of artist) when I am performing my activities. 
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -179,7 +322,7 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figure: Diversity of artist (as measured by Shannon entropy) in each day of the week in 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: diversity of artist (as measured by Shannon entropy) in each day of the week in 2019.&lt;p/&gt;
 &lt;p&gt;Browsing the internet, I found a cool visualization called 
 &lt;a href=&#34;https://datavizcatalogue.com/methods/images/top_images/SVG/stream_graph.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stream wave chart&lt;/a&gt;. This kind of figure shows the temporal evolution of the volume of songs listened (given by a color filled area) of a set of specific artists. I found it really awesome and tried to make my own stream chart. The above figures were all made using the Python package 
 &lt;a href=&#34;https://docs.bokeh.org/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt;. But it turns out this kind of visualization is not available on Bokeh. I searched for some alternatives and found out the 
@@ -193,7 +336,7 @@ The figure below shows the entropy for each day of the week in 2019. Weekdays pr
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figure: Temporal evolution of the volume of reproduction of my top artists in 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: temporal evolution of the volume of reproduction of my top artists in 2019.&lt;p/&gt;
 &lt;p&gt;Finally, I used 
 &lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; app to make a bar chart race (which has been really popular in social media recently). This is an alternative to visualize the temporal evolution of the listening history, but, this time, considering the cumulative number of reproductions.&lt;/p&gt;
 &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117094&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117094/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;

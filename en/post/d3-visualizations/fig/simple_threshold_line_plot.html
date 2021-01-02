@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Numero de reproducao em Maringa</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			.axis-title {
+				font-size: 15px;
+				font-family: Helvetica;
+			}	
+			.axis {
+				font-size: 12px;
+				font-family: Helvetica;
+			}	
+			.line {
+				fill: none;
+				stroke-width: 2.5;
+			}
+			.one-line {
+				fill: none;
+				stroke-width: 2.5;
+				stroke: "black";
+			}			
+			.ci {
+			  opacity: 0.15;
+			}	
+		    .tooltip {
+		        fill: white;
+		        stroke: #000;
+		    }
+		    .focus .tooltip-y {
+		    	font-family: Helvetica;
+		    	font-size: 10px;
+		    }
+		    .focus .tooltip-x {
+		    	font-family: Helvetica;
+		    	font-size: 10px;
+		    	font-weight: bold;
+		    }
+			.overlay {
+			  fill: none;
+			  pointer-events: all;
+			}
+			.focus circle {
+			  fill: #F1F3F3;
+			  stroke-width: 1px;
+			}
+			.focus text {
+			  font-size: 8px;
+			}
+			.hover-line {
+			  stroke-width: 0.75px;
+			}
+            .filled {
+                fill: url(#mainGradient);
+            }
+            .outlined {
+                fill:   none;
+                stroke: url(#mainGradient);
+                stroke-width: 1.25;
+            }
+		</style>
+	</head>
+
+	<div id="chart"></div>
+
+	<body>
+		<script type="text/javascript">
+			//Margin
+			const margin = { top: 10, right: 0, bottom: 35, left: 45 };
+
+			//Width and height
+			const width = 600 - margin.left - margin.right;
+			const height = 400 - margin.top - margin.bottom;
+
+			//For converting data
+			var parseTime = d3.timeParse("%Y-%m-%d"),
+				formatValue = d3.format(","),
+				formatAsMonth = d3.timeFormat("%b"),
+				formatAsDate = d3.timeFormat("%Y/%m/%d");
+
+			//Load in the data
+			d3.csv("data/rt_maringa_data.csv")
+			  .then(function(data) {
+				///Parse data
+			    data.forEach(function(d) {
+			    	d.date = parseTime(d.date);
+			    	d.mean_r = parseFloat(d.mean_r);
+			    	d.lower_5 = parseFloat(d.lower_5);
+			    	d.upper_95 = parseFloat(d.upper_95);			      			      
+			    });
+
+		        data.sort(function(a, b) {
+		            return a.date - b.date;
+		        });
+		        //Get median of x
+		        median = d3.median(data, function(d) { return d.date; })
+
+				//Create scale functions
+				xScale = d3.scaleTime()
+							.domain([
+								d3.min(data, function(d) { return d.date; }),
+								d3.max(data, function(d) { return d.date; })
+							])
+							.range([0, width]);
+				yScale = d3.scaleLinear()
+				            .domain([
+				            	d3.min(data, function(d) { return d.lower_5; }),
+				            	d3.max(data, function(d) { return d.upper_95; })
+							])
+							.range([height, 0]);	
+
+				//Create SVG element in chart id element
+				const svg = d3.select('#chart')
+				               .append('svg')
+				               .attr("class", "content")
+				               .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+				               .attr("preserveAspectRatio", "xMidYMid meet")
+				var g = svg.append("g")
+				            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                var svgDefs = svg.append('defs');
+           		var mainGradient = svgDefs.append('linearGradient')
+                                           .attr('id', 'mainGradient');
+	            mainGradient.attr("x1", 0)
+	            			.attr("gradientUnits", "userSpaceOnUse")
+							.attr("y1", 0)
+							.attr("x2", 0)
+							.attr("y2", height)
+							.selectAll("stop")
+							.data([
+								{offset: yScale(1) / height, color: "#e41a1c"},
+								{offset: yScale(1) / height, color: "#4daf4a"}
+							])
+							.enter().append("stop")
+							 .attr("offset", d => d.offset)
+							 .attr("stop-color", d => d.color);
+
+			    // Create confidence interval
+			    g.append("path")
+			      .attr("class", "ci")
+			      .classed('filled', true)
+			      .datum(data)
+			      .attr("stroke", "none")
+			      .attr("d", d3.area()
+			      	           .x(function(d) { return xScale(d.date) })
+			                   .y0(function(d) { return yScale(d.lower_5) })
+			                   .y1(function(d) { return yScale(d.upper_95) })
+			      );
+
+			    const minDate = d3.min(data, function(d) { return d.date; }), 
+			   		  maxDate = d3.max(data, function(d) { return d.date; });
+			   	
+				var horizontalData = [{x: minDate, y: 1}, {x: maxDate, y: 1}];
+				var horizontalLine = d3.line()
+									   .x(function(horizontalData) { return xScale(horizontalData.x); })
+									   .y(function(horizontalData) { return yScale(horizontalData.y); });
+				g.append("path")
+				 .datum(horizontalData)
+				  .attr("d", horizontalLine)
+				  .style("stroke", "#e41a1c")
+				  .style("stroke-dasharray", "3,3")			   		 
+
+				//Create line
+				var line = d3.line()
+							 .x(function(d) { return xScale(d.date); })
+							 .y(function(d) { return yScale(d.mean_r); });
+
+				g.append("path")
+			      .attr("class", "line")
+			      .datum(data)
+			      .attr("d", line)
+			      .classed("outlined", true)
+
+				//Create axis
+				var xAxis = d3.axisBottom(xScale)
+							  .ticks(7)
+							  .tickFormat(formatAsMonth)
+							  .tickSize(3);
+				var yAxis = d3.axisLeft(yScale)
+							  .ticks(7)
+							  .tickSize(3);
+
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0," + height + ")")
+				  .call(xAxis)
+				  .select(".domain")
+				  .attr("stroke","#252525")
+				  .attr("stroke-width","0");
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0,0)")
+				  .call(yAxis)
+				  .select(".domain")
+				  .attr("stroke","#252525")
+				  .attr("stroke-width","1");
+				g.selectAll(".tick")
+				  .selectAll("line")
+				  .attr("stroke-width","1");
+
+ 				//Create axis label
+			    g.append("text")
+			      .attr("class", "axis-title")
+			      .attr("transform", "rotate(-90)")
+			      .style("text-anchor", "middle")
+			      .attr("y",-45)
+			      .attr("x",-height/2)
+			      .attr("dy", ".71em")
+			      .text("Reproduction number, R(t)");
+
+				//Create tooltip
+			    var focus = g.append("g")
+			                  .attr("class", "focus");
+
+			    focus.append("path") 
+			          .attr("class", "hover-line")
+
+			    focus.append("text")
+			    	  .attr("class", "tooltip-y")
+			    focus.append("text")
+			    	  .attr("class", "tooltip-x")
+
+			    focus.append("circle")
+			          .attr("r", 3);
+
+			    svg.append("rect")
+			    	.attr("class", "overlay")
+			        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+			        .attr("width", width)
+			        .attr("height", height)
+			        .on("mouseover", function() {
+			        	focus.style("display", null); 
+			        })
+			        .on("mouseout", function() { 			        	
+			        	focus.style("display", "none"); 
+			        })
+			        .on("mousemove", event => mousemove(event));
+
+			    function mousemove(event) {
+					var x0 = xScale.invert(d3.pointer(event)[0]),
+					    bisectx = d3.bisector(function(d) { return d.date; }).left,
+					    i = bisectx(data, x0, 1),
+					    d0 = data[i - 1],
+					    d1 = data[i],
+					    dTrue = x0 - d0.date > d1.date - x0 ? d1 : d0; // if is true, d1, if is false d0
+					xValue = dTrue.date
+					d3.select(".hover-line")
+					   .attr("d", function() {
+					   		var dVar = "M" + 0 + "," + (-yScale(dTrue.mean_r));
+					    	dVar += " " + 0 + "," + (height - yScale(dTrue.mean_r));
+					    	return dVar;
+					   })
+					   .attr("stroke", function(d) {
+						   if (dTrue.mean_r < 1) {
+						    	return  "#4daf4a";
+					       } else {
+								return "#e41a1c";
+						   }
+					   })
+					focus.select("circle")
+					      .attr("stroke", function(d) {
+					      	  if (dTrue.mean_r < 1) {
+					    		  return  "#4daf4a";
+					    	  } else {
+					    		  return "#e41a1c";
+					    	  }
+					      })			      
+					focus.select(".tooltip-y").text(function() { return "R(t) = " + dTrue.mean_r.toFixed(2); })
+					focus.select(".tooltip-x").text(function() { return  formatAsDate(xValue); });			        
+					focus.attr("transform", "translate(" + xScale(xValue) + "," + yScale(dTrue.mean_r) + ")");
+
+					if (dTrue.date > median) {
+						focus.select(".tooltip-y")
+						 	  .attr("y", height*.95-yScale(dTrue.mean_r))
+						 	  .attr("text-anchor", "end")
+						 	  .attr("x", -5);
+						focus.select(".tooltip-x")
+						 	  .attr("y", height*.92-yScale(dTrue.mean_r))
+						 	  .attr("text-anchor", "end")
+						 	  .attr("x", -5);
+					} else {
+						focus.select(".tooltip-y")
+							  .attr("y", height*.95-yScale(dTrue.mean_r))
+							  .attr("text-anchor", "start")
+							  .attr("x", 5);
+						focus.select(".tooltip-x")
+							  .attr("y", height*.92-yScale(dTrue.mean_r))
+							  .attr("text-anchor", "start")
+						      .attr("x", 5);
+			        }
+			    }
+			});
+		</script>
+	</body>
+</html>

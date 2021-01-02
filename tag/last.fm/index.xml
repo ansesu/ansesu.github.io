@@ -5,12 +5,153 @@
     <link>/tag/last.fm/</link>
       <atom:link href="/tag/last.fm/index.xml" rel="self" type="application/rss+xml" />
     <description>last.fm</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
       <title>last.fm</title>
       <link>/tag/last.fm/</link>
     </image>
+    
+    <item>
+      <title>Meu last.fm em 2020</title>
+      <link>/post/lastfm-2020/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/post/lastfm-2020/</guid>
+      <description>&lt;p&gt;O 
+&lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; é uma rede social em que os usuários conseguem manter um histórico de sua atividade musical por meio de &lt;em&gt;scrobbles&lt;/em&gt; (nome atribuído ao registro de cada música reproduzida pelo usuário). Esse serviço existe desde 2002, quando a instalação de um programa era necessária para realizar os &lt;em&gt;scrobbles&lt;/em&gt;. Recentemente, porém, a plataforma foi integrada a vários serviços de streaming como Spotify, Deezer, Tidal e Google Play Music. Sendo assim, ficou muito mais fácil manter o registro de sua própria atividade musical. O last.fm exibe estatísticas semanais (na versão gratuita), mensais e anuais (na versão paga), referentes ao volume de músicas escutadas, artistas, álbuns, gêneros, padrões temporais e comparações com outros usuários. Além disso, a plataforma permite os usuários encontrarem pessoas com gostos musicais similares ao seus.&lt;/p&gt;
+&lt;p&gt;Este ano, novamente vou realizar uma análise estatística do 
+&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;meu perfil no last.fm&lt;/a&gt; em 2020. Para isso, utilizei a ferramenta 
+&lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Last.fm data export&lt;/a&gt; para exportar o histórico do meu perfil. A partir daí, utilizei o 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python&lt;/a&gt; para tratar o dado, e o pacote 
+&lt;a href=&#34;https://d3js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3.js&lt;/a&gt; para confeccionar algumas visualizações. O código para reprodução está disponível em: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#visão-geral&#34;&gt;Visão geral&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#as-músicas-mais-ouvidas-de-2020&#34;&gt;As músicas mais ouvidas de 2020&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#os-artistas-mais-ouvidos-de-2020&#34;&gt;Os artistas mais ouvidos de 2020&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#os-álbuns-mais-ouvidos-de-2020&#34;&gt;Os álbuns mais ouvidos de 2020&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#os-artistas-novos-mais-ouvidos-de-2020&#34;&gt;Os artistas novos mais ouvidos de 2020&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#visualizações&#34;&gt;Visualizações&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;visão-geral&#34;&gt;Visão geral&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Total de plays: 8,682&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total de músicas: 2,297&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total de artistas: 580&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total de álbuns: 1,079&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;as-músicas-mais-ouvidas-de-2020&#34;&gt;As músicas mais ouvidas de 2020&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;リセット - Taichi Mukai (121 plays)&lt;/li&gt;
+&lt;li&gt;Sou Babu - Babu Santana (81 plays)&lt;/li&gt;
+&lt;li&gt;道 - Taichi Mukai (71 plays)&lt;/li&gt;
+&lt;li&gt;In a Sweat ! - Yuki Hayashi (66 plays)&lt;/li&gt;
+&lt;li&gt;Catch up, latency - UNISON SQUARE GARDEN (58 plays)&lt;/li&gt;
+&lt;li&gt;Golden - Cory Wong (54 plays)&lt;/li&gt;
+&lt;li&gt;Kenni and the Jets - The Fearless Flyers (52 plays)&lt;/li&gt;
+&lt;li&gt;Starting Line - Cory Wong (50 plays)&lt;/li&gt;
+&lt;li&gt;AmarElo (Sample: Sujeito de Sorte - Belchior) - Emicida (47 plays)&lt;/li&gt;
+&lt;li&gt;Companion Pass - Cory Wong (45 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;os-artistas-mais-ouvidos-de-2020&#34;&gt;Os artistas mais ouvidos de 2020&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Foster the People (978 plays)&lt;/li&gt;
+&lt;li&gt;Cory Wong (462 plays)&lt;/li&gt;
+&lt;li&gt;Vulfpeck (411 plays)&lt;/li&gt;
+&lt;li&gt;Emicida (308 plays)&lt;/li&gt;
+&lt;li&gt;Phoenix (224 plays)&lt;/li&gt;
+&lt;li&gt;Yuki Hayashi (218 plays)&lt;/li&gt;
+&lt;li&gt;The Kooks (212 plays)&lt;/li&gt;
+&lt;li&gt;Taichi Mukai (204 plays)&lt;/li&gt;
+&lt;li&gt;Red Hot Chili Peppers (140 plays)&lt;/li&gt;
+&lt;li&gt;Tame Impala (127 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;os-álbuns-mais-ouvidos-de-2020&#34;&gt;Os álbuns mais ouvidos de 2020&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Torches - Foster the People (294 plays)&lt;/li&gt;
+&lt;li&gt;AmarElo - Emicida (246 plays)&lt;/li&gt;
+&lt;li&gt;TVアニメ「風が強く吹いている」オリジナルサウンドトラック - Yuki Hayashi (200 plays)&lt;/li&gt;
+&lt;li&gt;Motivational Music For The Syncopated Soul - Cory Wong (168 plays)&lt;/li&gt;
+&lt;li&gt;Supermodel - Foster the People (166 plays)&lt;/li&gt;
+&lt;li&gt;Sacred Hearts Club - Foster the People (162 plays)&lt;/li&gt;
+&lt;li&gt;Pure - Taichi Mukai (100 plays)&lt;/li&gt;
+&lt;li&gt;Frozen 2 (Original Motion Picture Soundtrack/Deluxe Edition) - Kristen Bell (97 plays)&lt;/li&gt;
+&lt;li&gt;Thrill of the Arts - Vulfpeck (84 plays)&lt;/li&gt;
+&lt;li&gt;The Battle of Los Angeles - Rage Against the Machine (82 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;os-artistas-novos-mais-ouvidos-de-2020&#34;&gt;Os artistas novos mais ouvidos de 2020&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Emicida (308 plays)&lt;/li&gt;
+&lt;li&gt;Yuki Hayashi (218 plays)&lt;/li&gt;
+&lt;li&gt;Taichi Mukai (204 plays)&lt;/li&gt;
+&lt;li&gt;Babu Santana (83 plays)&lt;/li&gt;
+&lt;li&gt;OKAMOTO&amp;rsquo;S (80 plays)&lt;/li&gt;
+&lt;li&gt;Self (66 plays)&lt;/li&gt;
+&lt;li&gt;UNISON SQUARE GARDEN (58 plays)&lt;/li&gt;
+&lt;li&gt;Public Enemy (52 plays)&lt;/li&gt;
+&lt;li&gt;Fitz and the Tantrums (47 plays)&lt;/li&gt;
+&lt;li&gt;Gen Hoshino (42 plays)&lt;/li&gt;
+&lt;li&gt;Pomplamoose (37 plays)&lt;/li&gt;
+&lt;li&gt;Romes (36 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;visualizações&#34;&gt;Visualizações&lt;/h2&gt;
+&lt;p&gt;(As figuras aqui expostas são interativas)&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:50%; position:relative; display:block; width: 50%;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/hours.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position: absolute; top:0; right:-50%; text-anchor:center&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: número de músicas em cada período do dia em 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:38.5%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/months_and_days.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: número de músicas em cada mês (dia da semana) de 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/streaks.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: sequências escutando o mesmo artista (música) em 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:56%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/stream_chart.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: evolução temporal do volume de reproduções dos top 10 artistas de 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/barchart_race.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figura: corrida de barras para artistas com mais de 30 reproduções em 2020.&lt;p/&gt;</description>
+    </item>
     
     <item>
       <title>Meu last.fm em 2019</title>
@@ -20,8 +161,9 @@
       <description>&lt;p&gt;O 
 &lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; é uma rede social em que os usuários conseguem manter um histórico de sua atividade musical por meio de &lt;em&gt;scrobbles&lt;/em&gt; (nome atribuído ao registro de cada música reproduzida pelo usuário). Esse serviço existe desde 2002, quando a instalação de um programa era necessária para realizar os &lt;em&gt;scrobbles&lt;/em&gt;. Recentemente, porém, a plataforma foi integrada a vários serviços de streaming como Spotify, Deezer, Tidal e Google Play Music. Sendo assim, ficou muito mais fácil manter o registro de sua própria atividade musical. O last.fm exibe estatísticas semanais (na versão gratuita), mensais e anuais (na versão paga), referentes ao volume de músicas escutadas, artistas, álbuns, gêneros, padrões temporais e comparações com outros usuários. Além disso, a plataforma permite os usuários encontrarem pessoas com gostos musicais similares ao seus.&lt;/p&gt;
 &lt;p&gt;Aqui, vou realizar uma análise estatística do 
-&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;meu perfil no last.fm&lt;/a&gt; em 2019 (e quem sabe continuo repetindo essa análise anualmente). Para isso, utilizei 
-&lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;essa ferramenta&lt;/a&gt; para exportar o histórico do meu perfil. A partir daí, utilizei o Python para tratar o dado e confeccionar algumas visualizações. O código para reprodução está disponível em: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;. Então, vamos lá! Primeiramente, alguns números que resumem um pouco do meu 2019.&lt;/p&gt;
+&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;meu perfil no last.fm&lt;/a&gt; em 2019 (e quem sabe continuo repetindo essa análise anualmente).  Para isso, utilizei a ferramenta 
+&lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Last.fm data export&lt;/a&gt; para exportar o histórico do meu perfil. A partir daí, utilizei o 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python&lt;/a&gt; para tratar o dado e confeccionar algumas visualizações. O código para reprodução está disponível em: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;. Então, vamos lá! Primeiramente, alguns números que resumem um pouco do meu 2019.&lt;/p&gt;
 &lt;h2&gt;Lista de Conteúdos&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -172,7 +314,7 @@ Também resolvi analisar as maiores sequências escutando o mesmo artista ou mú
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: Sequências escutando o mesmo artista em 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figura: sequências escutando o mesmo artista em 2019.&lt;p/&gt;
 A figura abaixo mostra as sequências escutando a mesma música em 2019. Em resumo, não costumo ouvir músicas repetidas em sequência.
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -182,7 +324,7 @@ A figura abaixo mostra as sequências escutando a mesma música em 2019. Em resu
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figura: Sequências escutando a mesma música em 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: sequências escutando a mesma música em 2019.&lt;p/&gt;
 &lt;p&gt;Em seguida, decidi investigar o comportamento da entropia de Shannon da distribuição dos artistas que ouço. A entropia normalizada de Shannon é descrita pela equação 
 &lt;a href=&#34;#entropy&#34;&gt;[1]&lt;/a&gt;
 $$
@@ -197,7 +339,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figura: Diversidade dos artistas que escutei em cada semana de 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: diversidade dos artistas que escutei em cada semana de 2019.&lt;p/&gt;
 &lt;p&gt;A figura abaixo mostra a entropia para cada dia da semana em 2019. Os dias da semana apresentam valores menores de entropia, o que pode indicar que ouço algum tipo mais específico de música (e consequentemente de um grupo de artistas) quando estou realizando minhas atividades.&lt;/p&gt;
 &lt;div
  style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
@@ -207,7 +349,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figura: Diversidade dos artistas que escutei em cada dia da semana de 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: diversidade dos artistas que escutei em cada dia da semana de 2019.&lt;p/&gt;
 &lt;p&gt;Navegando pela internet, achei um tipo de gráfico bem massa chamado 
 &lt;a href=&#34;https://datavizcatalogue.com/methods/images/top_images/SVG/stream_graph.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stream wave chart&lt;/a&gt;. Esse tipo de gráfico indica a evolução temporal do volume de músicas (dado por uma área colorida) de determinado artista em uma janela temporal. Achei legal e tentei fazer o meu próprio &lt;em&gt;stream chart&lt;/em&gt;. Os gráficos acima foram feitos por meio do pacote 
 &lt;a href=&#34;https://docs.bokeh.org/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt; do Python. Porém, não há suporte para o &lt;em&gt;stream chart&lt;/em&gt; no Bokeh. Então, tive que procurar alternativas, e acabei encontrando o pacote 
@@ -221,7 +363,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder=&#34;0&#34; scrolling=&#34;no&#34;
   style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figura: Evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.&lt;p/&gt;
 &lt;p&gt;Por fim, utilizei o 
 &lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; para confeccionar um gráfico de corrida de barras (que, por sinal, está bem famoso nas redes sociais atualmente). Essa é uma maneira alternativa de visualizar a evolução temporal da quantidade de músicas ouvidas por artista, pois acompanhamos o número de reproduções acumulado.&lt;/p&gt;
 &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117094&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117094/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;

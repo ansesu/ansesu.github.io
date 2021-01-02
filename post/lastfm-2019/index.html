@@ -728,8 +728,9 @@
       <p>O 
 <a href="https://www.last.fm/" target="_blank" rel="noopener">last.fm</a> é uma rede social em que os usuários conseguem manter um histórico de sua atividade musical por meio de <em>scrobbles</em> (nome atribuído ao registro de cada música reproduzida pelo usuário). Esse serviço existe desde 2002, quando a instalação de um programa era necessária para realizar os <em>scrobbles</em>. Recentemente, porém, a plataforma foi integrada a vários serviços de streaming como Spotify, Deezer, Tidal e Google Play Music. Sendo assim, ficou muito mais fácil manter o registro de sua própria atividade musical. O last.fm exibe estatísticas semanais (na versão gratuita), mensais e anuais (na versão paga), referentes ao volume de músicas escutadas, artistas, álbuns, gêneros, padrões temporais e comparações com outros usuários. Além disso, a plataforma permite os usuários encontrarem pessoas com gostos musicais similares ao seus.</p>
 <p>Aqui, vou realizar uma análise estatística do 
-<a href="http://last.fm/user/ansesu" target="_blank" rel="noopener">meu perfil no last.fm</a> em 2019 (e quem sabe continuo repetindo essa análise anualmente). Para isso, utilizei 
-<a href="https://mainstream.ghan.nl/export.html" target="_blank" rel="noopener">essa ferramenta</a> para exportar o histórico do meu perfil. A partir daí, utilizei o Python para tratar o dado e confeccionar algumas visualizações. O código para reprodução está disponível em: <a href="https://github.com/ansesu/lastfm/">https://github.com/ansesu/lastfm/</a>. Então, vamos lá! Primeiramente, alguns números que resumem um pouco do meu 2019.</p>
+<a href="http://last.fm/user/ansesu" target="_blank" rel="noopener">meu perfil no last.fm</a> em 2019 (e quem sabe continuo repetindo essa análise anualmente).  Para isso, utilizei a ferramenta 
+<a href="https://mainstream.ghan.nl/export.html" target="_blank" rel="noopener">Last.fm data export</a> para exportar o histórico do meu perfil. A partir daí, utilizei o 
+<a href="https://www.python.org/" target="_blank" rel="noopener">Python</a> para tratar o dado e confeccionar algumas visualizações. O código para reprodução está disponível em: <a href="https://github.com/ansesu/lastfm/">https://github.com/ansesu/lastfm/</a>. Então, vamos lá! Primeiramente, alguns números que resumem um pouco do meu 2019.</p>
 <h2>Lista de Conteúdos</h2>
 <nav id="TableOfContents">
   <ul>
@@ -880,7 +881,7 @@ Também resolvi analisar as maiores sequências escutando o mesmo artista ou mú
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center; font-size: 16px">Figura: Sequências escutando o mesmo artista em 2019.<p/>
+<p style="text-align: center; font-size: 16px">Figura: sequências escutando o mesmo artista em 2019.<p/>
 A figura abaixo mostra as sequências escutando a mesma música em 2019. Em resumo, não costumo ouvir músicas repetidas em sequência.
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -890,7 +891,7 @@ A figura abaixo mostra as sequências escutando a mesma música em 2019. Em resu
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center">Figura: Sequências escutando a mesma música em 2019.<p/>
+<p style="text-align: center">Figura: sequências escutando a mesma música em 2019.<p/>
 <p>Em seguida, decidi investigar o comportamento da entropia de Shannon da distribuição dos artistas que ouço. A entropia normalizada de Shannon é descrita pela equação 
 <a href="#entropy">[1]</a>
 $$
@@ -905,7 +906,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center">Figura: Diversidade dos artistas que escutei em cada semana de 2019.<p/>
+<p style="text-align: center">Figura: diversidade dos artistas que escutei em cada semana de 2019.<p/>
 <p>A figura abaixo mostra a entropia para cada dia da semana em 2019. Os dias da semana apresentam valores menores de entropia, o que pode indicar que ouço algum tipo mais específico de música (e consequentemente de um grupo de artistas) quando estou realizando minhas atividades.</p>
 <div
  style="padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;">
@@ -915,7 +916,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center">Figura: Diversidade dos artistas que escutei em cada dia da semana de 2019.<p/>
+<p style="text-align: center">Figura: diversidade dos artistas que escutei em cada dia da semana de 2019.<p/>
 <p>Navegando pela internet, achei um tipo de gráfico bem massa chamado 
 <a href="https://datavizcatalogue.com/methods/images/top_images/SVG/stream_graph.svg" target="_blank" rel="noopener">stream wave chart</a>. Esse tipo de gráfico indica a evolução temporal do volume de músicas (dado por uma área colorida) de determinado artista em uma janela temporal. Achei legal e tentei fazer o meu próprio <em>stream chart</em>. Os gráficos acima foram feitos por meio do pacote 
 <a href="https://docs.bokeh.org/en/latest/index.html" target="_blank" rel="noopener">Bokeh</a> do Python. Porém, não há suporte para o <em>stream chart</em> no Bokeh. Então, tive que procurar alternativas, e acabei encontrando o pacote 
@@ -929,7 +930,7 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   frameborder="0" scrolling="no"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<p style="text-align: center">Figura: Evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.<p/>
+<p style="text-align: center">Figura: evolução temporal do volume de reproduções de artistas com mais de 30 reproduções em 2019.<p/>
 <p>Por fim, utilizei o 
 <a href="https://flourish.io/" target="_blank" rel="noopener">flourish.io</a> para confeccionar um gráfico de corrida de barras (que, por sinal, está bem famoso nas redes sociais atualmente). Essa é uma maneira alternativa de visualizar a evolução temporal da quantidade de músicas ouvidas por artista, pois acompanhamos o número de reproduções acumulado.</p>
 <div class="flourish-embed flourish-bar_race" data-src="visualisation/3117094" data-url="https://flo.uri.sh/visualisation/3117094/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
@@ -950,6 +951,10 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
 <div class="article-tags">
   
   <a class="badge badge-light" href="/tag/last.fm/">last.fm</a>
+  
+  <a class="badge badge-light" href="/tag/python/">Python</a>
+  
+  <a class="badge badge-light" href="/tag/visualizacao/">Visualização</a>
   
 </div>
 
@@ -1244,6 +1249,13 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   
   
   <div class="post-nav-item">
+    <div class="meta-nav">Próximo</div>
+    <a href="/post/d3-visualizations/" rel="next">Visualização de dados com d3.js</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
     <div class="meta-nav">Anterior</div>
     <a href="/post/python-pep8/" rel="prev">PEP8 - Melhores práticas de estilo em Python</a>
   </div>
@@ -1261,6 +1273,12 @@ em que $n$ é o número total de artistas e $P_i$ é a fração de músicas escu
   <div class="article-widget content-widget-hr">
     <h3>Relacionados</h3>
     <ul>
+      
+      <li><a href="/post/lastfm-2020/">Meu last.fm em 2020</a></li>
+      
+      <li><a href="/post/rt-live-maringa/">Uma alternativa para o cálculo do número de reprodução em Maringá</a></li>
+      
+      <li><a href="/post/d3-visualizations/">Visualização de dados com d3.js</a></li>
       
       <li><a href="/post/python-pep8/">PEP8 - Melhores práticas de estilo em Python</a></li>
       

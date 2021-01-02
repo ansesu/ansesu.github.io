@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Circular barplot</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<!-- Function for radial charts -->
+		<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}	
+			.circular-barplot-label {
+		    	font-family: Helvetica;
+		    	font-size: 10px;
+		    	font-weight: bold;				
+			}
+	        .tooltip-circular-barplot {
+	            position: absolute;
+	            font-size: 15px;
+	            width:  auto;
+	            height: auto;
+	            pointer-events: none;
+	            background-color: white;
+	            font-family: Helvetica;
+	            box-sizing: border-box;
+	            padding: .5%;
+	        }			
+	        .tick {
+	        	stroke: #542788;
+	        	stroke-width: 2;
+	        }
+	        text {
+	        	font-family: Helvetica;
+	        	font-weight: 100;
+	        	font-size: 20px;
+	        }
+	        .clock {
+	        	stroke: #542788;
+	        	stroke-width: 4px;
+	        	opacity: 1;
+	        }
+		</style>
+	</head>
+
+	<div id="chart"></div>
+
+	<body>
+		<script type="text/javascript">
+			//Margin
+			const margin = { top: 10, right: 15, bottom: 10, left: 15 };
+
+			//Width and height
+			const width = 600 - margin.left - margin.right;
+			const height = 600 - margin.top - margin.bottom;
+				  innerRadius = 100,
+				  outerRadius = Math.min(width, height) / 2;
+			var formatValue = d3.format(",")
+
+			//Load in the data
+			d3.csv("data/hour_data.csv")
+			  .then(function(data) {
+				///Parse data
+			    data.forEach(function(d) {
+			    	d.hour = parseInt(d.hour);
+			    	d.count = parseInt(d.count);
+			    });
+
+			    maxDate = d3.max(data, function(d) { return d.count; });
+
+				var max_data = data.map(function(d) {
+			      	return {hour: d.hour, count: maxDate};	
+			    })	
+
+				//Create scale functions
+				xScale = d3.scaleBand()
+					        .range([0, 2 * Math.PI])
+					        .align(0)                
+					        .domain( data.map(function(d) { return d.hour; }) ); 
+				yScale = d3.scaleRadial()
+      						 .domain([
+      						 	 d3.min(data, function(d) { return d.count; }),
+      						 	 d3.max(data, function(d) { return d.count; })
+							 ])
+							 .range([innerRadius, outerRadius]);	
+
+				//Create SVG element in chart id element
+				const svg = d3.select('#chart')
+							  .append('svg')
+							    .attr("class", "content")
+							    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+							    .attr("preserveAspectRatio", "xMidYMid meet")
+				var g = svg.append("g")
+							.attr("transform", "translate(" + 5.37 * width / 10 + "," + ( 1.04*height/2 )+ ")");
+
+
+				// tooltip
+				var tooltipCircularBarplot = d3.select("#chart").append("div")
+				                                .attr("class", "tooltip-circular-barplot")
+				                                .style("opacity", 0);              
+
+				// tooltip mouseover event handler
+				var tipMouseover = function(event, d) {
+					d3.select(this)
+					 .transition()
+					  .duration(300) // ms				  
+					  .attr("d", d3.arc()     // imagine your doing a part of a donut plot
+					  .innerRadius(innerRadius)
+					  .outerRadius(function(d) { return yScale(d.count) + 10 ; })
+					  .startAngle(function(d) { return xScale(d.hour); })
+					  .endAngle(function(d) { return xScale(d.hour) + xScale.bandwidth() ; })
+					  .padAngle(0.01)
+					  .padRadius(innerRadius));            	
+
+					var html = "<b>" + d.hour + "h" + "-" + (d.hour+1) + "h </b><br/>" + formatValue(d.count) + " scrobbles";
+					tooltipCircularBarplot.html(html)
+					                      .style("left", (event.pageX) + "px")
+					                      .style("top", (event.pageY) + "px")
+					                      .style("font-size", "20px")
+					                      .transition()
+					                       .duration(300) // ms
+					                       .style("opacity", 1); // started as 0!
+				};
+				// tooltip mouseout event handler
+				var tipMouseout = function(d) {
+					d3.select(this)
+					.transition()
+					 .duration(300) // ms				  
+					 .attr("opacity", ".8")
+					 .attr("d", d3.arc()     // imagine your doing a part of a donut plot
+					 .innerRadius(innerRadius)
+					 .outerRadius(function(d) { return yScale(d.count); })
+					 .startAngle(function(d) { return xScale(d.hour); })
+					 .endAngle(function(d) { return xScale(d.hour) + xScale.bandwidth(); })
+					 .padAngle(0.01)
+					 .padRadius(innerRadius));   
+					tooltipCircularBarplot.transition()
+					                       .duration(300) // ms                       
+					                       .style("opacity", 0); // don't care about position!;                       
+				};
+
+				// Add the labels and clock
+				g.append("text")
+				  .text("00")
+				  .attr("transform", function(d) { return "translate(0,-70)"; })
+				  .attr("text-anchor", "middle")
+				g.append("text")
+				  .text("12")
+				  .attr("transform", function(d) { return "translate(0,82)"; })
+				  .attr("text-anchor", "middle")
+				g.append("text")
+				  .text("06")
+				  .attr("text-anchor", "middle")
+				  .attr("vertical-align", "bottom")				  
+				  .attr("transform", function(d) { return "translate(75,6)"; })
+				g.append("text")
+				  .text("18")
+				  .attr("transform", function(d) { return "translate(-75,6)"; })
+				  .attr("text-anchor", "middle")	
+
+				var tickData1 = [{x: 90, y: 0}, {x: 100, y: 0}];
+				var tickLine1 = d3.line()
+								   .x(function(tickData1) { return tickData1.x; })
+								   .y(function(tickData1) { return tickData1.y; });
+				g.append("path")
+				 .datum(tickData1)
+				  .attr("d", tickLine1)
+				  .attr("class", "tick")
+
+				var tickData2 = [{x: -90, y: 0}, {x: -100, y: 0}];
+				var tickLine2 = d3.line()
+								   .x(function(tickData2) { return tickData2.x; })
+								   .y(function(tickData2) { return tickData2.y; });
+				g.append("path")
+				 .datum(tickData2)
+				  .attr("d", tickLine2)
+				  .attr("class", "tick")
+
+				var tickData3 = [{x: 0, y: 100}, {x: 0, y: 90}];
+				var tickLine3 = d3.line()
+								   .x(function(tickData3) { return tickData3.x; })
+								   .y(function(tickData3) { return tickData3.y; });
+				g.append("path")
+				 .datum(tickData3)
+				  .attr("d", tickLine3)
+				  .attr("class", "tick")
+
+				var tickData4 = [{x: 0, y: -100}, {x: 0, y: -90}];
+				var tickLine4 = d3.line()
+								   .x(function(tickData4) { return tickData4.x; })
+								   .y(function(tickData4) { return tickData4.y; });
+				g.append("path")
+				 .datum(tickData4)
+				  .attr("d", tickLine4)
+				  .attr("class", "tick")
+
+				g.append("circle")
+			      .attr("class", "clock")
+			      .attr("cx", 0)
+			      .attr("cy", 0)
+			      .attr("r", 45)
+			      .attr("fill", "none")
+
+				g.append("circle")
+			      .attr("class", "clock")
+			      .attr("cx", 0)
+			      .attr("cy", 0)
+			      .attr("r", 1)
+			      .attr("fill", "#542788")				
+
+				var tickData5 = [{x: 0, y: 0}, {x: 0, y: -35}];
+				var tickLine5 = d3.line()
+								   .x(function(tickData5) { return tickData5.x; })
+								   .y(function(tickData5) { return tickData5.y; });
+				g.append("path")
+				 .datum(tickData5)
+				  .attr("d", tickLine5)
+				  .attr("class", "clock")
+
+				var tickData6 = [{x: 0, y: 0}, {x: 15, y: 20}];
+				var tickLine6 = d3.line()
+								   .x(function(tickData6) { return tickData6.x; })
+								   .y(function(tickData6) { return tickData6.y; });
+				g.append("path")
+				 .datum(tickData6)
+				  .attr("d", tickLine6)
+				  .attr("class", "clock")				    
+
+				// Add bars
+				g.append("g")
+				 .selectAll("path")
+				 .data(max_data)
+				 .enter()
+				 .append("path")
+				  .attr("fill", "#bdbdbd")
+				  .attr("d", d3.arc()   
+				  .innerRadius(innerRadius)
+				  .outerRadius(function(d) { return yScale(d.count); })
+				  .startAngle(function(d) { return xScale(d.hour); })
+				  .endAngle(function(d) { return xScale(d.hour) + xScale.bandwidth(); })
+				  .padAngle(0.01)
+				  .padRadius(innerRadius))
+				  .style("opacity", .2);				
+				g.append("g")
+				.selectAll("path")
+				.data(data)
+				.enter()
+				.append("path")
+				 .attr("fill", "#542788")
+				 .attr("d", d3.arc()   
+				 .innerRadius(innerRadius)
+				 .outerRadius(function(d) { return yScale(d.count); })
+				 .startAngle(function(d) { return xScale(d.hour); })
+				 .endAngle(function(d) { return xScale(d.hour) + xScale.bandwidth(); })
+				 .padAngle(0.01)
+				 .padRadius(innerRadius))
+				 .style("opacity", 1)
+	             .on("mouseover", tipMouseover)
+	             .on("mouseout", tipMouseout);
+			});
+		</script>
+	</body>
+</html>

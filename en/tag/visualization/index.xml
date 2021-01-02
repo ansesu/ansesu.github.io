@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualization | ansesu</title>
+    <link>/en/tag/visualization/</link>
+      <atom:link href="/en/tag/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <description>Visualization</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
+      <title>Visualization</title>
+      <link>/en/tag/visualization/</link>
+    </image>
+    
+    <item>
+      <title>Data visualization with d3.js</title>
+      <link>/en/post/d3-visualizations/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/en/post/d3-visualizations/</guid>
+      <description>&lt;p&gt;Although creating visualizations directly with Python (or any other programming language) can be more practical, interactivity and responsiveness are lost when displaying those same images in web format. For this reason, I decided to learn some visualization techniques using the 
+&lt;a href=&#34;https://d3js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3.js&lt;/a&gt; library. Below, I show some visualizations I created (spoiler alert: they are interactive!).&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/simple_line_plot.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: line plot with interactive vertical line showing the variable value.&lt;p/&gt;
+ &lt;div
+ style=&#34;padding-bottom:68%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/simple_bandplot.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: line plot with confidence interval and interactive vertical line showing the variable value.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/simple_multiline_plot.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: multiline plot with interactive vertical line showing the variables values.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/simple_threshold_line_plot.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: line plot with confidence interval and colors defined by a threshold. Values above this threshold are colored in red, while values below this threshold are colored in green. This visualization was inspired by the one in the website rt.live.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/streaks.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: scatter plot with variable marker size according to the variable value (with buttons to change between categories).&lt;p/&gt;
+  &lt;div
+ style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/simple_barplot.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: simple bar plot.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:39%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/months_and_days.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: grouped bar plot (with buttons to change between categories).&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:50%; position:relative; display:block; width: 50%;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/hours.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position: absolute; top:0; right:-50%; text-anchor:center&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: radial bar plot.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:55%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/stream_chart.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: stream chart plot.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/barchart_race.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: bar chart race.&lt;p/&gt;
+&lt;h2 id=&#34;to-do-list&#34;&gt;To do list&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Map&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Joyplot&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wordcloud&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Networks&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://colorbrewer2.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;colorbrewer2&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/d3/d3-time-format#locale_format&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3-time-format&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SVG Attribute reference&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://observablehq.com/@d3/d3v6-migration-guide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;D3 6.0 migration guide&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to Resize an SVG When the Window is Resized in d3.js&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://bl.ocks.org/williaster/af5b855651ffe29bdca1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3 scatterplot with tooltips&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bl.ocks.org/LemoNode/a9dc1a454fdc80ff2a738a9990935e9d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multiline chart&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bl.ocks.org/larsenmtl/e3b8b7c2ca4787f77d78f58d41c3da91&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3 mouseover multi-line chart&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.d3-graph-gallery.com/graph/barplot_basic.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Most basic barplot in d3.js&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.d3-graph-gallery.com/graph/barplot_button_data_hard.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Button to change input data in barplot (upgraded)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grouped bar chart&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.d3-graph-gallery.com/graph/circular_barplot_label.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Labels on circular barplot&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.d3-graph-gallery.com/graph/streamgraph_template.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Streamgraph template for d3.js&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bl.ocks.org/jrzief/70f1f8a5d066a286da3a1e699823470f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bar chart races&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://rt.live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rt.live&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;[1] Scott, A. 
+&lt;a href=&#34;https://www.amazon.com.br/Interactive-Visualization-Scott-Andrew-Murray/dp/1449339735&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Interactive Data Visualization for the Web&lt;/em&gt;&lt;/a&gt; (O&amp;rsquo;Reilly Media, 2013)&lt;/p&gt;
+&lt;p&gt;[2] Wilke, C. O. 
+&lt;a href=&#34;https://www.amazon.com/gp/product/1492031089&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Fundamentals of Data Visualization&lt;/em&gt;&lt;/a&gt; (O&amp;rsquo;Reilly Media, 2019)&lt;/p&gt;
+&lt;p&gt;[3] F. Crameri, G. E. Shephard, P. J. Heron, &lt;em&gt;The misuse of colour in science communication&lt;/em&gt;. 
+&lt;a href=&#34;https://www.nature.com/articles/s41467-020-19160-7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nature Communications 11, 5444 (2020).&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My 2020 last.fm</title>
+      <link>/en/post/lastfm-2020/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/en/post/lastfm-2020/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; is a social network in which users can keep track of their own musical activity through the so called scrobbles (the log of your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.&lt;/p&gt;
+&lt;p&gt;Here, I perform a statistical analysis of 
+&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last.fm profile&lt;/a&gt; in 2020. I start by using the 
+&lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Last.fm data export tool&lt;/a&gt; to extract my profile&amp;rsquo;s listening history. I use the 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python&lt;/a&gt; to parse data and the package 
+&lt;a href=&#34;https://d3js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3.js&lt;/a&gt; to make some visualizations. My code is available at: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2019-most-listened-songs&#34;&gt;My 2019 most listened songs&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2020-most-listened-artists&#34;&gt;My 2020 most listened artists&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2020-most-listened-albums&#34;&gt;My 2020 most listened albums&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2020-most-listened-new-artists&#34;&gt;My 2020 most listened new artists&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#visualizations&#34;&gt;Visualizations&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Total plays: 8,682&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total songs: 2,297&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total artists: 580&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total albums: 1,079&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;my-2019-most-listened-songs&#34;&gt;My 2019 most listened songs&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;リセット - Taichi Mukai (121 plays)&lt;/li&gt;
+&lt;li&gt;Sou Babu - Babu Santana (81 plays)&lt;/li&gt;
+&lt;li&gt;道 - Taichi Mukai (71 plays)&lt;/li&gt;
+&lt;li&gt;In a Sweat ! - Yuki Hayashi (66 plays)&lt;/li&gt;
+&lt;li&gt;Catch up, latency - UNISON SQUARE GARDEN (58 plays)&lt;/li&gt;
+&lt;li&gt;Golden - Cory Wong (54 plays)&lt;/li&gt;
+&lt;li&gt;Kenni and the Jets - The Fearless Flyers (52 plays)&lt;/li&gt;
+&lt;li&gt;Starting Line - Cory Wong (50 plays)&lt;/li&gt;
+&lt;li&gt;AmarElo (Sample: Sujeito de Sorte - Belchior) - Emicida (47 plays)&lt;/li&gt;
+&lt;li&gt;Companion Pass - Cory Wong (45 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2020-most-listened-artists&#34;&gt;My 2020 most listened artists&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Foster the People (978 plays)&lt;/li&gt;
+&lt;li&gt;Cory Wong (462 plays)&lt;/li&gt;
+&lt;li&gt;Vulfpeck (411 plays)&lt;/li&gt;
+&lt;li&gt;Emicida (308 plays)&lt;/li&gt;
+&lt;li&gt;Phoenix (224 plays)&lt;/li&gt;
+&lt;li&gt;Yuki Hayashi (218 plays)&lt;/li&gt;
+&lt;li&gt;The Kooks (212 plays)&lt;/li&gt;
+&lt;li&gt;Taichi Mukai (204 plays)&lt;/li&gt;
+&lt;li&gt;Red Hot Chili Peppers (140 plays)&lt;/li&gt;
+&lt;li&gt;Tame Impala (127 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2020-most-listened-albums&#34;&gt;My 2020 most listened albums&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Torches - Foster the People (294 plays)&lt;/li&gt;
+&lt;li&gt;AmarElo - Emicida (246 plays)&lt;/li&gt;
+&lt;li&gt;TVアニメ「風が強く吹いている」オリジナルサウンドトラック - Yuki Hayashi (200 plays)&lt;/li&gt;
+&lt;li&gt;Motivational Music For The Syncopated Soul - Cory Wong (168 plays)&lt;/li&gt;
+&lt;li&gt;Supermodel - Foster the People (166 plays)&lt;/li&gt;
+&lt;li&gt;Sacred Hearts Club - Foster the People (162 plays)&lt;/li&gt;
+&lt;li&gt;Pure - Taichi Mukai (100 plays)&lt;/li&gt;
+&lt;li&gt;Frozen 2 (Original Motion Picture Soundtrack/Deluxe Edition) - Kristen Bell (97 plays)&lt;/li&gt;
+&lt;li&gt;Thrill of the Arts - Vulfpeck (84 plays)&lt;/li&gt;
+&lt;li&gt;The Battle of Los Angeles - Rage Against the Machine (82 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2020-most-listened-new-artists&#34;&gt;My 2020 most listened new artists&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Emicida (308 plays)&lt;/li&gt;
+&lt;li&gt;Yuki Hayashi (218 plays)&lt;/li&gt;
+&lt;li&gt;Taichi Mukai (204 plays)&lt;/li&gt;
+&lt;li&gt;Babu Santana (83 plays)&lt;/li&gt;
+&lt;li&gt;OKAMOTO&amp;rsquo;S (80 plays)&lt;/li&gt;
+&lt;li&gt;Self (66 plays)&lt;/li&gt;
+&lt;li&gt;UNISON SQUARE GARDEN (58 plays)&lt;/li&gt;
+&lt;li&gt;Public Enemy (52 plays)&lt;/li&gt;
+&lt;li&gt;Fitz and the Tantrums (47 plays)&lt;/li&gt;
+&lt;li&gt;Gen Hoshino (42 plays)&lt;/li&gt;
+&lt;li&gt;Pomplamoose (37 plays)&lt;/li&gt;
+&lt;li&gt;Romes (36 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;visualizations&#34;&gt;Visualizations&lt;/h2&gt;
+&lt;p&gt;(The figures here shown are interactive)&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:50%; position:relative; display:block; width: 50%;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/hours.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position: absolute; top:0; right:-50%; text-anchor:center&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: number of songs listened in each period of the day in 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:38.5%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/months_and_days.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: number of songs listened in each month (day of the week) in 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/streaks.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: streaks listening the same artist (track) in 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:56%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/stream_chart.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: temporal evolution of the volume of reproduction of my top 10 artists in 2020.&lt;p/&gt;
+&lt;div
+ style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;fig/barchart_race.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: bar chart race for artists with more than 30 reproductions in 2020.&lt;p/&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My 2019 last.fm</title>
+      <link>/en/post/lastfm-2019/</link>
+      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/en/post/lastfm-2019/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; is a social network in which users can keep track of their own musical activity through the so called scrobbles (the log of your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.&lt;/p&gt;
+&lt;p&gt;Here, I perform a statistical analysis of 
+&lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last.fm profile&lt;/a&gt; in 2019 (and who knows turn this an annual thing). I start by using the 
+&lt;a href=&#34;https://mainstream.ghan.nl/export.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Last.fm data export tool&lt;/a&gt; to extract my profile&amp;rsquo;s listening history. Then, I use the 
+&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python&lt;/a&gt; language to parse data and make some visualizations. My code is available at: &lt;a href=&#34;https://github.com/ansesu/lastfm/&#34;&gt;https://github.com/ansesu/lastfm/&lt;/a&gt;. So, here we go! First of all, some numbers that summarize my 2019.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2019-most-listened-songs&#34;&gt;My 2019 most listened songs&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2019-most-listened-artists&#34;&gt;My 2019 most listened artists&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2019-most-listened-albums&#34;&gt;My 2019 most listened albums&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#my-2019-most-listened-new-artists&#34;&gt;My 2019 most listened new artists&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#visualizations&#34;&gt;Visualizations&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Total plays: 10,215&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total songs: 2,270&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total artists: 555&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Total albums: 1,027&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;my-2019-most-listened-songs&#34;&gt;My 2019 most listened songs&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Pick U Up - Foster the People (159 plays)&lt;/li&gt;
+&lt;li&gt;Imagination - Foster the People (102 plays)&lt;/li&gt;
+&lt;li&gt;Style - Foster the People (65 plays)&lt;/li&gt;
+&lt;li&gt;Half of the Way - Vulfpeck (61 plays)&lt;/li&gt;
+&lt;li&gt;Wait For The Moment - Vulfpeck (57 plays)&lt;/li&gt;
+&lt;li&gt;Worst Nites - Foster the People (52 plays)&lt;/li&gt;
+&lt;li&gt;1612 - Vulfpeck (51 plays)&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t Stop (Color on the Walls) - Foster the People (49 plays)&lt;/li&gt;
+&lt;li&gt;Goats in Trees - Foster the People (49 plays)&lt;/li&gt;
+&lt;li&gt;Helena Beat - Foster the People (48 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2019-most-listened-artists&#34;&gt;My 2019 most listened artists&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Vulfpeck (1785 plays)&lt;/li&gt;
+&lt;li&gt;Foster the People (1711 plays)&lt;/li&gt;
+&lt;li&gt;Saint Motel (427 plays)&lt;/li&gt;
+&lt;li&gt;The Kooks (377 plays)&lt;/li&gt;
+&lt;li&gt;Khruangbin (264 plays)&lt;/li&gt;
+&lt;li&gt;Red Hot Chili Peppers (247 plays)&lt;/li&gt;
+&lt;li&gt;The Strokes (201 plays)&lt;/li&gt;
+&lt;li&gt;Jamiroquai (185 plays)&lt;/li&gt;
+&lt;li&gt;J Rabbit (180 plays)&lt;/li&gt;
+&lt;li&gt;Wednesday Campanella (162 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2019-most-listened-albums&#34;&gt;My 2019 most listened albums&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Torches - Foster the People (418 plays)&lt;/li&gt;
+&lt;li&gt;Supermodel - Foster the People (339 plays)&lt;/li&gt;
+&lt;li&gt;Thrill of the Arts - Vulfpeck (312 plays)&lt;/li&gt;
+&lt;li&gt;Sacred Hearts Club - Foster the People (302 plays)&lt;/li&gt;
+&lt;li&gt;hill climber - Vulfpeck (286 plays)&lt;/li&gt;
+&lt;li&gt;The Beautiful Game - Vulfpeck (280 plays)&lt;/li&gt;
+&lt;li&gt;Saintmotelevision - Saint Motel (236 plays)&lt;/li&gt;
+&lt;li&gt;Pick U Up - Foster the People (216 plays)&lt;/li&gt;
+&lt;li&gt;Fugue State - Vulfpeck (213 plays)&lt;/li&gt;
+&lt;li&gt;Mr Finish Line - Vulfpeck (194 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-2019-most-listened-new-artists&#34;&gt;My 2019 most listened new artists&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Theo Katzman (66 plays)&lt;/li&gt;
+&lt;li&gt;Beach Fossils (64 plays)&lt;/li&gt;
+&lt;li&gt;Ripe (40 plays)&lt;/li&gt;
+&lt;li&gt;DJ Bean Ornish (28 plays)&lt;/li&gt;
+&lt;li&gt;Breakestra (23 plays)&lt;/li&gt;
+&lt;li&gt;Michael Haydn (22 plays)&lt;/li&gt;
+&lt;li&gt;おかん (19 plays)&lt;/li&gt;
+&lt;li&gt;Madeon (18 plays)&lt;/li&gt;
+&lt;li&gt;Scary Goldings (17 plays)&lt;/li&gt;
+&lt;li&gt;Ozawa Kenji (17 plays)&lt;/li&gt;
+&lt;li&gt;小沢健二 (14 plays)&lt;/li&gt;
+&lt;li&gt;Aqueous (12 plays)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;visualizations&#34;&gt;Visualizations&lt;/h2&gt;
+&lt;p&gt;(The figures here shown are interactive)&lt;/p&gt;
+&lt;p&gt;Now, I present some visualizations with some interesting statistics (at least for me). The figure below shows the number of songs listened in each period of the day in 2019. Usually, when I am programming, studying or working out, I listen to music. In this sense, the higher musical activity may be a proxy of my productivity (and the low activity shows that I normally don&amp;rsquo;t wake up early).&lt;/p&gt;
+&lt;div style=&#34;padding-bottom:75%; width: 100%; height: 100%; position:relative; display: block; max-width: 900px;  max-height: 900px; margin: 0 auto;&#34;&gt;
+    &lt;iframe
+        width=&#34;100%&#34; height=&#34;100%&#34;
+        src=&#34;html/daily_hours_2019_en.html&#34;
+        frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+        style=&#34;position:absolute; top:0; left: 0;&#34;&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34; &gt;Figure: number of songs listened in each period of the day in 2019.&lt;p/&gt;
+&lt;p&gt;The figure below shows the number of songs listened in each month of 2019. In July and August, I traveled for some extracurricular activity and, thus, didn&amp;rsquo;t have much time to listen to music.&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;html/month_counts_2019_en.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: number of songs listened in each month of 2019.&lt;p/&gt;
+&lt;p&gt;The figure below shows the number of songs listened in each day of the week in 2019. As mentioned before, I usually listen to music when I am performing some activity, so the count is naturally higher in weekdays. Specially, I believe my productivity is higher on Mondays.&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;html/weekday_counts_2019_en.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: number of songs listened in each day of the week in 2019.&lt;p/&gt;
+&lt;p&gt;I also analyzed the listening streaks for artists and songs. I tend to listen to music in shuffle mode, so, a long streak indicates that I am actually addicted to that specific artist or song. The figure below shows the listening streaks for artists in 2019. At the end of 2018, I found a amazing band called Vulfpeck (which I strongly recommend) and ended up listening to it a lot in 2019. This was my biggest 2019 artist streak. Other honorable mentions: Foster the People (all the way!) and Beach Fossils, this last one presented by my lab colleague Gustavo.&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;html/listening_streaks_2019_en.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center; font-size: 16px&#34;&gt;Figure: streaks listening the same artist in 2019.&lt;p/&gt;
+The figure below shows my song streaks in 2019. In summary, I usually don&#39;t listen to songs on repeat.
+&lt;div
+ style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;html/listening_streaks_track_2019_en.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: streaks listening the same track in 2019.&lt;p/&gt;
+&lt;p&gt;Next, I applied the concept of Shannon entropy to the distribution of artists listened. The normalized Shanon entropy is described by the equation 
+&lt;a href=&#34;#entropy&#34;&gt;[1]&lt;/a&gt;
+$$
+H = \text{Diversity} = -\dfrac{1}{\log n}\sum_i P_i \log P_i
+$$
+where $n$ is the total number of artists and $P_i$ is the fraction of songs from the $i$th artist. The entropy indicates the quantity of information contained in the probability distribution of artists. Values close to one ($\approx 1$) reveal that information is equally distributed among artists or, in other words, I listen to them in the same proportion. Conversely, values close to zero ($\approx 0$) indicate that one of the artists dominates my musical sessions. Therefore, I consider that the entropy is a kind of musical diversity (or heterogeinity) considering the artists I listen, which is different than being eclectic. The figure below shows the entropy for each week in 2019. The entropy exhibit smaller values exactly when I had my longest streaks. Also, it seems that, during a week, I tend to listen to a set of artists homogeneously.&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;html/yearly_entropy_2019_en.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: diversity of artist (as measured by Shannon entropy) in each week of 2019.&lt;p/&gt;
+The figure below shows the entropy for each day of the week in 2019. Weekdays present smaller values of entropy, what may suggest that I tend to listen to a specific kind of music (and consequently of artist) when I am performing my activities. 
+&lt;div
+ style=&#34;padding-bottom:73%; position:relative; display:block; width: 100%; max-width: 900px; margin: 0 auto;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;html/weekday_entropy_2019_en.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: diversity of artist (as measured by Shannon entropy) in each day of the week in 2019.&lt;p/&gt;
+&lt;p&gt;Browsing the internet, I found a cool visualization called 
+&lt;a href=&#34;https://datavizcatalogue.com/methods/images/top_images/SVG/stream_graph.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stream wave chart&lt;/a&gt;. This kind of figure shows the temporal evolution of the volume of songs listened (given by a color filled area) of a set of specific artists. I found it really awesome and tried to make my own stream chart. The above figures were all made using the Python package 
+&lt;a href=&#34;https://docs.bokeh.org/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt;. But it turns out this kind of visualization is not available on Bokeh. I searched for some alternatives and found out the 
+&lt;a href=&#34;https://altair-viz.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Altair&lt;/a&gt; package (also from Python). Then, I selected all the artists with at least 30 reproductions in 2019, which yielded a set of 21 unique artists. The figure below shows the evolution of my reproduction volume in 2019. You can click on the names to select a specific artist. Also, you can do your own last.fm wave chart in a non-pythonic way by using this 
+&lt;a href=&#34;https://savas.ca/lastwave/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;site&lt;/a&gt; (try it out!).&lt;/p&gt;
+&lt;div
+ style=&#34;padding-bottom:35%; position:relative; display:block; width: 100%; max-width: 600px; margin: 0 auto;&#34;&gt;
+ &lt;iframe
+  width=&#34;100%&#34; height=&#34;100%&#34;
+  src=&#34;html/stream_artist_chart_2019_en.html&#34;
+  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
+  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figure: temporal evolution of the volume of reproduction of my top artists in 2019.&lt;p/&gt;
+&lt;p&gt;Finally, I used 
+&lt;a href=&#34;https://flourish.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;flourish.io&lt;/a&gt; app to make a bar chart race (which has been really popular in social media recently). This is an alternative to visualize the temporal evolution of the listening history, but, this time, considering the cumulative number of reproductions.&lt;/p&gt;
+&lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117094&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117094/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a name=&#34;entropy&#34;&gt; [1] Shannon, Claude E., &lt;em&gt;A Mathematical Theory of Communication&lt;/em&gt;. 
+&lt;a href=&#34;https://doi.org/10.1002%2Fj.1538-7305.1948.tb01338.x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bell System Technical Journal. 27 (3): 379–423 (1948)&lt;/a&gt;&lt;/p&gt;
+&lt;!-- &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117110&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117110/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt; --&gt;
+&lt;!-- &lt;div class=&#34;flourish-embed flourish-bar_race&#34; data-src=&#34;visualisation/3117159&#34; data-url=&#34;https://flo.uri.sh/visualisation/3117159/embed&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;/div&gt; --&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

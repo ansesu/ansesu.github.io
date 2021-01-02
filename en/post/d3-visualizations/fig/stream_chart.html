@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Circular barplot</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			.axis-title {
+				font-size: 15px;
+				font-family: Helvetica;
+			}	
+			.axis {
+				font-size: 12px;
+				font-family: Helvetica;
+			}	
+	        .tooltip-stream {
+	            position: absolute;
+	            font-size: 35px;
+	            width:  auto;
+	            height: auto;
+	            pointer-events: none;
+	            background-color: none;
+	            font-family: Helvetica;
+	            box-sizing: border-box;
+	            padding: .5%;
+	        }	
+			.legend {
+				font-size: 12px;
+				font-family: Helvetica;
+			}	        		
+		</style>
+	</head>
+
+	<div id="chart"></div>
+
+	<body>
+		<script type="text/javascript">
+			//Margin
+			const margin = { top: 10, right: 120, bottom: 40, left: 10 };
+
+			//Width and height
+			const width = 700 - margin.left - margin.right;
+			const height = 400 - margin.top - margin.bottom;
+			var parseTime = d3.timeParse("%Y-%m-%d"),
+				formatValue = d3.format(","),
+				formatAsMonth = d3.timeFormat("%b"),
+				formatAsDate = d3.timeFormat("%d/%m/%Y");
+
+			//Load in the data
+			d3.csv("data/stream_chart_data.csv")
+			  .then(function(data) {			
+				
+				var keys = data.columns.slice(1)
+				///Parse data and sort values by date
+			    data.forEach(function(d) {
+			    	d.date = parseTime(d.date);
+			    });		    
+		        data.sort(function(a, b) {
+		            return a.date - b.date;
+		        });
+
+				//Create scale functions
+				xScale = d3.scaleTime()
+						    .domain([
+						    	new Date(2019, 11, 25),
+						    	new Date(2020, 12, 15)
+						    ])
+							   .range([0, width]);
+				yScale = d3.scaleLinear()
+      						.domain([-50,185])
+							.range([ height, 0]);
+	
+				//Create SVG element in chart id element
+				const svg = d3.select('#chart')
+							  .append('svg')
+							    .attr("class", "content")
+							    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+							    .attr("preserveAspectRatio", "xMidYMid meet")
+				var g = svg.append("g")
+				   		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+				// color palette
+				var color = d3.scaleOrdinal()
+							   .domain(keys)
+							   .range(d3.schemeTableau10);
+
+				var artists = color.domain().map(function(name) {
+			      	return {name: name}	
+			    })			
+				//Create legend
+			    var legend = g.selectAll('g')
+			                  .data(artists.reverse())
+			                  .enter().append('g')
+			                   .attr('class', 'legend');
+			    legend.append('rect')
+			           .attr('x', 545)
+			           .attr('y', function(d, i) {
+			           	   return i * 15;
+			           })
+			           .attr('width', 10)
+			           .attr('height', 10)
+			           .style('fill', function(d) {
+			               return  color(d.name);
+			           });
+			    legend.append('text')
+			           .attr('x', 560)
+			           .attr('y', function(d, i) {
+			               return (i * 15)+9;
+			           })
+			           .text(function(d) {
+			               return d.name;
+			           });
+
+				//Create axis
+				var xAxis = d3.axisBottom(xScale)
+							  .tickFormat(formatAsMonth)
+							  .tickSize(3);
+
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0," + height + ")")
+				  .call(xAxis)
+				  .select(".domain")
+				   .attr("stroke","#252525")
+				   .attr("stroke-width","0");
+				g.selectAll(".tick")
+				  .selectAll("line")
+				   .attr("stroke-width","1");
+
+				//stack the data?
+				var stackedData = d3.stack()
+					                .offset(d3.stackOffsetWiggle)
+					                .keys(keys)
+					                (data)						
+				// Area generator
+				var area = d3.area()
+							  .x(function(d) { return xScale(d.data.date); })
+							  .y0(function(d) { return yScale(d[0]); })
+							  .y1(function(d) { return yScale(d[1]); })
+							  .curve(d3.curveBasis);
+
+				// create a tooltip
+                var tooltipStream = d3.select("#chart").append("div")
+									   .attr("class", "tooltip-stream")
+									   .style("opacity", 0);
+
+				// Three function that change the tooltip when user hover / move / leave a cell
+				var mouseover = function(event,d) {
+					d3.selectAll(".myArea").style("opacity", .2);
+					d3.select(this)
+					   .style("stroke", "#bdbdbd")
+					   .style("opacity", 1);
+					
+					var html = event.target.__data__.key;
+					tooltipStream.html(html)
+					              .style("left", "30px")
+					              .style("top", "15px")
+								  .transition()
+							       .duration(300) // ms
+								   .style("opacity", .9); // started as 0!	
+				}
+
+				var mouseleave = function(d) {
+					d3.selectAll(".myArea").style("opacity", 1).style("stroke", "none")
+					
+					tooltipStream.transition()
+                                  .duration(300) // ms
+                                  .style("opacity", 0); // don't care about position!;  
+				}				
+
+				// Show the areas
+				g.selectAll("mylayers")
+				  .data(stackedData)
+				  .enter()
+				  .append("path")
+				   .attr("class", "myArea")
+				   .style("fill", function(d) { return color(d.key); })
+				   .attr("d", area)	
+				   .on("mouseover", mouseover)
+				   .on("mouseleave", mouseleave)
+			});
+		</script>
+	</body>
+</html>

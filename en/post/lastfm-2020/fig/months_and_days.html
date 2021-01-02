@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Frequências mensais e semanais</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			.axis-title {
+				font-size: 15px;
+				font-family: Helvetica;
+			}	
+			.axis {
+				font-size: 12px;
+				font-family: Helvetica;
+			}	
+			.barplot-label {
+		    	font-family: Helvetica;
+		    	font-size: 10px;
+		    	font-weight: bold;				
+			}
+	        .tooltip-barplot {
+	            position: absolute;
+	            font-size: 20px;
+	            width:  auto;
+	            height: auto;
+	            pointer-events: none;
+	            background-color: white;
+	            font-family: Helvetica;
+	            box-sizing: border-box;
+	            padding: .5%;
+	        }			
+			button {
+				position:relative;
+				z-index: 1000;
+				font-size: 20px;
+			}			 
+			.legend {
+				font-size: 10px;
+				font-family: Helvetica;
+			}			       
+		</style>
+	</head>
+
+	<button onclick="plotCharts('data/month_data.csv', true)">Monthly</button>
+	<button onclick=" plotCharts('data/weekday_data.csv', false)">Weekly</button>
+	<div id="chart"></div>
+
+	<body>
+		<script type="text/javascript">
+			//Margin
+			const margin = { top: 30, right: 10, bottom: 40, left: 49 };
+
+			//Width and height
+			const width = 600 - margin.left - margin.right;
+			const height = 250 - margin.top - margin.bottom;
+
+			// Formatter
+			var formatValue = d3.format(",")
+
+			//Create SVG element in chart id element
+			const svg = d3.select('#chart')
+						  .append('svg')
+						    .attr("class", "content")
+						    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+						    .attr("preserveAspectRatio", "xMidYMid meet")
+			var g = svg.append("g")
+			            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");	
+
+			//Create scale functions
+			xScale = d3.scaleBand()
+						.range([ 0, width ])
+						.domain(['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'])
+						.padding(0.2); 
+			yScale = d3.scaleLinear()
+						.domain([0,1220])
+						.range([height, 0]);	
+			//Create axis
+			var xAxis = d3.axisBottom(xScale)
+						  .ticks(5)
+						  .tickSize(0);
+
+			var yAxis = d3.axisLeft(yScale)
+						  .tickSize(3);						  
+			g.append("g")
+			  .attr("class", "xAxis")
+			  .attr("transform", "translate(0," + height + ")")
+			  .call(xAxis)
+			  .select(".domain")
+			   .attr("stroke","#252525")
+			   .attr("stroke-width","0");		
+
+			g.append("g")
+			  .attr("class", "yAxis")
+			  .attr("transform", "translate(0,0)")
+			  .call(yAxis)
+			  .select(".domain")
+			   .attr("stroke","#252525")
+			   .attr("stroke-width","1");
+			//Create axis label
+		    g.append("text")
+		      .attr("class", "axis-title")
+		      .attr("transform", "rotate(-90)")
+		      .style("text-anchor", "middle")
+		      .attr("y",-49)
+		      .attr("x",-height/2)
+		      .attr("dy", ".71em")
+		      .text("Scrobbles");
+
+
+			function plotCharts (data_path) {
+				//Load in the data
+				d3.csv(data_path)
+				  .then(function(data) {
+					///Parse data
+				    data.forEach(function(d) {
+						d.category = d.category;
+						d.category_str_pt = d.category_str_pt;
+						d.category_str_en = d.category_str_en;
+						d.category_str_complete_pt = d.category_str_complete_pt;
+						d.category_str_complete_en = d.category_str_complete_en;
+						d.count_2019 = parseInt(d.count_2019);
+						d.count_2020 = parseInt(d.count_2020);
+				    });
+
+				    var subgroups = data.columns.slice(1,3)
+				    var groups = d3.map(data, function(d){return(d.category_str_en)})
+
+				    if (data_path==="data/month_data.csv") {
+				    	var colors = ['#fb9a99','#e31a1c'];
+				    } else {
+				    	var colors = ['#ffff99','#ffd92f'];
+				    }
+
+				    var color = d3.scaleOrdinal()
+								   .domain(subgroups)
+								   .range(colors)		
+
+					//Create scale functions
+					xScale = d3.scaleBand()
+								.range([ 0,  width])
+								.domain(groups)
+								.padding(0.2); 
+				  	xSubgroup = d3.scaleBand()
+				   				   .domain(subgroups)
+				   				   .range([0, xScale.bandwidth()])
+				 				   .padding([0.05])								
+					yScale = d3.scaleLinear()
+	      						.domain([
+	      							0,
+	      							d3.max([d3.max(data, function(d) { return d.count_2019; }), 
+	      								    d3.max(data, function(d) { return d.count_2020; })])
+								])
+								.range([ height, 0]);
+
+					//Create axis
+					var xAxis = d3.axisBottom(xScale)
+								  .ticks(5)
+								  .tickSize(0);
+					var yAxis = d3.axisLeft(yScale)
+								  .tickSize(3);
+
+					g.select('.xAxis')
+					  .transition()
+					   .duration(300)
+					   .ease(d3.easeLinear)
+					   .call(xAxis);
+					g.select('.yAxis')
+					  .transition()
+					   .duration(300)
+					   .ease(d3.easeLinear)
+					   .call(yAxis);						
+
+				  // tooltip
+	              var tooltipBarplot = d3.select("#chart").append("div")
+	                                      .attr("class", "tooltip-barplot")
+	                                      .style("opacity", 0);              	   
+
+	              // tooltip mouseover event handler
+	              var mouseover = function(event, d) {
+					  d3.select(this)
+	                    .transition()
+	                     .duration(300) 		  
+						 .attr("opacity", 1);; 
+
+	                  var html = "<b>" +  d.category + " " + d.key.slice(-4) + "</b><br/>" + 
+	                  			 formatValue(d.value) + " scrobbles";
+	                  tooltipBarplot.html(html)
+	                                .style("left", (event.pageX) + "px")
+	                                .style("top", (event.pageY) + "px")
+	                                .transition()
+	                                 .duration(300) // ms
+	                                 .style("opacity", 1); // started as 0!
+	              };
+	              // tooltip mouseout event handler
+	              var mouseout = function(d) {
+					  d3.select(this)
+	                     .transition()
+	                      .duration(300) // ms				  
+				   		  .attr("opacity", ".8");
+
+	                  tooltipBarplot.transition()
+	                                 .duration(300) // ms                       
+	                                 .style("opacity", 0); // don't care about position!;                       
+	              };
+
+
+					rect = g.selectAll("rect")
+					         .attr("fill-opacity", 1)
+					         .attr("stroke-opacity", 1)
+					         .transition()
+				              .duration(250) //change fill and stroke opacity to avoid CSS conflicts
+				              .attr("fill-opacity", 0)
+				              .attr("stroke-opacity", 0)
+				              .remove(); //remove after transitions are complete
+
+				    //Create rectangles
+			        rect = g.append("g")
+			      			.selectAll("g")
+							.data(data)
+							.enter()
+							.append("g")
+							  .attr("transform", function(d) { return "translate(" + xScale(d.category_str_en) + ",0)"; })
+						      .selectAll("rect")
+							  .data(function(d) { return subgroups.map(function(key) { return {key: key, value: d[key], category: d.category_str_complete_en}; }); })
+					rect.enter().append('rect')
+						.merge(rect)
+	                    .transition()
+	                      .duration(300)
+	                      .ease(d3.easeLinear)							    
+					      .attr("x", function(d) { return xSubgroup(d.key); })
+					      .attr("y", function(d) { return yScale(d.value); })
+					      .attr("width", xSubgroup.bandwidth())
+					      .attr("height", function(d) { return height - yScale(d.value); })
+					      .attr("fill", function(d) { return color(d.key); })
+					      .attr("opacity", "0.8");					      
+
+					g.selectAll("rect")
+					 .on("mouseover", mouseover)
+					 .on("mouseout", mouseout);
+
+					//Create legend
+				    var legend = g.append("g")
+				                  .selectAll("g")
+					              .data([{ year: "2019", name: "count_2019" },
+					              		 { year: "2020", name: "count_2020" }])
+				                  .enter().append("g")
+				                   .attr('class', 'legend');
+				    legend.append('rect')
+				           .attr('x', width*.9)
+				           .attr('y', function(d, i) {
+				             return i * 13 - 9;
+				           })
+				           .attr('width', 10)
+				           .attr('height', 10)
+	                       .transition()
+	                        .duration(300) 
+				            .style('fill', function(d) {
+				              return color(d.name);
+				            });
+					g.selectAll("text.legendText")
+					  .attr("opacity", 1)
+				      .transition()
+			           .duration(0) 
+			           .attr("opacity", 0)
+			           .remove(); 					            
+				    legend.append('text')
+				    	   .attr("class", "legendText")					    
+				           .attr('x', width*.9+15)
+				           .attr('y', function(d, i) {
+				             return (i * 13);
+				           })
+				           .text(function(d) {
+				             return d.year;
+						   });		        
+				});
+			}
+			plotCharts('data/month_data.csv');
+		</script>
+	</body>
+</html>

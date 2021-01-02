@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Simple barplot</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+			.axis-title {
+				font-size: 15px;
+				font-family: Helvetica;
+			}	
+			.axis {
+				font-size: 12px;
+				font-family: Helvetica;
+			}	
+			.barplot-label {
+		    	font-family: Helvetica;
+		    	font-size: 10px;
+		    	font-weight: bold;				
+			}
+	        .tooltip-barplot {
+	            position: absolute;
+	            font-size: 20px;
+	            width:  auto;
+	            height: auto;
+	            pointer-events: none;
+	            background-color: white;
+	            font-family: Helvetica;
+	            box-sizing: border-box;
+	            padding: .5%;
+	        }			
+		</style>
+	</head>
+
+	<div id="chart"></div>
+
+	<body>
+		<script type="text/javascript">
+			//Margin
+			const margin = { top: 10, right: 10, bottom: 40, left: 48 };
+
+			//Width and height
+			const width = 600 - margin.left - margin.right;
+			const height = 400 - margin.top - margin.bottom;
+			var formatValue = d3.format(",")
+
+			//Load in the data
+			d3.csv("data/month_simple_data.csv")
+			  .then(function(data) {
+				///Parse data
+			    data.forEach(function(d) {
+			    	d.month = d.month;
+			     	d.month_str_pt = d.month_str_pt;
+			     	d.month_str_en = d.month_str_en;
+			     	d.month_str_complete_pt = d.month_str_complete_pt;
+			     	d.month_str_complete_en = d.month_str_complete_en;
+			     	d.count = parseInt(d.count);
+			    });
+
+				//Create scale functions
+				xScale = d3.scaleBand()
+							.range([ 0, width ])
+							.domain(data.map(function(d) { return d.month_str_pt; }))
+							.padding(0.2); 
+				yScale = d3.scaleLinear()
+      						.domain([
+      							0,
+      							d3.max(data, function(d) { return d.count; })
+							])
+							.range([ height, 0]);
+	
+				//Create SVG element in chart id element
+				const svg = d3.select('#chart')
+							  .append('svg')
+							   .attr("class", "content")
+							   .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+							   .attr("preserveAspectRatio", "xMidYMid meet")
+				var g = svg.append("g")
+				            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+				//Create axis
+				var xAxis = d3.axisBottom(xScale)
+							  .tickSize(3);
+				var yAxis = d3.axisLeft(yScale)
+							  .tickSize(3);
+
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0," + height + ")")
+				  .call(xAxis)
+				  .select(".domain")
+				  .attr("stroke","#252525")
+				  .attr("stroke-width","0");
+				g.append("g")
+				  .attr("class", "axis")
+				  .attr("transform", "translate(0,0)")
+				  .call(yAxis)
+				  .select(".domain")
+				  .attr("stroke","#252525")
+				  .attr("stroke-width","1");
+				g.selectAll(".tick")
+				  .selectAll("line")
+				  .attr("stroke-width","1");
+
+ 				//Create axis label
+			    g.append("text")
+			      .attr("class", "axis-title")
+			      .attr("transform", "rotate(-90)")
+			      .style("text-anchor", "middle")
+			      .attr("y",-48)
+			      .attr("x",-height/2)
+			      .attr("dy", ".71em")
+			      .text("Scrobbles");
+
+				// tooltip
+				var tooltipBarplot = d3.select("#chart").append("div")
+				                        .attr("class", "tooltip-barplot")
+				                        .style("opacity", 0);              
+
+				// tooltip mouseover event handler
+				var tipMouseover = function(event, d) {
+					d3.select(this)
+					   .transition()
+					   .duration(300) 		  
+					   .attr("opacity", 1);
+
+					var html = "<b>" + d.month_str_complete_pt + "</b><br/>" + 
+							   formatValue(d.count) + " scrobbles";
+
+					tooltipBarplot.html(html)
+								   .style("left", (event.pageX) + "px")
+								   .style("top", (event.pageY) + "px")
+								   .transition()
+								   .duration(300) // ms
+								   .style("opacity", 1); // started as 0!
+				};
+				// tooltip mouseout event handler
+				var tipMouseout = function(d) {
+					d3.select(this)
+					  .transition()
+					   .duration(300) // ms				  
+					   .attr("opacity", ".8");
+
+					tooltipBarplot.transition()
+					               .duration(300) // ms                       
+					               .style("opacity", 0); // don't care about position!;                       
+				};
+
+				// Add bars
+				g.selectAll("bar")
+				 .data(data)
+				 .enter()
+				 .append("rect")
+				  .attr("x", function(d) { return xScale(d.month_str_pt); })
+				  .attr("y", function(d) { return yScale(d.count); })
+				  .attr("width", xScale.bandwidth())
+				  .attr("height", function(d) { return height - yScale(d.count); })
+				  .attr("fill", "#fdb462")
+				  .attr("opacity", .8)
+	              .on("mouseover", tipMouseover)
+	              .on("mouseout", tipMouseout);
+			});
+		</script>
+	</body>
+</html>

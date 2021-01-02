@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Streaks</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+		<style type="text/css">
+			.chart {
+			    display: inline-block;
+			    position: relative;
+			    width: 100%;
+			    padding-bottom: 100%;
+			    vertical-align: top;		    
+			    overflow: hidden;
+			}
+			.content {
+			    display: inline-block;
+			    position: absolute;
+			    pointer-events: all;
+			    top: 0;
+			    left: 0;
+			}
+			.axis-title {
+				font-size: 15px;
+				font-family: Helvetica;
+			}	
+			.axis {
+				font-size: 12px;
+				font-family: Helvetica;
+			}	
+			.circle {
+				stroke-width: 1;
+			}
+	        .tooltip-scatter {
+	            position: absolute;
+	            font-size: 20px;
+	            width:  auto;
+	            height: auto;
+	            pointer-events: none;
+	            background-color: white;
+	            font-family: Helvetica;
+	            box-sizing: border-box;
+	            padding: .5%;	            
+	        }		    
+			button {
+				position:relative;
+				z-index: 1000;
+				font-size: 20px;
+			}		
+		</style>
+	</head>
+	<button onclick="plotStreaks('data/streak_artist_data.csv', true)">Artist</button>
+	<button onclick=" plotStreaks('data/streak_track_data.csv', false)">Track</button>
+	<div id="chart" style="z-index: -1000"></div>
+
+	<body>
+		<script type="text/javascript">
+			//Margin
+			const margin = { top: 25, right: 0, bottom: 30, left: 48 };
+
+			//Width and height
+			const width = 600 - margin.left - margin.right;
+			const height = 400 - margin.top - margin.bottom;
+
+			//For converting data
+			var parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S"),
+				formatValue = d3.format(","),
+				formatAsMonth = d3.timeFormat("%b"),
+				formatAsDate = d3.timeFormat("%Y/%m/%d");
+
+			//Create scale functions
+			xScale = d3.scaleTime()
+						.domain([
+							new Date(2019, 11, 20),
+							new Date(2020, 12, 31)
+					    ])
+						.range([0, width]);
+			yScale = d3.scaleLinear()
+						.domain([0,75])
+						.range([height, 0]);							   
+			//Create SVG element in chart id element
+			const svg = d3.select('#chart')
+			              .append('svg')
+			               .attr("class", "content")
+			               .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+			               .attr("preserveAspectRatio", "xMidYMid meet")
+			var g = svg.append("g")
+			            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+			//Create axis
+			var xAxis = d3.axisBottom(xScale)
+						  .ticks(11)
+						  .tickFormat(formatAsMonth)
+						  .tickSize(3);
+			var yAxis = d3.axisLeft(yScale)
+						  .ticks(7)
+						  .tickSize(3);						  
+			g.append("g")
+			  .attr("class", "axis")
+			  .attr("transform", "translate(0," + height + ")")
+			  .call(xAxis)
+			  .select(".domain")
+			  .attr("stroke","#252525")
+			  .attr("stroke-width","0");		
+
+			g.append("g")
+			  .attr("class", "yAxis")
+			  .attr("transform", "translate(0,0)")
+			  .call(yAxis)
+			  .select(".domain")
+			  .attr("stroke","#252525")
+			  .attr("stroke-width","1");
+	 				//Create axis label
+		    g.append("text")
+		      .attr("class", "axis-title")
+		      .attr("transform", "rotate(-90)")
+		      .style("text-anchor", "middle")
+		      .attr("y",-45)
+		      .attr("x",-height/2)
+		      .attr("dy", ".71em")
+		      .text("Streak");
+
+			g.selectAll(".tick")
+			  .selectAll("line")
+			  .attr("stroke-width","1");
+
+			function plotStreaks(data_path, first) {
+				//Load in the data
+				data = d3.csv(data_path)
+				         .then(function(data) {
+
+					///Parse data and sort values by date
+				    data.forEach(function(d) {
+				    	d.date = parseTime(d.date);
+				    	d.streak = parseInt(d.streak);
+				    	d.name = d.name;
+				    });
+
+			        data.sort(function(a, b) {
+			            return a.date - b.date;
+			        });
+
+					yScale = d3.scaleLinear()
+								.domain([
+									d3.min(data, function(d) { return d.streak; }),
+									d3.max(data, function(d) { return d.streak; })*1.1
+								])
+								.range([height, 0]);	
+
+					var yAxis = d3.axisLeft(yScale)
+								  .ticks(7)
+								  .tickSize(3);
+
+					g.select('.yAxis')
+					  .transition()
+					  .duration(300)
+					  .ease(d3.easeLinear)
+					  .call(yAxis);
+
+					// tooltip
+					var tooltipScatter = d3.select("#chart").append("div")
+					                        .attr("class", "tooltip-scatter")
+					                        .style("opacity", 0);							  
+					// tooltip mouseover event handler
+					var mouseover = function(event, d) {
+						d3.select(this)
+						  .transition()
+						   .duration(300) // ms				  
+						   .attr("opacity", "1")
+						   .attr("r", function(d) {
+						   	 return 1.5*Math.sqrt(height - yScale(d.streak));	
+						   });  
+
+						var html = "<b>" + formatAsDate(d.date) + "</b><br/>" +
+						           d.name + "<br/>" +
+						           "Streak: " + d.streak;
+
+						tooltipScatter.html(html)
+						              .style("left", (event.pageX - 30) + "px")
+						              .style("top", (event.pageY - 58) + "px")
+						              .transition()
+						               .duration(300) // ms
+						               .style("opacity", 1); // started as 0!
+					};
+					// tooltip mouseout event handler
+					var mouseout = function(d) {
+						d3.select(this)
+						  .transition()
+						   .duration(300) // ms				  
+							.attr("opacity", "0.25")
+							.attr("r", function(d) {
+								return Math.sqrt(height - yScale(d.streak));	
+							});   
+						tooltipScatter.transition()
+						               .duration(300) // ms
+						               .style("opacity", 0); // don't care about position!;                       
+					};		
+
+				    //Create circles
+			        circle = g.selectAll("circle")
+							  .data(data)	
+								
+					circle.enter().append('circle')
+						  .merge(circle)
+	                      .transition()
+	                       .duration(300)
+	                       .ease(d3.easeLinear)
+						   .attr("cx", function(d) {
+						    	return xScale(d.date);
+						   })
+						   .attr("cy", function(d) {
+							    return yScale(d.streak);
+						   })
+						   .attr("r", function (d) {
+						    	return Math.sqrt(height - yScale(d.streak));
+						   })
+						   .attr("fill", function() {
+								if (data_path == 'data/streak_artist_data.csv'){
+									return "#f16913";
+								} else {
+									return "#4d4d4d";
+								}
+						   })
+						  .attr("stroke", function() {
+								if (data_path == 'data/streak_artist_data.csv'){
+									return "#f16913";
+								} else {
+									return "#4d4d4d";
+								}
+						   })						
+						  .attr("opacity", "0.25")
+						  .attr("class", "circle");
+						
+					circle.exit()
+					      .remove()
+
+					g.selectAll("circle")
+					 .on("mouseover", mouseover)
+					 .on("mouseout", mouseout);
+				});								  
+			} 
+			plotStreaks('data/streak_artist_data.csv', true);
+		</script>
+	</body>
+</html>

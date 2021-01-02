@@ -3,6 +3,161 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/author/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/author/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/author/"
+                />
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/"
+                />
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/d3.js/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/d3.js/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/d3.js/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/last.fm/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/last.fm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/last.fm/"
+                />
+  </url>
+  
+  <url>
+    <loc>/post/lastfm-2020/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/lastfm-2020/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/post/lastfm-2020/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/python/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tag/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tag/python/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/visualizacao/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/d3-visualizations/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/d3-visualizations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/post/d3-visualizations/"
+                />
+  </url>
+  
+  <url>
     <loc>/publication-type/2/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -29,36 +184,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/author/andre-s.-sunahara/"
-                />
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/"
-                />
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/authors/"
                 />
   </url>
   
@@ -213,66 +338,6 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/</loc>
-    <lastmod>2020-07-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/author/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/author/"
-                />
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-07-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/post/"
-                />
-  </url>
-  
-  <url>
-    <loc>/tag/last.fm/</loc>
-    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tag/last.fm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tag/last.fm/"
-                />
-  </url>
-  
-  <url>
     <loc>/post/lastfm-2019/</loc>
     <lastmod>2020-07-18T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -314,21 +379,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="/post/python-pep8/"
-                />
-  </url>
-  
-  <url>
-    <loc>/tag/python/</loc>
-    <lastmod>2020-07-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tag/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/tag/python/"
                 />
   </url>
   
