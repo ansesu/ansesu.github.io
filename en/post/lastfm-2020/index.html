@@ -725,7 +725,10 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>
+      <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+<script type="text/javascript" src="js/formatter.js"> </script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<p>
 <a href="https://www.last.fm/" target="_blank" rel="noopener">last.fm</a> is a social network in which users can keep track of their own musical activity through the so called scrobbles (the log of your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.</p>
 <p>Here, I perform a statistical analysis of 
 <a href="http://last.fm/user/ansesu" target="_blank" rel="noopener">my last.fm profile</a> in 2020. I start by using the 
@@ -814,50 +817,35 @@
 </ol>
 <h2 id="visualizations">Visualizations</h2>
 <p>(The figures here shown are interactive)</p>
-<div
- style="padding-bottom:50%; position:relative; display:block; width: 50%;">
- <iframe
-  width="100%" height="100%"
-  src="fig/hours.html"
-  frameborder="0" scrolling="no"
-  style="position: absolute; top:0; right:-50%; text-anchor:center"></iframe>
-</div>
+<div id="hours" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/hours.js"> </script>
 <p style="text-align: center" >Figure: number of songs listened in each period of the day in 2020.<p/>
-<div
- style="padding-bottom:47.5%; position:relative; display:block; width: 100%;">
-<iframe
-  width="100%" height="100%"
-  src="fig/months_and_days.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<p><button style="border-radius: 4px;" onclick="plotCharts('data/month_data.csv', true)">Mensal</button>
+<button style="border-radius: 4px;" onclick=" plotCharts('data/weekday_data.csv', false)">Semanal</button></p>
+  <div id="barplot" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/months_and_days.js"> </script>
 <p style="text-align: center" >Figure: number of songs listened in each month (day of the week) in 2020.<p/>
-<div
- style="padding-bottom:72.5%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/streaks.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<p><button style="border-radius: 4px;" onclick="plotStreaks('data/streak_artist_data.csv')">Artist</button>
+<button style="border-radius: 4px;" onclick="plotStreaks('data/streak_track_data.csv')">Track</button></p>
+  <div id="streaks" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/streaks.js"> </script>
 <p style="text-align: center" >Figure: streaks listening the same artist (track) in 2020.<p/>
-<div
- style="padding-bottom:56%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/stream_chart.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<div id="stream_chart" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/stream_chart.js"> </script>
 <p style="text-align: center" >Figure: temporal evolution of the volume of reproduction of my top 10 artists in 2020.<p/>
-<div
- style="padding-bottom:65%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/barchart_race.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<script type="text/javascript"> 
+function reloadchart() {
+   //alert("In function");
+   var container = document.getElementById("barchartrace");
+   //alert(content);
+   container.innerHTML= null;  
+   makeChart();
+  // document.getElementById("#barchartrace").reload()
+}
+</script>
+<p><button style="border-radius: 4px;" onclick="reloadchart()">Reload</button></p>
+<div id="barchartrace" style="z-index: -1000"> </div>
+<script type="text/javascript" src="js/barchart_race.js"> </script>
 <p style="text-align: center" >Figure: bar chart race for artists with more than 30 reproductions in 2020.<p/>
 
     </div>

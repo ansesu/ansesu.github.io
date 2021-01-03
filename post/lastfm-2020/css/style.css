@@ -1,0 +1,163 @@
+.streaks {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: top;        
+  overflow: hidden;
+}
+.barplot {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: top;        
+  overflow: hidden;
+}
+.hours {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.streamchart {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: auto;
+}
+.barchartrace {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+
+.content {
+  display: block;
+  position: relative;
+  pointer-events: all;
+  top: 0;
+  left: 0;
+}
+.content_hours {
+  display: block;
+  position: relative;
+  pointer-events: all;
+  top: 0;
+  left: 25%;
+}
+
+.axis-title {
+  font-size: 15px;
+  font-family: Helvetica;
+  fill: #525252;
+} 
+.clock {
+  stroke: #542788;
+  stroke-width: 4px;
+  opacity: 1;
+}
+.legend {
+  font-size: 10px;
+  font-family: Helvetica;
+} 
+.line {
+  fill: none;
+  stroke: #252525;
+  stroke-width: 2.5;
+}
+.text-clock {
+  font-family: Helvetica;
+  font-weight: 100;
+  font-size: 20px;
+}
+.tick-clock {
+  stroke: #542788;
+  stroke-width: 2;
+}
+.tooltip-html {
+  position: absolute;
+  width:  auto;
+  height: auto;
+  pointer-events: none;
+  background-color: white;
+  font-family: Helvetica;
+  box-sizing: border-box;
+  padding: .5%;
+}  
+.tooltip-stream {
+    position: absolute;
+    fill: #252525;
+    font-family: Helvetica;
+}
+.xAxis {
+  font-size: 10px;
+  font-family: Helvetica;
+} 
+.yAxis {
+  font-size: 10px;
+  font-family: Helvetica;
+} 
+.yAxis .domain {
+  stroke-width: .75;
+  stroke: #525252;
+}
+.yAxis line {
+  stroke: #525252;
+}
+.xAxisStream {
+  font-size: 12px;
+  font-family: Helvetica;
+} 
+div {
+  display: block;
+}               
+button {
+  display: inline-block;
+  position:relative;
+  z-index: 1000;
+  font-size: 15px;
+}   
+#barchartrace text {
+font-size: 16px;
+font-family: Helvetica, sans-serif;
+}
+#barchartrace .title-race {
+font-size: 24px;
+font-weight: 500;
+}
+
+#barchartrace text.label{
+font-weight: 600;
+}
+
+#barchartrace text.valueLabel{
+font-weight: 300;
+}
+
+#barchartrace text.dateText{
+font-size: 30px;
+font-weight: 700;
+opacity: 0.25;
+}      
+#barchartrace .tick text {
+fill: #777777;
+}
+#barchartrace .xAxis .tick:nth-child(2) text {
+text-anchor: start;
+}
+#barchartrace .tick line {
+shape-rendering: CrispEdges;
+stroke: #dddddd;
+}
+#barchartrace .tick line.origin{
+stroke: #aaaaaa;
+}
+#barchartrace path.domain{
+display: none;
+}   

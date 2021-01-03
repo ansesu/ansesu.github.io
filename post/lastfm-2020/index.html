@@ -725,7 +725,10 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>O 
+      <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+<script type="text/javascript" src="js/formatter.js"> </script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<p>O 
 <a href="https://www.last.fm/" target="_blank" rel="noopener">last.fm</a> é uma rede social em que os usuários conseguem manter um histórico de sua atividade musical por meio de <em>scrobbles</em> (nome atribuído ao registro de cada música reproduzida pelo usuário). Esse serviço existe desde 2002, quando a instalação de um programa era necessária para realizar os <em>scrobbles</em>. Recentemente, porém, a plataforma foi integrada a vários serviços de streaming como Spotify, Deezer, Tidal e Google Play Music. Sendo assim, ficou muito mais fácil manter o registro de sua própria atividade musical. O last.fm exibe estatísticas semanais (na versão gratuita), mensais e anuais (na versão paga), referentes ao volume de músicas escutadas, artistas, álbuns, gêneros, padrões temporais e comparações com outros usuários. Além disso, a plataforma permite os usuários encontrarem pessoas com gostos musicais similares ao seus.</p>
 <p>Este ano, novamente vou realizar uma análise estatística do 
 <a href="http://last.fm/user/ansesu" target="_blank" rel="noopener">meu perfil no last.fm</a> em 2020. Para isso, utilizei a ferramenta 
@@ -814,50 +817,35 @@
 </ol>
 <h2 id="visualizações">Visualizações</h2>
 <p>(As figuras aqui expostas são interativas)</p>
-<div
- style="padding-bottom:50%; position:relative; display:block; width: 50%;">
- <iframe
-  width="100%" height="100%"
-  src="fig/hours.html"
-  frameborder="0" scrolling="no"
-  style="position: absolute; top:0; right:-50%; text-anchor:center"></iframe>
-</div>
+<div id="hours" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/hours.js"> </script>
 <p style="text-align: center" >Figura: número de músicas em cada período do dia em 2020.<p/>
-<div
- style="padding-bottom:47.5%; position:relative; display:block; width: 100%;">
- <iframe
-  width="100%" height="100%"
-  src="fig/months_and_days.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0; "></iframe>
-</div>
-<p style="text-align: center" >Figura: número de músicas em cada mês (dia da semana) de 2020.<p/>
-<div
- style="padding-bottom:72.5%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/streaks.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<p style="text-align: center" >Figura: sequências escutando o mesmo artista (música) em 2020.<p/>
-<div
- style="padding-bottom:56%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/stream_chart.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<p style="text-align: center" >Figura: evolução temporal do volume de reproduções dos top 10 artistas de 2020.<p/>
-<div
- style="padding-bottom:65%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/barchart_race.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<p><button style="border-radius: 4px;" onclick="plotCharts('data/month_data.csv', true)">Mensal</button>
+<button style="border-radius: 4px;" onclick=" plotCharts('data/weekday_data.csv', false)">Semanal</button></p>
+  <div id="barplot" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/months_and_days.js"> </script>
+<p style="text-align: center"> Figura: número de músicas em cada mês (dia da semana) de 2020.<p/>
+<p><button style="border-radius: 4px;" onclick="plotStreaks('data/streak_artist_data.csv')">Artist</button>
+<button style="border-radius: 4px;" onclick="plotStreaks('data/streak_track_data.csv')">Track</button></p>
+  <div id="streaks" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/streaks.js"> </script>
+<p style="text-align: center"> Figura: sequências escutando o mesmo artista (música) em 2020.<p/>
+<div id="stream_chart" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/stream_chart.js"> </script>
+<p style="text-align: center">Figura: evolução temporal do volume de reproduções dos top 10 artistas de 2020.<p/>
+<script type="text/javascript"> 
+function reloadchart() {
+   //alert("In function");
+   var container = document.getElementById("barchartrace");
+   //alert(content);
+   container.innerHTML= null;  
+   makeChart();
+  // document.getElementById("#barchartrace").reload()
+}
+</script>
+<p><button style="border-radius: 4px;" onclick="reloadchart()">Reload</button></p>
+<div id="barchartrace" style="z-index: -1000"> </div>
+<script type="text/javascript" src="js/barchart_race.js"> </script>
 <p style="text-align: center" >Figura: corrida de barras para artistas com mais de 30 reproduções em 2020.<p/>
     </div>
 

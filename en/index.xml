@@ -17,97 +17,55 @@
       <link>/en/post/d3-visualizations/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       <guid>/en/post/d3-visualizations/</guid>
-      <description>&lt;p&gt;Although creating visualizations directly with Python (or any other programming language) can be more practical, interactivity and responsiveness are lost when displaying those same images in web format. For this reason, I decided to learn some visualization techniques using the 
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d3js.org/d3.v6.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/formatter.js&#34;&gt; &lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34;&gt;
+&lt;p&gt;Although creating visualizations directly with Python (or any other programming language) can be more practical, interactivity and responsiveness are lost when displaying those same images in web format. For this reason, I decided to learn some visualization techniques using the 
 &lt;a href=&#34;https://d3js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3.js&lt;/a&gt; library. Below, I show some visualizations I created (spoiler alert: they are interactive!).&lt;/p&gt;
-&lt;div
- style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/simple_line_plot.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;lineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_line_plot.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: line plot with interactive vertical line showing the variable value.&lt;p/&gt;
- &lt;div
- style=&#34;padding-bottom:68%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/simple_bandplot.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;bandplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_bandplot.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: line plot with confidence interval and interactive vertical line showing the variable value.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/simple_multiline_plot.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;multilineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_multiline_plot.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: multiline plot with interactive vertical line showing the variables values.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:66%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/simple_threshold_line_plot.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;thresholdplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_threshold_line_plot.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: line plot with confidence interval and colors defined by a threshold. Values above this threshold are colored in red, while values below this threshold are colored in green. This visualization was inspired by the one in the website rt.live.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:72.5%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/streaks.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_artist_data.csv&#39;)&#34;&gt;Artist&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_track_data.csv&#39;)&#34;&gt;Track&lt;/button&gt;&lt;/p&gt;
+  &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/streaks.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: scatter plot with variable marker size according to the variable value (with buttons to change between categories).&lt;p/&gt;
-  &lt;div
- style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/simple_barplot.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;simplebarplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_barplot.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: simple bar plot.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:47.5%; position:relative; display:block; width: 100%;&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/months_and_days.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotCharts(&#39;data/month_data.csv&#39;, true)&#34;&gt;Mensal&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34; plotCharts(&#39;data/weekday_data.csv&#39;, false)&#34;&gt;Semanal&lt;/button&gt;&lt;/p&gt;
+  &lt;div id=&#34;barplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/months_and_days.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: grouped bar plot (with buttons to change between categories).&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:50%; position:relative; display:block; width: 50%;&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/hours.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position: absolute; top:0; right:-50%; text-anchor:center&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;hours&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/hours.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: radial bar plot.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:55%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/stream_chart.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: stream chart plot.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/barchart_race.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34;&gt; 
+function reloadchart() {
+   //alert(&#34;In function&#34;);
+   var container = document.getElementById(&#34;barchartrace&#34;);
+   //alert(content);
+   container.innerHTML= null;  
+   makeChart();
+  // document.getElementById(&#34;#barchartrace&#34;).reload()
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;reloadchart()&#34;&gt;Reload&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&#34;barchartrace&#34; style=&#34;z-index: -1000&#34;&gt; &lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/barchart_race.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: bar chart race.&lt;p/&gt;
 &lt;h2 id=&#34;to-do-list&#34;&gt;To do list&lt;/h2&gt;
 &lt;ul&gt;
@@ -202,7 +160,10 @@
       <link>/en/post/lastfm-2020/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       <guid>/en/post/lastfm-2020/</guid>
-      <description>&lt;p&gt;
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d3js.org/d3.v6.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/formatter.js&#34;&gt; &lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34;&gt;
+&lt;p&gt;
 &lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; is a social network in which users can keep track of their own musical activity through the so called scrobbles (the log of your listened song). This service was created in 2002, when it was necessary to install a software in order to scrobble. Recently, however, the plataform was integrated to music streaming services such as Spotify, Deezer, Tidal and Google Play Music. Thus, it has become much easier to keep track of your own musical activity. last.fm shows weekly (in the free version), monthly and annual (in the premium version) statistics, concerning the number of listened songs, artists, albums, genres, temporal patterns and comparison with other last.fm users. In addition, the plataform allows users to find people with similar musical tastes.&lt;/p&gt;
 &lt;p&gt;Here, I perform a statistical analysis of 
 &lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last.fm profile&lt;/a&gt; in 2020. I start by using the 
@@ -291,50 +252,35 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;visualizations&#34;&gt;Visualizations&lt;/h2&gt;
 &lt;p&gt;(The figures here shown are interactive)&lt;/p&gt;
-&lt;div
- style=&#34;padding-bottom:50%; position:relative; display:block; width: 50%;&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/hours.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position: absolute; top:0; right:-50%; text-anchor:center&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;hours&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/hours.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: number of songs listened in each period of the day in 2020.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:47.5%; position:relative; display:block; width: 100%;&#34;&gt;
-&lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/months_and_days.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotCharts(&#39;data/month_data.csv&#39;, true)&#34;&gt;Mensal&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34; plotCharts(&#39;data/weekday_data.csv&#39;, false)&#34;&gt;Semanal&lt;/button&gt;&lt;/p&gt;
+  &lt;div id=&#34;barplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/months_and_days.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: number of songs listened in each month (day of the week) in 2020.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:72.5%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/streaks.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_artist_data.csv&#39;)&#34;&gt;Artist&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_track_data.csv&#39;)&#34;&gt;Track&lt;/button&gt;&lt;/p&gt;
+  &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/streaks.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: streaks listening the same artist (track) in 2020.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:56%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/stream_chart.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: temporal evolution of the volume of reproduction of my top 10 artists in 2020.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/barchart_race.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34;&gt; 
+function reloadchart() {
+   //alert(&#34;In function&#34;);
+   var container = document.getElementById(&#34;barchartrace&#34;);
+   //alert(content);
+   container.innerHTML= null;  
+   makeChart();
+  // document.getElementById(&#34;#barchartrace&#34;).reload()
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;reloadchart()&#34;&gt;Reload&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&#34;barchartrace&#34; style=&#34;z-index: -1000&#34;&gt; &lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/barchart_race.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figure: bar chart race for artists with more than 30 reproductions in 2020.&lt;p/&gt;
 </description>
     </item>

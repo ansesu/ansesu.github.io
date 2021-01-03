@@ -17,7 +17,10 @@
       <link>/post/lastfm-2020/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       <guid>/post/lastfm-2020/</guid>
-      <description>&lt;p&gt;O 
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d3js.org/d3.v6.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/formatter.js&#34;&gt; &lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34;&gt;
+&lt;p&gt;O 
 &lt;a href=&#34;https://www.last.fm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last.fm&lt;/a&gt; é uma rede social em que os usuários conseguem manter um histórico de sua atividade musical por meio de &lt;em&gt;scrobbles&lt;/em&gt; (nome atribuído ao registro de cada música reproduzida pelo usuário). Esse serviço existe desde 2002, quando a instalação de um programa era necessária para realizar os &lt;em&gt;scrobbles&lt;/em&gt;. Recentemente, porém, a plataforma foi integrada a vários serviços de streaming como Spotify, Deezer, Tidal e Google Play Music. Sendo assim, ficou muito mais fácil manter o registro de sua própria atividade musical. O last.fm exibe estatísticas semanais (na versão gratuita), mensais e anuais (na versão paga), referentes ao volume de músicas escutadas, artistas, álbuns, gêneros, padrões temporais e comparações com outros usuários. Além disso, a plataforma permite os usuários encontrarem pessoas com gostos musicais similares ao seus.&lt;/p&gt;
 &lt;p&gt;Este ano, novamente vou realizar uma análise estatística do 
 &lt;a href=&#34;http://last.fm/user/ansesu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;meu perfil no last.fm&lt;/a&gt; em 2020. Para isso, utilizei a ferramenta 
@@ -106,50 +109,35 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;visualizações&#34;&gt;Visualizações&lt;/h2&gt;
 &lt;p&gt;(As figuras aqui expostas são interativas)&lt;/p&gt;
-&lt;div
- style=&#34;padding-bottom:50%; position:relative; display:block; width: 50%;&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/hours.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position: absolute; top:0; right:-50%; text-anchor:center&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;div id=&#34;hours&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/hours.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figura: número de músicas em cada período do dia em 2020.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:47.5%; position:relative; display:block; width: 100%;&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/months_and_days.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0; &#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: número de músicas em cada mês (dia da semana) de 2020.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:72.5%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/streaks.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: sequências escutando o mesmo artista (música) em 2020.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:56%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/stream_chart.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: evolução temporal do volume de reproduções dos top 10 artistas de 2020.&lt;p/&gt;
-&lt;div
- style=&#34;padding-bottom:65%; position:relative; display:block; width: 100%&#34;&gt;
- &lt;iframe
-  width=&#34;100%&#34; height=&#34;100%&#34;
-  src=&#34;fig/barchart_race.html&#34;
-  frameborder=&#34;0&#34; scrolling=&#34;no&#34;
-  style=&#34;position:absolute; top:0; left: 0&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotCharts(&#39;data/month_data.csv&#39;, true)&#34;&gt;Mensal&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34; plotCharts(&#39;data/weekday_data.csv&#39;, false)&#34;&gt;Semanal&lt;/button&gt;&lt;/p&gt;
+  &lt;div id=&#34;barplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/months_and_days.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;&gt; Figura: número de músicas em cada mês (dia da semana) de 2020.&lt;p/&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_artist_data.csv&#39;)&#34;&gt;Artist&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_track_data.csv&#39;)&#34;&gt;Track&lt;/button&gt;&lt;/p&gt;
+  &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/streaks.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;&gt; Figura: sequências escutando o mesmo artista (música) em 2020.&lt;p/&gt;
+&lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;Figura: evolução temporal do volume de reproduções dos top 10 artistas de 2020.&lt;p/&gt;
+&lt;script type=&#34;text/javascript&#34;&gt; 
+function reloadchart() {
+   //alert(&#34;In function&#34;);
+   var container = document.getElementById(&#34;barchartrace&#34;);
+   //alert(content);
+   container.innerHTML= null;  
+   makeChart();
+  // document.getElementById(&#34;#barchartrace&#34;).reload()
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;reloadchart()&#34;&gt;Reload&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&#34;barchartrace&#34; style=&#34;z-index: -1000&#34;&gt; &lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/barchart_race.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; &gt;Figura: corrida de barras para artistas com mais de 30 reproduções em 2020.&lt;p/&gt;</description>
     </item>
     

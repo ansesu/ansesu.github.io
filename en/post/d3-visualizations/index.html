@@ -725,97 +725,55 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Although creating visualizations directly with Python (or any other programming language) can be more practical, interactivity and responsiveness are lost when displaying those same images in web format. For this reason, I decided to learn some visualization techniques using the 
+      <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+<script type="text/javascript" src="js/formatter.js"> </script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<p>Although creating visualizations directly with Python (or any other programming language) can be more practical, interactivity and responsiveness are lost when displaying those same images in web format. For this reason, I decided to learn some visualization techniques using the 
 <a href="https://d3js.org/" target="_blank" rel="noopener">d3.js</a> library. Below, I show some visualizations I created (spoiler alert: they are interactive!).</p>
-<div
- style="padding-bottom:66%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/simple_line_plot.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<div id="lineplot" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/simple_line_plot.js"> </script>
 <p style="text-align: center" >Figure: line plot with interactive vertical line showing the variable value.<p/>
- <div
- style="padding-bottom:68%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/simple_bandplot.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<div id="bandplot" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/simple_bandplot.js"> </script>
 <p style="text-align: center" >Figure: line plot with confidence interval and interactive vertical line showing the variable value.<p/>
-<div
- style="padding-bottom:66%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/simple_multiline_plot.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<div id="multilineplot" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/simple_multiline_plot.js"> </script>
 <p style="text-align: center" >Figure: multiline plot with interactive vertical line showing the variables values.<p/>
-<div
- style="padding-bottom:66%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/simple_threshold_line_plot.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<div id="thresholdplot" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/simple_threshold_line_plot.js"> </script>
 <p style="text-align: center" >Figure: line plot with confidence interval and colors defined by a threshold. Values above this threshold are colored in red, while values below this threshold are colored in green. This visualization was inspired by the one in the website rt.live.<p/>
-<div
- style="padding-bottom:72.5%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/streaks.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<p><button style="border-radius: 4px;" onclick="plotStreaks('data/streak_artist_data.csv')">Artist</button>
+<button style="border-radius: 4px;" onclick="plotStreaks('data/streak_track_data.csv')">Track</button></p>
+  <div id="streaks" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/streaks.js"> </script>
 <p style="text-align: center" >Figure: scatter plot with variable marker size according to the variable value (with buttons to change between categories).<p/>
-  <div
- style="padding-bottom:65%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/simple_barplot.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<div id="simplebarplot" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/simple_barplot.js"> </script>
 <p style="text-align: center" >Figure: simple bar plot.<p/>
-<div
- style="padding-bottom:47.5%; position:relative; display:block; width: 100%;">
- <iframe
-  width="100%" height="100%"
-  src="fig/months_and_days.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<p><button style="border-radius: 4px;" onclick="plotCharts('data/month_data.csv', true)">Mensal</button>
+<button style="border-radius: 4px;" onclick=" plotCharts('data/weekday_data.csv', false)">Semanal</button></p>
+  <div id="barplot" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/months_and_days.js"> </script>
 <p style="text-align: center" >Figure: grouped bar plot (with buttons to change between categories).<p/>
-<div
- style="padding-bottom:50%; position:relative; display:block; width: 50%;">
- <iframe
-  width="100%" height="100%"
-  src="fig/hours.html"
-  frameborder="0" scrolling="no"
-  style="position: absolute; top:0; right:-50%; text-anchor:center"></iframe>
-</div>
+<div id="hours" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/hours.js"> </script>
 <p style="text-align: center" >Figure: radial bar plot.<p/>
-<div
- style="padding-bottom:55%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/stream_chart.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<div id="stream_chart" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/stream_chart.js"> </script>
 <p style="text-align: center" >Figure: stream chart plot.<p/>
-<div
- style="padding-bottom:65%; position:relative; display:block; width: 100%">
- <iframe
-  width="100%" height="100%"
-  src="fig/barchart_race.html"
-  frameborder="0" scrolling="no"
-  style="position:absolute; top:0; left: 0"></iframe>
-</div>
+<script type="text/javascript"> 
+function reloadchart() {
+   //alert("In function");
+   var container = document.getElementById("barchartrace");
+   //alert(content);
+   container.innerHTML= null;  
+   makeChart();
+  // document.getElementById("#barchartrace").reload()
+}
+</script>
+<p><button style="border-radius: 4px;" onclick="reloadchart()">Reload</button></p>
+<div id="barchartrace" style="z-index: -1000"> </div>
+<script type="text/javascript" src="js/barchart_race.js"> </script>
 <p style="text-align: center" >Figure: bar chart race.<p/>
 <h2 id="to-do-list">To do list</h2>
 <ul>
