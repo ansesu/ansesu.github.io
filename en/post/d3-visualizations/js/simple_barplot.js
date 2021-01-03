@@ -111,7 +111,7 @@ d3.csv("data/month_simple_data.csv")
 		 .attr("y", function(d) { return yScaleBar(d.count); })
 		 .attr("width", xScaleBar.bandwidth())
 		 .attr("height", function(d) { return heightBar - yScaleBar(d.count); })
-		 .attr("fill", "#f768a1")
+		 .attr("fill", "#fa9fb5")
 		 .attr("opacity", .8)
 	     .on("mouseover", tipMouseover)
 	     .on("mouseout", tipMouseout);
