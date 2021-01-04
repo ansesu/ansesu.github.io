@@ -74,7 +74,6 @@ function plotMap(variable, first) {
 			tooltipMap.html(html)
 					   .style("left", (event.pageX) + "px")
 					   .style("top", (event.pageY) + "px")
-					   .style("font-size", "1.4vw")					   
 					   .transition()
 					   .duration(300) // ms
 					   .style("opacity", 1); // started as 0!
@@ -104,7 +103,6 @@ function plotMap(variable, first) {
 				    .attr("fill", function (d) {
 				    	return scaleMap(d.properties.log_cases)
 				    })
-				    .attr("transform", "(" + widthMap/2 + "," - heightMap/2 + ")")
 				    .on("mouseover", mouseoverMap)
 			        .on("mouseout", mouseoutMap);	
 

@@ -1,5 +1,5 @@
 //Margin
-const marginLine = { top: 10, right: 0, bottom: 25, left: 55 };
+const marginLine = { top: 12, right: 5, bottom: 25, left: 71 };
 
 //Width and height
 const widthLine = 600 - marginLine.left - marginLine.right;
@@ -41,6 +41,7 @@ d3.csv("data/confirmed_maringa_data.csv")
 		               .attr("class", "content")
 		               .attr("viewBox", `0 0 ${widthLine + marginLine.left + marginLine.right} ${heightLine + marginLine.top + marginLine.bottom}`)
 		               .attr("preserveAspectRatio", "xMidYMid meet")
+		               .attr("width", "100%")
 
 	var gLine = svgLine.append("g")
 	            		.attr("transform", "translate(" + marginLine.left + "," + marginLine.top + ")");
@@ -71,11 +72,16 @@ d3.csv("data/confirmed_maringa_data.csv")
 	      .attr("class", "axis-title")
 	      .attr("transform", "rotate(-90)")
 	      .style("text-anchor", "middle")
-	      .attr("y",-55)
+	      .attr("y",-70)
 	      .attr("x",-heightLine/2)
 	      .attr("dy", ".71em")
 	      .text("Confirmed cases of COVID-19");
-
+	gLine.append("text")
+	      .attr("text-anchor", "end")
+	      .attr("x", xScaleLine(d3.max(data, function(d) { return d.Date; }))-4)
+	      .attr("y", yScaleLine(d3.max(data, function(d) { return d.Confirmed; })))
+	      .attr("font-size", "15px")
+	      .text(formatValue(d3.max(data, function(d) { return d.Confirmed; })))
 	//Create line
 	var lineLine = d3.line()
 					 .x(function(d) { return xScaleLine(d.Date); })
@@ -134,9 +140,9 @@ d3.csv("data/confirmed_maringa_data.csv")
 		focusLine.attr("transform", "translate(" + xScaleLine(xDate) + "," + yScaleLine(dTrue.Confirmed) + ")");
 	    focusLine.select("circle")
 	          	  .attr("opacity", "1");
-		if (dTrue.Confirmed > data[Math.round(data.length-data.length*.46)].Confirmed) {
+		if (dTrue.Confirmed > data[Math.round(data.length-data.length*.43)].Confirmed) {
 			focusLine.select(".tooltip-confirmed")
-			 	      .attr("y", heightLine*.95-yScaleLine(dTrue.Confirmed))
+			 	      .attr("y", heightLine*.96-yScaleLine(dTrue.Confirmed))
 			 	      .attr("text-anchor", "end")
 			 	      .attr("x", -5);
 		    focusLine.select("#lineplot .tooltip-date")
@@ -145,7 +151,7 @@ d3.csv("data/confirmed_maringa_data.csv")
 			 	      .attr("x", -5);
 		} else {
 			focusLine.select(".tooltip-confirmed")
-					  .attr("y", heightLine*.6-yScaleLine(dTrue.Confirmed))
+					  .attr("y", heightLine*.61-yScaleLine(dTrue.Confirmed))
 					  .attr("text-anchor", "start")
 					  .attr("x", 5);
 			focusLine.select("#lineplot .tooltip-date")

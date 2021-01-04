@@ -1,5 +1,5 @@
 //Margin
-const marginBar = { top: 10, right: 10, bottom: 25, left: 48 };
+const marginBar = { top: 10, right: 10, bottom: 25, left: 56 };
 
 //Width and height
 const widthBar = 600 - marginBar.left - marginBar.right;
@@ -41,7 +41,7 @@ d3.csv("data/month_simple_data.csv")
 
 	//Create axis
 	var xAxisBar = d3.axisBottom(xScaleBar)
-					  .tickSize(3);
+					  .tickSize(0);
 	var yAxisBar = d3.axisLeft(yScaleBar)
 				 	  .tickSize(3);
 
@@ -62,7 +62,7 @@ d3.csv("data/month_simple_data.csv")
         .attr("class", "axis-title")
         .attr("transform", "rotate(-90)")
         .style("text-anchor", "middle")
-        .attr("y",-48)
+        .attr("y",-55)
         .attr("x",-heightBar/2)
         .attr("dy", ".71em")
         .text("Scrobbles");
@@ -85,7 +85,6 @@ d3.csv("data/month_simple_data.csv")
 		tooltipBarplot.html(html)
 					   .style("left", (event.pageX) + "px")
 					   .style("top", (event.pageY) + "px")
-					   .style("font-size", "1.4vw")					   
 					   .transition()
 					   .duration(300) // ms
 					   .style("opacity", 1); // started as 0!

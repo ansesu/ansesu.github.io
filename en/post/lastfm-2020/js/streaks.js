@@ -114,7 +114,6 @@ function plotStreaks(data_path) {
       tooltipScatter.html(html)
                     .style("left", (event.pageX - 30) + "px")
                     .style("top", (event.pageY - 58) + "px")
-                    .style("font-size", "1.4vw")
                     .transition()
                      .duration(300) // ms
                      .style("opacity", 1); // started as 0!
@@ -142,31 +141,31 @@ function plotStreaks(data_path) {
                           .transition()
                            .duration(300)
                            .ease(d3.easeLinear)
-     .attr("cx", function(d) {
-        return xScaleStreaks(d.date);
-     })
-     .attr("cy", function(d) {
-        return yScaleStreaks(d.streak);
-     })
-     .attr("r", function (d) {
-        return Math.sqrt(heightStreaks - yScaleStreaks(d.streak));
-     })
-     .attr("fill", function() {
-      if (data_path == 'data/streak_artist_data.csv'){
-        return "#f16913";
-      } else {
-        return "#4d4d4d";
-      }
-     })
-    .attr("stroke", function() {
-      if (data_path == 'data/streak_artist_data.csv'){
-        return "#f16913";
-      } else {
-        return "#4d4d4d";
-      }
-     })           
-    .attr("opacity", "0.25")
-    .attr("class", "circle");
+                           .attr("cx", function(d) {
+                              return xScaleStreaks(d.date);
+                           })
+                           .attr("cy", function(d) {
+                              return yScaleStreaks(d.streak);
+                           })
+                           .attr("r", function (d) {
+                              return Math.sqrt(heightStreaks - yScaleStreaks(d.streak));
+                           })
+                           .attr("fill", function() {
+                            if (data_path == 'data/streak_artist_data.csv'){
+                              return "#f16913";
+                            } else {
+                              return "#4d4d4d";
+                            }
+                           })
+                          .attr("stroke", function() {
+                            if (data_path == 'data/streak_artist_data.csv'){
+                              return "#f16913";
+                            } else {
+                              return "#4d4d4d";
+                            }
+                           })           
+                          .attr("opacity", "0.25")
+                          .attr("class", "circle");
       
     circleStreaks.exit()
                  .remove()

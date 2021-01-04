@@ -1,5 +1,5 @@
 //Margin
-const marginStream = { top: 10, right: 120, bottom: 25, left: 10 };
+const marginStream = { top: 10, right: 151, bottom: 25, left: 10 };
 
 //Width and height
 const widthStream = 700 - marginStream.left - marginStream.right;
@@ -54,23 +54,24 @@ d3.csv("data/stream_chart_data.csv")
 			                  .enter().append('g')
 			                   .attr('class', 'legend');
     legendStream.append('rect')
-		         .attr('x', 545)
+		         .attr('x', 517)
 		         .attr('y', function(d, i) {
-		         	return i * 15;
+		         	return i * 18;
 		         })
-		         .attr('width', 10)
-		         .attr('height', 10)
+		         .attr('width', 12.5)
+		         .attr('height', 12.5)
 		         .style('fill', function(d) {
 		            return  colorStream(d.name);
 		         });
     legendStream.append('text')
-		           .attr('x', 560)
+		           .attr('x', 532)
 		           .attr('y', function(d, i) {
-		               return (i * 15)+9;
+		               return (i * 18)+11.9;
 		           })
 		           .text(function(d) {
 		               return d.name;
-		           });
+		           })
+		           .attr("font-size", "16");
 
 	//Create axis
 	var xAxisStream = d3.axisBottom(xScaleStream)

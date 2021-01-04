@@ -1,5 +1,5 @@
 //Margin
-const marginMLine = { top: 10, right: 0, bottom: 25, left: 40 };
+const marginMLine = { top: 10, right: 0, bottom: 25, left: 51 };
 
 //Width and Height
 const widthMLine = 600 - marginMLine.left - marginMLine.right;
@@ -75,7 +75,7 @@ d3.csv("data/occupancy_maringa_data.csv")
     legendMLine.append('rect')
                 .attr('x', 10)
                 .attr('y', function(d, i) {
-               		return i * 15;
+               		return i * 16.3;
           	    })
         	      .attr('width', 10)
         	      .attr('height', 10)
@@ -85,7 +85,7 @@ d3.csv("data/occupancy_maringa_data.csv")
     legendMLine.append('text')
                 .attr('x', 25)
                 .attr('y', function(d, i) {
-      		         return (i * 15)+10;
+      		         return (i * 16)+10;
                  })
                 .text(function(d) {
         	      	return d.name;
@@ -116,7 +116,7 @@ d3.csv("data/occupancy_maringa_data.csv")
            .attr("class", "axis-title")
            .attr("transform", "rotate(-90)")
            .style("text-anchor", "middle")
-           .attr("y",-40)
+           .attr("y",-50)
            .attr("x",-heightMLine/2)
            .attr("dy", ".71em")
            .text("Hospital beds occupancy (%)");
@@ -133,7 +133,7 @@ d3.csv("data/occupancy_maringa_data.csv")
           				  .y( function(d) { return yScaleMLine(d.Occupancy); });
 
 	categoryMLine.append("path")
-      		     .attr("class", "line")
+      		     .attr("class", "multiline")
       	         .attr("d", function(d) {
       	         	return lineMLine(d.values);
       	         })
@@ -212,7 +212,7 @@ d3.csv("data/occupancy_maringa_data.csv")
            			return xScaleMLine(xDate)+5;
            		}
            	})
-          .attr("y", heightMLine - 15 - 3*11);
+          .attr("y", heightMLine - 26 - 3*11);
         d3.selectAll(".focus-per-line")
            .attr("transform", function(d, i) {
            		var totalOccupancy = function(){
@@ -239,7 +239,7 @@ d3.csv("data/occupancy_maringa_data.csv")
               		return 5;
               	}
 	           })
-             .attr("y", heightMLine - yScaleMLine(data[idx][d.name]) - 12.5 - (2-i)*12)
+             .attr("y", heightMLine - yScaleMLine(data[idx][d.name]) - 12.5 - (2-i)*15.5)
              .attr("fill", colorMLine(d.name));
              
        		   return "translate(" + xScaleMLine(xDate) + "," + yScaleMLine(data[idx][d.name]) +")";

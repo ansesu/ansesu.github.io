@@ -36,7 +36,6 @@
     overflow: hidden;
 }
 
-
 .content {
   display: block;
   position: relative;
@@ -53,7 +52,7 @@
 }
 
 .axis-title {
-  font-size: 15px;
+  font-size: 17px;
   font-family: Helvetica;
   fill: #525252;
 } 
@@ -62,17 +61,9 @@
   stroke-width: 4px;
   opacity: 1;
 }
-.legend {
-  font-size: 10px;
+.legend text {
+  font-size: 13px;
   font-family: Helvetica;
-} 
-.line {
-  fill: none;
-  stroke: #252525;
-  stroke-width: 2.5;
-}
-.spacedParagraph {
-  margin-bottom:60px;
 } 
 .text-clock {
   font-family: Helvetica;
@@ -91,30 +82,30 @@
   background-color: white;
   font-family: Helvetica;
   box-sizing: border-box;
-  padding: .5%;
-}  
+  padding: .15%;
+}    
+.spacedParagraph {
+  margin-bottom:60px;
+} 
 .tooltip-stream {
     position: absolute;
     fill: #252525;
     font-family: Helvetica;
 }
+
 .xAxis {
-  font-size: 10px;
+  font-size: 13.5px;
   font-family: Helvetica;
-} 
-.yAxis {
-  font-size: 10px;
-  font-family: Helvetica;
-} 
-.yAxis .domain {
-  stroke-width: .75;
-  stroke: #525252;
 }
+.yAxis {
+  font-size: 13.5px;
+  font-family: Helvetica;
+} 
 .yAxis line {
   stroke: #525252;
 }
 .xAxisStream {
-  font-size: 12px;
+  font-size: 16px;
   font-family: Helvetica;
 } 
 div {
@@ -125,7 +116,8 @@ button {
   position:relative;
   z-index: 1000;
   font-size: 15px;
-}   
+}  
+
 #barchartrace text {
 font-size: 16px;
 font-family: Helvetica, sans-serif;

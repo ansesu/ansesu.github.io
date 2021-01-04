@@ -1,5 +1,5 @@
 //Margin
-const marginBarG = { top: 10, right: 10, bottom: 25, left: 49 };
+const marginBarG = { top: 10, right: 10, bottom: 25, left: 58 };
 
 //Width and height
 const widthBarG = 600 - marginBarG.left - marginBarG.right;
@@ -46,7 +46,7 @@ gBarG.append("text")
 	  .attr("class", "axis-title")
 	  .attr("transform", "rotate(-90)")
 	  .style("text-anchor", "middle")
-	  .attr("y",-49)
+	  .attr("y",-57)
 	  .attr("x",-heightBarG/2)
 	  .attr("dy", ".71em")
 	  .text("Scrobbles");
@@ -132,7 +132,6 @@ function plotCharts (data_path) {
 		  tooltipBarplot.html(html)
 		                .style("left", (event.pageX) + "px")
 		                .style("top", (event.pageY) + "px")
-		                .style("font-size", "1.4vw")
 		                .transition()
 		                 .duration(300) // ms
 		                 .style("opacity", 1); // started as 0!
@@ -192,7 +191,7 @@ function plotCharts (data_path) {
 			                  .enter().append("g")
 			                   .attr('class', 'legend');
 	    legendBarG.append('rect')
-		           .attr('x', widthBarG*.915)
+		           .attr('x', widthBarG*.9)
 		           .attr('y', function(d, i) {
 		             return i * 13 - 9;
 		           })
@@ -211,7 +210,7 @@ function plotCharts (data_path) {
 	           .remove(); 					            
 	    legendBarG.append('text')
 		    	   .attr("class", "legendText")					    
-		           .attr('x', widthBarG*.915+15)
+		           .attr('x', widthBarG*.9+15)
 		           .attr('y', function(d, i) {
 		             return (i * 13);
 		           })

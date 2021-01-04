@@ -1,5 +1,5 @@
 //Margin
-const marginThreshold = { top: 10, right: 0, bottom: 25, left: 45 };
+const marginThreshold = { top: 10, right: 0, bottom: 25, left: 54 };
 
 //Width and height
 const widthThreshold = 600 - marginThreshold.left - marginThreshold.right;
@@ -127,11 +127,25 @@ d3.csv("data/rt_maringa_data.csv")
 		       .attr("class", "axis-title")
 		       .attr("transform", "rotate(-90)")
 		       .style("text-anchor", "middle")
-		       .attr("y",-45)
+		       .attr("y",-52)
 		       .attr("x",-heightThreshold/2)
 		       .attr("dy", ".71em")
 		       .text("Reproduction number, R(t)");
 
+	gThreshold.append("text")
+				    .attr("text-anchor", "end")
+				    .attr("x", xScaleThreshold(maxDateThreshold)-1)
+				    .attr("y", yScaleThreshold(data[data.length-1].mean_r)-5)
+				    .attr("font-size", "15px")
+				    .text(data[data.length-1].mean_r.toFixed(2))
+				    .style("font-weight", "bold")
+				    .style("fill", function() {
+				    	if (data[data.length-1].mean_r >=1 ) {
+				    		return "#e41a1c";
+				    	} else {
+				    		return "#4daf4a";
+				    	}
+				    })
 	//Create tooltip
     var focusThreshold = gThreshold.append("g")
                   					.attr("class", "focus");
@@ -197,7 +211,7 @@ d3.csv("data/rt_maringa_data.csv")
 		    		   .attr("opacity", "1");
 		if (dTrue.date > medianThreshold) {
 			focusThreshold.select("#thresholdplot .tooltip-y")
-					 	   .attr("y", heightThreshold*.95-yScaleThreshold(dTrue.mean_r))
+					 	   .attr("y", heightThreshold*.96-yScaleThreshold(dTrue.mean_r))
 					 	   .attr("text-anchor", "end")
 					 	   .attr("x", -5);
 			focusThreshold.select("#thresholdplot .tooltip-x")
@@ -206,7 +220,7 @@ d3.csv("data/rt_maringa_data.csv")
 					 	   .attr("x", -5);
 		} else {
 			focusThreshold.select("#thresholdplot .tooltip-y")
-						   .attr("y", heightThreshold*.95-yScaleThreshold(dTrue.mean_r))
+						   .attr("y", heightThreshold*.96-yScaleThreshold(dTrue.mean_r))
 						   .attr("text-anchor", "start")
 						   .attr("x", 5);
 			focusThreshold.select("#thresholdplot .tooltip-x")

@@ -114,7 +114,6 @@ function plotStreaks(data_path) {
       tooltipScatter.html(html)
                     .style("left", (event.pageX - 30) + "px")
                     .style("top", (event.pageY - 58) + "px")
-                    .style("font-size", "1.4vw")
                     .transition()
                      .duration(300) // ms
                      .style("opacity", 1); // started as 0!

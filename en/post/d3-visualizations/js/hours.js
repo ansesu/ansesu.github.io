@@ -66,7 +66,6 @@ d3.csv("data/hour_data.csv")
 		tooltipCircularBarplot.html(html)
 		                      .style("left", (event.pageX) + "px")
 		                      .style("top", (event.pageY) + "px")
-		                      .style("font-size", "1.4vw")
 		                      .transition()
 		                       .duration(300) // ms
 		                       .style("opacity", 1); // started as 0!

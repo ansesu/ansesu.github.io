@@ -93,12 +93,12 @@
 }
 
 .axis-title {
-  font-size: 15px;
+  font-size: 17px;
   font-family: Helvetica;
   fill: #525252;
 } 
 .ci {
-  opacity: 0.25;
+  opacity: 0.1;
   fill: #252525;
 } 
 .clock {
@@ -126,8 +126,8 @@
   stroke: #737373;
   stroke-width: 0.75px;
 }
-.legend {
-  font-size: 10px;
+.legend text {
+  font-size: 13px;
   font-family: Helvetica;
 } 
 .line {
@@ -137,7 +137,11 @@
 }
 .map {
   stroke: #737373;
-  stroke-width: 1;
+  stroke-width: .75;
+}
+.multiline{
+  stroke-width:1.5;
+  fill: none;
 }
 .one-line {
   fill: none;
@@ -170,28 +174,29 @@
   background-color: white;
   font-family: Helvetica;
   box-sizing: border-box;
-  padding: .5%;
-}     
+  padding: .15%;
+}    
+ 
 .focus .tooltip-confirmed {
   font-family: Helvetica;
-  font-size: 10px;
+  font-size: 14px;
 }
 .focus .tooltip-date {
   font-family: Helvetica;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: bold;
 }
 .focus-per-line text {
   font-family: Helvetica;
-  font-size: 10px;
+  font-size: 14px;
 }
 .focus .tooltip-y {
   font-family: Helvetica;
-  font-size: 10px;
+  font-size: 14px;
 }
 .focus .tooltip-x {
   font-family: Helvetica;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: bold;
 }
 .spacedParagraph {
@@ -202,27 +207,24 @@
     fill: #252525;
     font-family: Helvetica;
 }
+
 .xAxis {
-  font-size: 10px;
+  font-size: 13.5px;
   font-family: Helvetica;
 } 
-.yAxis {
-  font-size: 10px;
+.xAxisBand {
+  font-size: 13.5px;
   font-family: Helvetica;
-} 
-.yAxis .domain {
-  stroke-width: .75;
-  stroke: #525252;
 }
+.yAxis {
+  font-size: 13.5px;
+  font-family: Helvetica;
+} 
 .yAxis line {
   stroke: #525252;
 }
-.xAxisBand .domain {
-  stroke-width: .75;
-  stroke: #525252;
-}
 .xAxisStream {
-  font-size: 12px;
+  font-size: 16px;
   font-family: Helvetica;
 } 
 div {

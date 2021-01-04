@@ -1,5 +1,5 @@
 //Margin
-const marginBand = { top: 10, right: 15, bottom: 45, left: 55 };
+const marginBand = { top: 10, right: 15, bottom: 45, left: 69 };
 
 //Width and height
 const widthBand = 600 - marginBand.left - marginBand.right;
@@ -85,7 +85,7 @@ d3.csv("data/simple_bandplot_data.csv")
 	      .attr("class", "axis-title")
 	      .attr("transform", "rotate(-90)")
 	      .style("text-anchor", "middle")
-	      .attr("y",-55)
+	      .attr("y",-67)
 	      .attr("x",-heightBand/2)
 	      .attr("dy", ".71em")
 	      .text("y");
@@ -93,7 +93,7 @@ d3.csv("data/simple_bandplot_data.csv")
     gBand.append("text")
 	      .attr("class", "axis-title")
 	      .style("text-anchor", "middle")
-	      .attr("y", heightBand+25)
+	      .attr("y", heightBand+20)
 	      .attr("x", widthBand/2)
 	      .attr("dy", ".71em")
 	      .text("x");
@@ -149,7 +149,7 @@ d3.csv("data/simple_bandplot_data.csv")
     	
 		if (dTrue.x > medianBand) {
 			focusBand.select("#bandplot .tooltip-y")
-					  .attr("y", heightBand*.955-yScaleBand(dTrue.y))
+					  .attr("y", heightBand*.965-yScaleBand(dTrue.y))
 					  .attr("text-anchor", "end")
 					  .attr("x", -5);
 			focusBand.select("#bandplot .tooltip-x")
@@ -158,11 +158,11 @@ d3.csv("data/simple_bandplot_data.csv")
 				      .attr("x", -5);
 		} else {
 			focusBand.select("#bandplot .tooltip-y")
-				      .attr("y", heightBand*.605-yScaleBand(dTrue.y))
+				      .attr("y", heightBand*.48-yScaleBand(dTrue.y))
 				      .attr("text-anchor", "start")
 				      .attr("x", 5);
 			focusBand.select("#bandplot .tooltip-x")
-				      .attr("y", heightBand*.57-yScaleBand(dTrue.y))
+				      .attr("y", heightBand*.435-yScaleBand(dTrue.y))
 				      .attr("text-anchor", "start")
 				      .attr("x", 5);
 		}

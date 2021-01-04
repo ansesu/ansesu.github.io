@@ -28,7 +28,7 @@ function makeChart() {
     let titleRace = gRace.append('text')
 			              .attr('class', 'title-race')
 			              .attr('y', -30)
-			              .html('Número de scrobbles por artista do ansesu em 2020');
+			              .html('ansesu scrobbles per artist in 2020');
      	    
     let dateRace = + new Date(2019,0,1);
 
