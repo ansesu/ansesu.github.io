@@ -88,15 +88,15 @@ d3.csv("data/simple_bandplot_data.csv")
 	      .attr("y",-67)
 	      .attr("x",-heightBand/2)
 	      .attr("dy", ".71em")
-	      .text("y");
+	      .text("Variável dependente, y");
 
     gBand.append("text")
 	      .attr("class", "axis-title")
 	      .style("text-anchor", "middle")
-	      .attr("y", heightBand+20)
+	      .attr("y", heightBand+25)
 	      .attr("x", widthBand/2)
 	      .attr("dy", ".71em")
-	      .text("x");
+	      .text("Variável independente, x");
 
 	//Create tooltip
     var focusBand = gBand.append("g")

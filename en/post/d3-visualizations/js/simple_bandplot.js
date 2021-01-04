@@ -80,7 +80,6 @@ d3.csv("data/simple_bandplot_data.csv")
 		  .attr("transform", "translate(0,0)")
 		  .call(yAxisBand)
 
-    //Create axis label
     gBand.append("text")
 	      .attr("class", "axis-title")
 	      .attr("transform", "rotate(-90)")
@@ -88,15 +87,15 @@ d3.csv("data/simple_bandplot_data.csv")
 	      .attr("y",-67)
 	      .attr("x",-heightBand/2)
 	      .attr("dy", ".71em")
-	      .text("y");
+	      .text("Dependent variable, y");
 
     gBand.append("text")
 	      .attr("class", "axis-title")
 	      .style("text-anchor", "middle")
-	      .attr("y", heightBand+20)
+	      .attr("y", heightBand+25)
 	      .attr("x", widthBand/2)
 	      .attr("dy", ".71em")
-	      .text("x");
+	      .text("Independent variable, x");
 
 	//Create tooltip
     var focusBand = gBand.append("g")
