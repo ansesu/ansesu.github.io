@@ -102,7 +102,7 @@ d3.csv("data/stream_chart_data.csv")
 
 	// create a tooltip
     var tooltipStream = gStream.append("text")
-						        .attr("class", "tooltip-stream")
+					  			.attr("class", "tooltip-stream")    
 						        .style("opacity", 0);
 
 	// Three function that change the tooltip when user hover / move / leave a cell
@@ -114,8 +114,9 @@ d3.csv("data/stream_chart_data.csv")
 		
 		var textStream = event.target.__data__.key;
 		tooltipStream.text(textStream)
+		              .attr("font-size", "22")  
 		              .attr("x", 5)
-		              .attr("y", 20)           
+		              .attr("y", 17)            
 					  .transition()
 				       .duration(400) // ms
 					   .style("opacity", 1); // started as 0!	
