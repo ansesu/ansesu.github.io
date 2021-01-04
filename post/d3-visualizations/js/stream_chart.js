@@ -116,7 +116,7 @@ d3.csv("data/stream_chart_data.csv")
 		tooltipStream.text(textStream)
 		              .attr("font-size", "22")  
 		              .attr("x", 5)
-		              .attr("y", 17)         
+		              .attr("y", 15)         
 					  .transition()
 				       .duration(400) // ms
 					   .style("opacity", 1); // started as 0!
