@@ -20,12 +20,12 @@ d3.csv("data/occupancy_maringa_data.csv")
     //Parse data
     data.forEach(function(d) {
     	d.Date = parseTimeMLine(d.Date);
-     	d.Enfermaria = parseFloat(d.Enfermaria.replace(',','.'));
-     	d.UTI = parseFloat(d.UTI.replace(',','.'));
-     	d["UTI neonatal"] = parseFloat(d["UTI neonatal"].replace(',','.'));			      
+     	d.Infirmary = parseFloat(d.Infirmary.replace(',','.'));
+     	d.ICU = parseFloat(d.ICU.replace(',','.'));
+     	d["ICU (neonatal)"] = parseFloat(d["ICU (neonatal)"].replace(',','.'));			      
      	d.Enfermaria_total = parseInt(d.Enfermaria_total);
      	d.UTI_total = parseInt(d.UTI_total);
-     	d["UTI neonatal_total"] = parseInt(d["UTI neonatal_total"]);
+     	d["UTI (neonatal)_total"] = parseInt(d["UTI (neonatal)_total"]);
     });
 
 	//Get median of dates
