@@ -73,7 +73,7 @@ d3.csv("data/month_simple_data.csv")
 	                        .style("opacity", 0);              
 
 	// tooltip mouseover event handler
-	var tipMouseover = function(event, d) {
+	var mouseoverBar = function(event, d) {
 		d3.select(this)
 		   .transition()
 		   .duration(300) 		  
@@ -91,7 +91,7 @@ d3.csv("data/month_simple_data.csv")
 					   .style("opacity", 1); // started as 0!
 	};
 	// tooltip mouseout event handler
-	var tipMouseout = function(d) {
+	var mouseoutBar = function(d) {
 		d3.select(this)
 		  .transition()
 		   .duration(300) // ms				  
@@ -113,6 +113,6 @@ d3.csv("data/month_simple_data.csv")
 		 .attr("height", function(d) { return heightBar - yScaleBar(d.count); })
 		 .attr("fill", "#fa9fb5")
 		 .attr("opacity", .8)
-	     .on("mouseover", tipMouseover)
-	     .on("mouseout", tipMouseout);
+	     .on("mouseover", mouseoverBar)
+	     .on("mouseout", mouseoutBar);
 });

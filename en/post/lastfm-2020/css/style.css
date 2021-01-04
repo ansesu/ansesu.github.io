@@ -71,6 +71,9 @@
   stroke: #252525;
   stroke-width: 2.5;
 }
+.spacedParagraph {
+  margin-bottom:60px;
+} 
 .text-clock {
   font-family: Helvetica;
   font-weight: 100;

@@ -1,5 +1,5 @@
 //Margin
-const marginBand = { top: 10, right: 15, bottom: 65, left: 55 };
+const marginBand = { top: 10, right: 15, bottom: 45, left: 55 };
 
 //Width and height
 const widthBand = 600 - marginBand.left - marginBand.right;

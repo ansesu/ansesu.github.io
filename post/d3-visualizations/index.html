@@ -730,37 +730,37 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <p>Apesar de a confecção de visualizações diretamente pelo Python (ou qualquer outra linguagem de programação) ser mais prática, perde-se liberdade na personalização de interatividade e também responsividade ao expor essas imagens em formato da web. Por isso, resolvi aprender um pouquinho sobre a biblioteca 
 <a href="https://d3js.org/" target="_blank" rel="noopener">d3.js</a>. Abaixo, mostro algumas visualizações que confeccionei (as figuras são interativas).</p>
+<h1 id="gráfico-de-linha">Gráfico de linha</h1>
 <div id="lineplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_line_plot.js"> </script>
-<p style="text-align: center" >Figura: gráfico de linha com barra vertical interativa indicando o valor da variável.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura: gráfico de linha com barra vertical interativa indicando o valor da variável.<p/>
 <div id="bandplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_bandplot.js"> </script>
-<p style="text-align: center" >Figura: gráfico de linha com intervalo de confiança e com barra vertical interativa indicando o valor da variável.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura: gráfico de linha com intervalo de confiança e com barra vertical interativa indicando o valor da variável.<p/>
 <div id="multilineplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_multiline_plot.js"> </script>
-<p style="text-align: center" >Figura: gráfico multilinhas com barra vertical interativa indicando o valor das variáveis.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura: gráfico multilinhas com barra vertical interativa indicando o valor das variáveis.<p/>
 <div id="thresholdplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_threshold_line_plot.js"> </script>
-<p style="text-align: center" >Figura: gráfico de linha com intervalo de confiança e cores diferentes definidas por um limite. Valores acima do limite são coloridos de vermelho, enquanto valores abaixo desse mesmo limite são coloridos de verde. Visualização inspirada no site rt.live.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura: gráfico de linha com intervalo de confiança e cores diferentes definidas por um limite. Valores acima do limite são coloridos de vermelho, enquanto valores abaixo desse mesmo limite são coloridos de verde. Visualização inspirada no site rt.live.<p/>
+<h1 id="scatter-plot">Scatter plot</h1>
 <p><button style="border-radius: 4px;" onclick="plotStreaks('data/streak_artist_data.csv')">Artist</button>
 <button style="border-radius: 4px;" onclick="plotStreaks('data/streak_track_data.csv')">Track</button></p>
   <div id="streaks" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/streaks.js"> </script>
-<p style="text-align: center" >Figura: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).<p/>
+<p style="text-align: center" class="spacedParagraph">Figura: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).<p/>
+<h1 id="gráfico-de-barra">Gráfico de barra</h1>
 <div id="simplebarplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_barplot.js"> </script>
-<p style="text-align: center" >Figura: gráfico de barras simples.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras simples.<p/>
 <p><button style="border-radius: 4px;" onclick="plotCharts('data/month_data.csv', true)">Mensal</button>
 <button style="border-radius: 4px;" onclick=" plotCharts('data/weekday_data.csv', false)">Semanal</button></p>
   <div id="barplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/months_and_days.js"> </script>
-<p style="text-align: center" >Figura: gráfico de barras agrupado (com botão para troca de categoria).<p/>
+<p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras agrupado (com botão para troca de categoria).<p/>
 <div id="hours" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/hours.js"> </script>
-<p style="text-align: center" >Figura: gráfico de barras radial.<p/>
-<div id="stream_chart" style="z-index: -1000"></div>
-<script type="text/javascript" src="js/stream_chart.js"> </script>
-<p style="text-align: center" >Figura: stream chart plot.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras radial.<p/>
 <script type="text/javascript"> 
 function reloadchart() {
    //alert("In function");
@@ -774,22 +774,17 @@ function reloadchart() {
 <p><button style="border-radius: 4px;" onclick="reloadchart()">Reload</button></p>
 <div id="barchartrace" style="z-index: -1000"> </div>
 <script type="text/javascript" src="js/barchart_race.js"> </script>
-<p style="text-align: center" >Figura: gráfico de corrida de barras.<p/>
-<h2 id="na-lista-para-fazer">Na lista para fazer</h2>
-<ul>
-<li>
-<p>Mapa</p>
-</li>
-<li>
-<p>Joyplot</p>
-</li>
-<li>
-<p>Wordcloud</p>
-</li>
-<li>
-<p>Redes</p>
-</li>
-</ul>
+<p style="text-align: center" class="spacedParagraph">Figura: gráfico de corrida de barras.<p/>
+<h1 id="gráfico-de-área">Gráfico de área</h1>
+<div id="stream_chart" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/stream_chart.js"> </script>
+<p style="text-align: center" class="spacedParagraph">Figura: stream chart plot.<p/>
+<h1 id="mapa">Mapa</h1>
+<p><button style="border-radius: 4px;" onclick="plotMap('cases', false)">Casos</button>
+<button style="border-radius: 4px;" onclick="plotMap('deaths', false)">Mortes</button></p>
+<div id="paranamap" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/simple_map.js"> </script>
+<p style="text-align: center" class="spacedParagraph">Figura: mapa com escala de cor dependente da amplitude da variável (com botão para troca de categoria).<p/>
 <h2 id="recursos">Recursos</h2>
 <ul>
 <li>
@@ -847,6 +842,10 @@ function reloadchart() {
 <li>
 <p>
 <a href="https://bl.ocks.org/jrzief/70f1f8a5d066a286da3a1e699823470f" target="_blank" rel="noopener">bar chart races</a></p>
+</li>
+<li>
+<p>
+<a href="http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/" target="_blank" rel="noopener">D3 and Web Mapping: Map your Data!</a></p>
 </li>
 <li>
 <p>

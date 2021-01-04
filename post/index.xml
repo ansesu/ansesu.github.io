@@ -111,20 +111,20 @@
 &lt;p&gt;(As figuras aqui expostas são interativas)&lt;/p&gt;
 &lt;div id=&#34;hours&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/hours.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: número de músicas em cada período do dia em 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: número de músicas em cada período do dia em 2020.&lt;p/&gt;
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotCharts(&#39;data/month_data.csv&#39;, true)&#34;&gt;Mensal&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34; plotCharts(&#39;data/weekday_data.csv&#39;, false)&#34;&gt;Semanal&lt;/button&gt;&lt;/p&gt;
   &lt;div id=&#34;barplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/months_and_days.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34;&gt; Figura: número de músicas em cada mês (dia da semana) de 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt; Figura: número de músicas em cada mês (dia da semana) de 2020.&lt;p/&gt;
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_artist_data.csv&#39;)&#34;&gt;Artist&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_track_data.csv&#39;)&#34;&gt;Track&lt;/button&gt;&lt;/p&gt;
   &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/streaks.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34;&gt; Figura: sequências escutando o mesmo artista (música) em 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt; Figura: sequências escutando o mesmo artista (música) em 2020.&lt;p/&gt;
 &lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34;&gt;Figura: evolução temporal do volume de reproduções dos top 10 artistas de 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: evolução temporal do volume de reproduções dos top 10 artistas de 2020.&lt;p/&gt;
 &lt;script type=&#34;text/javascript&#34;&gt; 
 function reloadchart() {
    //alert(&#34;In function&#34;);
@@ -138,7 +138,7 @@ function reloadchart() {
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;reloadchart()&#34;&gt;Reload&lt;/button&gt;&lt;/p&gt;
 &lt;div id=&#34;barchartrace&#34; style=&#34;z-index: -1000&#34;&gt; &lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/barchart_race.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: corrida de barras para artistas com mais de 30 reproduções em 2020.&lt;p/&gt;</description>
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: corrida de barras para artistas com mais de 30 reproduções em 2020.&lt;p/&gt;</description>
     </item>
     
     <item>
@@ -151,37 +151,37 @@ function reloadchart() {
 &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34;&gt;
 &lt;p&gt;Apesar de a confecção de visualizações diretamente pelo Python (ou qualquer outra linguagem de programação) ser mais prática, perde-se liberdade na personalização de interatividade e também responsividade ao expor essas imagens em formato da web. Por isso, resolvi aprender um pouquinho sobre a biblioteca 
 &lt;a href=&#34;https://d3js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3.js&lt;/a&gt;. Abaixo, mostro algumas visualizações que confeccionei (as figuras são interativas).&lt;/p&gt;
+&lt;h1 id=&#34;gráfico-de-linha&#34;&gt;Gráfico de linha&lt;/h1&gt;
 &lt;div id=&#34;lineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_line_plot.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: gráfico de linha com barra vertical interativa indicando o valor da variável.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico de linha com barra vertical interativa indicando o valor da variável.&lt;p/&gt;
 &lt;div id=&#34;bandplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_bandplot.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: gráfico de linha com intervalo de confiança e com barra vertical interativa indicando o valor da variável.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico de linha com intervalo de confiança e com barra vertical interativa indicando o valor da variável.&lt;p/&gt;
 &lt;div id=&#34;multilineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_multiline_plot.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: gráfico multilinhas com barra vertical interativa indicando o valor das variáveis.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico multilinhas com barra vertical interativa indicando o valor das variáveis.&lt;p/&gt;
 &lt;div id=&#34;thresholdplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_threshold_line_plot.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: gráfico de linha com intervalo de confiança e cores diferentes definidas por um limite. Valores acima do limite são coloridos de vermelho, enquanto valores abaixo desse mesmo limite são coloridos de verde. Visualização inspirada no site rt.live.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico de linha com intervalo de confiança e cores diferentes definidas por um limite. Valores acima do limite são coloridos de vermelho, enquanto valores abaixo desse mesmo limite são coloridos de verde. Visualização inspirada no site rt.live.&lt;p/&gt;
+&lt;h1 id=&#34;scatter-plot&#34;&gt;Scatter plot&lt;/h1&gt;
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_artist_data.csv&#39;)&#34;&gt;Artist&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_track_data.csv&#39;)&#34;&gt;Track&lt;/button&gt;&lt;/p&gt;
   &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/streaks.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).&lt;p/&gt;
+&lt;h1 id=&#34;gráfico-de-barra&#34;&gt;Gráfico de barra&lt;/h1&gt;
 &lt;div id=&#34;simplebarplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_barplot.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: gráfico de barras simples.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico de barras simples.&lt;p/&gt;
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotCharts(&#39;data/month_data.csv&#39;, true)&#34;&gt;Mensal&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34; plotCharts(&#39;data/weekday_data.csv&#39;, false)&#34;&gt;Semanal&lt;/button&gt;&lt;/p&gt;
   &lt;div id=&#34;barplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/months_and_days.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: gráfico de barras agrupado (com botão para troca de categoria).&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico de barras agrupado (com botão para troca de categoria).&lt;p/&gt;
 &lt;div id=&#34;hours&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/hours.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: gráfico de barras radial.&lt;p/&gt;
-&lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: stream chart plot.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico de barras radial.&lt;p/&gt;
 &lt;script type=&#34;text/javascript&#34;&gt; 
 function reloadchart() {
    //alert(&#34;In function&#34;);
@@ -195,22 +195,17 @@ function reloadchart() {
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;reloadchart()&#34;&gt;Reload&lt;/button&gt;&lt;/p&gt;
 &lt;div id=&#34;barchartrace&#34; style=&#34;z-index: -1000&#34;&gt; &lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/barchart_race.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; &gt;Figura: gráfico de corrida de barras.&lt;p/&gt;
-&lt;h2 id=&#34;na-lista-para-fazer&#34;&gt;Na lista para fazer&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Mapa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Joyplot&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Wordcloud&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Redes&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico de corrida de barras.&lt;p/&gt;
+&lt;h1 id=&#34;gráfico-de-área&#34;&gt;Gráfico de área&lt;/h1&gt;
+&lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: stream chart plot.&lt;p/&gt;
+&lt;h1 id=&#34;mapa&#34;&gt;Mapa&lt;/h1&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotMap(&#39;cases&#39;, false)&#34;&gt;Casos&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotMap(&#39;deaths&#39;, false)&#34;&gt;Mortes&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&#34;paranamap&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_map.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: mapa com escala de cor dependente da amplitude da variável (com botão para troca de categoria).&lt;p/&gt;
 &lt;h2 id=&#34;recursos&#34;&gt;Recursos&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -268,6 +263,10 @@ function reloadchart() {
 &lt;li&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://bl.ocks.org/jrzief/70f1f8a5d066a286da3a1e699823470f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bar chart races&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;D3 and Web Mapping: Map your Data!&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;

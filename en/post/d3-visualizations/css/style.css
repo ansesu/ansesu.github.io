@@ -135,6 +135,10 @@
   stroke: #252525;
   stroke-width: 2.5;
 }
+.map {
+  stroke: #737373;
+  stroke-width: 1;
+}
 .one-line {
   fill: none;
   stroke-width: 2.5;
@@ -190,6 +194,9 @@
   font-size: 10px;
   font-weight: bold;
 }
+.spacedParagraph {
+  margin-bottom:60px;
+} 
 .tooltip-stream {
     position: absolute;
     fill: #252525;
@@ -226,7 +233,8 @@ button {
   position:relative;
   z-index: 1000;
   font-size: 15px;
-}   
+}  
+
 #barchartrace text {
 font-size: 16px;
 font-family: Helvetica, sans-serif;

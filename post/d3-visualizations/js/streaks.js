@@ -142,38 +142,38 @@ function plotStreaks(data_path) {
                           .transition()
                            .duration(300)
                            .ease(d3.easeLinear)
-     .attr("cx", function(d) {
-        return xScaleStreaks(d.date);
-     })
-     .attr("cy", function(d) {
-        return yScaleStreaks(d.streak);
-     })
-     .attr("r", function (d) {
-        return Math.sqrt(heightStreaks - yScaleStreaks(d.streak));
-     })
-     .attr("fill", function() {
-      if (data_path == 'data/streak_artist_data.csv'){
-        return "#f16913";
-      } else {
-        return "#4d4d4d";
-      }
-     })
-    .attr("stroke", function() {
-      if (data_path == 'data/streak_artist_data.csv'){
-        return "#f16913";
-      } else {
-        return "#4d4d4d";
-      }
-     })           
-    .attr("opacity", "0.25")
-    .attr("class", "circle");
-      
-    circleStreaks.exit()
-                 .remove()
+                           .attr("cx", function(d) {
+                              return xScaleStreaks(d.date);
+                           })
+                           .attr("cy", function(d) {
+                              return yScaleStreaks(d.streak);
+                           })
+                           .attr("r", function (d) {
+                              return Math.sqrt(heightStreaks - yScaleStreaks(d.streak));
+                           })
+                           .attr("fill", function() {
+                            if (data_path == 'data/streak_artist_data.csv'){
+                              return "#f16913";
+                            } else {
+                              return "#4d4d4d";
+                            }
+                           })
+                          .attr("stroke", function() {
+                            if (data_path == 'data/streak_artist_data.csv'){
+                              return "#f16913";
+                            } else {
+                              return "#4d4d4d";
+                            }
+                           })           
+                          .attr("opacity", "0.25")
+                          .attr("class", "circle");
+                            
+                          circleStreaks.exit()
+                                       .remove()
 
-    gStreaks.selectAll("circle")
-            .on("mouseover", mouseoverStreaks)
-            .on("mouseout", mouseoutStreaks);
+                          gStreaks.selectAll("circle")
+                                  .on("mouseover", mouseoverStreaks)
+                                  .on("mouseout", mouseoutStreaks);
   });                 
 } 
 
