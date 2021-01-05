@@ -137,7 +137,7 @@
 }
 .map {
   stroke: #737373;
-  stroke-width: 1;
+  stroke-width: .5;
 }
 .multiline{
   stroke-width:1.25;

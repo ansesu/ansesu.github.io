@@ -193,7 +193,7 @@ function plotCharts (data_path) {
 	    legendBarG.append('rect')
 		           .attr('x', widthBarG*.9)
 		           .attr('y', function(d, i) {
-		             return i * 13 - 9;
+		             return i * 13 - 9.5;
 		           })
 		           .attr('width', 10)
 		           .attr('height', 10)

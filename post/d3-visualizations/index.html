@@ -744,22 +744,22 @@
 <script type="text/javascript" src="js/simple_threshold_line_plot.js"> </script>
 <p style="text-align: center" class="spacedParagraph">Figura: gráfico de linha com intervalo de confiança e cores diferentes definidas por um limite. Valores acima do limite são coloridos de vermelho, enquanto valores abaixo desse mesmo limite são coloridos de verde. Visualização inspirada no site rt.live.<p/>
 <h1 id="scatter-plot">Scatter plot</h1>
-<p><button style="border-radius: 4px;" onclick="plotStreaks('data/streak_artist_data.csv')">Artist</button>
-<button style="border-radius: 4px;" onclick="plotStreaks('data/streak_track_data.csv')">Track</button></p>
+<p><button style="border-radius: 4px;" onclick="plotStreaks('../lastfm-2020/data/streak_artist_data.csv')">Artist</button>
+<button style="border-radius: 4px;" onclick="plotStreaks('../lastfm-2020/data/streak_track_data.csv')">Track</button></p>
   <div id="streaks" style="z-index: -1000"></div>
-<script type="text/javascript" src="js/streaks.js"> </script>
+<script type="text/javascript" src="../lastfm-2020/js/streaks.js"> </script>
 <p style="text-align: center" class="spacedParagraph">Figura: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).<p/>
 <h1 id="gráfico-de-barra">Gráfico de barra</h1>
 <div id="simplebarplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_barplot.js"> </script>
 <p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras simples.<p/>
-<p><button style="border-radius: 4px;" onclick="plotCharts('data/month_data.csv', true)">Mensal</button>
-<button style="border-radius: 4px;" onclick=" plotCharts('data/weekday_data.csv', false)">Semanal</button></p>
+<p><button style="border-radius: 4px;" onclick="plotCharts('../lastfm-2020/data/month_data.csv', true)">Mensal</button>
+<button style="border-radius: 4px;" onclick=" plotCharts('../lastfm-2020/data/weekday_data.csv', false)">Semanal</button></p>
   <div id="barplot" style="z-index: -1000"></div>
-<script type="text/javascript" src="js/months_and_days.js"> </script>
+<script type="text/javascript" src="../lastfm-2020/js/months_and_days.js"> </script>
 <p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras agrupado (com botão para troca de categoria).<p/>
 <div id="hours" style="z-index: -1000"></div>
-<script type="text/javascript" src="js/hours.js"> </script>
+<script type="text/javascript" src="../lastfm-2020/js/hours.js"> </script>
 <p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras radial.<p/>
 <script type="text/javascript"> 
 function reloadchart() {
@@ -773,11 +773,11 @@ function reloadchart() {
 </script>
 <p><button style="border-radius: 4px;" onclick="reloadchart()">Reload</button></p>
 <div id="barchartrace" style="z-index: -1000"> </div>
-<script type="text/javascript" src="js/barchart_race.js"> </script>
+<script type="text/javascript" src="../lastfm-2020/js/barchart_race.js"> </script>
 <p style="text-align: center" class="spacedParagraph">Figura: gráfico de corrida de barras.<p/>
 <h1 id="gráfico-de-área">Gráfico de área</h1>
 <div id="stream_chart" style="z-index: -1000"></div>
-<script type="text/javascript" src="js/stream_chart.js"> </script>
+<script type="text/javascript" src="../lastfm-2020/js/stream_chart.js"> </script>
 <p style="text-align: center" class="spacedParagraph">Figura: stream chart plot.<p/>
 <h1 id="mapa">Mapa</h1>
 <p><button style="border-radius: 4px;" onclick="plotMap('cases', false)">Casos</button>
