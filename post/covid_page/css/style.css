@@ -123,7 +123,7 @@
   stroke-width: 0.75px;
 }
 .legend {
-  font-size: 13px;
+  font-size: 14px;
   font-family: Helvetica;
 } 
 .lineConfirmados {
@@ -175,11 +175,11 @@
 }
 #multilineplot .tooltip-text {
   font-family: Helvetica;
-  font-size: 15px;
+  font-size: 14px;
 }
 #multilineplot .tooltip-date {
   font-family: Helvetica;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 }
 .focus-per-line text {
