@@ -1,5 +1,5 @@
 //Margin
-const marginLine = { top: 12, right: 5, bottom: 25, left: 71 };
+const marginLine = { top: 12, right: 5, bottom: 45, left: 71 };
 
 //Width and height
 const widthLine = 600 - marginLine.left - marginLine.right;
@@ -63,11 +63,8 @@ d3.csv("data/confirmed_maringa_data.csv")
 
 	gLine.append("g")
 		  .attr("class", "xAxis")
-		  .attr("transform", "translate(0," + heightLine + ")")
-		  .call(xAxisLine)
-		  .select(".domain")
-		  .attr("stroke","#252525")
-		  .attr("stroke-width","0");
+		  .attr("transform", "translate(0," + (heightLine + 20) + ")")
+		  .call(xAxisLine);
 	gLine.append("g")
 		  .attr("class", "yAxis")
 		  .attr("transform", "translate(0,0)")
@@ -81,13 +78,7 @@ d3.csv("data/confirmed_maringa_data.csv")
 	      .attr("y",-70)
 	      .attr("x",-heightLine/2)
 	      .attr("dy", ".71em")
-	      .text("Casos confirmados de COVID-19");
-	gLine.append("text")
-	      .attr("text-anchor", "end")
-	      .attr("x", xScaleLine(d3.max(data, function(d) { return d.Date; }))-4)
-	      .attr("y", yScaleLine(d3.max(data, function(d) { return d.Confirmed; })))
-	      .attr("font-size", "15px")
-	      .text(formatValue(d3.max(data, function(d) { return d.Confirmed; })))
+	      .text("Casos");
 
 
 	d3.csv("data/decretos.csv")

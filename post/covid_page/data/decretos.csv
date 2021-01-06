@@ -1,10 +1,10 @@
 Data,resumo,Confirmados,y,flexibilizacao
 2020-03-18,(18/03/2020) Decreto 445/2020: Situação de emergência e fechamento do comércio. ,1,1106.2,False
-2020-03-20,"(20/03/2020) Decreto 461/2020: Suspensão do transporte intermunicipal, <br/>fechamento de lojas de conveniência.",2,1107.2,False
+2020-03-20,"(20/03/2020) Decreto 461/2020: Suspensão do transporte intermunicipal, <br/>fechamento de lojas de conveniência.",2,-1103.2,False
 2020-03-23,"(23/03/2020) Decretos 462 e 464/2020: Toque de recolher, suspensão do atendimento presencial em bancos e da rodoviária municipal.",4,1109.2,False
-2020-04-01,"(01/04/2020) Decreto 489/2020: Liberação de padarias, açougues e peixarias.",19,1124.2,True
+2020-04-01,"(01/04/2020) Decreto 489/2020: Liberação de padarias, açougues e peixarias.",19,-1086.2,True
 2020-04-06,"(06/04/2020) Decreto 502/2020: Liberação de oficinas mecânicas, clínicas médicas, veterinárias e pet shops.",38,1143.2,True
-2020-04-08,"(08/04/2020) Decreto 506/2020: Novas regras sobre abertura de serviços de saúde de urgência, emergência e internação, farmácias, abastecimento de postos de combustível, distribuidora de água e gás. Comércios alimentícios são autorizados a abrir em horário especial no feriado de páscoa.",42,1810.32,True
+2020-04-08,"(08/04/2020) Decreto 506/2020: Novas regras sobre abertura de serviços de saúde de urgência, emergência e internação, farmácias, abastecimento de postos de combustível, distribuidora de água e gás. Comércios alimentícios são autorizados a abrir em horário especial no feriado de páscoa.",42,-1063.2,True
 2020-04-09,(09/04/2020) Decreto 546/2020: Liberação da indústria e construção civil.,44,1149.2,True
 2020-04-15,(15/04/2020) Suspensão do toque de recolher por habeas corpus.,51,1156.2,True
 2020-04-18,(18/04/2020) Decreto 566/2020: Reabertura do comércio.,52,1157.2,True
