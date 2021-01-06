@@ -164,9 +164,6 @@ d3.csv("data/occupancy_maringa_data.csv")
                       	return colorMLine(d.name);
                       });  
 
-    focusPerLineMLine.append("text") // Value
-    			           .append("class", "tooltip-value")
-
     svgMLine.append('rect') 
              .attr("class", "overlay")
              .attr("transform", "translate(" + marginMLine.left + "," + marginMLine.top + ")")

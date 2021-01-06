@@ -23,8 +23,8 @@
 &lt;p&gt;&lt;strong&gt;(Post temporário)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Testando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.&lt;/p&gt;
 &lt;h1 id=&#34;casos-confirmados-acumulados&#34;&gt;Casos confirmados acumulados&lt;/h1&gt;
-&lt;div id=&#34;lineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;js/casos_confirmados_acumulados.js&#34;&gt; &lt;/script&gt;
+&lt;div id=&#34;multilineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/confirmados_ativos.js&#34;&gt; &lt;/script&gt;
 &lt;!-- 
 &lt;div id=&#34;multilineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_multiline_plot.js&#34;&gt; &lt;/script&gt;

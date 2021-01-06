@@ -123,7 +123,7 @@
   stroke-width: 0.75px;
 }
 .legend {
-  font-size: 13px;
+  font-size: 15px;
   font-family: Helvetica;
 } 
 .lineConfirmados {
@@ -141,7 +141,7 @@
   stroke-width: .5;
 }
 .multiline{
-  stroke-width:1.25;
+  stroke-width:1.5;
   fill: none;
 }
 .one-line {
@@ -173,13 +173,13 @@
 #svgwrapper {
   position: relative;
 }
-.focus .tooltip-confirmed {
+#multilineplot .tooltip-text {
   font-family: Helvetica;
-  font-size: 14px;
+  font-size: 15px;
 }
-.focus .tooltip-date {
+#multilineplot .tooltip-date {
   font-family: Helvetica;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
 }
 .focus-per-line text {
