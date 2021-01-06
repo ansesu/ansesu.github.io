@@ -211,20 +211,20 @@ d3.csv("data/rt_maringa_data.csv")
 		    		   .attr("opacity", "1");
 		if (dTrue.date > medianThreshold) {
 			focusThreshold.select("#thresholdplot .tooltip-y")
-					 	   .attr("y", heightThreshold*.98-yScaleThreshold(dTrue.mean_r))
+					 	   .attr("y", heightThreshold*.11-yScaleThreshold(dTrue.mean_r))
 					 	   .attr("text-anchor", "end")
 					 	   .attr("x", -5);
 			focusThreshold.select("#thresholdplot .tooltip-x")
-					 	   .attr("y", heightThreshold*.93-yScaleThreshold(dTrue.mean_r))
+					 	   .attr("y", heightThreshold*.05-yScaleThreshold(dTrue.mean_r))
 					 	   .attr("text-anchor", "end")
 					 	   .attr("x", -5);
 		} else {
 			focusThreshold.select("#thresholdplot .tooltip-y")
-						   .attr("y", heightThreshold*.98-yScaleThreshold(dTrue.mean_r))
+						   .attr("y", heightThreshold*.11-yScaleThreshold(dTrue.mean_r))
 						   .attr("text-anchor", "start")
 						   .attr("x", 5);
 			focusThreshold.select("#thresholdplot .tooltip-x")
-						   .attr("y", heightThreshold*.93-yScaleThreshold(dTrue.mean_r))
+						   .attr("y", heightThreshold*.05-yScaleThreshold(dTrue.mean_r))
 						   .attr("text-anchor", "start")
 					       .attr("x", 5);
         }
