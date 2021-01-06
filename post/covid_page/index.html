@@ -673,7 +673,7 @@ Casos confirmados acumulados     Figure: multiline plot with interactive vertica
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 minutos de leitura
+    1 minutos de leitura
   </span>
   
 
@@ -723,64 +723,90 @@ Casos confirmados acumulados     Figure: multiline plot with interactive vertica
 <!-- 
 <div id="multilineplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_multiline_plot.js"> </script>
-<p style="text-align: center"  class="spacedParagraph">Figure: multiline plot with interactive vertical line showing the variables values.<p/>
-
+<p style="text-align: center"  class="spacedParagraph">Figure: multiline plot with interactive vertical line showing the variables values.<p/> -->
 <div id="thresholdplot" style="z-index: -1000"></div>
-<script type="text/javascript" src="js/simple_threshold_line_plot.js"> </script>
-<p style="text-align: center"  class="spacedParagraph">Figure: line plot with confidence interval and colors defined by a threshold. Values above this threshold are colored in red, while values below this threshold are colored in green. This visualization was inspired by the one in the website rt.live.<p/>
-
+<script type="text/javascript" src="js/numero_reproducao.js"> </script>
+<!-- 
 # Geographic plot
-
-<button style="border-radius: 4px;" onclick="plotMap('cases', false)">Cases</button>
-<button style="border-radius: 4px;" onclick="plotMap('deaths', false)">Deaths</button>
+<p><button style="border-radius: 4px;" onclick="plotMap('cases', false)">Cases</button>
+<button style="border-radius: 4px;" onclick="plotMap('deaths', false)">Deaths</button></p>
 <div id="paranamap" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_map.js"> </script>
 <p style="text-align: center" class="spacedParagraph">Figure: map with color varying scale depending on the amplitude of the variable (with buttons to change between categories).<p/>
-
-## Resources
-
-- [colorbrewer2](https://colorbrewer2.org/)
-
-- [d3-time-format](https://github.com/d3/d3-time-format#locale_format)
-
-- [SVG Attribute reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute)
-
-- [D3 6.0 migration guide](https://observablehq.com/@d3/d3v6-migration-guide)
-
-- [How to Resize an SVG When the Window is Resized in d3.js](https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/)
-
-- [d3 scatterplot with tooltips](http://bl.ocks.org/williaster/af5b855651ffe29bdca1)
-
-- [Multiline chart](https://bl.ocks.org/LemoNode/a9dc1a454fdc80ff2a738a9990935e9d)
-
-- [d3 mouseover multi-line chart](https://bl.ocks.org/larsenmtl/e3b8b7c2ca4787f77d78f58d41c3da91)
-
-- [Most basic barplot in d3.js](https://www.d3-graph-gallery.com/graph/barplot_basic.html)
-
-- [Button to change input data in barplot (upgraded)](https://www.d3-graph-gallery.com/graph/barplot_button_data_hard.html)
-
-- [Grouped bar chart](https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad)
-
-- [Labels on circular barplot](https://www.d3-graph-gallery.com/graph/circular_barplot_label.html)
-
-- [Streamgraph template for d3.js](https://www.d3-graph-gallery.com/graph/streamgraph_template.html)
-
-- [bar chart races](https://bl.ocks.org/jrzief/70f1f8a5d066a286da3a1e699823470f)
-
-- [D3 and Web Mapping: Map your Data!](http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/)
-
-- [rt.live](http://rt.live)
-
-
-## References
- 
-[1] Scott, A. [*Interactive Data Visualization for the Web*](https://www.amazon.com.br/Interactive-Visualization-Scott-Andrew-Murray/dp/1449339735) (O'Reilly Media, 2013)    
-
-
-[2] Wilke, C. O. [*Fundamentals of Data Visualization*](https://www.amazon.com/gp/product/1492031089) (O'Reilly Media, 2019)
-
-[3] F. Crameri, G. E. Shephard, P. J. Heron, *The misuse of colour in science communication*. [Nature Communications 11, 5444 (2020).](https://www.nature.com/articles/s41467-020-19160-7) --><blockquote>
-</blockquote>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>
+<p>
+<a href="https://colorbrewer2.org/" target="_blank" rel="noopener">colorbrewer2</a></p>
+</li>
+<li>
+<p>
+<a href="https://github.com/d3/d3-time-format#locale_format" target="_blank" rel="noopener">d3-time-format</a></p>
+</li>
+<li>
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute" target="_blank" rel="noopener">SVG Attribute reference</a></p>
+</li>
+<li>
+<p>
+<a href="https://observablehq.com/@d3/d3v6-migration-guide" target="_blank" rel="noopener">D3 6.0 migration guide</a></p>
+</li>
+<li>
+<p>
+<a href="https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/" target="_blank" rel="noopener">How to Resize an SVG When the Window is Resized in d3.js</a></p>
+</li>
+<li>
+<p>
+<a href="http://bl.ocks.org/williaster/af5b855651ffe29bdca1" target="_blank" rel="noopener">d3 scatterplot with tooltips</a></p>
+</li>
+<li>
+<p>
+<a href="https://bl.ocks.org/LemoNode/a9dc1a454fdc80ff2a738a9990935e9d" target="_blank" rel="noopener">Multiline chart</a></p>
+</li>
+<li>
+<p>
+<a href="https://bl.ocks.org/larsenmtl/e3b8b7c2ca4787f77d78f58d41c3da91" target="_blank" rel="noopener">d3 mouseover multi-line chart</a></p>
+</li>
+<li>
+<p>
+<a href="https://www.d3-graph-gallery.com/graph/barplot_basic.html" target="_blank" rel="noopener">Most basic barplot in d3.js</a></p>
+</li>
+<li>
+<p>
+<a href="https://www.d3-graph-gallery.com/graph/barplot_button_data_hard.html" target="_blank" rel="noopener">Button to change input data in barplot (upgraded)</a></p>
+</li>
+<li>
+<p>
+<a href="https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad" target="_blank" rel="noopener">Grouped bar chart</a></p>
+</li>
+<li>
+<p>
+<a href="https://www.d3-graph-gallery.com/graph/circular_barplot_label.html" target="_blank" rel="noopener">Labels on circular barplot</a></p>
+</li>
+<li>
+<p>
+<a href="https://www.d3-graph-gallery.com/graph/streamgraph_template.html" target="_blank" rel="noopener">Streamgraph template for d3.js</a></p>
+</li>
+<li>
+<p>
+<a href="https://bl.ocks.org/jrzief/70f1f8a5d066a286da3a1e699823470f" target="_blank" rel="noopener">bar chart races</a></p>
+</li>
+<li>
+<p>
+<a href="http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/" target="_blank" rel="noopener">D3 and Web Mapping: Map your Data!</a></p>
+</li>
+<li>
+<p>
+<a href="http://rt.live" target="_blank" rel="noopener">rt.live</a></p>
+</li>
+</ul>
+<h2 id="references">References</h2>
+<p>[1] Scott, A. 
+<a href="https://www.amazon.com.br/Interactive-Visualization-Scott-Andrew-Murray/dp/1449339735" target="_blank" rel="noopener"><em>Interactive Data Visualization for the Web</em></a> (O&rsquo;Reilly Media, 2013)</p>
+<p>[2] Wilke, C. O. 
+<a href="https://www.amazon.com/gp/product/1492031089" target="_blank" rel="noopener"><em>Fundamentals of Data Visualization</em></a> (O&rsquo;Reilly Media, 2019)</p>
+<p>[3] F. Crameri, G. E. Shephard, P. J. Heron, <em>The misuse of colour in science communication</em>. 
+<a href="https://www.nature.com/articles/s41467-020-19160-7" target="_blank" rel="noopener">Nature Communications 11, 5444 (2020).</a> &ndash;&gt;</p>
 
     </div>
 
