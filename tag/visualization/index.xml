@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualization | ansesu</title>
+    <link>/tag/visualization/</link>
+      <atom:link href="/tag/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <description>Visualization</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png</url>
+      <title>Visualization</title>
+      <link>/tag/visualization/</link>
+    </image>
+    
+    <item>
+      <title>(Teste) Observatório COVID-19 de Maringá</title>
+      <link>/post/covid_page/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/post/covid_page/</guid>
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d3js.org/d3.v6.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/formatter.js&#34;&gt; &lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34;&gt;
+&lt;p&gt;&lt;strong&gt;(Post temporário)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Testando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.&lt;/p&gt;
+&lt;h1 id=&#34;casos-confirmados-acumulados&#34;&gt;Casos confirmados acumulados&lt;/h1&gt;
+&lt;div id=&#34;lineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/casos_confirmados_acumulados.js&#34;&gt; &lt;/script&gt;
+&lt;!-- 
+&lt;div id=&#34;multilineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_multiline_plot.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;  class=&#34;spacedParagraph&#34;&gt;Figure: multiline plot with interactive vertical line showing the variables values.&lt;p/&gt;
+
+&lt;div id=&#34;thresholdplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_threshold_line_plot.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;  class=&#34;spacedParagraph&#34;&gt;Figure: line plot with confidence interval and colors defined by a threshold. Values above this threshold are colored in red, while values below this threshold are colored in green. This visualization was inspired by the one in the website rt.live.&lt;p/&gt;
+
+# Geographic plot
+
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotMap(&#39;cases&#39;, false)&#34;&gt;Cases&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotMap(&#39;deaths&#39;, false)&#34;&gt;Deaths&lt;/button&gt;
+&lt;div id=&#34;paranamap&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_map.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure: map with color varying scale depending on the amplitude of the variable (with buttons to change between categories).&lt;p/&gt;
+
+## Resources
+
+- [colorbrewer2](https://colorbrewer2.org/)
+
+- [d3-time-format](https://github.com/d3/d3-time-format#locale_format)
+
+- [SVG Attribute reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute)
+
+- [D3 6.0 migration guide](https://observablehq.com/@d3/d3v6-migration-guide)
+
+- [How to Resize an SVG When the Window is Resized in d3.js](https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/)
+
+- [d3 scatterplot with tooltips](http://bl.ocks.org/williaster/af5b855651ffe29bdca1)
+
+- [Multiline chart](https://bl.ocks.org/LemoNode/a9dc1a454fdc80ff2a738a9990935e9d)
+
+- [d3 mouseover multi-line chart](https://bl.ocks.org/larsenmtl/e3b8b7c2ca4787f77d78f58d41c3da91)
+
+- [Most basic barplot in d3.js](https://www.d3-graph-gallery.com/graph/barplot_basic.html)
+
+- [Button to change input data in barplot (upgraded)](https://www.d3-graph-gallery.com/graph/barplot_button_data_hard.html)
+
+- [Grouped bar chart](https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad)
+
+- [Labels on circular barplot](https://www.d3-graph-gallery.com/graph/circular_barplot_label.html)
+
+- [Streamgraph template for d3.js](https://www.d3-graph-gallery.com/graph/streamgraph_template.html)
+
+- [bar chart races](https://bl.ocks.org/jrzief/70f1f8a5d066a286da3a1e699823470f)
+
+- [D3 and Web Mapping: Map your Data!](http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/)
+
+- [rt.live](http://rt.live)
+
+
+## References
+ 
+[1] Scott, A. [*Interactive Data Visualization for the Web*](https://www.amazon.com.br/Interactive-Visualization-Scott-Andrew-Murray/dp/1449339735) (O&#39;Reilly Media, 2013)    
+
+
+[2] Wilke, C. O. [*Fundamentals of Data Visualization*](https://www.amazon.com/gp/product/1492031089) (O&#39;Reilly Media, 2019)
+
+[3] F. Crameri, G. E. Shephard, P. J. Heron, *The misuse of colour in science communication*. [Nature Communications 11, 5444 (2020).](https://www.nature.com/articles/s41467-020-19160-7) --&gt;&lt;blockquote&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
