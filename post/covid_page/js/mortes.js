@@ -73,7 +73,7 @@ d3.csv("data/mortes.csv")
   	      .attr("y",-52)
   	      .attr("x",-heightMortes/2)
   	      .attr("dy", ".71em")
-  	      .text("Mortes");
+  	      .text("Óbitos");
 	//Create line
 	var lineMortes = d3.line()
           					 .x(function(d) { return xScaleMortes(d.Data); })

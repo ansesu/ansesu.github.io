@@ -1,97 +1,97 @@
 //Margin
-const marginConfirmadosDiario = { top: 0, right: 5, bottom: 100, left: 53 };
+const marginMortesDiario = { top: 5.5, right: 5, bottom: 100, left: 43 };
 
 //Width and height
-const widthConfirmadosDiario = 600 - marginConfirmadosDiario.left - marginConfirmadosDiario.right;
-const heightConfirmadosDiario = 375 - marginConfirmadosDiario.top - marginConfirmadosDiario.bottom;
+const widthMortesDiario = 600 - marginMortesDiario.left - marginMortesDiario.right;
+const heightMortesDiario = 375 - marginMortesDiario.top - marginMortesDiario.bottom;
 
 //For converting data
-var parseTimeConfirmadosDiario = d3.timeParse("%Y-%m-%d");
+var parseTimeMortesDiario = d3.timeParse("%Y-%m-%d");
 
 //Load in the data			
-d3.csv("data/confirmados_diario.csv")
+d3.csv("data/mortes_diario.csv")
   .then(function(data) {	
 	///Parse data and sort values by date
     data.forEach(function(d) {
-    	d.Data = parseTimeConfirmadosDiario(d.Data);
-    	d.Confirmados_diario = parseInt(d.Confirmados_diario);
+    	d.Data = parseTimeMortesDiario(d.Data);
+    	d.Mortes_diario = parseInt(d.Mortes_diario);
     	d.moving_average = parseFloat(d.moving_average)
     });
     data.sort(function(a, b) {
         return a.Data - b.Data;
     });
 	//Create scale functions
-	xScaleConfirmadosDiario = d3.scaleTime()
+	xScaleMortesDiario = d3.scaleTime()
           						.domain([
           							d3.min(data, function(d) { return d.Data; }),
           							d3.max(data, function(d) { return d.Data; })
           						])
-				           		.range([0, widthConfirmadosDiario]);   
+				           		.range([0, widthMortesDiario]);   
 	xBand = d3.scaleBand()
 			   .domain(data.map(function(d) { return d.Data; }))
-	  		   .rangeRound([0, widthConfirmadosDiario])
+	  		   .rangeRound([0, widthMortesDiario])
 	  		   .padding(0.1)
-	yScaleConfirmadosDiario = d3.scaleLinear()
+	yScaleMortesDiario = d3.scaleLinear()
           						.domain([
           							0,
-          							d3.max(data, function(d) { return d.Confirmados_diario; })
+          							d3.max(data, function(d) { return d.Mortes_diario; })
           						])
-          						.range([heightConfirmadosDiario, 0]);  
-    maxConfirmadosDiario = d3.max(data, function(d) { return d.Confirmados_diario; });        							
-	yScaleDecretosConfirmados = d3.scaleLinear()
+          						.range([heightMortesDiario, 0]);  
+    maxMortesDiario = d3.max(data, function(d) { return d.Mortes_diario; });        							
+	yScaleDecretosMortes = d3.scaleLinear()
   						.domain([-4,4])
-          				.range([heightConfirmadosDiario+marginConfirmadosDiario.bottom-5, heightConfirmadosDiario+50]);
+          				.range([heightMortesDiario+marginMortesDiario.bottom-5, heightMortesDiario+50]);
 	//Create SVG element in chart id element
-	const svgConfirmadosDiario = d3.select('#confirmados_diario')
+	const svgMortesDiario = d3.select('#mortes_diario')
     		              			.append('svg')
     		              			.attr("class", "content")
-    		               			.attr("viewBox", `0 0 ${widthConfirmadosDiario + marginConfirmadosDiario.left + marginConfirmadosDiario.right} ${heightConfirmadosDiario + marginConfirmadosDiario.top + marginConfirmadosDiario.bottom}`)
+    		               			.attr("viewBox", `0 0 ${widthMortesDiario + marginMortesDiario.left + marginMortesDiario.right} ${heightMortesDiario + marginMortesDiario.top + marginMortesDiario.bottom}`)
     		               			.attr("preserveAspectRatio", "xMidYMid meet")
 
-	var gConfirmadosDiario = svgConfirmadosDiario.append("g")
-	            	        					  .attr("transform", "translate(" + marginConfirmadosDiario.left + "," + marginConfirmadosDiario.top + ")");
+	var gMortesDiario = svgMortesDiario.append("g")
+	            	        					  .attr("transform", "translate(" + marginMortesDiario.left + "," + marginMortesDiario.top + ")");
 
 	//Create axis
-	var xAxisConfirmadosDiario = d3.axisBottom(xScaleConfirmadosDiario)
+	var xAxisMortesDiario = d3.axisBottom(xScaleMortesDiario)
 									.tickFormat(formatAsMonth)
           					        .tickSize(3);
-	var xAxisConfirmadosDiarioDecretos = d3.axisBottom(xScaleConfirmadosDiario)  
+	var xAxisMortesDiarioDecretos = d3.axisBottom(xScaleMortesDiario)  
           					               .tickValues([])
           					               .tickSize(0);          					       
-	var yAxisConfirmadosDiario = d3.axisLeft(yScaleConfirmadosDiario)
+	var yAxisMortesDiario = d3.axisLeft(yScaleMortesDiario)
           					       .tickSize(3);
 
-	gConfirmadosDiario.append("g")
+	gMortesDiario.append("g")
 		    		  .attr("class", "xAxis")
-		    		  .attr("transform", "translate(0," + heightConfirmadosDiario + ")")
-		    		  .call(xAxisConfirmadosDiario)
+		    		  .attr("transform", "translate(0," + heightMortesDiario + ")")
+		    		  .call(xAxisMortesDiario)
 		    		  .select(".domain")
-		    		  .attr("stroke","#252525")
+		    		  .attr("stroke","#525252")
 		    		  .attr("stroke-width","0");
-	gConfirmadosDiario.append("g")
+	gMortesDiario.append("g")
 		    		  .attr("class", "xAxisDecretos")
-		    		  .attr("transform", "translate(0," + (heightConfirmadosDiario+(marginConfirmadosDiario.bottom+50-5)/2) + ")")
-		    		  .call(xAxisConfirmadosDiarioDecretos)
+		    		  .attr("transform", "translate(0," + (heightMortesDiario+(marginMortesDiario.bottom+50-5)/2) + ")")
+		    		  .call(xAxisMortesDiarioDecretos)
 		    		  .select(".domain")
-		    		  .attr("stroke","#252525")
+		    		  .attr("stroke","#525252")
 		    		  .attr("stroke-width","1");		    		  
-	gConfirmadosDiario.append("g")
+	gMortesDiario.append("g")
 		    		  .attr("class", "yAxis")
 		    		  .attr("transform", "translate(0,0)")
-		    		  .call(yAxisConfirmadosDiario)
+		    		  .call(yAxisMortesDiario)
 
     //Create axis label
-    gConfirmadosDiario.append("text")
+    gMortesDiario.append("text")
 		    	      .attr("class", "axis-title")
 		    	      .attr("transform", "rotate(-90)")
 		    	      .style("text-anchor", "middle")
-		    	      .attr("y",-52)
-		    	      .attr("x",-heightConfirmadosDiario/2)
+		    	      .attr("y",-42)
+		    	      .attr("x",-heightMortesDiario/2)
 		    	      .attr("dy", ".71em")
-		    	      .text("Casos diários");
-    gConfirmadosDiario.append("text")
+		    	      .text("Óbitos diários");
+    gMortesDiario.append("text")
     				  .attr("position", "absolute")
-		    	      .attr("y",heightConfirmadosDiario + 40)
+		    	      .attr("y",heightMortesDiario + 40)
 		    	      .attr("x",0)
 		    	      .text("Linha do tempo dos decretos")
 		    	      .attr("font-size", "13");
@@ -99,18 +99,18 @@ d3.csv("data/confirmados_diario.csv")
 	// d3.csv("data/decretos_first.csv")
 	//   .then(function(data_decretos_first) {	
 	//     data_decretos_first.forEach(function(d) {
-	//     	d.Data = parseTimeConfirmadosDiario(d.Data);
+	//     	d.Data = parseTimeMortesDiario(d.Data);
 	//     	d.flexibilizacao = (d.flexibilizacao === 'True');
 	//     });
  
-	// 	gConfirmadosDiario.selectAll(".lineDecretosFirst")
+	// 	gMortesDiario.selectAll(".lineDecretosFirst")
 	// 					  .data(data_decretos_first).enter()
 	// 					  .append("line")
 	// 					    .attr("class", "lineDecretosFirst")
-	// 				        .attr("x1", function(d) { return xScaleConfirmadosDiario(d.Data); })
-	// 				        .attr("x2", function(d) { return xScaleConfirmadosDiario(d.Data); })
-	// 				        .attr("y1", function(d) { return yScaleConfirmadosDiario(0); })
-	// 				        .attr("y2", function(d) { return yScaleConfirmadosDiario(maxConfirmadosDiario); })	
+	// 				        .attr("x1", function(d) { return xScaleMortesDiario(d.Data); })
+	// 				        .attr("x2", function(d) { return xScaleMortesDiario(d.Data); })
+	// 				        .attr("y1", function(d) { return yScaleMortesDiario(0); })
+	// 				        .attr("y2", function(d) { return yScaleMortesDiario(maxMortesDiario); })	
 	// 				        .attr("stroke", function(d) {
 	// 		                  	if (d.flexibilizacao ){
 	// 		                  		return "#1a9850";
@@ -123,15 +123,15 @@ d3.csv("data/confirmados_diario.csv")
 	// })
 
 	// tooltip
-	var focusConfirmadosDiarioText = gConfirmadosDiario.append("g")
+	var focusMortesDiarioText = gMortesDiario.append("g")
 	                          							.attr("class", "focus");
-	focusConfirmadosDiarioText.append("text")
+	focusMortesDiarioText.append("text")
 	            			  .attr("class", "tooltip-daily-cases tooltip-text")
 
-	focusConfirmadosDiarioText.append("text")
+	focusMortesDiarioText.append("text")
 							  .attr("class", "tooltip-moving-average tooltip-text")
 	            			  
-	focusConfirmadosDiarioText.append("text")
+	focusMortesDiarioText.append("text")
 	          				    .attr("class", "tooltip-date")             
 
 	// tooltip mouseover event handler
@@ -139,73 +139,73 @@ d3.csv("data/confirmados_diario.csv")
 		d3.select(this)
 		   .transition()
 		   .duration(300) 		  
-		   .attr("fill", "#ff7f00");
+		   .attr("fill", "#525252");
 
-	    focusConfirmadosDiarioText.select("#confirmados_diario .tooltip-daily-cases")
-				                    .text(function() { return "Casos diários: " + formatValue(d.Confirmados_diario) })
+	    focusMortesDiarioText.select("#mortes_diario .tooltip-daily-cases")
+				                    .text(function() { return "Óbitos diários: " + formatValue(d.Mortes_diario) })
 				                    .attr("position", "absolute")
-				                    .attr("y", heightConfirmadosDiario-85)
+				                    .attr("y", heightMortesDiario-85)
 				                    .attr("x", 10);
-	    focusConfirmadosDiarioText.select("#confirmados_diario .tooltip-moving-average")
+
+	    focusMortesDiarioText.select("#mortes_diario .tooltip-moving-average")
 				                    .text(function() { return "Média movel: " + parseFloat(d.moving_average).toFixed(1)})
 				                    .attr("position", "absolute")
-				                    .attr("y", heightConfirmadosDiario-70)
+				                    .attr("y", heightMortesDiario-70)
 				                    .attr("x", 10);				
-
-			                    
-	    focusConfirmadosDiarioText.select("#confirmados_diario .tooltip-date")
+                    
+	    focusMortesDiarioText.select("#mortes_diario .tooltip-date")
 				                    .text(function() { return formatAsDate(d.Data); })
 				                    .attr("position", "absolute")				                    
-				                    .attr("y", heightConfirmadosDiario-100)
+				                    .attr("y", heightMortesDiario-100)
 				                    .attr("x", 10);
-        focusConfirmadosDiarioText.attr("opacity", "1")
+        focusMortesDiarioText.attr("opacity", "1")
 	};
 	// tooltip mouseout event handler
 	var mouseoutBar = function(d) {
 		d3.select(this)
 		  .transition()
 		   .duration(300) // ms				  
-		   .attr("fill", "#404040");
+		   .attr("fill", "#fc8d62");
 
-		focusConfirmadosDiarioText.attr("opacity", "0")                      
+		focusMortesDiarioText.attr("opacity", "0")                      
 	};    	      
 	// Add bars
-	gConfirmadosDiario.selectAll(".barConfirmadosDiario")
+	gMortesDiario.selectAll(".barMortesDiario")
 						.data(data)
 						.enter()
 						.append("rect")
-						 .attr("class", "barConfirmadosDiario")
-						 .attr("x", function(d) { return xScaleConfirmadosDiario(d.Data); })
-						 .attr("y", function(d) { return yScaleConfirmadosDiario(d.Confirmados_diario); })
+						 .attr("class", "barMortesDiario")
+						 .attr("x", function(d) { return xScaleMortesDiario(d.Data); })
+						 .attr("y", function(d) { return yScaleMortesDiario(d.Mortes_diario); })
 						 .attr("width", xBand.bandwidth())
-						 .attr("height", function(d) { return heightConfirmadosDiario - yScaleConfirmadosDiario(d.Confirmados_diario); })
-						 .attr("fill", "#404040")
+						 .attr("height", function(d) { return heightMortesDiario - yScaleMortesDiario(d.Mortes_diario); })
+						 .attr("fill", "#fc8d62")
 						 .on("mouseover", mouseoverBar)
 						 .on("mouseout", mouseoutBar);
 
-	var lineConfirmadosDiario = d3.line()
-          				          .x(function(d) { return xScaleConfirmadosDiario(d.Data); })
-          				          .y(function(d) { return yScaleConfirmadosDiario(d.moving_average); });
+	var lineMortesDiario = d3.line()
+          				          .x(function(d) { return xScaleMortesDiario(d.Data); })
+          				          .y(function(d) { return yScaleMortesDiario(d.moving_average); });
 
-	pathConfirmadosDiario = gConfirmadosDiario.append("path")
+	pathMortesDiario = gMortesDiario.append("path")
     		                                  .attr("class", "line")
     		                                  .datum(data)
-    		                                  .attr("d", lineConfirmadosDiario)
-                                              .attr("stroke", "#f03b20")
-    totalLengthConfirmadosDiario = pathConfirmadosDiario.node().getTotalLength();                                          
-    function updateConfirmadosDiario() {
-	    cb = d3.select(".checkboxConfirmadosDiario")
+    		                                  .attr("d", lineMortesDiario)
+                                              .attr("stroke", "#525252")
+    totalLengthMortesDiario = pathMortesDiario.node().getTotalLength();                                          
+    function updateMortesDiario() {
+	    cb = d3.select(".checkboxMortesDiario")
 	    // If the box is check, I show the group
 	    if (cb.property("checked")) {
-			pathConfirmadosDiario = gConfirmadosDiario.append("path")
+			pathMortesDiario = gMortesDiario.append("path")
 		    		                                  .attr("class", "line")
-		    		                                  .attr("d", lineConfirmadosDiario(data))
-		    		                                  .attr("stroke", "#f03b20")	
+		    		                                  .attr("d", lineMortesDiario(data))
+		    		                                  .attr("stroke", "#525252")	
 		    		                                  .attr("fill", "none")
 
-            pathConfirmadosDiario              
-                          .attr("stroke-dasharray", totalLengthConfirmadosDiario)
-                          .attr("stroke-dashoffset", totalLengthConfirmadosDiario)	
+            pathMortesDiario              
+                          .attr("stroke-dasharray", totalLengthMortesDiario)
+                          .attr("stroke-dashoffset", totalLengthMortesDiario)	
                            .transition()	    		                                  
                            .duration(3000)
                            .ease(d3.easeLinear)    
@@ -214,29 +214,29 @@ d3.csv("data/confirmados_diario.csv")
 		                                                   	
 	    // Otherwise I hide it
 	    } else {
-	    	pathConfirmadosDiario.remove()
+	    	pathMortesDiario.remove()
 	    }    	
     }
 
-    d3.selectAll(".checkboxConfirmadosDiario").on("change", updateConfirmadosDiario);
+    d3.selectAll(".checkboxMortesDiario").on("change", updateMortesDiario);
 
 	d3.csv("data/decretos.csv")
 	  .then(function(data_decretos) {	
 	    data_decretos.forEach(function(d) {
-	    	d.Data = parseTimeConfirmadosDiario(d.Data);
+	    	d.Data = parseTimeMortesDiario(d.Data);
 	    	d.y = parseInt(d.y);
 	    	d.resumo = String(d.resumo);
 	    	d.flexibilizacao = (d.flexibilizacao === 'True')
 	    });
  
-		gConfirmadosDiario.selectAll(".lineDecretos")
+		gMortesDiario.selectAll(".lineDecretos")
 						  .data(data_decretos).enter()
 						  .append("line")
 						    .attr("class", "lineDecretos")
-					        .attr("x1", function(d) { return xScaleConfirmadosDiario(d.Data); })
-					        .attr("x2", function(d) { return xScaleConfirmadosDiario(d.Data); })
-					        .attr("y1", function(d) { return yScaleDecretosConfirmados(0); })
-					        .attr("y2", function(d) { return yScaleDecretosConfirmados(d.y); })	
+					        .attr("x1", function(d) { return xScaleMortesDiario(d.Data); })
+					        .attr("x2", function(d) { return xScaleMortesDiario(d.Data); })
+					        .attr("y1", function(d) { return yScaleDecretosMortes(0); })
+					        .attr("y2", function(d) { return yScaleDecretosMortes(d.y); })	
 					        .attr("stroke", function(d) {
 			                  	if (d.flexibilizacao ){
 			                  		return "#1a9850";
@@ -245,7 +245,7 @@ d3.csv("data/confirmados_diario.csv")
 			                  	}
 			                 })
 
-   		 var tooltipDecretos = gConfirmadosDiario.append("text")
+   		 var tooltipDecretos = gMortesDiario.append("text")
 						  			.attr("class", "tooltip-line")
 							        .style("opacity", 0);
 
@@ -292,7 +292,7 @@ d3.csv("data/confirmados_diario.csv")
 						  .transition()
 					       .duration(400) // ms
 						   .style("opacity", 1) // started as 0!
-			gConfirmadosDiario.selectAll(".tooltip-line")
+			gMortesDiario.selectAll(".tooltip-line")
 	  			 			   .call(wrap, 300) 	      
 	    };
 	    // tooltip mouseout event handler
@@ -308,14 +308,14 @@ d3.csv("data/confirmados_diario.csv")
 	                     .style("opacity", 0); // don't care about position!;                       
 	    }; 
 
-	    circleLine = gConfirmadosDiario.selectAll("circle")
+	    circleLine = gMortesDiario.selectAll("circle")
 	                                   .data(data_decretos)
 	    circleLine.enter().append('circle')
 	                       .attr("cx", function(d) {
-	                          return xScaleConfirmadosDiario(d.Data);
+	                          return xScaleMortesDiario(d.Data);
 	                       })
 	                       .attr("cy", function(d) {
-	                          return yScaleDecretosConfirmados(d.y);
+	                          return yScaleDecretosMortes(d.y);
 	                       })
 	                       .attr("r", function (d) {
 	                          return 3;
@@ -329,7 +329,7 @@ d3.csv("data/confirmados_diario.csv")
 	                      	}
 	                      })
 
-	    gConfirmadosDiario.selectAll("circle")
+	    gMortesDiario.selectAll("circle")
                   .on("mouseover", mouseoverDecretos)
                   .on("mouseout", mouseoutDecretos);	                          	 
 	}) 
