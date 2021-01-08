@@ -72,28 +72,28 @@ d3.csv("data/confirmados_ativos.csv")
 	                                  .attr("transform", "translate(" + marginConfirmados.left + "," + marginConfirmados.top + ")");
 
 	//Create legend
-    var legendConfirmados = gConfirmados.selectAll('g')
-                                        .data(categoriesConfirmados)
-                                        .enter().append('g')
-                                         .attr('class', 'legend');
-    legendConfirmados.append('rect')
-                      .attr('x', 10)
-                      .attr('y', function(d, i) {
-                     		return i * 17.3;
-                	    })
-              	      .attr('width', 12)
-              	      .attr('height', 12)
-                      .style('fill', function(d) {
-                     		return colorConfirmados(d.name);
-                      });
-    legendConfirmados.append('text')
-                      .attr('x', 25)
-                      .attr('y', function(d, i) {
-            		         return (i * 17.3)+11;
-                       })
-                      .text(function(d) {
-              	      	return d.name;
-            	        });
+  var legendConfirmados = gConfirmados.selectAll('g')
+                                      .data(categoriesConfirmados)
+                                      .enter().append('g')
+                                       .attr('class', 'legend');
+  legendConfirmados.append('rect')
+                    .attr('x', 10)
+                    .attr('y', function(d, i) {
+                   		return i * 17.3;
+              	    })
+            	      .attr('width', 12)
+            	      .attr('height', 12)
+                    .style('fill', function(d) {
+                   		return colorConfirmados(d.name);
+                    });
+  legendConfirmados.append('text')
+                    .attr('x', 25)
+                    .attr('y', function(d, i) {
+          		         return (i * 17.3)+11;
+                     })
+                    .text(function(d) {
+            	      	return d.name;
+          	        });
 
     //Create axis
 	var xAxisConfirmados = d3.axisBottom(xScaleConfirmados)
@@ -116,14 +116,14 @@ d3.csv("data/confirmados_ativos.csv")
       	       .call(yAxisConfirmados)
 
 	//Create axis label
-    gConfirmados.append("text")
-                 .attr("class", "axis-title")
-                 .attr("transform", "rotate(-90)")
-                 .style("text-anchor", "middle")
-                 .attr("y",-75)
-                 .attr("x",-heightConfirmados/2)
-                 .attr("dy", ".71em")
-                 .text("Casos");
+  gConfirmados.append("text")
+               .attr("class", "axis-title")
+               .attr("transform", "rotate(-90)")
+               .style("text-anchor", "middle")
+               .attr("y",-75)
+               .attr("x",-heightConfirmados/2)
+               .attr("dy", ".71em")
+               .text("Casos");
 	//Create each category object
 	var categoryConfirmados = gConfirmados.selectAll(".category")
                                         .data(categoriesConfirmados)
@@ -145,51 +145,51 @@ d3.csv("data/confirmados_ativos.csv")
             	         });
 
 	// Create tooltip
-    var focusConfirmados = gConfirmados.append("g")
-                                        .attr("class", "focus");
+  var focusConfirmados = gConfirmados.append("g")
+                                      .attr("class", "focus");
 
-    focusConfirmados.append("path")
-                     .attr("class", "hover-line")
+  focusConfirmados.append("path")
+                   .attr("class", "hover-line")
 
-    var linesConfirmados = document.getElementsByClassName('line');
-    var focusPerLineConfirmados = focusConfirmados.selectAll('.focus-per-line')
-                                                  .data(categoriesConfirmados)
-                                                  .enter().append("g")
-                                                   .attr("class", "focus-per-line");
+  var linesConfirmados = document.getElementsByClassName('line');
+  var focusPerLineConfirmados = focusConfirmados.selectAll('.focus-per-line')
+                                                .data(categoriesConfirmados)
+                                                .enter().append("g")
+                                                 .attr("class", "focus-per-line");
 
-    var tooltipTextConfirmados = gConfirmados.selectAll('.tooltip-text')
-            	                               .data(categoriesConfirmados)
-            	                               .enter().append("text")
-            	                                .attr("class", "tooltip-text");	    
+  var tooltipTextConfirmados = gConfirmados.selectAll('.tooltip-text')
+          	                               .data(categoriesConfirmados)
+          	                               .enter().append("text")
+          	                                .attr("class", "tooltip-text");	    
 
-    var tooltipTextDataConfirmados = gConfirmados.append("text")
-            			                         			  .attr("class", "tooltip-date");	                                    
-    focusPerLineConfirmados.append("circle") 
-                            .attr("opacity", "0")
-                            .attr("r", 3)
-                            .style("stroke", function(d) {
-                            	return colorConfirmados(d.name);
-                            })
-                            .style("fill", function(d) {
-                              return colorConfirmados(d.name);
-                            });  
+  var tooltipTextDataConfirmados = gConfirmados.append("text")
+          			                         			  .attr("class", "tooltip-date");	                                    
+  focusPerLineConfirmados.append("circle") 
+                          .attr("opacity", "0")
+                          .attr("r", 3)
+                          .style("stroke", function(d) {
+                          	return colorConfirmados(d.name);
+                          })
+                          .style("fill", function(d) {
+                            return colorConfirmados(d.name);
+                          });  
 
-    svgConfirmados.append('rect') 
-                   .attr("class", "overlay")
-                   .attr("transform", "translate(" + marginConfirmados.left + "," + marginConfirmados.top + ")")
-                   .attr('width', widthConfirmados)
-                   .attr('height', heightConfirmados)
-                   .on("mouseover", function() {
-                     	focusConfirmados.style("display", null); 
-                     	tooltipTextConfirmados.style("display", null);
-              				tooltipTextDataConfirmados.style("display", null);
-                   })
-                   .on("mouseout", function() { 			        	
-                     	focusConfirmados.style("display", "none"); 
-                     	tooltipTextConfirmados.style("display", "none");
-              				tooltipTextDataConfirmados.style("display", "none");
-                   })
-                   .on('mousemove', event => mousemoveConfirmados(event));
+  svgConfirmados.append('rect') 
+                 .attr("class", "overlay")
+                 .attr("transform", "translate(" + marginConfirmados.left + "," + marginConfirmados.top + ")")
+                 .attr('width', widthConfirmados)
+                 .attr('height', heightConfirmados)
+                 .on("mouseover", function() {
+                   	focusConfirmados.style("display", null); 
+                   	tooltipTextConfirmados.style("display", null);
+            				tooltipTextDataConfirmados.style("display", null);
+                 })
+                 .on("mouseout", function() { 			        	
+                   	focusConfirmados.style("display", "none"); 
+                   	tooltipTextConfirmados.style("display", "none");
+            				tooltipTextDataConfirmados.style("display", "none");
+                 })
+                 .on('mousemove', event => mousemoveConfirmados(event));
 
     function mousemoveConfirmados(event) { // mouse moving over canvas
         var mouse = d3.pointer(event),

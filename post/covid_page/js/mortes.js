@@ -20,7 +20,6 @@ d3.csv("data/mortes.csv")
     data.sort(function(a, b) {
         return a.Data - b.Data;
     });
-  data1=data
 	//Create scale functions
 	xScaleMortes = d3.scaleTime()
           					.domain([
@@ -66,15 +65,15 @@ d3.csv("data/mortes.csv")
     		  .attr("transform", "translate(0,0)")
     		  .call(yAxisMortes)
 
-    //Create axis label
-    gMortes.append("text")
-    	      .attr("class", "axis-title")
-    	      .attr("transform", "rotate(-90)")
-    	      .style("text-anchor", "middle")
-    	      .attr("y",-52)
-    	      .attr("x",-heightMortes/2)
-    	      .attr("dy", ".71em")
-    	      .text("Mortes");
+  //Create axis label
+  gMortes.append("text")
+  	      .attr("class", "axis-title")
+  	      .attr("transform", "rotate(-90)")
+  	      .style("text-anchor", "middle")
+  	      .attr("y",-52)
+  	      .attr("x",-heightMortes/2)
+  	      .attr("dy", ".71em")
+  	      .text("Mortes");
 	//Create line
 	var lineMortes = d3.line()
           					 .x(function(d) { return xScaleMortes(d.Data); })
@@ -87,67 +86,67 @@ d3.csv("data/mortes.csv")
           .attr("stroke", "#fc8d62");
 
 	//Create tooltip
-    var focusMortes = gMortes.append("g")
-                		          .attr("class", "focus");
+  var focusMortes = gMortes.append("g")
+              		          .attr("class", "focus");
 
-    focusMortes.append("path") 
-          	     .attr("class", "hover-line")
+  focusMortes.append("path") 
+        	     .attr("class", "hover-line")
 
-    var focusMortesText = gMortes.append("g")
-                                  .attr("class", "focus");
-    focusMortesText.append("text")
-                    .attr("class", "tooltip-text")
-    focusMortesText.append("text")
-                    .attr("class", "tooltip-date")
+  var focusMortesText = gMortes.append("g")
+                                .attr("class", "focus");
+  focusMortesText.append("text")
+                  .attr("class", "tooltip-text")
+  focusMortesText.append("text")
+                  .attr("class", "tooltip-date")
 
-    focusMortes.append("circle")
-            	  .attr("r", 3)
-            	  .attr("opacity", "0");
+  focusMortes.append("circle")
+          	  .attr("r", 3)
+          	  .attr("opacity", "0");
 
-    svgMortes.append("rect")
-      	    	.attr("class", "overlay")
-      	        .attr("transform", "translate(" + marginMortes.left + "," + marginMortes.top + ")")
-      	        .attr("width", widthMortes)
-      	        .attr("height", heightMortes)
-      	        .on("mouseover", function() {
-      	        	focusMortes.style("display", null); 
-                  focusMortesText.style("display", null); 
-      	        })
-      	        .on("mouseout", function() { 			        	
-      	        	focusMortes.style("display", "none"); 
-                  focusMortesText.style("display", "none"); 
-      	        })
-      	        .on("mousemove", event => mousemoveMortes(event));
+  svgMortes.append("rect")
+    	    	.attr("class", "overlay")
+    	        .attr("transform", "translate(" + marginMortes.left + "," + marginMortes.top + ")")
+    	        .attr("width", widthMortes)
+    	        .attr("height", heightMortes)
+    	        .on("mouseover", function() {
+    	        	focusMortes.style("display", null); 
+                focusMortesText.style("display", null); 
+    	        })
+    	        .on("mouseout", function() { 			        	
+    	        	focusMortes.style("display", "none"); 
+                focusMortesText.style("display", "none"); 
+    	        })
+    	        .on("mousemove", event => mousemoveMortes(event));
 
-    function mousemoveMortes(event) {
-    	var x0 = xScaleMortes.invert(d3.pointer(event)[0]),
-            bisectDate = d3.bisector(function(d) { return d.Data; }).left,
-            i = bisectDate(data, x0, 1),
-            d0 = data[i - 1],
-            d1 = data[i],
-            dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0; // if is true, d1, if is false d0
-      xDate = dTrue.Data;
-      d3.select("#mortes .hover-line")
-         .attr("d", function() {
-         		var dVar = "M" + 0 + "," + (-yScaleMortes(dTrue.Mortes));
-          	dVar += " " + 0 + "," + (heightMortes - yScaleMortes(dTrue.Mortes));
-          	return dVar;
-         })			        
-  		focusMortes.attr("transform", "translate(" + xScaleMortes(xDate) + "," + yScaleMortes(dTrue.Mortes) + ")");
-	    focusMortes.select("circle")
-                   .style("stroke", "#fc8d62")
-                   .style("fill", "#fc8d62")
-  	          	   .attr("opacity", "1");
-      focusMortesText.select(".tooltip-text")
-                      .text(function() { return "Mortes: " + formatValue(dTrue.Mortes); })
-                      .attr("position", "absolute")
-                      .attr("y", heightMortes-10)
-                      .attr("text-anchor", "end")
-                      .attr("x", widthMortes);
-      focusMortesText.select("#mortes .tooltip-date")
-                      .text(function() { return formatAsDate(xDate); })
-                      .attr("y", heightMortes-25)
-                      .attr("text-anchor", "end")
-                      .attr("x", widthMortes);
+  function mousemoveMortes(event) {
+  	var x0 = xScaleMortes.invert(d3.pointer(event)[0]),
+          bisectDate = d3.bisector(function(d) { return d.Data; }).left,
+          i = bisectDate(data, x0, 1),
+          d0 = data[i - 1],
+          d1 = data[i],
+          dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0; // if is true, d1, if is false d0
+    xDate = dTrue.Data;
+    d3.select("#mortes .hover-line")
+       .attr("d", function() {
+       		var dVar = "M" + 0 + "," + (-yScaleMortes(dTrue.Mortes));
+        	dVar += " " + 0 + "," + (heightMortes - yScaleMortes(dTrue.Mortes));
+        	return dVar;
+       })			        
+		focusMortes.attr("transform", "translate(" + xScaleMortes(xDate) + "," + yScaleMortes(dTrue.Mortes) + ")");
+    focusMortes.select("circle")
+                 .style("stroke", "#fc8d62")
+                 .style("fill", "#fc8d62")
+	          	   .attr("opacity", "1");
+    focusMortesText.select(".tooltip-text")
+                    .text(function() { return "Mortes: " + formatValue(dTrue.Mortes); })
+                    .attr("position", "absolute")
+                    .attr("y", heightMortes-10)
+                    .attr("text-anchor", "end")
+                    .attr("x", widthMortes);
+    focusMortesText.select("#mortes .tooltip-date")
+                    .text(function() { return formatAsDate(xDate); })
+                    .attr("y", heightMortes-25)
+                    .attr("text-anchor", "end")
+                    .attr("x", widthMortes);
   }
 });

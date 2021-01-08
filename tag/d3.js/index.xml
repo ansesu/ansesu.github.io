@@ -27,6 +27,10 @@
 &lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá.&lt;/p&gt;
 &lt;div id=&#34;confirmados-ativos&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/confirmados_ativos.js&#34;&gt; &lt;/script&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados diarios de COVID-19 em Maringá.&lt;/p&gt;
+&lt;p&gt;&lt;input type=&#34;checkbox&#34; class=&#34;checkboxConfirmadosDiario&#34; style=&#34;margin-right:5px&#34; checked&gt;&lt;label&gt; &lt;b&gt;Média móvel &lt;/b&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;div id=&#34;confirmados_diario&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/confirmados_diario.js&#34;&gt; &lt;/script&gt;
 &lt;h2 id=&#34;obitos-acumulados&#34;&gt;Obitos acumulados&lt;/h2&gt;
 &lt;p&gt;A figura abaixo mostra a evolução do número de mortes acumuladas por COVID-19 em Maringá.&lt;/p&gt;
 &lt;div id=&#34;mortes&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
@@ -40,7 +44,7 @@
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotOcupacao(&#39;data/ocupacao.csv&#39;, false)&#34;&gt;Total&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotOcupacao(&#39;data/ocupacao_covid.csv&#39;, false)&#34;&gt;COVID&lt;/button&gt;&lt;/p&gt;
 &lt;div id=&#34;ocupacao&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;js/ocupacao2.js&#34;&gt; &lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/ocupacao.js&#34;&gt; &lt;/script&gt;
 &lt;h2 id=&#34;número-de-reprodução&#34;&gt;Número de reprodução&lt;/h2&gt;
 &lt;p&gt;A figura abaixo mostra nossas estimativas para a evolução do número de reprodução instantâneo em Maringá. A seção Número de reprodução instantâneo, em nossa página sobre Modelos Epidêmicos, detalha o modelo utilizado para realizar as estimativas. Essa medida prioriza o período mais recente da epidemia, uma vez que considera apenas seus últimos sete dias.&lt;/p&gt;
 &lt;p&gt;O número de reprodução deve ser interpretado em conjunto com outras medidas como o número absoluto de casos, tal qual orienta o site rt.live. No exemplo exposto no site, dois estados americanos com números de reprodução diferentes são comparados em uma situação hipotética. Supõe-se que um dos estados apresenta 1000 novos casos diários e um valor do número de reprodução efetivo. Enquanto isso, outro estado apresenta 10 casos diários e . Nessa situação, apesar de o segundo estado apresentar um número de reprodução mais elevado, é o primeiro que está em pior situação. O pior de todos os casos é aquele em que o número de reprodução e o número de casos são ambos elevados.&lt;/p&gt;

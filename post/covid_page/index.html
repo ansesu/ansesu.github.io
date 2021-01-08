@@ -722,6 +722,10 @@ Evolução da COVID-19 em Maringá Casos confirmados e ativos acumulados A figur
 <p>A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá.</p>
 <div id="confirmados-ativos" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/confirmados_ativos.js"> </script>
+<p>A figura abaixo mostra a evolução do número de casos confirmados diarios de COVID-19 em Maringá.</p>
+<p><input type="checkbox" class="checkboxConfirmadosDiario" style="margin-right:5px" checked><label> <b>Média móvel </b></label></p>
+<div id="confirmados_diario" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/confirmados_diario.js"> </script>
 <h2 id="obitos-acumulados">Obitos acumulados</h2>
 <p>A figura abaixo mostra a evolução do número de mortes acumuladas por COVID-19 em Maringá.</p>
 <div id="mortes" style="z-index: -1000"></div>
@@ -735,7 +739,7 @@ Evolução da COVID-19 em Maringá Casos confirmados e ativos acumulados A figur
 <p><button style="border-radius: 4px;" onclick="plotOcupacao('data/ocupacao.csv', false)">Total</button>
 <button style="border-radius: 4px;" onclick="plotOcupacao('data/ocupacao_covid.csv', false)">COVID</button></p>
 <div id="ocupacao" style="z-index: -1000"></div>
-<script type="text/javascript" src="js/ocupacao2.js"> </script>
+<script type="text/javascript" src="js/ocupacao.js"> </script>
 <h2 id="número-de-reprodução">Número de reprodução</h2>
 <p>A figura abaixo mostra nossas estimativas para a evolução do número de reprodução instantâneo em Maringá. A seção Número de reprodução instantâneo, em nossa página sobre Modelos Epidêmicos, detalha o modelo utilizado para realizar as estimativas. Essa medida prioriza o período mais recente da epidemia, uma vez que considera apenas seus últimos sete dias.</p>
 <p>O número de reprodução deve ser interpretado em conjunto com outras medidas como o número absoluto de casos, tal qual orienta o site rt.live. No exemplo exposto no site, dois estados americanos com números de reprodução diferentes são comparados em uma situação hipotética. Supõe-se que um dos estados apresenta 1000 novos casos diários e um valor do número de reprodução efetivo. Enquanto isso, outro estado apresenta 10 casos diários e . Nessa situação, apesar de o segundo estado apresentar um número de reprodução mais elevado, é o primeiro que está em pior situação. O pior de todos os casos é aquele em que o número de reprodução e o número de casos são ambos elevados.</p>

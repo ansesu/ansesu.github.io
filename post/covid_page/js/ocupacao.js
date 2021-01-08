@@ -1,45 +1,92 @@
 //Margin
-const marginMLine = { top: 10, right: 0, bottom: 25, left: 51 };
+const marginOcupacao = { top: 10, right: 10, bottom: 25, left: 53 };
 
 //Width and Height
-const widthMLine = 600 - marginMLine.left - marginMLine.right;
-const heightMLine = 400 - marginMLine.top - marginMLine.bottom;
+const widthOcupacao = 600 - marginOcupacao.left - marginOcupacao.right;
+const heightOcupacao = 300 - marginOcupacao.top - marginOcupacao.bottom;
 
 //For converting data
-var parseTimeMLine = d3.timeParse("%d/%m/%Y");
+var parseTimeOcupacao = d3.timeParse("%Y-%m-%d");
 
-//Create categorical color scale
-var colorMLine = d3.scaleOrdinal(['#1b9e77', '#e7298a', '#7570b3']);
 
-//Load in the data
-d3.csv("data/occupancy_maringa_data.csv")
-  .then(function(data) {			
-	//Assign a color to each occupancy columns
-    colorMLine.domain(Object.keys(data[0]).slice(1, 4));
+//Create SVG element
+const svgOcupacao = d3.select('#ocupacao')
+                      .append('svg')
+                       .attr("class", "content")
+                       .attr("viewBox", `0 0 ${widthOcupacao + marginOcupacao.left + marginOcupacao.right} ${heightOcupacao + marginOcupacao.top + marginOcupacao.bottom}`)
+                       .attr("preserveAspectRatio", "xMidYMid meet")
+    
+var gOcupacao = svgOcupacao.append("g")
+                            .attr("transform", "translate(" + marginOcupacao.left + "," + marginOcupacao.top + ")");
+
+// Create y-axis
+yScaleOcupacao = d3.scaleLinear()
+                    .domain([0,100])
+                    .range([heightOcupacao, 0]); 
+var yAxisOcupacao = d3.axisLeft(yScaleOcupacao)
+                      .ticks(7)
+                      .tickSize(3);
+
+gOcupacao.append("g")
+          .attr("class", "yAxis")
+          .attr("transform", "translate(0,0)")
+          .call(yAxisOcupacao)
+
+//Create axis label
+gOcupacao.append("text")
+          .attr("class", "axis-title")
+          .attr("transform", "rotate(-90)")
+          .style("text-anchor", "middle")
+          .attr("y",-52)
+          .attr("x",-heightOcupacao/2)
+          .attr("dy", ".71em")
+          .text("Ocupação dos leitos (%)");
+
+function plotOcupacao(data_path, first) {
+  //Load in the data
+  d3.csv(data_path)
+    .then(function(data) {			
+    //Create categorical color scale
+    if (data_path == "data/ocupacao.csv") {
+      var colorOcupacao = d3.scaleOrdinal(['#d53e4f', '#88419d', '#35978f']); 
+      var x_tooltip = 10;
+      var y_tooltip = 17;
+    } else {
+      var colorOcupacao = d3.scaleOrdinal(['#4d4d4d', '#de77ae', '#f1a340']); 
+      var x_tooltip = 230;
+      var y_tooltip = 213   
+    }
+     
+    colorOcupacao.domain(Object.keys(data[0]).slice(1, 4));
 
     //Parse data
     data.forEach(function(d) {
-    	d.Date = parseTimeMLine(d.Date);
-     	d.Infirmary = parseFloat(d.Infirmary.replace(',','.'));
-     	d.ICU = parseFloat(d.ICU.replace(',','.'));
-     	d["ICU (neonatal)"] = parseFloat(d["ICU (neonatal)"].replace(',','.'));			      
-     	d.Enfermaria_total = parseInt(d.Enfermaria_total);
-     	d.UTI_total = parseInt(d.UTI_total);
-     	d["UTI (neonatal)_total"] = parseInt(d["UTI (neonatal)_total"]);
+      d.Date = parseTimeOcupacao(d.Date);
+      d.Enfermaria = parseFloat(d.Enfermaria.replace(',','.'));
+      d.UTI = parseFloat(d.UTI.replace(',','.'));
+      d["UTI neonatal"] = parseFloat(d["UTI neonatal"].replace(',','.'));           
+      d.Enfermaria_total = parseInt(d.Enfermaria_total);
+      d.UTI_total = parseInt(d.UTI_total);
+      d["UTI neonatal_total"] = parseInt(d["UTI neonatal_total"]);
     });
 
-	//Get median of dates
-	medianMLine = d3.median(data, function(d) { return d.Date; })
-
-	//Create categories (for each line plot)
-    var categoriesMLine = colorMLine.domain().map(function(name) {
+    //Create categories (for each line plot)
+    var categoriesOcupacao = colorOcupacao.domain().map(function(name) {
     	return {
     		name: name,
         	values: data.map(function(d) {
-            	return {
-                	Date: d.Date,
-            		Occupancy: parseFloat(d[name])
-          		};
+        		if (Number.isNaN(d[name])) {
+              		return {
+                  		Date: d.Date,
+              			Occupancy: 0
+            		};        			
+          		} else {
+              		return {
+                  		Date: d.Date,
+              			Occupancy: parseInt(d[name])
+            		};          		
+          		}
+
         	})
         };
     });
@@ -49,140 +96,162 @@ d3.csv("data/occupancy_maringa_data.csv")
         return a.Date - b.Date;
     });
 
-	//Create scale functions
-	xScaleMLine = d3.scaleTime()
-          			 	 .domain(d3.extent(data, function(d) { return d.Date; }))
-          			 	 .range([0, widthMLine]);
-	yScaleMLine = d3.scaleLinear()
-          				 .domain([0,100])
-          				 .range([heightMLine, 0]);	
+		//Create legend
+		var legendRectOcupacao = gOcupacao.selectAll('#ocupacao .legendRect')
+		                                  .data(categoriesOcupacao)
+		// legendRectOcupacao.exit()
+		//                   .transition()
+		//                    .duration(600)
+		//                    .attr("opacity", "0")
+		//                    .remove() 
 
-	//Create SVG element
-	const svgMLine = d3.select('#ocupacao')
-                	   .append('svg')
-                	    .attr("class", "content")
-                	    .attr("viewBox", `0 0 ${widthMLine + marginMLine.left + marginMLine.right} ${heightMLine + marginMLine.top + marginMLine.bottom}`)
-                	    .attr("preserveAspectRatio", "xMidYMid meet")
-	    
-	var gMLine = svgMLine.append("g")
-	                      .attr("transform", "translate(" + marginMLine.left + "," + marginMLine.top + ")");
+		legendRectOcupacao.enter().append('rect')
+		                  .merge(legendRectOcupacao)
+		                  .transition()
+		                   .duration(600)
+		                   .attr("class", "legendRect")
+		                   .attr('x', 10)
+		                   .attr('y', function(d, i) {
+		                  		return i * 17.3;
+		          	       })
+		        	       .attr('width', 12)
+		        	       .attr('height', 12)
+		                   .style('fill', function(d) {
+		                 		return colorOcupacao(d.name);
+		                   });
 
-	//Create legend
-    var legendMLine = gMLine.selectAll('g')
-                            .data(categoriesMLine)
-                            .enter().append('g')
-                             .attr('class', 'legend');
-    legendMLine.append('rect')
-                .attr('x', 10)
-                .attr('y', function(d, i) {
-               		return i * 16.3;
-          	    })
-        	      .attr('width', 10)
-        	      .attr('height', 10)
-                .style('fill', function(d) {
-               		return colorMLine(d.name);
-                });
-    legendMLine.append('text')
-                .attr('x', 25)
-                .attr('y', function(d, i) {
-      		         return (i * 16)+10;
+		var legendTextOcupacao = gOcupacao.selectAll('#ocupacao .legend')
+		                                  .data(categoriesOcupacao)
+		// legendTextOcupacao.exit()
+		//                   .transition()
+		//                    .duration(600)
+		//                    .attr("opacity", "0")
+		//                    .remove()    
+
+		legendTextOcupacao.enter().append('text')
+		                  .merge(legendTextOcupacao)
+		                  .transition()
+		                   .duration(0)                    
+		                   .attr("class", "legend")
+		                   .attr('x', 25)
+		                   .attr('y', function(d, i) {
+		      		           return (i * 17.3)+11;
+		                    })
+		                   .text(function(d) {
+		                    if (data_path == "data/ocupacao.csv") {
+		                    	return d.name;
+		                    } else {
+		                        return d.name + " COVID";
+		                    }
+		      	           });
+		//Create scale functions
+		xScaleOcupacao = d3.scaleTime()
+		                    .domain(d3.extent(data, function(d) { return d.Date; }))
+		                    .range([0, widthOcupacao]);
+		//Create axis
+		var xAxisOcupacao = d3.axisBottom(xScaleOcupacao)
+		          		       .ticks(7)
+		          		       .tickFormat(formatAsMonth)
+		          		       .tickSize(3);
+		if (first) {
+		gOcupacao.append("g")
+		         .attr("class", "xAxis")
+		         .attr("transform", "translate(0," + heightOcupacao + ")")    
+		         .call(xAxisOcupacao)
+		         .select(".domain")
+		          .attr("stroke","#252525")
+		          .attr("stroke-width","0");
+		} else {
+		gOcupacao.select('.xAxis')
+		         .transition()
+		          .duration(300)
+		          .ease(d3.easeLinear)
+		          .call(xAxisOcupacao);    
+		}
+
+
+		//Create each category object
+		var categoryOcupacao = gOcupacao.selectAll("#ocupacao .line")
+		                                .data(categoriesOcupacao)
+
+		//Create lines
+		var lineOcupacao = d3.line()
+		                     .x( function(d) { return xScaleOcupacao(d.Date); })
+		                     .y( function(d) { return yScaleOcupacao(d.Occupancy); });
+
+		categoryOcupacao.enter()
+		                .append("path")
+		      		    .attr("class", "line")
+		                .merge(categoryOcupacao)
+		                .transition()
+		                  .duration(500)
+		                  .ease(d3.easeLinear)
+		    	          .attr("d", function(d) {
+		    	       		   return lineOcupacao(d.values);
+		    	          })
+		    	          .style("stroke", function(d) {
+		    	      		   return colorOcupacao(d.name);
+		    	          });
+
+     // Create tooltip
+    var focusOcupacao = gOcupacao.append("g")
+                                  .attr("class", "focus");
+
+    focusOcupacao.append("path")
+                  .attr("class", "hover-line")
+
+    var linesOcupacao = document.getElementsByClassName('line');
+
+    d3.selectAll('#ocupacao .focus-per-line') // circle disappears if data input is changed
+    d3.selectAll('#ocupacao .hover-line') // circle disappears if data input is changed
+
+    var focusPerLineOcupacao = focusOcupacao.selectAll('#ocupacao .focus-per-line')
+                                             .data(categoriesOcupacao)
+    // focusPerLineOcupacao.exit()
+    //                     .transition()
+    //                      .duration(0)
+    //                      .attr("opacity", "0")
+    //                      .remove();   
+    focusPerLineOcupacao.enter().append("g")
+                        .attr("class", "focus-per-line")
+                        .append("circle") 
+                        .merge(focusPerLineOcupacao)
+                         .transition()
+                          .duration(0)
+                          .ease(d3.easeLinear)
+                          .attr("r", 3)
+                          .style("stroke", function(d) {
+                            return colorOcupacao(d.name);
+                          })
+                          .style("fill", function(d) {
+                            return colorOcupacao(d.name);
+                          }); 
+    d3.selectAll('#ocupacao .focus-per-line').style("display", "none")
+
+    var tooltipTextDateOcupacao = gOcupacao.append("text")
+            			                    .attr("class", "tooltip-date");	                                                                                 
+    svgOcupacao.append('rect') 
+                 .attr("class", "overlay")
+                 .attr("transform", "translate(" + marginOcupacao.left + "," + marginOcupacao.top + ")")
+                 .attr('width', widthOcupacao)
+                 .attr('height', heightOcupacao)
+                 .on("mouseover", function() {
+                   	d3.selectAll('#ocupacao .tooltip-date').style("display", null); 
+                   	d3.selectAll('#ocupacao .tooltip-text').style("display", null);
+                    d3.selectAll('#ocupacao .focus-per-line').style("display", null) // circle disappears if data input is changed
+                    d3.selectAll('#ocupacao .hover-line').style("display", null) // circle disappears if data input is changed                   
                  })
-                .text(function(d) {
-        	      	return d.name;
-      	        });
+                 .on("mouseout", function() { 			
+                   	d3.selectAll('#ocupacao .tooltip-date').style("display", "none"); 
+                   	d3.selectAll('#ocupacao .tooltip-text').style("display", "none");
+                    d3.selectAll('#ocupacao .focus-per-line').style("display", "none") // circle disappears if data input is changed
+                    d3.selectAll('#ocupacao .hover-line').style("display", "none") // circle disappears if data input is changed                
+                 })
+                 .on('mousemove', event => mousemoveOcupacao(event));
 
-    //Create axis
-	var xAxisMLine = d3.axisBottom(xScaleMLine)
-          				   .ticks(7)
-          				   .tickFormat(formatAsMonth)
-          				   .tickSize(3);
-	var yAxisMLine = d3.axisLeft(yScaleMLine)
-				             .ticks(7)
-				             .tickSize(3);
-	gMLine.append("g")
-    	   .attr("class", "xAxis")
-    	   .attr("transform", "translate(0," + heightMLine + ")")
-    	   .call(xAxisMLine)
-    	   .select(".domain")
-    	    .attr("stroke","#252525")
-    	    .attr("stroke-width","0");
-	gMLine.append("g")
-	       .attr("class", "yAxis")
-	       .attr("transform", "translate(0,0)")
-	       .call(yAxisMLine)
-
-	//Create axis label
-    gMLine.append("text")
-           .attr("class", "axis-title")
-           .attr("transform", "rotate(-90)")
-           .style("text-anchor", "middle")
-           .attr("y",-50)
-           .attr("x",-heightMLine/2)
-           .attr("dy", ".71em")
-           .text("Hospital beds occupancy (%)");
-
-	//Create each category object
-	var categoryMLine = gMLine.selectAll(".category")
-                            .data(categoriesMLine)
-                            .enter().append("g")
-                             .attr("class", "category");
-
-	//Create lines
-	var lineMLine = d3.line()
-          				  .x( function(d) { return xScaleMLine(d.Date); })
-          				  .y( function(d) { return yScaleMLine(d.Occupancy); });
-
-	categoryMLine.append("path")
-      		     .attr("class", "line")
-      	         .attr("d", function(d) {
-      	         	return lineMLine(d.values);
-      	         })
-      	         .style("stroke", function(d) {
-      	         	return colorMLine(d.name);
-      	         });
-
-	// Create tooltip
-    var focusMLine = gMLine.append("g")
-                           .attr("class", "focus");
-
-    focusMLine.append("path")
-              .attr("class", "hover-line")
-
-    focusMLine.append("text")
-              .attr("class", "tooltip-date");
-
-    var linesMLine = document.getElementsByClassName('line');
-    var focusPerLineMLine = focusMLine.selectAll('.focus-per-line')
-                                      .data(categoriesMLine)
-                                      .enter().append("g")
-                                       .attr("class", "focus-per-line");		
-
-    focusPerLineMLine.append("circle") 
-                      .attr("opacity", "0")
-                      .attr("r", 3)
-                      .style("stroke", function(d) {
-                      	return colorMLine(d.name);
-                      });  
-
-    focusPerLineMLine.append("text") // Value
-    			           .append("class", "tooltip-text")
-
-    svgMLine.append('rect') 
-             .attr("class", "overlay")
-             .attr("transform", "translate(" + marginMLine.left + "," + marginMLine.top + ")")
-             .attr('width', widthMLine)
-             .attr('height', heightMLine)
-             .on("mouseover", function() {
-               	focusMLine.style("display", null); 
-             })
-             .on("mouseout", function() { 			        	
-               	focusMLine.style("display", "none"); 
-             })
-             .on('mousemove', event => mousemoveMLine(event));
-
-    function mousemoveMLine(event) { // mouse moving over canvas
+    function mousemoveOcupacao(event) { // mouse moving over canvas
         var mouse = d3.pointer(event),
-            x0 = xScaleMLine.invert(mouse[0]),
+            x0 = xScaleOcupacao.invert(mouse[0]),
             bisectDate = d3.bisector(function(d) { return d.Date; }).left,
             i = bisectDate(data, x0, 1),
             d0 = data[i - 1],
@@ -192,59 +261,47 @@ d3.csv("data/occupancy_maringa_data.csv")
         xDate = dTrue.Date;
         d3.select("#ocupacao .hover-line")
            .attr("d", function() {
-           		var dVar = "M" + xScaleMLine(xDate) + "," + heightMLine;
-            	dVar += " " + xScaleMLine(xDate) + "," + 0;
+           		var dVar = "M" + xScaleOcupacao(xDate) + "," + heightOcupacao;
+            	dVar += " " + xScaleOcupacao(xDate) + "," + 0;
            		return dVar;
-           });
+           })
         d3.select('#ocupacao .tooltip-date')
            .text(formatAsDate(xDate))
-           .attr("text-anchor", function() {
-           		if (xDate > medianMLine) {
-           			return "end";
-           		} else {
-           			return "start";
-           		}
-           	})
-           .attr("dx", function() {
-           		if (xDate > medianMLine) {
-           			return xScaleMLine(xDate)-5;
-           		} else {
-           			return xScaleMLine(xDate)+5;
-           		}
-           	})
-          .attr("y", heightMLine - 26 - 3*11);
-        d3.selectAll(".focus-per-line")
-           .attr("transform", function(d, i) {
-           		var totalOccupancy = function(){
-            		total = data[idx][d.name+"_total"];
-            		if (Number.isNaN(total)) {
-            			return "";
-            		} else {
-            			return " (" + Math.round(data[idx][d.name]*total/100)+ "/" + total + ")";
-            		}
-            }
-       		d3.select(this).select('.focus-per-line text')
-             .text(d.name + ": " + data[idx][d.name].toFixed(2) + "%" + totalOccupancy())
-             .attr("text-anchor", function() {
-              	if (xDate > medianMLine) {
-              		return "end";
-              	} else {
-              		return "start";
-              	}
-	           })
-             .attr("x", function() {
-              	if (xDate > medianMLine) {
-              		return -5;
-              	} else {
-              		return 5;
-              	}
-	           })
-             .attr("y", heightMLine - yScaleMLine(data[idx][d.name]) - 12.5 - (2-i)*15.5)
-             .attr("fill", colorMLine(d.name));
-             
-       		   return "translate(" + xScaleMLine(xDate) + "," + yScaleMLine(data[idx][d.name]) +")";
-          });
-        focusPerLineMLine.select("circle") 
-                          .attr("opacity", "1")
+           .attr("x", x_tooltip)
+           .attr("y", heightOcupacao - y_tooltip - 13 - 3*11);
+
+        var tooltipTextOcupacao = gOcupacao.selectAll('#ocupacao .tooltip-text')
+                                            .data(categoriesOcupacao)             
+    
+        tooltipTextOcupacao.enter().append("text")
+                   .merge(tooltipTextOcupacao)
+                   .transition()
+                    .duration(0)                       
+                   .attr("class", "tooltip-text")
+                   .text(function (d) {
+                      var totalOccupancy = function() {
+                        total = data[idx][d.name+"_total"];
+                        if (Number.isNaN(total)) {
+                          return "";
+                        } else {
+                          return " (" + Math.round(data[idx][d.name]*total/100)+ "/" + total + ")";
+                        }
+                      }  
+                      if (Number.isNaN(data[idx][d.name])) {   
+               		        return "";
+               		    } else {
+               		        return d.name + ": " + data[idx][d.name].toFixed(2) + "%" + totalOccupancy();
+               		    }})
+                   .attr("x", x_tooltip)
+                   .attr("y", function (d,i) { return heightOcupacao - y_tooltip - (2-i)*15.5})
+                   .style("fill", function(d) { return colorOcupacao(d.name); })
+                d3.selectAll("#ocupacao .focus-per-line")
+                   .attr("transform", function(d, i) { 
+               	      d3.select(this).select('#ocupacao .focus-per-line circle')
+           		        return "translate(" + xScaleOcupacao(xDate) + "," + yScaleOcupacao(data[idx][d.name]) +")";
+                  });
     };
-});
+  });
+}
+
+plotOcupacao("data/ocupacao.csv", true)
