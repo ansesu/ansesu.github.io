@@ -738,6 +738,10 @@ Evolução da COVID-19 em Maringá Casos confirmados e ativos acumulados A figur
 <p>A figura abaixo mostra a evolução do número de suspeitos por COVID-19 em Maringá.</p>
 <div id="suspeitos" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/suspeitos.js"> </script>
+<p>A figura abaixo mostra a evolução do número de casos confirmados diarios de COVID-19 em Maringá.</p>
+<p><input type="checkbox" class="checkboxSuspeitosEncerradosDiario" style="margin-right:5px" checked><label> <b>Média móvel </b></label></p>
+<div id="suspeitos_encerrados_diario" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/suspeitos_encerrados_diario.js"> </script>
 <h2 id="ocupacao-dos-leitos">Ocupacao dos leitos</h2>
 <p>A figura abaixo mostra a evolução de ocupacao dos leitos hospitalares em Maringá.</p>
 <p><button style="border-radius: 4px;" onclick="plotOcupacao('data/ocupacao.csv', false)">Total</button>
@@ -749,7 +753,9 @@ Evolução da COVID-19 em Maringá Casos confirmados e ativos acumulados A figur
 <p>O número de reprodução deve ser interpretado em conjunto com outras medidas como o número absoluto de casos, tal qual orienta o site rt.live. No exemplo exposto no site, dois estados americanos com números de reprodução diferentes são comparados em uma situação hipotética. Supõe-se que um dos estados apresenta 1000 novos casos diários e um valor do número de reprodução efetivo. Enquanto isso, outro estado apresenta 10 casos diários e . Nessa situação, apesar de o segundo estado apresentar um número de reprodução mais elevado, é o primeiro que está em pior situação. O pior de todos os casos é aquele em que o número de reprodução e o número de casos são ambos elevados.</p>
 <div id="numero-de-reproducao" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/numero_de_reproducao.js"> </script>
-
+<h2 id="tempo-de-dobra">Tempo de dobra</h2>
+<div id="tempo_dobra" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/tempo_dobra.js"> </script>
     </div>
 
     

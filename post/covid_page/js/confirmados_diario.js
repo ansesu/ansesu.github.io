@@ -135,7 +135,7 @@ d3.csv("data/confirmados_diario.csv")
 	          				    .attr("class", "tooltip-date")             
 
 	// tooltip mouseover event handler
-	var mouseoverBar = function(event, d) {
+	var mouseoverConfirmadosDiario = function(event, d) {
 		d3.select(this)
 		   .transition()
 		   .duration(300) 		  
@@ -161,7 +161,7 @@ d3.csv("data/confirmados_diario.csv")
         focusConfirmadosDiarioText.attr("opacity", "1")
 	};
 	// tooltip mouseout event handler
-	var mouseoutBar = function(d) {
+	var mouseoutConfirmadosDiario = function(d) {
 		d3.select(this)
 		  .transition()
 		   .duration(300) // ms				  
@@ -180,8 +180,8 @@ d3.csv("data/confirmados_diario.csv")
 						 .attr("width", xBand.bandwidth())
 						 .attr("height", function(d) { return heightConfirmadosDiario - yScaleConfirmadosDiario(d.Confirmados_diario); })
 						 .attr("fill", "#404040")
-						 .on("mouseover", mouseoverBar)
-						 .on("mouseout", mouseoutBar);
+						 .on("mouseover", mouseoverConfirmadosDiario)
+						 .on("mouseout", mouseoutConfirmadosDiario);
 
 	var lineConfirmadosDiario = d3.line()
           				          .x(function(d) { return xScaleConfirmadosDiario(d.Data); })

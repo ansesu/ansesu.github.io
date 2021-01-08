@@ -135,7 +135,7 @@ d3.csv("data/mortes_diario.csv")
 	          				    .attr("class", "tooltip-date")             
 
 	// tooltip mouseover event handler
-	var mouseoverBar = function(event, d) {
+	var mouseoverMortesDiario = function(event, d) {
 		d3.select(this)
 		   .transition()
 		   .duration(300) 		  
@@ -161,7 +161,7 @@ d3.csv("data/mortes_diario.csv")
         focusMortesDiarioText.attr("opacity", "1")
 	};
 	// tooltip mouseout event handler
-	var mouseoutBar = function(d) {
+	var mouseoutMortesDiario = function(d) {
 		d3.select(this)
 		  .transition()
 		   .duration(300) // ms				  
@@ -180,8 +180,8 @@ d3.csv("data/mortes_diario.csv")
 						 .attr("width", xBand.bandwidth())
 						 .attr("height", function(d) { return heightMortesDiario - yScaleMortesDiario(d.Mortes_diario); })
 						 .attr("fill", "#fc8d62")
-						 .on("mouseover", mouseoverBar)
-						 .on("mouseout", mouseoutBar);
+						 .on("mouseover", mouseoverMortesDiario)
+						 .on("mouseout", mouseoutMortesDiario);
 
 	var lineMortesDiario = d3.line()
           				          .x(function(d) { return xScaleMortesDiario(d.Data); })

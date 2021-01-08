@@ -35,12 +35,12 @@ d3.csv("data/confirmados_ativos.csv")
         		if (Number.isNaN(d[name])) {
 	            	return {
 	                	Data: d.Data,
-	            		Cases: 0
+	            		  Cases: 0
 	          		};        			
           		} else {
 	            	return {
 	                	Data: d.Data,
-	            		Cases: parseInt(d[name])
+	            		  Cases: parseInt(d[name])
 	          		};          		
           		}
 
