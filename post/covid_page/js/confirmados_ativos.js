@@ -55,139 +55,141 @@ d3.csv("data/confirmados_ativos.csv")
 
 	//Create scale functions
 	xScaleConfirmados = d3.scaleTime()
-          			 	 .domain(d3.extent(data, function(d) { return d.Data; }))
-          			 	 .range([0, widthConfirmados]);
+                			 	 .domain(d3.extent(data, function(d) { return d.Data; }))
+                			 	 .range([0, widthConfirmados]);
 	yScaleConfirmados = d3.scaleLinear()
-          				 .domain([0,d3.max(data, function(d) { return d.Confirmados; })])
-          				 .range([heightConfirmados, 0]);	
+                				 .domain([0,d3.max(data, function(d) { return d.Confirmados; })])
+                				 .range([heightConfirmados, 0]);	
 
 	//Create SVG element
-	const svgConfirmados = d3.select('#multilineplot')
-                	   .append('svg')
-                	    .attr("class", "content")
-                	    .attr("viewBox", `0 0 ${widthConfirmados + marginConfirmados.left + marginConfirmados.right} ${heightConfirmados + marginConfirmados.top + marginConfirmados.bottom}`)
-                	    .attr("preserveAspectRatio", "xMidYMid meet")
+	const svgConfirmados = d3.select('#confirmados-ativos')
+                      	   .append('svg')
+                      	    .attr("class", "content")
+                      	    .attr("viewBox", `0 0 ${widthConfirmados + marginConfirmados.left + marginConfirmados.right} ${heightConfirmados + marginConfirmados.top + marginConfirmados.bottom}`)
+                      	    .attr("preserveAspectRatio", "xMidYMid meet")
 	    
 	var gConfirmados = svgConfirmados.append("g")
-	                      .attr("transform", "translate(" + marginConfirmados.left + "," + marginConfirmados.top + ")");
+	                                  .attr("transform", "translate(" + marginConfirmados.left + "," + marginConfirmados.top + ")");
 
 	//Create legend
     var legendConfirmados = gConfirmados.selectAll('g')
-                            .data(categoriesConfirmados)
-                            .enter().append('g')
-                             .attr('class', 'legend');
+                                        .data(categoriesConfirmados)
+                                        .enter().append('g')
+                                         .attr('class', 'legend');
     legendConfirmados.append('rect')
-                .attr('x', 10)
-                .attr('y', function(d, i) {
-               		return i * 17.3;
-          	    })
-        	      .attr('width', 12)
-        	      .attr('height', 12)
-                .style('fill', function(d) {
-               		return colorConfirmados(d.name);
-                });
+                      .attr('x', 10)
+                      .attr('y', function(d, i) {
+                     		return i * 17.3;
+                	    })
+              	      .attr('width', 12)
+              	      .attr('height', 12)
+                      .style('fill', function(d) {
+                     		return colorConfirmados(d.name);
+                      });
     legendConfirmados.append('text')
-                .attr('x', 25)
-                .attr('y', function(d, i) {
-      		         return (i * 17.3)+11;
-                 })
-                .text(function(d) {
-        	      	return d.name;
-      	        });
+                      .attr('x', 25)
+                      .attr('y', function(d, i) {
+            		         return (i * 17.3)+11;
+                       })
+                      .text(function(d) {
+              	      	return d.name;
+            	        });
 
     //Create axis
 	var xAxisConfirmados = d3.axisBottom(xScaleConfirmados)
-          				   .ticks(7)
-          				   .tickFormat(formatAsMonth)
-          				   .tickSize(3);
+                				   .ticks(7)
+                				   .tickFormat(formatAsMonth)
+                				   .tickSize(3);
 	var yAxisConfirmados = d3.axisLeft(yScaleConfirmados)
-				             .ticks(7)
-				             .tickSize(3);
+      				             .ticks(7)
+      				             .tickSize(3);
 	gConfirmados.append("g")
-    	   .attr("class", "xAxis")
-    	   .attr("transform", "translate(0," + heightConfirmados + ")")
-    	   .call(xAxisConfirmados)
-    	   .select(".domain")
-    	    .attr("stroke","#252525")
-    	    .attr("stroke-width","0");
+          	   .attr("class", "xAxis")
+          	   .attr("transform", "translate(0," + heightConfirmados + ")")
+          	   .call(xAxisConfirmados)
+          	   .select(".domain")
+          	    .attr("stroke","#252525")
+          	    .attr("stroke-width","0");
 	gConfirmados.append("g")
-	       .attr("class", "yAxis")
-	       .attr("transform", "translate(0,0)")
-	       .call(yAxisConfirmados)
+      	       .attr("class", "yAxis")
+      	       .attr("transform", "translate(0,0)")
+      	       .call(yAxisConfirmados)
 
 	//Create axis label
     gConfirmados.append("text")
-           .attr("class", "axis-title")
-           .attr("transform", "rotate(-90)")
-           .style("text-anchor", "middle")
-           .attr("y",-75)
-           .attr("x",-heightConfirmados/2)
-           .attr("dy", ".71em")
-           .text("Casos");
-    categoriesConfirmados1 = categoriesConfirmados;
+                 .attr("class", "axis-title")
+                 .attr("transform", "rotate(-90)")
+                 .style("text-anchor", "middle")
+                 .attr("y",-75)
+                 .attr("x",-heightConfirmados/2)
+                 .attr("dy", ".71em")
+                 .text("Casos");
 	//Create each category object
 	var categoryConfirmados = gConfirmados.selectAll(".category")
-                              .data(categoriesConfirmados)
-                               .enter().append("g")
-                               .attr("class", "category");
+                                        .data(categoriesConfirmados)
+                                         .enter().append("g")
+                                         .attr("class", "category");
 
 	//Create lines
 	var lineConfirmados = d3.line()
-          			   .x( function(d) { return xScaleConfirmados(d.Data); })
-          			   .y( function(d) { return yScaleConfirmados(d.Cases); });
+                  			   .x( function(d) { return xScaleConfirmados(d.Data); })
+                  			   .y( function(d) { return yScaleConfirmados(d.Cases); });
 
 	categoryConfirmados.append("path")
-      		     .attr("class", "multiline")
-      	         .attr("d", function(d) {
-      	         	return lineConfirmados(d.values);
-      	         })
-      	         .style("stroke", function(d) {
-      	         	return colorConfirmados(d.name);
-      	         });
+            		     .attr("class", "line")
+            	         .attr("d", function(d) {
+            	         	return lineConfirmados(d.values);
+            	         })
+            	         .style("stroke", function(d) {
+            	         	return colorConfirmados(d.name);
+            	         });
 
 	// Create tooltip
     var focusConfirmados = gConfirmados.append("g")
-                           .attr("class", "focus");
+                                        .attr("class", "focus");
 
     focusConfirmados.append("path")
-              .attr("class", "hover-line")
+                     .attr("class", "hover-line")
 
     var linesConfirmados = document.getElementsByClassName('line');
     var focusPerLineConfirmados = focusConfirmados.selectAll('.focus-per-line')
-                                      .data(categoriesConfirmados)
-                                      .enter().append("g")
-                                       .attr("class", "focus-per-line");
+                                                  .data(categoriesConfirmados)
+                                                  .enter().append("g")
+                                                   .attr("class", "focus-per-line");
 
     var tooltipTextConfirmados = gConfirmados.selectAll('.tooltip-text')
-	                               .data(categoriesConfirmados)
-	                               .enter().append("text")
-	                                .attr("class", "tooltip-text");	    
+            	                               .data(categoriesConfirmados)
+            	                               .enter().append("text")
+            	                                .attr("class", "tooltip-text");	    
 
     var tooltipTextDataConfirmados = gConfirmados.append("text")
-            						  .attr("class", "tooltip-date");	                                    
+            			                         			  .attr("class", "tooltip-date");	                                    
     focusPerLineConfirmados.append("circle") 
-                      .attr("opacity", "0")
-                      .attr("r", 3)
-                      .style("stroke", function(d) {
-                      	return colorConfirmados(d.name);
-                      });  
+                            .attr("opacity", "0")
+                            .attr("r", 3)
+                            .style("stroke", function(d) {
+                            	return colorConfirmados(d.name);
+                            })
+                            .style("fill", function(d) {
+                              return colorConfirmados(d.name);
+                            });  
 
     svgConfirmados.append('rect') 
-             .attr("class", "overlay")
-             .attr("transform", "translate(" + marginConfirmados.left + "," + marginConfirmados.top + ")")
-             .attr('width', widthConfirmados)
-             .attr('height', heightConfirmados)
-             .on("mouseover", function() {
-               	focusConfirmados.style("display", null); 
-               	tooltipTextConfirmados.style("display", null);
-				tooltipTextDataConfirmados.style("display", null);
-             })
-             .on("mouseout", function() { 			        	
-               	focusConfirmados.style("display", "none"); 
-               	tooltipTextConfirmados.style("display", "none");
-				tooltipTextDataConfirmados.style("display", "none");
-             })
-             .on('mousemove', event => mousemoveConfirmados(event));
+                   .attr("class", "overlay")
+                   .attr("transform", "translate(" + marginConfirmados.left + "," + marginConfirmados.top + ")")
+                   .attr('width', widthConfirmados)
+                   .attr('height', heightConfirmados)
+                   .on("mouseover", function() {
+                     	focusConfirmados.style("display", null); 
+                     	tooltipTextConfirmados.style("display", null);
+              				tooltipTextDataConfirmados.style("display", null);
+                   })
+                   .on("mouseout", function() { 			        	
+                     	focusConfirmados.style("display", "none"); 
+                     	tooltipTextConfirmados.style("display", "none");
+              				tooltipTextDataConfirmados.style("display", "none");
+                   })
+                   .on('mousemove', event => mousemoveConfirmados(event));
 
     function mousemoveConfirmados(event) { // mouse moving over canvas
         var mouse = d3.pointer(event),
@@ -199,16 +201,16 @@ d3.csv("data/confirmados_ativos.csv")
             dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0,
             idx = x0 - d0.Data > d1.Data - x0 ? i : i-1,
         xData = dTrue.Data;
-        d3.select("#multilineplot .hover-line")
+        d3.select("#confirmados-ativos .hover-line")
            .attr("d", function() {
            		var dVar = "M" + xScaleConfirmados(xData) + "," + heightConfirmados;
             	dVar += " " + xScaleConfirmados(xData) + "," + 0;
            		return dVar;
            });
-        d3.select('#multilineplot .tooltip-date')
+        d3.select('#confirmados-ativos .tooltip-date')
            .text(formatAsDate(xData))
            .attr("x", 10)
-           .attr("y", heightConfirmados - 70 - 3*11);
+           .attr("y", heightConfirmados - 68 - 3*11);
         tooltipTextConfirmados
            .text(function (d) {if (Number.isNaN(data[idx][d.name])) {   
        		        return "";
@@ -217,25 +219,17 @@ d3.csv("data/confirmados_ativos.csv")
        		    }})
            .attr("x", 10)
            .attr("y", function (d,i) { return heightConfirmados - 55.5 - (2-i)*15.5})
-        d3.selectAll(".focus-per-line")
+        d3.selectAll("#confirmados-ativos .focus-per-line")
            .attr("transform", function(d, i) { 
            	   if (Number.isNaN(data[idx][d.name])) {   
-           	        d3.select(this).select('.focus-per-line circle')
+           	        d3.select(this).select('#confirmados-ativos .focus-per-line circle')
                        .style("opacity", "0")     
        		        return "translate(0,0)";
        		   } else {
-           	        d3.select(this).select('.focus-per-line circle')
+           	        d3.select(this).select('#confirmados-ativos .focus-per-line circle')
                        .style("opacity", "1")     
        		        return "translate(" + xScaleConfirmados(xData) + "," + yScaleConfirmados(data[idx][d.name]) +")";
        		   } 
           });
     };
 });
-
-
-
-// d3.select(this).select('.focus-per-line text')
-// .text(d.name + ": " + data[idx][d.name])
-// .attr("x", )
-// .attr("y", heightConfirmados - yScaleConfirmados(data[idx][d.name]) - 12.5 - (2-i)*15.5)
-// .attr("fill", colorConfirmados(d.name));

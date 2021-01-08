@@ -29,7 +29,7 @@
   
   <meta name="description" content="(Post temporário)
 Testando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.
-Evolução da COVID-19 em Maringá Casos confirmados acumulados A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá.">
+Evolução da COVID-19 em Maringá Casos confirmados e ativos acumulados A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá.">
 
   
   <link rel="alternate" hreflang="pt" href="/post/covid_page/">
@@ -282,7 +282,7 @@ Evolução da COVID-19 em Maringá Casos confirmados acumulados A figura abaixo 
   <meta property="og:title" content="(Teste) Observatório COVID-19 de Maringá | ansesu">
   <meta property="og:description" content="(Post temporário)
 Testando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.
-Evolução da COVID-19 em Maringá Casos confirmados acumulados A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
+Evolução da COVID-19 em Maringá Casos confirmados e ativos acumulados A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá."><meta property="og:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="pt">
   
     
@@ -327,7 +327,7 @@ Evolução da COVID-19 em Maringá Casos confirmados acumulados A figura abaixo 
       "url": "/images/icon_hu746286de3b138d0457f4b08ac36e8423_17467_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "(Post temporário)\nTestando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.\nEvolução da COVID-19 em Maringá Casos confirmados acumulados A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá."
+  "description": "(Post temporário)\nTestando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.\nEvolução da COVID-19 em Maringá Casos confirmados e ativos acumulados A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá."
 }
 </script>
 
@@ -718,15 +718,29 @@ Evolução da COVID-19 em Maringá Casos confirmados acumulados A figura abaixo 
 <p><strong>(Post temporário)</strong></p>
 <p>Testando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.</p>
 <h1 id="evolução-da-covid-19-em-maringá">Evolução da COVID-19 em Maringá</h1>
-<h2 id="casos-confirmados-acumulados">Casos confirmados acumulados</h2>
-<p>A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá. As marcas em forma de asterisco vermelho indicam os decretos da prefeitura do município que impuseram algum tipo de restrição aos moradores. Já as marcas em forma de asterisco verde indicam a flexibilização dessas medidas.</p>
-<div id="multilineplot" style="z-index: -1000"></div>
+<h2 id="casos-confirmados-e-ativos-acumulados">Casos confirmados e ativos acumulados</h2>
+<p>A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá.</p>
+<div id="confirmados-ativos" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/confirmados_ativos.js"> </script>
+<h2 id="obitos-acumulados">Obitos acumulados</h2>
+<p>A figura abaixo mostra a evolução do número de mortes acumuladas por COVID-19 em Maringá.</p>
+<div id="mortes" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/mortes.js"> </script>
+<h2 id="suspeitos-em-acompanhamento">Suspeitos em acompanhamento</h2>
+<p>A figura abaixo mostra a evolução do número de suspeitos por COVID-19 em Maringá.</p>
+<div id="suspeitos" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/suspeitos.js"> </script>
+<h2 id="ocupacao-dos-leitos">Ocupacao dos leitos</h2>
+<p>A figura abaixo mostra a evolução de ocupacao dos leitos hospitalares em Maringá.</p>
+<p><button style="border-radius: 4px;" onclick="plotOcupacao('data/ocupacao.csv', false)">Total</button>
+<button style="border-radius: 4px;" onclick="plotOcupacao('data/ocupacao_covid.csv', false)">COVID</button></p>
+<div id="ocupacao" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/ocupacao2.js"> </script>
 <h2 id="número-de-reprodução">Número de reprodução</h2>
 <p>A figura abaixo mostra nossas estimativas para a evolução do número de reprodução instantâneo em Maringá. A seção Número de reprodução instantâneo, em nossa página sobre Modelos Epidêmicos, detalha o modelo utilizado para realizar as estimativas. Essa medida prioriza o período mais recente da epidemia, uma vez que considera apenas seus últimos sete dias.</p>
 <p>O número de reprodução deve ser interpretado em conjunto com outras medidas como o número absoluto de casos, tal qual orienta o site rt.live. No exemplo exposto no site, dois estados americanos com números de reprodução diferentes são comparados em uma situação hipotética. Supõe-se que um dos estados apresenta 1000 novos casos diários e um valor do número de reprodução efetivo. Enquanto isso, outro estado apresenta 10 casos diários e . Nessa situação, apesar de o segundo estado apresentar um número de reprodução mais elevado, é o primeiro que está em pior situação. O pior de todos os casos é aquele em que o número de reprodução e o número de casos são ambos elevados.</p>
-<div id="thresholdplot" style="z-index: -1000"></div>
-<script type="text/javascript" src="js/numero_reproducao.js"> </script>
+<div id="numero-de-reproducao" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/numero_de_reproducao.js"> </script>
 
     </div>
 

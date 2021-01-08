@@ -23,15 +23,29 @@
 &lt;p&gt;&lt;strong&gt;(Post temporário)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Testando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.&lt;/p&gt;
 &lt;h1 id=&#34;evolução-da-covid-19-em-maringá&#34;&gt;Evolução da COVID-19 em Maringá&lt;/h1&gt;
-&lt;h2 id=&#34;casos-confirmados-acumulados&#34;&gt;Casos confirmados acumulados&lt;/h2&gt;
-&lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá. As marcas em forma de asterisco vermelho indicam os decretos da prefeitura do município que impuseram algum tipo de restrição aos moradores. Já as marcas em forma de asterisco verde indicam a flexibilização dessas medidas.&lt;/p&gt;
-&lt;div id=&#34;multilineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;casos-confirmados-e-ativos-acumulados&#34;&gt;Casos confirmados e ativos acumulados&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá.&lt;/p&gt;
+&lt;div id=&#34;confirmados-ativos&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/confirmados_ativos.js&#34;&gt; &lt;/script&gt;
+&lt;h2 id=&#34;obitos-acumulados&#34;&gt;Obitos acumulados&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de mortes acumuladas por COVID-19 em Maringá.&lt;/p&gt;
+&lt;div id=&#34;mortes&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/mortes.js&#34;&gt; &lt;/script&gt;
+&lt;h2 id=&#34;suspeitos-em-acompanhamento&#34;&gt;Suspeitos em acompanhamento&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de suspeitos por COVID-19 em Maringá.&lt;/p&gt;
+&lt;div id=&#34;suspeitos&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/suspeitos.js&#34;&gt; &lt;/script&gt;
+&lt;h2 id=&#34;ocupacao-dos-leitos&#34;&gt;Ocupacao dos leitos&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução de ocupacao dos leitos hospitalares em Maringá.&lt;/p&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotOcupacao(&#39;data/ocupacao.csv&#39;, false)&#34;&gt;Total&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotOcupacao(&#39;data/ocupacao_covid.csv&#39;, false)&#34;&gt;COVID&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&#34;ocupacao&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/ocupacao2.js&#34;&gt; &lt;/script&gt;
 &lt;h2 id=&#34;número-de-reprodução&#34;&gt;Número de reprodução&lt;/h2&gt;
 &lt;p&gt;A figura abaixo mostra nossas estimativas para a evolução do número de reprodução instantâneo em Maringá. A seção Número de reprodução instantâneo, em nossa página sobre Modelos Epidêmicos, detalha o modelo utilizado para realizar as estimativas. Essa medida prioriza o período mais recente da epidemia, uma vez que considera apenas seus últimos sete dias.&lt;/p&gt;
 &lt;p&gt;O número de reprodução deve ser interpretado em conjunto com outras medidas como o número absoluto de casos, tal qual orienta o site rt.live. No exemplo exposto no site, dois estados americanos com números de reprodução diferentes são comparados em uma situação hipotética. Supõe-se que um dos estados apresenta 1000 novos casos diários e um valor do número de reprodução efetivo. Enquanto isso, outro estado apresenta 10 casos diários e . Nessa situação, apesar de o segundo estado apresentar um número de reprodução mais elevado, é o primeiro que está em pior situação. O pior de todos os casos é aquele em que o número de reprodução e o número de casos são ambos elevados.&lt;/p&gt;
-&lt;div id=&#34;thresholdplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;js/numero_reproducao.js&#34;&gt; &lt;/script&gt;
+&lt;div id=&#34;numero-de-reproducao&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/numero_de_reproducao.js&#34;&gt; &lt;/script&gt;
 </description>
     </item>
     

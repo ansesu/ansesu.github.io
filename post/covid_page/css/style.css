@@ -1,4 +1,4 @@
-.streaks {
+.confirmados-ativos {
   display: block;
   position: relative;
   width: 100%;
@@ -6,7 +6,7 @@
   vertical-align: top;        
   overflow: hidden;
 }
-.simplebarplot {
+.mortes {
     display: inline-block;
     position: relative;
     width: 100%;
@@ -14,56 +14,8 @@
     vertical-align: top;
     overflow: hidden;
 }
-.barplot {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
-  vertical-align: top;        
-  overflow: hidden;
-}
-.hours {
-    display: block;
-    position: absolute;
-    top: 0;
-}
-.streamchart {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: auto;
-}
-.barchartrace {
-    display: block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    vertical-align: top;
-    overflow: hidden;
-}
-.lineplot {
-    position: relative;
 
-}
-.bandplot {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    vertical-align: top;
-    overflow: hidden;
-}
-.multilineplot {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    vertical-align: top;
-    overflow: hidden;
-}
-.thresholdplot {
+.numero_de_reproducao {
     display: inline-block;
     position: relative;
     width: 100%;
@@ -80,13 +32,6 @@
   top: 0;
   left: 0;
 }
-.content_hours {
-  display: block;
-  position: relative;
-  pointer-events: all;
-  top: 0;
-  left: 25%;
-}
 
 .axis-title {
   font-size: 17px;
@@ -97,27 +42,13 @@
   opacity: 0.1;
   fill: #252525;
 } 
-.clock {
-  stroke: #542788;
-  stroke-width: 4px;
-  opacity: 1;
-}
 .filled {
     fill: url(#mainGradient);
-}
-.focus circle {
-  fill: #F1F3F3;
-  stroke: #252525;
-  stroke-width: 1px;
 }
 .focus-per-line {
   font-size: 10px;
   font-family: Helvetica;
 }   
-.focus-per-line .circle {
-  fill: #F1F3F3;
-  stroke-width: 1px;
-}
 .hover-line {
   stroke: #737373;
   stroke-width: 0.75px;
@@ -126,29 +57,10 @@
   font-size: 14px;
   font-family: Helvetica;
 } 
-.lineConfirmados {
-  fill: none;
-  stroke: #252525;
-  stroke-width: 2.5;
-  z-index: 10000;
-}
-.lineDecretos {
-  position: absolute;
-  z-index: -1000000000;
-}
-.map {
-  stroke: #737373;
-  stroke-width: .5;
-}
-.multiline{
-  stroke-width:1.5;
+.line {
+  stroke-width:1.75;
   fill: none;
 }
-.one-line {
-  fill: none;
-  stroke-width: 2.5;
-  stroke: "black";
-} 
 .outlined {
     fill:   none;
     stroke: url(#mainGradient);
@@ -158,39 +70,11 @@
   fill: none;
   pointer-events: all;
 }
-.text-clock {
-  font-family: Helvetica;
-  font-weight: 100;
-  font-size: 20px;
-}
-.tick-clock {
-  stroke: #542788;
-  stroke-width: 2;
-}
-.tooltip-line {
-  position: absolute;
-}  
-#svgwrapper {
-  position: relative;
-}
-#multilineplot .tooltip-text {
+.tooltip-text {
   font-family: Helvetica;
   font-size: 14px;
 }
-#multilineplot .tooltip-date {
-  font-family: Helvetica;
-  font-size: 14px;
-  font-weight: bold;
-}
-.focus-per-line text {
-  font-family: Helvetica;
-  font-size: 14px;
-}
-.focus .tooltip-y {
-  font-family: Helvetica;
-  font-size: 14px;
-}
-.focus .tooltip-x {
+.tooltip-date {
   font-family: Helvetica;
   font-size: 14px;
   font-weight: bold;
@@ -198,19 +82,10 @@
 .spacedParagraph {
   margin-bottom:60px;
 } 
-.tooltip-stream {
-    position: absolute;
-    fill: #252525;
-    font-family: Helvetica;
-}
 .xAxis {
   font-size: 15px;
   font-family: Helvetica;
 } 
-.xAxisBand {
-  font-size: 15px;
-  font-family: Helvetica;
-}
 .yAxis {
   font-size: 15px;
   font-family: Helvetica;
@@ -218,10 +93,6 @@
 .yAxis line {
   stroke: #525252;
 }
-.xAxisStream {
-  font-size: 16px;
-  font-family: Helvetica;
-} 
 
 div {
   display: block;
@@ -232,42 +103,3 @@ button {
   z-index: 1000;
   font-size: 15px;
 }  
-
-#barchartrace text {
-font-size: 16px;
-font-family: Helvetica, sans-serif;
-}
-#barchartrace .title-race {
-font-size: 24px;
-font-weight: 500;
-}
-
-#barchartrace text.label{
-font-weight: 600;
-}
-
-#barchartrace text.valueLabel{
-font-weight: 300;
-}
-
-#barchartrace text.dateText{
-font-size: 30px;
-font-weight: 700;
-opacity: 0.25;
-}      
-#barchartrace .tick text {
-fill: #777777;
-}
-#barchartrace .xAxis .tick:nth-child(2) text {
-text-anchor: start;
-}
-#barchartrace .tick line {
-shape-rendering: CrispEdges;
-stroke: #dddddd;
-}
-#barchartrace .tick line.origin{
-stroke: #aaaaaa;
-}
-#barchartrace path.domain{
-display: none;
-}   
