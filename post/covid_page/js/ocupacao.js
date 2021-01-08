@@ -294,7 +294,6 @@ function plotOcupacao(data_path, first) {
                		    }})
                    .attr("x", x_tooltip)
                    .attr("y", function (d,i) { return heightOcupacao - y_tooltip - (2-i)*15.5})
-                   .style("fill", function(d) { return colorOcupacao(d.name); })
                 d3.selectAll("#ocupacao .focus-per-line")
                    .attr("transform", function(d, i) { 
                	      d3.select(this).select('#ocupacao .focus-per-line circle')
