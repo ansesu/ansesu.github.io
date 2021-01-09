@@ -202,6 +202,7 @@ d3.csv("data/suspeitos_encerrados_diario.csv")
 				                    .attr("position", "absolute")				                    
 				                    .attr("y", heightSuspeitosEncerradosDiario-200)
 				                    .attr("x", 10);
+
         focusSuspeitosEncerradosDiarioText.attr("opacity", "1")
 	};
 	// tooltip mouseout event handler
@@ -217,7 +218,8 @@ d3.csv("data/suspeitos_encerrados_diario.csv")
 		   	}
 		   });		   	
 
-		focusSuspeitosEncerradosDiarioText.attr("opacity", "0")                      
+		focusSuspeitosEncerradosDiarioText.attr("opacity", "0")  
+                   
 	};    	      
 	// Add bars
 	gSuspeitosEncerradosDiario.selectAll(".barSuspeitosDiario")
@@ -378,7 +380,12 @@ d3.csv("data/suspeitos_encerrados_diario.csv")
 					       .duration(400) // ms
 						   .style("opacity", 1) // started as 0!
 			gSuspeitosEncerradosDiario.selectAll(".tooltip-line")
-	  			 			   .call(wrap, 300) 	      
+	  			 			   .call(wrap, 300) 
+
+        	d3.selectAll('#suspeitos_encerrados_diario .legend')
+        	  .transition()
+	           .duration(500)
+	           .style("display", "none");	  			 			   	      
 	    };
 	    // tooltip mouseout event handler
 	    var mouseoutDecretos = function(d) {
@@ -390,7 +397,13 @@ d3.csv("data/suspeitos_encerrados_diario.csv")
 	          });   
 	      tooltipDecretos.transition()
 	                     .duration(300) // ms
-	                     .style("opacity", 0); // don't care about position!;                       
+	                     .style("opacity", 0); // don't care about position!;    
+
+          d3.selectAll('#suspeitos_encerrados_diario .legend')
+        	  .transition()
+	           .duration(300)
+	           .delay(300)
+	           .style("display", null);	                                        
 	    }; 
 
 	    circleLine = gSuspeitosEncerradosDiario.selectAll("circle")
