@@ -148,75 +148,74 @@ function plotCharts (data_path) {
 		                 .style("opacity", 0); // don't care about position!;                       
 		};
 
-
-		rectBarG = gBarG.selectAll("rect")
-				         .attr("fill-opacity", 1)
-				         .attr("stroke-opacity", 1)
-				         .transition()
-			              .duration(0) //change fill and stroke opacity to avoid CSS conflicts
-			              .attr("fill-opacity", 0)
-			              .attr("stroke-opacity", 0)
-			              .remove(); //remove after transitions are complete
-
 	    //Create rectangles
-        rectBarG = gBarG.append("g")
-		      			.selectAll("g")
-						.data(data)
-						.enter()
-						.append("g")
-						  .attr("transform", function(d) { return "translate(" + xScaleBarG(d.category_str_pt) + ",0)"; })
-					      .selectAll("rect")
-						  .data(function(d) { return subgroups.map(function(key) { return {key: key, value: d[key], category: d.category_str_complete_pt}; }); })
-		rectBarG.enter().append('rect')
-						.merge(rectBarG)
-			            .transition()
-			              .duration(300)
-			              .ease(d3.easeLinear)							    
-					      .attr("x", function(d) { return xSubgroup(d.key); })
-					      .attr("y", function(d) { return yScaleBarG(d.value); })
-					      .attr("width", xSubgroup.bandwidth())
-					      .attr("height", function(d) { return heightBarG - yScaleBarG(d.value); })
-					      .attr("fill", function(d) { return color(d.key); })
-					      .attr("opacity", "0.8");				      
+        var groupsBarG = gBarG.selectAll("#barplot g.groupsBarG")
+						      .data(data)
+						  
+		groupsBarG.enter().append("g")
+				  .merge(groupsBarG)
+				  .attr("class", "groupsBarG")
+				  .attr("transform", function(d) { return "translate(" + xScaleBarG(d.category_str_pt) + ",0)"; })
+		groupsBarG.exit().remove()		  
+					      
 
+		var rectBarG = gBarG.selectAll("#barplot g.groupsBarG").selectAll("#barplot rect.rectBarG")
+						    .data(function(d) { return subgroups.map(function(key) { return {key: key, value: d[key], category: d.category_str_complete_pt}; }); })
+
+		rectBarG.enter().append('rect')
+			    .merge(rectBarG)
+			    .attr("class", "rectBarG")
+	            .transition()
+	              .duration(300)
+	              .ease(d3.easeLinear)							    
+			      .attr("x", function(d) { return xSubgroup(d.key); })
+			      .attr("y", function(d) { return yScaleBarG(d.value); })
+			      .attr("width", xSubgroup.bandwidth())
+			      .attr("height", function(d) { return heightBarG - yScaleBarG(d.value); })
+			      .attr("fill", function(d) { return color(d.key); })
+			      .attr("opacity", "0.8");			      		
+		rectBarG.exit().remove()	      
+	    
 		gBarG.selectAll("rect")
 		 .on("mouseover", mouseoverBarG)
 		 .on("mouseout", mouseoutBarG);
 
 		//Create legend
-	    var legendBarG = gBarG.append("g")
-			                  .selectAll("g")
+	    var legendRectBarG = gBarG.selectAll("#barplot rect.legend")
 				              .data([{ year: "2019", name: "count_2019" },
 				              		 { year: "2020", name: "count_2020" }])
-			                  .enter().append("g")
-			                   .attr('class', 'legend');
-	    legendBarG.append('rect')
-		           .attr('x', widthBarG*.9)
-		           .attr('y', function(d, i) {
-		             return i * 13 - 9.5;
-		           })
-		           .attr('width', 10)
-		           .attr('height', 10)
-	               .transition()
-	                .duration(300) 
-		            .style('fill', function(d) {
-		              return color(d.name);
-		            });
-		gBarG.selectAll("text.legendText")
-			  .attr("opacity", 1)
-		      .transition()
-	           .duration(0) 
-	           .attr("opacity", 0)
-	           .remove(); 					            
-	    legendBarG.append('text')
-		    	   .attr("class", "legendText")					    
-		           .attr('x', widthBarG*.9+15)
-		           .attr('y', function(d, i) {
-		             return (i * 13);
-		           })
-		           .text(function(d) {
-		             return d.year;
-				   });		       
+		legendRectBarG.enter().append("rect")
+					  .merge(legendRectBarG)
+			          .attr('class', 'legend')
+			           .attr('x', widthBarG*.9)
+			           .attr('y', function(d, i) {
+			             return i * 13 - 9.5;
+			           })
+			           .attr('width', 10)
+			           .attr('height', 10)
+		               .transition()
+		                .duration(300) 
+			            .style('fill', function(d) {
+			              return color(d.name);
+			            });
+
+		legendRectBarG.exit().remove()
+
+	    var legendTextBarG = gBarG.selectAll("#barplot text.legend")
+				              .data([{ year: "2019", name: "count_2019" },
+				              		 { year: "2020", name: "count_2020" }])			            
+			            
+	    legendTextBarG.enter().append("text")
+				      .merge(legendTextBarG)
+		    	       .attr("class", "legend")					    
+		               .attr('x', widthBarG*.9+15)
+		               .attr('y', function(d, i) {
+		                 return (i * 13);
+		               })
+		               .text(function(d) {
+		                 return d.year;
+				       });		
+	    legendTextBarG.exit().remove()       
 	});
 }
 plotCharts('data/month_data.csv');

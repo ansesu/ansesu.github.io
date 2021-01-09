@@ -756,6 +756,16 @@ Evolução da COVID-19 em Maringá Casos confirmados e ativos acumulados A figur
 <h2 id="tempo-de-dobra">Tempo de dobra</h2>
 <div id="tempo_dobra" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/tempo_dobra.js"> </script>
+<h2 id="incidencia-por-faixa-etaria-e-genero">Incidencia por faixa etaria e genero</h2>
+<p><button style="border-radius: 4px;" onclick="plotIncidencia('data/incidencia_genero.csv', false)">Por gênero</button>
+<button style="border-radius: 4px;" onclick="plotIncidencia('data/incidencia.csv', false)">Geral</button></p>
+<div id="incidencia" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/incidencia.js"> </script>
+<h2 id="comparacao-com-outras-cidades">Comparacao com outras cidades</h2>
+<p><select id="selectButtonConfirmados"></select></p>
+<div id="confirmados_comparacao" style="z-index: -1000"></div>
+<script type="text/javascript" src="js/comparacao_confirmados.js"> </script>
+
     </div>
 
     

@@ -79,11 +79,25 @@
   font-size: 14px;
   font-weight: bold;
 }
+.tooltip-html {
+  position: absolute;
+  width:  auto;
+  height: auto;
+  pointer-events: none;
+  background-color: white;
+  font-family: Helvetica;
+  box-sizing: border-box;
+  padding: .15%;
+}   
 .spacedParagraph {
   margin-bottom:60px;
 } 
 .xAxis {
   font-size: 15px;
+  font-family: Helvetica;
+} 
+#incidencia .xAxis {
+  font-size: 14px;
   font-family: Helvetica;
 } 
 .yAxis {

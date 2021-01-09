@@ -167,12 +167,12 @@ function plotStreaks(data_path) {
                           .attr("opacity", "0.25")
                           .attr("class", "circle");
                             
-                          circleStreaks.exit()
-                                       .remove()
+    circleStreaks.exit()
+                 .remove()
 
-                          gStreaks.selectAll("circle")
-                                  .on("mouseover", mouseoverStreaks)
-                                  .on("mouseout", mouseoutStreaks);
+    gStreaks.selectAll("circle")
+            .on("mouseover", mouseoverStreaks)
+            .on("mouseout", mouseoutStreaks);
   });                 
 } 
 

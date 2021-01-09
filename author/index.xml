@@ -60,7 +60,17 @@
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/numero_de_reproducao.js&#34;&gt; &lt;/script&gt;
 &lt;h2 id=&#34;tempo-de-dobra&#34;&gt;Tempo de dobra&lt;/h2&gt;
 &lt;div id=&#34;tempo_dobra&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;js/tempo_dobra.js&#34;&gt; &lt;/script&gt;</description>
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/tempo_dobra.js&#34;&gt; &lt;/script&gt;
+&lt;h2 id=&#34;incidencia-por-faixa-etaria-e-genero&#34;&gt;Incidencia por faixa etaria e genero&lt;/h2&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotIncidencia(&#39;data/incidencia_genero.csv&#39;, false)&#34;&gt;Por gênero&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotIncidencia(&#39;data/incidencia.csv&#39;, false)&#34;&gt;Geral&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&#34;incidencia&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/incidencia.js&#34;&gt; &lt;/script&gt;
+&lt;h2 id=&#34;comparacao-com-outras-cidades&#34;&gt;Comparacao com outras cidades&lt;/h2&gt;
+&lt;p&gt;&lt;select id=&#34;selectButtonConfirmados&#34;&gt;&lt;/select&gt;&lt;/p&gt;
+&lt;div id=&#34;confirmados_comparacao&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/comparacao_confirmados.js&#34;&gt; &lt;/script&gt;
+</description>
     </item>
     
     <item>
