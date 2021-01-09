@@ -60,30 +60,42 @@ d3.csv("data/comparacao_confirmados.csv")
 	    
 	var gConfirmadosComparacao = svgConfirmadosComparacao.append("g")
 	                                  .attr("transform", "translate(" + marginConfirmadosComparacao.left + "," + marginConfirmadosComparacao.top + ")");
+  dataLegendConfirmadosComparacao = [{ color: "red",   name: "Bologna (ITA)" },
+                                     { color: "black", name: "Maringá" }]
+    //Create legend
+    var legendRectConfirmadosComparacao = gConfirmadosComparacao.selectAll("#confirmados_comparacao rect.legend")
+                                .data(dataLegendConfirmadosComparacao)
+    legendRectConfirmadosComparacao.enter().append("rect")
+            .merge(legendRectConfirmadosComparacao)
+                .attr('class', 'legend')
+                 .attr('x', 10)
+                 .attr('y', function(d, i) {
+                   return i * 13 + 10;
+                 })
+                 .attr('width', 10)
+                 .attr('height', 10)
+                   .transition()
+                    .duration(300) 
+                  .style('fill', function(d) {
+                    return d.color;
+                  });
 
-	// Create legend
- //  var legendConfirmadosComparacao = gConfirmadosComparacao.selectAll('g')
- //                                      .data(categoriesConfirmadosComparacao)
- //                                      .enter().append('g')
- //                                       .attr('class', 'legend');
- //  legendConfirmadosComparacao.append('rect')
- //                    .attr('x', 10)
- //                    .attr('y', function(d, i) {
- //                   		return i * 17.3;
- //              	    })
- //            	      .attr('width', 12)
- //            	      .attr('height', 12)
- //                    .style('fill', function(d) {
- //                   		return colorConfirmadosComparacao(d.name);
- //                    });
- //  legendConfirmadosComparacao.append('text')
- //                    .attr('x', 25)
- //                    .attr('y', function(d, i) {
- //          		         return (i * 17.3)+11;
- //                     })
- //                    .text(function(d) {
- //            	      	return d.name;
- //          	        });
+    legendRectConfirmadosComparacao.exit().remove()
+
+      var legendTextConfirmadosComparacao = gConfirmadosComparacao.selectAll("#confirmados_comparacao text.legend")
+                      .data(dataLegendConfirmadosComparacao)                  
+                  
+      legendTextConfirmadosComparacao.enter().append("text")
+              .merge(legendTextConfirmadosComparacao)
+                 .attr("class", "legend")             
+                   .attr('x', 25)
+                   .attr('y', function(d, i) {
+                     return (i * 13 + 19.5);
+                   })
+                   .text(function(d) {
+                     return d.name;
+               });    
+      legendTextConfirmadosComparacao.exit().remove() 
 
     //Create axis
 	var xAxisConfirmadosComparacao = d3.axisBottom(xScaleConfirmadosComparacao)
@@ -261,7 +273,29 @@ d3.csv("data/comparacao_confirmados.csv")
           .x(function(d) { return xScaleConfirmadosComparacao(d.DeltaT) })
           .y(function(d) { return yScaleConfirmadosComparacao(d.Confirmados) })
         )
-        .attr("stroke", function(d){ return "black" })           
+        .attr("stroke", function(d){ return "black" })     
+
+    dataLegendConfirmadosComparacao = [{ color: "red",   name: selectedGroup },
+                                       { color: "black", name: "Maringá" }]
+    // Create legend
+
+    var legendTextConfirmadosComparacao = gConfirmadosComparacao.selectAll("#confirmados_comparacao text.legend")
+                                                                 .data(dataLegendConfirmadosComparacao)                  
+                
+    legendTextConfirmadosComparacao.enter().append("text")
+            .merge(legendTextConfirmadosComparacao)
+            .transition()
+            .duration(1000)            
+               .attr("class", "legend")             
+                 .attr('x', 25)
+                 .attr('y', function(d, i) {
+                   return (i * 13 + 19.5);
+                 })
+                 .text(function(d) {
+                   return d.name;
+             });    
+
+    legendTextConfirmadosComparacao.exit().remove()           
   } 
 
     // When the button is changed, run the updateChart function
