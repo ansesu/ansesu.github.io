@@ -165,7 +165,7 @@ d3.csv("data/mortes_diario.csv")
 		d3.select(this)
 		  .transition()
 		   .duration(300) // ms				  
-		   .attr("fill", "#fc8d62");
+		   .attr("fill", "#ef3b2c");
 
 		focusMortesDiarioText.attr("opacity", "0")                      
 	};    	      
@@ -179,7 +179,7 @@ d3.csv("data/mortes_diario.csv")
 						 .attr("y", function(d) { return yScaleMortesDiario(d.Mortes_diario); })
 						 .attr("width", xBand.bandwidth())
 						 .attr("height", function(d) { return heightMortesDiario - yScaleMortesDiario(d.Mortes_diario); })
-						 .attr("fill", "#fc8d62")
+						 .attr("fill", "#ef3b2c")
 						 .on("mouseover", mouseoverMortesDiario)
 						 .on("mouseout", mouseoutMortesDiario);
 
@@ -191,7 +191,7 @@ d3.csv("data/mortes_diario.csv")
     		                                  .attr("class", "line")
     		                                  .datum(data)
     		                                  .attr("d", lineMortesDiario)
-                                              .attr("stroke", "#525252")
+                                              .attr("stroke", "#a50f15")
     totalLengthMortesDiario = pathMortesDiario.node().getTotalLength();                                          
     function updateMortesDiario() {
 	    cb = d3.select(".checkboxMortesDiario")
@@ -200,7 +200,7 @@ d3.csv("data/mortes_diario.csv")
 			pathMortesDiario = gMortesDiario.append("path")
 		    		                                  .attr("class", "line")
 		    		                                  .attr("d", lineMortesDiario(data))
-		    		                                  .attr("stroke", "#525252")	
+		    		                                  .attr("stroke", "#a50f15")	
 		    		                                  .attr("fill", "none")
 
             pathMortesDiario              

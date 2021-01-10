@@ -197,10 +197,19 @@ d3.csv("data/confirmados_ativos.csv")
             bisectData = d3.bisector(function(d) { return d.Data; }).left,
             i = bisectData(data, x0, 1),
             d0 = data[i - 1],
-            d1 = data[i],
-            dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0,
-            idx = x0 - d0.Data > d1.Data - x0 ? i : i-1,
-        xData = dTrue.Data;
+            d1 = data[i];
+        if (d1 == null){
+            d1 = data[i - 1];
+        }       
+        var dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0, // if is true, d1, if is false d0
+            idx = x0 - d0.Date > d1.Date - x0 ? i : i-1;
+        if (data[idx] == null) {
+           var data_idx = data[idx-1],
+               xData = data_idx.Data;
+        } else {
+           var data_idx = data[idx],
+               xData = data_idx.Data;
+        }    
         d3.select("#confirmados-ativos .hover-line")
            .attr("d", function() {
            		var dVar = "M" + xScaleConfirmados(xData) + "," + heightConfirmados;

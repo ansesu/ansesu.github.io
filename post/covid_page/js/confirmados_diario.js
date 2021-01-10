@@ -191,7 +191,7 @@ d3.csv("data/confirmados_diario.csv")
     		                                  .attr("class", "line")
     		                                  .datum(data)
     		                                  .attr("d", lineConfirmadosDiario)
-                                              .attr("stroke", "#f03b20")
+                                              .attr("stroke", "#252525")
     totalLengthConfirmadosDiario = pathConfirmadosDiario.node().getTotalLength();                                          
     function updateConfirmadosDiario() {
 	    cb = d3.select(".checkboxConfirmadosDiario")
@@ -200,7 +200,7 @@ d3.csv("data/confirmados_diario.csv")
 			pathConfirmadosDiario = gConfirmadosDiario.append("path")
 		    		                                  .attr("class", "line")
 		    		                                  .attr("d", lineConfirmadosDiario(data))
-		    		                                  .attr("stroke", "#f03b20")	
+		    		                                  .attr("stroke", "#252525")	
 		    		                                  .attr("fill", "none")
 
             pathConfirmadosDiario              

@@ -255,10 +255,19 @@ function plotOcupacao(data_path, first) {
             bisectDate = d3.bisector(function(d) { return d.Date; }).left,
             i = bisectDate(data, x0, 1),
             d0 = data[i - 1],
-            d1 = data[i],
-            dTrue = x0 - d0.Date > d1.Date - x0 ? d1 : d0,
-            idx = x0 - d0.Date > d1.Date - x0 ? i : i-1,
-        xDate = dTrue.Date;
+            d1 = data[i];
+        if (d1 == null){
+            d1 = data[i - 1];
+        }       
+        var dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0, // if is true, d1, if is false d0
+            idx = x0 - d0.Date > d1.Date - x0 ? i : i-1;
+        if (data[idx] == null) {
+           var data_idx = data[idx-1],
+               xDate = data_idx.Date;
+        } else {
+           var data_idx = data[idx],
+               xDate = data_idx.Date;
+        }             
         d3.select("#ocupacao .hover-line")
            .attr("d", function() {
            		var dVar = "M" + xScaleOcupacao(xDate) + "," + heightOcupacao;
@@ -280,24 +289,24 @@ function plotOcupacao(data_path, first) {
                    .attr("class", "tooltip-text")
                    .text(function (d) {
                       var totalOccupancy = function() {
-                        total = data[idx][d.name+"_total"];
+                        total = data_idx[d.name+"_total"];
                         if (Number.isNaN(total)) {
                           return "";
                         } else {
-                          return " (" + Math.round(data[idx][d.name]*total/100)+ "/" + total + ")";
+                          return " (" + Math.round(data_idx[d.name]*total/100)+ "/" + total + ")";
                         }
                       }  
-                      if (Number.isNaN(data[idx][d.name])) {   
+                      if (Number.isNaN(data_idx[d.name])) {   
                		        return "";
                		    } else {
-               		        return d.name + ": " + data[idx][d.name].toFixed(2) + "%" + totalOccupancy();
+               		        return d.name + ": " + data_idx[d.name].toFixed(2) + "%" + totalOccupancy();
                		    }})
                    .attr("x", x_tooltip)
                    .attr("y", function (d,i) { return heightOcupacao - y_tooltip - (2-i)*15.5})
                 d3.selectAll("#ocupacao .focus-per-line")
                    .attr("transform", function(d, i) { 
                	      d3.select(this).select('#ocupacao .focus-per-line circle')
-           		        return "translate(" + xScaleOcupacao(xDate) + "," + yScaleOcupacao(data[idx][d.name]) +")";
+           		        return "translate(" + xScaleOcupacao(xDate) + "," + yScaleOcupacao(data_idx[d.name]) +")";
                   });
     };
   });

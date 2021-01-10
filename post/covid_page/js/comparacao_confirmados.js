@@ -1,5 +1,5 @@
 //Margin
-const marginConfirmadosComparacao = { top: 10, right: 10, bottom: 25, left: 76 };
+const marginConfirmadosComparacao = { top: 10, right: 10, bottom: 40, left: 76 };
 
 //Width and Height
 const widthConfirmadosComparacao = 600 - marginConfirmadosComparacao.left - marginConfirmadosComparacao.right;
@@ -9,8 +9,8 @@ const heightConfirmadosComparacao = 300 - marginConfirmadosComparacao.top - marg
 var parseTimeConfirmadosComparacao = d3.timeParse("%Y-%m-%d");
 
 //Create categorical color scale
-var colorMaringa = '#404040';
-var colorOutros = '#bdbdbd';
+var colorMaringaConfirmados = '#404040';
+var colorOutroConfirmados = '#bdbdbd';
 
 //Load in the data
 d3.csv("data/comparacao_confirmados.csv")
@@ -52,7 +52,7 @@ d3.csv("data/comparacao_confirmados.csv")
                 				 .range([heightConfirmadosComparacao, 0]);	
 
 	//Create SVG element
-	const svgConfirmadosComparacao = d3.select('#confirmados_comparacao')
+	const svgConfirmadosComparacao = d3.select('#comparacao_confirmados')
                       	   .append('svg')
                       	    .attr("class", "content")
                       	    .attr("viewBox", `0 0 ${widthConfirmadosComparacao + marginConfirmadosComparacao.left + marginConfirmadosComparacao.right} ${heightConfirmadosComparacao + marginConfirmadosComparacao.top + marginConfirmadosComparacao.bottom}`)
@@ -60,20 +60,20 @@ d3.csv("data/comparacao_confirmados.csv")
 	    
 	var gConfirmadosComparacao = svgConfirmadosComparacao.append("g")
 	                                  .attr("transform", "translate(" + marginConfirmadosComparacao.left + "," + marginConfirmadosComparacao.top + ")");
-  dataLegendConfirmadosComparacao = [{ color: "red",   name: "Bologna (ITA)" },
-                                     { color: "black", name: "Maringá" }]
+  dataLegendConfirmadosComparacao = [{ color: colorOutroConfirmados,   name: "Bologna (ITA)" },
+                                     { color: colorMaringaConfirmados, name: "Maringá" }]
     //Create legend
-    var legendRectConfirmadosComparacao = gConfirmadosComparacao.selectAll("#confirmados_comparacao rect.legend")
+    var legendRectConfirmadosComparacao = gConfirmadosComparacao.selectAll("#comparacao_confirmados rect.legend")
                                 .data(dataLegendConfirmadosComparacao)
     legendRectConfirmadosComparacao.enter().append("rect")
             .merge(legendRectConfirmadosComparacao)
                 .attr('class', 'legend')
                  .attr('x', 10)
                  .attr('y', function(d, i) {
-                   return i * 13 + 10;
+                   return i * 17.3;
                  })
-                 .attr('width', 10)
-                 .attr('height', 10)
+                 .attr('width', 12)
+                 .attr('height', 12)
                    .transition()
                     .duration(300) 
                   .style('fill', function(d) {
@@ -82,7 +82,7 @@ d3.csv("data/comparacao_confirmados.csv")
 
     legendRectConfirmadosComparacao.exit().remove()
 
-      var legendTextConfirmadosComparacao = gConfirmadosComparacao.selectAll("#confirmados_comparacao text.legend")
+      var legendTextConfirmadosComparacao = gConfirmadosComparacao.selectAll("#comparacao_confirmados text.legend")
                       .data(dataLegendConfirmadosComparacao)                  
                   
       legendTextConfirmadosComparacao.enter().append("text")
@@ -90,7 +90,7 @@ d3.csv("data/comparacao_confirmados.csv")
                  .attr("class", "legend")             
                    .attr('x', 25)
                    .attr('y', function(d, i) {
-                     return (i * 13 + 19.5);
+                     return (i * 17.3+11);
                    })
                    .text(function(d) {
                      return d.name;
@@ -124,7 +124,13 @@ d3.csv("data/comparacao_confirmados.csv")
                .attr("x",-heightConfirmadosComparacao/2)
                .attr("dy", ".71em")
                .text("Casos");
-
+// Create axis label
+gConfirmadosComparacao.append("text")
+    .attr("class", "axis-title")
+    .style("text-anchor", "middle")
+    .attr("y",heightConfirmadosComparacao+37)
+    .attr("x",widthConfirmadosComparacao/2)
+    .text("Dias após o primeiro caso");
 	//Create lines
 	var lineMaringaConfirmadosComparacao = d3.line()
                                      .x( function(d) { return xScaleConfirmadosComparacao(d.DeltaT); })
@@ -133,7 +139,7 @@ d3.csv("data/comparacao_confirmados.csv")
                           .attr("class", "line")
                           .datum(dataMaringaConfirmados)
                           .attr("d", lineMaringaConfirmadosComparacao)
-                          .attr("stroke", "black");
+                          .attr("stroke", colorMaringaConfirmados);
 
   var lineOutrosConfirmadosComparacao = d3.line()
                                            .x( function(d) { return xScaleConfirmadosComparacao(d.DeltaT); })
@@ -142,95 +148,110 @@ d3.csv("data/comparacao_confirmados.csv")
                           .attr("class", "line")
                           .datum(dataOutroConfirmados)
                           .attr("d", lineOutrosConfirmadosComparacao)
-                          .attr("stroke", "red");
-	// // Create tooltip
- //  var focusConfirmadosComparacao = gConfirmadosComparacao.append("g")
- //                                      .attr("class", "focus");
+                          .attr("stroke", colorOutroConfirmados);
 
- //  focusConfirmadosComparacao.append("path")
- //                   .attr("class", "hover-line")
+  //Create tooltip
+  var focusConfirmadosComparacaoHover = gConfirmadosComparacao.append("g")
+                            .attr("class", "focus");  
+  var focusConfirmadosComparacaoOutro = gConfirmadosComparacao.append("g")
+                            .attr("class", "focus");  
+  var focusConfirmadosComparacaoMaringa = gConfirmadosComparacao.append("g")
+                            .attr("class", "focus");
+  
 
- //  var linesConfirmadosComparacao = document.getElementsByClassName('line');
- //  var focusPerLineConfirmadosComparacao = focusConfirmadosComparacao.selectAll('.focus-per-line')
- //                                                .data(categoriesConfirmadosComparacao)
- //                                                .enter().append("g")
- //                                                 .attr("class", "focus-per-line");
+  focusConfirmadosComparacaoHover.append("path") 
+               .attr("class", "hover-line")
 
- //  var tooltipTextConfirmadosComparacao = gConfirmadosComparacao.selectAll('.tooltip-text')
- //          	                               .data(categoriesConfirmadosComparacao)
- //          	                               .enter().append("text")
- //          	                                .attr("class", "tooltip-text");	    
+  var focusConfirmadosComparacaoText = gConfirmadosComparacao.append("g")
+                                .attr("class", "focus");
+  focusConfirmadosComparacaoText.append("text")
+                  .attr("class", "tooltip-text Maringa")
+  focusConfirmadosComparacaoText.append("text")
+                  .attr("class", "tooltip-text Outro")
 
- //  var tooltipTextDataConfirmadosComparacao = gConfirmadosComparacao.append("text")
- //          			                         			  .attr("class", "tooltip-date");	                                    
- //  focusPerLineConfirmadosComparacao.append("circle") 
- //                          .attr("opacity", "0")
- //                          .attr("r", 3)
- //                          .style("stroke", function(d) {
- //                          	return colorConfirmadosComparacao(d.name);
- //                          })
- //                          .style("fill", function(d) {
- //                            return colorConfirmadosComparacao(d.name);
- //                          });  
+  focusConfirmadosComparacaoMaringa.append("circle")
+              .attr("class", "Maringa")
+              .attr("r", 3)
+              .attr("opacity", "0");
+  focusConfirmadosComparacaoOutro.append("circle")
+              .attr("class", "Outro")
+              .attr("r", 3)
+              .attr("opacity", "0");
 
- //  svgConfirmadosComparacao.append('rect') 
- //                 .attr("class", "overlay")
- //                 .attr("transform", "translate(" + marginConfirmadosComparacao.left + "," + marginConfirmadosComparacao.top + ")")
- //                 .attr('width', widthConfirmadosComparacao)
- //                 .attr('height', heightConfirmadosComparacao)
- //                 .on("mouseover", function() {
- //                   	focusConfirmadosComparacao.style("display", null); 
- //                   	tooltipTextConfirmadosComparacao.style("display", null);
- //            				tooltipTextDataConfirmadosComparacao.style("display", null);
- //                 })
- //                 .on("mouseout", function() { 			        	
- //                   	focusConfirmadosComparacao.style("display", "none"); 
- //                   	tooltipTextConfirmadosComparacao.style("display", "none");
- //            				tooltipTextDataConfirmadosComparacao.style("display", "none");
- //                 })
- //                 .on('mousemove', event => mousemoveConfirmadosComparacao(event));
+  svgConfirmadosComparacao.append("rect")
+                          .attr("class", "overlay")
+                            .attr("transform", "translate(" + marginConfirmadosComparacao.left + "," + marginConfirmadosComparacao.top + ")")
+                            .attr("width", widthConfirmadosComparacao)
+                            .attr("height", heightConfirmadosComparacao)
+                            .on("mouseover", function() {
+                              focusConfirmadosComparacaoMaringa.style("display", null);
+                              focusConfirmadosComparacaoOutro.style("display", null); 
+                              focusConfirmadosComparacaoHover.style("display", null); 
+                              focusConfirmadosComparacaoText.style("display", null); 
+                            })
+                            .on("mouseout", function() {                
+                              focusConfirmadosComparacaoMaringa.style("display", "none");
+                              focusConfirmadosComparacaoOutro.style("display", "none");
+                              focusConfirmadosComparacaoHover.style("display", "none");                              
+                              focusConfirmadosComparacaoText.style("display", "none"); 
+                            })
+                            .on("mousemove", event => mousemoveConfirmadosComparacao(event));
 
- //    function mousemoveConfirmadosComparacao(event) { // mouse moving over canvas
- //        var mouse = d3.pointer(event),
- //            x0 = xScaleConfirmadosComparacao.invert(mouse[0]),
- //            bisectData = d3.bisector(function(d) { return d.Data; }).left,
- //            i = bisectData(data, x0, 1),
- //            d0 = data[i - 1],
- //            d1 = data[i],
- //            dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0,
- //            idx = x0 - d0.Data > d1.Data - x0 ? i : i-1,
- //        xData = dTrue.Data;
- //        d3.select("#confirmados_comparacao .hover-line")
- //           .attr("d", function() {
- //           		var dVar = "M" + xScaleConfirmadosComparacao(xData) + "," + heightConfirmadosComparacao;
- //            	dVar += " " + xScaleConfirmadosComparacao(xData) + "," + 0;
- //           		return dVar;
- //           });
- //        d3.select('#confirmados_comparacao .tooltip-date')
- //           .text(formatAsDate(xData))
- //           .attr("x", 10)
- //           .attr("y", heightConfirmadosComparacao - 68 - 3*11);
- //        tooltipTextConfirmadosComparacao
- //           .text(function (d) {if (Number.isNaN(data[idx][d.name])) {   
- //       		        return "";
- //       		    } else {
- //       		        return d.name + ": " + formatValue(data[idx][d.name]);
- //       		    }})
- //           .attr("x", 10)
- //           .attr("y", function (d,i) { return heightConfirmadosComparacao - 55.5 - (2-i)*15.5})
- //        d3.selectAll("#confirmados_comparacao .focus-per-line")
- //           .attr("transform", function(d, i) { 
- //           	   if (Number.isNaN(data[idx][d.name])) {   
- //           	        d3.select(this).select('#confirmados_comparacao .focus-per-line circle')
- //                       .style("opacity", "0")     
- //       		        return "translate(0,0)";
- //       		   } else {
- //           	        d3.select(this).select('#confirmados_comparacao .focus-per-line circle')
- //                       .style("opacity", "1")     
- //       		        return "translate(" + xScaleConfirmadosComparacao(xData) + "," + yScaleConfirmadosComparacao(data[idx][d.name]) +")";
- //       		   } 
- //          });
- //    };
+  function mousemoveConfirmadosComparacao(event) {
+    // Get coords - Maringa
+    var x0_Maringa = xScaleConfirmadosComparacao.invert(d3.pointer(event)[0]),
+          bisectDate_Maringa = d3.bisector(function(d) { return d.DeltaT; }).left,
+          i_Maringa = bisectDate_Maringa(dataMaringaConfirmados, x0_Maringa, 1),
+          d0_Maringa = dataMaringaConfirmados[i_Maringa - 1],
+          d1_Maringa = dataMaringaConfirmados[i_Maringa];
+    if (d1_Maringa == null){
+      var d1_Maringa = dataMaringaConfirmados[i_Maringa - 1];
+    }
+    var dTrue_Maringa = x0_Maringa - d0_Maringa.DeltaT > d1_Maringa.DeltaT - x0_Maringa ? d1_Maringa : d0_Maringa; // if is true, d1, if is false d0
+    xDate_Maringa = dTrue_Maringa.DeltaT;
+
+    // Get coords - Outro             
+    var x0_Outro = xScaleConfirmadosComparacao.invert(d3.pointer(event)[0]),
+          bisectDate_Outro = d3.bisector(function(d) { return d.DeltaT; }).left,
+          i_Outro = bisectDate_Outro(dataOutroConfirmados, x0_Outro, 1),
+          d0_Outro = dataOutroConfirmados[i_Outro - 1],
+          d1_Outro = dataOutroConfirmados[i_Outro];
+    if (d1_Outro == null){
+      var d1_Outro = dataOutroConfirmados[i_Outro - 1];
+    }
+    var dTrue_Outro = x0_Outro - d0_Outro.DeltaT > d1_Outro.DeltaT - x0_Outro ? d1_Outro : d0_Outro; // if is true, d1, if is false d0
+    xDate_Outro = dTrue_Outro.DeltaT;
+
+    var mouse = d3.pointer(event);
+    //showLine();
+    // move the vertical line
+    d3.select("#comparacao_confirmados .hover-line")
+      .attr("d", function() {
+        var d = "M" + mouse[0] + "," + heightConfirmadosComparacao;
+        d += " " + mouse[0] + ",0" ;
+        return d;}
+)            
+    focusConfirmadosComparacaoMaringa.attr("transform", "translate(" + xScaleConfirmadosComparacao(xDate_Maringa) + "," + yScaleConfirmadosComparacao(dTrue_Maringa.Confirmados) + ")");
+    focusConfirmadosComparacaoMaringa.select("#comparacao_confirmados circle.Maringa")
+                 .style("stroke", colorMaringaConfirmados)
+                 .style("fill", colorMaringaConfirmados)
+                 .attr("opacity", "1");
+    focusConfirmadosComparacaoOutro.attr("transform", "translate(" + xScaleConfirmadosComparacao(xDate_Outro) + "," + yScaleConfirmadosComparacao(dTrue_Outro.Confirmados) + ")");
+    focusConfirmadosComparacaoOutro.select("#comparacao_confirmados circle.Outro")
+                 .style("stroke", colorOutroConfirmados)
+                 .style("fill", colorOutroConfirmados)
+                 .attr("opacity", "1");
+                                  
+    focusConfirmadosComparacaoText.select("#comparacao_confirmados .Maringa")
+                    .text(function() { return dTrue_Maringa.Cidade+ ": " + formatValue(dTrue_Maringa.Confirmados) + " casos (" + xDate_Maringa + " dias)"; })
+                    .attr("position", "absolute")
+                    .attr("y", heightConfirmadosComparacao-133)
+                    .attr("x", 10);
+    focusConfirmadosComparacaoText.select("#comparacao_confirmados .Outro")
+                    .text(function() { return dTrue_Outro.Cidade+ ": " + formatValue(dTrue_Outro.Confirmados) + " casos (" + xDate_Outro + " dias)"; })
+                    .attr("y", heightConfirmadosComparacao-150)
+                    .attr("x", 10);
+  }
 
  function update(selectedGroup) {
   // Create new data with the selection?
@@ -263,7 +284,7 @@ d3.csv("data/comparacao_confirmados.csv")
           .x(function(d) { return xScaleConfirmadosComparacao(d.DeltaT) })
           .y(function(d) { return yScaleConfirmadosComparacao(d.Confirmados) })
         )
-        .attr("stroke", function(d){ return "red" })  
+        .attr("stroke", function(d){ return colorOutroConfirmados })  
 
     lineMaringaConfirmados
         .datum(dataMaringaConfirmados)
@@ -273,13 +294,13 @@ d3.csv("data/comparacao_confirmados.csv")
           .x(function(d) { return xScaleConfirmadosComparacao(d.DeltaT) })
           .y(function(d) { return yScaleConfirmadosComparacao(d.Confirmados) })
         )
-        .attr("stroke", function(d){ return "black" })     
+        .attr("stroke", function(d){ return colorMaringaConfirmados })     
 
-    dataLegendConfirmadosComparacao = [{ color: "red",   name: selectedGroup },
-                                       { color: "black", name: "Maringá" }]
+    dataLegendConfirmadosComparacao = [{ color: colorOutroConfirmados,   name: selectedGroup },
+                                       { color: colorMaringaConfirmados, name: "Maringá" }]
     // Create legend
 
-    var legendTextConfirmadosComparacao = gConfirmadosComparacao.selectAll("#confirmados_comparacao text.legend")
+    var legendTextConfirmadosComparacao = gConfirmadosComparacao.selectAll("#comparacao_confirmados text.legend")
                                                                  .data(dataLegendConfirmadosComparacao)                  
                 
     legendTextConfirmadosComparacao.enter().append("text")
@@ -289,7 +310,7 @@ d3.csv("data/comparacao_confirmados.csv")
                .attr("class", "legend")             
                  .attr('x', 25)
                  .attr('y', function(d, i) {
-                   return (i * 13 + 19.5);
+                   return (i * 17.3+11);
                  })
                  .text(function(d) {
                    return d.name;

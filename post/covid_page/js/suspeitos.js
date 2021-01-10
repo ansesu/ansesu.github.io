@@ -123,8 +123,11 @@ d3.csv("data/suspeitos.csv")
           bisectDate = d3.bisector(function(d) { return d.Data; }).left,
           i = bisectDate(data, x0, 1),
           d0 = data[i - 1],
-          d1 = data[i],
-          dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0; // if is true, d1, if is false d0
+          d1 = data[i];
+    if (d1 == null){
+        d1 = data[i - 1];
+    }          
+    var dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0; // if is true, d1, if is false d0
     xDate = dTrue.Data;
     d3.select("#suspeitos .hover-line")
        .attr("d", function() {

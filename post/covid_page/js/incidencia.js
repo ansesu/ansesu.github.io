@@ -1,5 +1,5 @@
 //Margin
-const marginIncidencia = { top: 10, right: 10, bottom: 40, left: 44 };
+const marginIncidencia = { top: 15, right: 10, bottom: 40, left: 44 };
 
 //Width and height
 const widthIncidencia = 600 - marginIncidencia.left - marginIncidencia.right;
@@ -203,10 +203,10 @@ function plotIncidencia (data_path) {
 			          .attr('class', 'legend')
 			           .attr('x', widthIncidencia*.86)
 			           .attr('y', function(d, i) {
-			             return i * 13 - 9.5;
+			             return i * 17.3-15;
 			           })
-			           .attr('width', 10)
-			           .attr('height', 10)
+			           .attr('width', 12)
+			           .attr('height', 12)
 		               .transition()
 		                .duration(300) 
 			            .style('fill', function(d) {
@@ -223,7 +223,7 @@ function plotIncidencia (data_path) {
 		    	       .attr("class", "legend")					    
 		               .attr('x', widthIncidencia*.86+15)
 		               .attr('y', function(d, i) {
-		                 return (i * 13);
+		                 return (i * 17.3)-4;
 		               })
 		               .text(function(d) {
 		                 return d.year;

@@ -21,56 +21,207 @@
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/formatter.js&#34;&gt; &lt;/script&gt;
 &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34;&gt;
 &lt;p&gt;&lt;strong&gt;(Post temporário)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Testando os gráficos do site do COVID. A seguir, os gráficos confeccionados até então.&lt;/p&gt;
+&lt;p&gt;Testando os gráficos do site do COVID.&lt;/p&gt;
+&lt;h1 id=&#34;informações-gerais&#34;&gt;Informações gerais&lt;/h1&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #525252; color:#f0f0f0; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               Casos diários 
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #bdbdbd; border-radius: 0px 0px 15px 15px;&#34;&gt;
+145 (mm: 154)
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #525252; color:#f0f0f0; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               Casos totais 
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #bdbdbd; border-radius: 0px 0px 15px 15px;&#34;&gt;
+23.641
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #ef3b2c; color:#f0f0f0; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               Óbitos diários 
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #fcbba1;border-radius: 0px 0px 15px 15px;&#34;&gt;
+0 (mm: 2)
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #ef3b2c; color:#f0f0f0; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               Óbitos totais 
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #fcbba1;border-radius: 0px 0px 15px 15px;&#34;&gt;
+323
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #bdbdbd;border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               Casos ativos 
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #f0f0f0;border-radius: 0px 0px 15px 15px;&#34;&gt;
+1.798 (+82)
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #e5c494; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               Suspeitos
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #f6e8c3;border-radius: 0px 0px 15px 15px;&#34;&gt;
+17.162 (+222)
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #92c5de; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+              Encerrados
+           &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #d3e5ed; border-radius: 0px 0px 15px 15px;&#34;&gt;
+60.399 (+371)
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #41ae76; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+              Número de reprodução
+           &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #d9f0a3; border-radius: 0px 0px 15px 15px;&#34;&gt;
+0,9
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;row&#34; style=&#34;padding-bottom: 10px&#34;&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #4292c6; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               Tempo de dobra
+           &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #c6dbef;border-radius: 0px 0px 15px 15px;&#34;&gt;
+105 dias
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #cc2341; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               Enfermaria (COVID) 
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #e09daa;  border-radius: 0px 0px 15px 15px;&#34;&gt;
+65.3% (35.6%)
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #6a51a3; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               UTI adulto (COVID) 
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #bcbddc; border-radius: 0px 0px 15px 15px;&#34;&gt;
+79.0% (52.3%)
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3 col-xs-3 mt-3 mb-3&#34;&gt;
+         &lt;div class=&#34;panel panel-default&#34;&gt;
+             &lt;div class=&#34;panel-heading&#34;, style=&#34;text-align: center; background-color: #35978f; border-radius: 15px 15px 0px 0px;&#34;&gt; 
+               UTI neonatal (COVID)
+         	 &lt;/div&gt;
+                &lt;div class=&#34;panel-body&#34;, style=&#34;text-align: center; background-color: #c7eae5; border-radius: 0px 0px 15px 15px;&#34;&gt;
+52.5% (20.0%)
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&#34;text-align: center;&#34;&gt;mm: média móvel dos últimos sete dias.&lt;/p&gt;
+&lt;p style=&#34;text-align: center;&#34;&gt;
+Última atualização dos dados: 09.01.2021
+&lt;/p&gt;
 &lt;h1 id=&#34;evolução-da-covid-19-em-maringá&#34;&gt;Evolução da COVID-19 em Maringá&lt;/h1&gt;
-&lt;h2 id=&#34;casos-confirmados-e-ativos-acumulados&#34;&gt;Casos confirmados e ativos acumulados&lt;/h2&gt;
-&lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá.&lt;/p&gt;
+&lt;h2 id=&#34;casos-acumulados-e-ativos-no-tempo&#34;&gt;Casos acumulados e ativos no tempo&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados acumulados (em preto) e casos ativos (em cinza) de COVID-19 em Maringá. As marcas em forma de asterisco vermelho indicam os decretos da prefeitura do município que impuseram algum tipo de restrição aos moradores. Já as marcas em forma de asterisco verde indicam a flexibilização dessas medidas.&lt;/p&gt;
 &lt;div id=&#34;confirmados-ativos&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/confirmados_ativos.js&#34;&gt; &lt;/script&gt;
-&lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados diarios de COVID-19 em Maringá.&lt;/p&gt;
+&lt;h2 id=&#34;casos-diários-no-tempo&#34;&gt;Casos diários no tempo&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de casos diários confirmados de COVID-19 em Maringá. De forma idêntica à figura anterior, as marcas em forma de asterisco vermelho indicam os decretos da prefeitura do município que impuseram algum tipo de restrição aos moradores. Já as marcas em forma de asterisco verde indicam a flexibilização dessas medidas. A curva cinza representa uma média móvel de casos diários em uma janela de sete dias (ela pode ser ativada ou desativada clicando na caixa de seleção acima da figura ou na legenda, no canto superior esquerdo, da figura).&lt;/p&gt;
 &lt;p&gt;&lt;input type=&#34;checkbox&#34; class=&#34;checkboxConfirmadosDiario&#34; style=&#34;margin-right:5px&#34; checked&gt;&lt;label&gt; &lt;b&gt;Média móvel &lt;/b&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;div id=&#34;confirmados_diario&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/confirmados_diario.js&#34;&gt; &lt;/script&gt;
-&lt;h2 id=&#34;obitos-acumulados&#34;&gt;Obitos acumulados&lt;/h2&gt;
-&lt;p&gt;A figura abaixo mostra a evolução do número de mortes acumuladas por COVID-19 em Maringá.&lt;/p&gt;
+&lt;h2 id=&#34;mortes-no-tempo&#34;&gt;Mortes no tempo&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de mortes por COVID-19 em Maringá. De forma idêntica às figuras anteriores, as marcas em forma de asterisco vermelho indicam os decretos da prefeitura do município que impuseram algum tipo de restrição aos moradores. Já as marcas em forma de asterisco verde indicam a flexibilização dessas medidas.&lt;/p&gt;
 &lt;div id=&#34;mortes&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/mortes.js&#34;&gt; &lt;/script&gt;
-&lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados diarios de COVID-19 em Maringá.&lt;/p&gt;
+&lt;h2 id=&#34;mortes-diárias-no-tempo&#34;&gt;Mortes diárias no tempo&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de mortes diárias por COVID-19 em Maringá. De forma idêntica à figura anterior, as marcas em forma de asterisco vermelho indicam os decretos da prefeitura do município que impuseram algum tipo de restrição aos moradores. Já as marcas em forma de asterisco verde indicam a flexibilização dessas medidas. A curva cinza representa uma média móvel de casos diários em uma janela de sete dias (ela pode ser ativada ou desativada clicando na caixa de seleção acima da figura ou na legenda, no canto superior esquerdo, da figura).&lt;/p&gt;
 &lt;p&gt;&lt;input type=&#34;checkbox&#34; class=&#34;checkboxMortesDiario&#34; style=&#34;margin-right:5px&#34; checked&gt;&lt;label&gt; &lt;b&gt;Média móvel &lt;/b&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;div id=&#34;mortes_diario&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/mortes_diario.js&#34;&gt; &lt;/script&gt;
-&lt;h2 id=&#34;suspeitos-em-acompanhamento&#34;&gt;Suspeitos em acompanhamento&lt;/h2&gt;
-&lt;p&gt;A figura abaixo mostra a evolução do número de suspeitos por COVID-19 em Maringá.&lt;/p&gt;
+&lt;h2 id=&#34;suspeitos-em-acompanhamento-no-tempo&#34;&gt;Suspeitos em acompanhamento no tempo&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número de casos suspeitos de COVID-19 em acompanhamento em Maringá. As marcas em forma de asterisco vermelho indicam os decretos da prefeitura do município que impuseram algum tipo de restrição aos moradores. Já as marcas em forma de asterisco verde indicam a flexibilização dessas medidas.&lt;/p&gt;
 &lt;div id=&#34;suspeitos&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/suspeitos.js&#34;&gt; &lt;/script&gt;
-&lt;p&gt;A figura abaixo mostra a evolução do número de casos confirmados diarios de COVID-19 em Maringá.&lt;/p&gt;
+&lt;h2 id=&#34;casos-suspeitos-e-encerrados-no-tempo&#34;&gt;Casos suspeitos e encerrados no tempo&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a evolução do número diário de novos casos suspeitos (em bege) e de casos encerrados (em azul, a partir do dia 31/03/2020) de COVID-19 em Maringá. As marcas em forma de asterisco vermelho indicam os decretos da prefeitura do município que impuseram algum tipo de restrição aos moradores. Já as marcas em forma de asterisco verde indicam a flexibilização dessas medidas. Duas curvas mostram as médias móveis de suspeitos e casos encerrados diários em uma janela de sete dias (elas podem ser ativadas ou desativadas clicando na caixa de seleção acima da figura ou, para desativar cada uma individualmente, na legenda da figura).&lt;/p&gt;
 &lt;p&gt;&lt;input type=&#34;checkbox&#34; class=&#34;checkboxSuspeitosEncerradosDiario&#34; style=&#34;margin-right:5px&#34; checked&gt;&lt;label&gt; &lt;b&gt;Média móvel &lt;/b&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;div id=&#34;suspeitos_encerrados_diario&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/suspeitos_encerrados_diario.js&#34;&gt; &lt;/script&gt;
-&lt;h2 id=&#34;ocupacao-dos-leitos&#34;&gt;Ocupacao dos leitos&lt;/h2&gt;
-&lt;p&gt;A figura abaixo mostra a evolução de ocupacao dos leitos hospitalares em Maringá.&lt;/p&gt;
+&lt;h2 id=&#34;ocupação-de-leitos-no-tempo&#34;&gt;Ocupação de leitos no tempo&lt;/h2&gt;
+&lt;p&gt;As figuras abaixo mostram a evolução da porcentagem de leitos totais e leitos exclusivos para COVID-19 disponíveis em Maringá (clique nos pontos de cada figura para visualizar informações sobre a quantidade absoluta de leitos em determinada data).&lt;/p&gt;
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotOcupacao(&#39;data/ocupacao.csv&#39;, false)&#34;&gt;Total&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotOcupacao(&#39;data/ocupacao_covid.csv&#39;, false)&#34;&gt;COVID&lt;/button&gt;&lt;/p&gt;
 &lt;div id=&#34;ocupacao&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/ocupacao.js&#34;&gt; &lt;/script&gt;
-&lt;h2 id=&#34;número-de-reprodução&#34;&gt;Número de reprodução&lt;/h2&gt;
+&lt;h2 id=&#34;número-de-reprodução-instantâneo-no-tempo&#34;&gt;Número de reprodução instantâneo no tempo&lt;/h2&gt;
 &lt;p&gt;A figura abaixo mostra nossas estimativas para a evolução do número de reprodução instantâneo em Maringá. A seção Número de reprodução instantâneo, em nossa página sobre Modelos Epidêmicos, detalha o modelo utilizado para realizar as estimativas. Essa medida prioriza o período mais recente da epidemia, uma vez que considera apenas seus últimos sete dias.&lt;/p&gt;
-&lt;p&gt;O número de reprodução deve ser interpretado em conjunto com outras medidas como o número absoluto de casos, tal qual orienta o site rt.live. No exemplo exposto no site, dois estados americanos com números de reprodução diferentes são comparados em uma situação hipotética. Supõe-se que um dos estados apresenta 1000 novos casos diários e um valor do número de reprodução efetivo. Enquanto isso, outro estado apresenta 10 casos diários e . Nessa situação, apesar de o segundo estado apresentar um número de reprodução mais elevado, é o primeiro que está em pior situação. O pior de todos os casos é aquele em que o número de reprodução e o número de casos são ambos elevados.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;O número de reprodução deve ser interpretado em conjunto com outras medidas como  o número absoluto de casos, tal qual orienta o site 
+&lt;a href=&#34;https://rt.live/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rt.live&lt;/a&gt;. No exemplo exposto no site, dois estados americanos com números de reprodução diferentes são comparados em uma situação hipotética. Supõe-se que um dos estados apresenta 1000 novos casos diários e um valor $\mathcal{R}_{ef}(t)=1$ do número de reprodução efetivo. Enquanto isso, outro estado apresenta 10 casos diários e $\mathcal{R}_{ef}(t)=1{,}1$. Nessa situação, apesar de o segundo estado apresentar um número de reprodução mais elevado, é o primeiro que está em pior situação. O pior de todos os casos é aquele em que o número de reprodução e o número de casos são ambos elevados.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div id=&#34;numero-de-reproducao&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/numero_de_reproducao.js&#34;&gt; &lt;/script&gt;
-&lt;h2 id=&#34;tempo-de-dobra&#34;&gt;Tempo de dobra&lt;/h2&gt;
+&lt;h2 id=&#34;tempo-de-dobra-ou-duplicação-no-tempo&#34;&gt;Tempo de dobra ou duplicação no tempo&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra uma estimativa do tempo de dobra ou tempo de duplicação do número de casos ao longo do tempo. Supondo um crescimento exponencial, o tempo de dobra indica o tempo necessário para que o número de casos dobre. Conforme discutido em uma seção dedicada ao Modelo exponencial (veja nossa página sobre Modelos Epidêmicos, o crescimento exponencial é uma característica que marca o início de uma epidemia. A estimativa do tempo de dobra em função do tempo é um indicativo do quão rápido o número de casos está variando: quanto menor o valor do tempo de dobra, mais rapidamente o número de casos aumenta no tempo.&lt;/p&gt;
 &lt;div id=&#34;tempo_dobra&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/tempo_dobra.js&#34;&gt; &lt;/script&gt;
-&lt;h2 id=&#34;incidencia-por-faixa-etaria-e-genero&#34;&gt;Incidencia por faixa etaria e genero&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;É importante novamente observar que as estimativas para o tempo de dobra podem sofrer de vieses relacionados à quantidade limitada de testes disponíveis para detectar a presença do vírus em pessoas suspeitas.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;incidência-por-faixa-etária-e-gênero&#34;&gt;Incidência por faixa etária e gênero&lt;/h2&gt;
+&lt;p&gt;A figura abaixo mostra a incidência de COVID-19 por mil habitantes para cada faixa etária em Maringá. Os dados referentes à faixa etária e gênero dos casos confirmados foram obtidos dos boletins diários disponibilizados pela Secretaria de Saúde de Maringá a partir do dia 01/05/2020. Além disso, os dados demográficos populacionais de Maringá utilizados para calcular a incidência por faixa etária e gênero foram retirados do 
+&lt;a href=&#34;https://cidades.ibge.gov.br/brasil/pr/maringa/panorama&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;último censo demográfico&lt;/a&gt; realizado pelo IBGE no ano de 2010.&lt;/p&gt;
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotIncidencia(&#39;data/incidencia_genero.csv&#39;, false)&#34;&gt;Por gênero&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotIncidencia(&#39;data/incidencia.csv&#39;, false)&#34;&gt;Geral&lt;/button&gt;&lt;/p&gt;
 &lt;div id=&#34;incidencia&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/incidencia.js&#34;&gt; &lt;/script&gt;
-&lt;h2 id=&#34;comparacao-com-outras-cidades&#34;&gt;Comparacao com outras cidades&lt;/h2&gt;
+&lt;h1 id=&#34;comparação-com-outras-cidades&#34;&gt;Comparação com outras cidades&lt;/h1&gt;
+&lt;p&gt;Além das tentativas de modelagem da epidemia de COVID-19, uma outra possibilidade para avaliar a evolução da doença em nossa cidade passa por comparar os dados atuais da epidemia em Maringá com os dados (passados ou presentes) de outras cidades de tamanho semelhante no Brasil e no mundo. De fato, investigações muito recentes apontam que o tamanho (população) de uma cidade pode afetar a maneira como a COVID-19 se propaga, possivelmente devido ao fato de o número de conexões entre pessoas aumentar com o tamanho da cidade 
+&lt;a href=&#34;#bettencourt&#34;&gt;[1]&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;número-de-casos-acumulados&#34;&gt;Número de casos acumulados&lt;/h2&gt;
+&lt;p&gt;Na figura abaixo, mostramos o número de casos acumulados em Maringá e a mesma quantidade para diferentes cidades que podem ser selecionadas.&lt;/p&gt;
 &lt;p&gt;&lt;select id=&#34;selectButtonConfirmados&#34;&gt;&lt;/select&gt;&lt;/p&gt;
-&lt;div id=&#34;confirmados_comparacao&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;comparacao_confirmados&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/comparacao_confirmados.js&#34;&gt; &lt;/script&gt;
-</description>
+&lt;p&gt;A primeira dessas cidades é Bologna (388 mil habitantes) na Itália. Nesse caso, notamos que o perfil de evolução da COVID-19 em Maringá é muito diferente do observado para Bologna. Uma diferença marcante ocorre nos primeiros dias após o surgimento do primeiro caso. Esse número passou de 2 para 41 nos seis primeiros dias (após o registro do primeiro caso) de epidemia em Bologna. Nesse mesmo período, o número de casos em Maringá aumentou de 1 para 4 casos. Esse comportamento indica que as duas cidades devem ter tomado decisões muito distintas após o surgimento do primeiro caso. De fato, a Itália apresentou o primeiro caso da doença em 20/02, porém, entrou em &lt;em&gt;lockdown&lt;/em&gt; apenas no dia 09/03. A cidade de Bologna já registrava 80 casos de COVID-19 no dia 09/03 - nove dias após o primeiro caso no município - de modo que as 
+&lt;a href=&#34;https://www.nytimes.com/interactive/2020/04/05/world/europe/italy-coronavirus-lockdown-reopen.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ações dos governantes da Itália podem ter sido tomadas muito tardiamente&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;número-de-mortes-acumuladas&#34;&gt;Número de mortes acumuladas&lt;/h2&gt;
+&lt;p&gt;Decidimos também comparar o número de mortes associadas à COVID-19 em Maringá com o reportado em outras cidades (as mesmas do gráfico anterior, com a exceção de Bologna).&lt;/p&gt;
+&lt;p&gt;&lt;select id=&#34;selectButtonMortes&#34;&gt;&lt;/select&gt;&lt;/p&gt;
+&lt;div id=&#34;comparacao_mortes&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/comparacao_mortes.js&#34;&gt; &lt;/script&gt;</description>
     </item>
     
     <item>

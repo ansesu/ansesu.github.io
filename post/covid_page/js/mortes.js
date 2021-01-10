@@ -83,7 +83,7 @@ d3.csv("data/mortes.csv")
     		  .attr("class", "line")
     		  .datum(data)
     		  .attr("d", lineMortes)
-          .attr("stroke", "#fc8d62");
+          .attr("stroke", "#ef3b2c");
 
 	//Create tooltip
   var focusMortes = gMortes.append("g")
@@ -123,8 +123,11 @@ d3.csv("data/mortes.csv")
           bisectDate = d3.bisector(function(d) { return d.Data; }).left,
           i = bisectDate(data, x0, 1),
           d0 = data[i - 1],
-          d1 = data[i],
-          dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0; // if is true, d1, if is false d0
+          d1 = data[i];
+    if (d1 == null){
+        d1 = data[i - 1];
+    }          
+    var dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0; // if is true, d1, if is false d0
     xDate = dTrue.Data;
     d3.select("#mortes .hover-line")
        .attr("d", function() {
@@ -134,8 +137,8 @@ d3.csv("data/mortes.csv")
        })			        
 		focusMortes.attr("transform", "translate(" + xScaleMortes(xDate) + "," + yScaleMortes(dTrue.Mortes) + ")");
     focusMortes.select("circle")
-                 .style("stroke", "#fc8d62")
-                 .style("fill", "#fc8d62")
+                 .style("stroke", "#ef3b2c")
+                 .style("fill", "#ef3b2c")
 	          	   .attr("opacity", "1");
     focusMortesText.select(".tooltip-text")
                     .text(function() { return "Mortes: " + formatValue(dTrue.Mortes); })
