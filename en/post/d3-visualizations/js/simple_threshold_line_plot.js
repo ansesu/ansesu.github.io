@@ -218,7 +218,7 @@ d3.csv("data/rt_maringa_data.csv")
 					 	   .attr("text-anchor", "end")
 					 	   .attr("x", -5);
 			focusThreshold.select("#thresholdplot .tooltip-x")
-					 	   .attr("y", heightThreshold*.05-yScaleThreshold(dTrue.mean_r))
+					 	   .attr("y", heightThreshold*.045-yScaleThreshold(dTrue.mean_r))
 					 	   .attr("text-anchor", "end")
 					 	   .attr("x", -5);
 		} else {
@@ -227,7 +227,7 @@ d3.csv("data/rt_maringa_data.csv")
 						   .attr("text-anchor", "start")
 						   .attr("x", 5);
 			focusThreshold.select("#thresholdplot .tooltip-x")
-						   .attr("y", heightThreshold*.05-yScaleThreshold(dTrue.mean_r))
+						   .attr("y", heightThreshold*.045-yScaleThreshold(dTrue.mean_r))
 						   .attr("text-anchor", "start")
 					       .attr("x", 5);
         }
