@@ -166,6 +166,10 @@
   stroke: #542788;
   stroke-width: 2;
 }
+.tooltip-text {
+  font-family: Helvetica;
+  font-size: 14px;
+}
 .tooltip-html {
   position: absolute;
   width:  auto;

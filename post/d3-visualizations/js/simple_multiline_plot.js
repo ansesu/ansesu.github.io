@@ -3,7 +3,7 @@ const marginMLine = { top: 10, right: 0, bottom: 25, left: 51 };
 
 //Width and Height
 const widthMLine = 600 - marginMLine.left - marginMLine.right;
-const heightMLine = 400 - marginMLine.top - marginMLine.bottom;
+const heightMLine = 300 - marginMLine.top - marginMLine.bottom;
 
 //For converting data
 var parseTimeMLine = d3.timeParse("%d/%m/%Y");
@@ -155,7 +155,7 @@ d3.csv("data/occupancy_maringa_data.csv")
     var focusPerLineMLine = focusMLine.selectAll('.focus-per-line')
                                       .data(categoriesMLine)
                                       .enter().append("g")
-                                       .attr("class", "focus-per-line");		
+                                       .attr("class", "focus-per-line");
 
     focusPerLineMLine.append("circle") 
                       .attr("opacity", "0")
@@ -163,6 +163,7 @@ d3.csv("data/occupancy_maringa_data.csv")
                       .style("stroke", function(d) {
                       	return colorMLine(d.name);
                       });  
+    focusPerLineMLine.append("text");
 
     svgMLine.append('rect') 
              .attr("class", "overlay")

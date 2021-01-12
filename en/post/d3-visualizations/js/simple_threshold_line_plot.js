@@ -3,7 +3,7 @@ const marginThreshold = { top: 10, right: 0, bottom: 25, left: 54 };
 
 //Width and height
 const widthThreshold = 600 - marginThreshold.left - marginThreshold.right;
-const heightThreshold = 400 - marginThreshold.top - marginThreshold.bottom;
+const heightThreshold = 300 - marginThreshold.top - marginThreshold.bottom;
 
 //For converting data
 var parseTimeThreshold = d3.timeParse("%Y-%m-%d");
@@ -211,20 +211,20 @@ d3.csv("data/rt_maringa_data.csv")
 		    		   .attr("opacity", "1");
 		if (dTrue.date > medianThreshold) {
 			focusThreshold.select("#thresholdplot .tooltip-y")
-					 	   .attr("y", heightThreshold*.96-yScaleThreshold(dTrue.mean_r))
+					 	   .attr("y", heightThreshold*.1-yScaleThreshold(dTrue.mean_r))
 					 	   .attr("text-anchor", "end")
 					 	   .attr("x", -5);
 			focusThreshold.select("#thresholdplot .tooltip-x")
-					 	   .attr("y", heightThreshold*.92-yScaleThreshold(dTrue.mean_r))
+					 	   .attr("y", heightThreshold*.05-yScaleThreshold(dTrue.mean_r))
 					 	   .attr("text-anchor", "end")
 					 	   .attr("x", -5);
 		} else {
 			focusThreshold.select("#thresholdplot .tooltip-y")
-						   .attr("y", heightThreshold*.96-yScaleThreshold(dTrue.mean_r))
+						   .attr("y", heightThreshold*.1-yScaleThreshold(dTrue.mean_r))
 						   .attr("text-anchor", "start")
 						   .attr("x", 5);
 			focusThreshold.select("#thresholdplot .tooltip-x")
-						   .attr("y", heightThreshold*.92-yScaleThreshold(dTrue.mean_r))
+						   .attr("y", heightThreshold*.05-yScaleThreshold(dTrue.mean_r))
 						   .attr("text-anchor", "start")
 					       .attr("x", 5);
         }

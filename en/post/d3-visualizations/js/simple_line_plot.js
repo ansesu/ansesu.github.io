@@ -3,7 +3,7 @@ const marginLine = { top: 12, right: 5, bottom: 25, left: 71 };
 
 //Width and height
 const widthLine = 600 - marginLine.left - marginLine.right;
-const heightLine = 400 - marginLine.top - marginLine.bottom;
+const heightLine = 300 - marginLine.top - marginLine.bottom;
 
 //For converting data
 var parseTimeLine = d3.timeParse("%d/%m/%Y");
@@ -146,7 +146,7 @@ d3.csv("data/confirmed_maringa_data.csv")
 			 	      .attr("text-anchor", "end")
 			 	      .attr("x", -5);
 		    focusLine.select("#lineplot .tooltip-date")
-			 	      .attr("y", heightLine*.92-yScaleLine(dTrue.Confirmed))
+			 	      .attr("y", heightLine*.91-yScaleLine(dTrue.Confirmed))
 			 	      .attr("text-anchor", "end")
 			 	      .attr("x", -5);
 		} else {
@@ -155,7 +155,7 @@ d3.csv("data/confirmed_maringa_data.csv")
 					  .attr("text-anchor", "start")
 					  .attr("x", 5);
 			focusLine.select("#lineplot .tooltip-date")
-					  .attr("y", heightLine*.57-yScaleLine(dTrue.Confirmed))
+					  .attr("y", heightLine*.56-yScaleLine(dTrue.Confirmed))
 					  .attr("text-anchor", "start")
 					  .attr("x", 5);
         }
