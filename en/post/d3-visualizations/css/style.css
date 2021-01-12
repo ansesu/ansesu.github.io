@@ -133,14 +133,14 @@
 .line {
   fill: none;
   stroke: #252525;
-  stroke-width: 2.5;
+  stroke-width: 1.5;
 }
 .map {
   stroke: #737373;
   stroke-width: .5;
 }
 .multiline{
-  stroke-width:1.25;
+  stroke-width:1.5;
   fill: none;
 }
 .one-line {
@@ -151,7 +151,7 @@
 .outlined {
     fill:   none;
     stroke: url(#mainGradient);
-    stroke-width: 1.25;
+    stroke-width: 1.5;
 }
 .overlay {
   fill: none;
