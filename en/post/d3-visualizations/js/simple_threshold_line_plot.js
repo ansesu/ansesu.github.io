@@ -1,5 +1,5 @@
 //Margin
-const marginThreshold = { top: 10, right: 0, bottom: 25, left: 54 };
+const marginThreshold = { top: 10, right: 5, bottom: 25, left: 54 };
 
 //Width and height
 const widthThreshold = 600 - marginThreshold.left - marginThreshold.right;
@@ -180,8 +180,11 @@ d3.csv("data/rt_maringa_data.csv")
 		    bisectx = d3.bisector(function(d) { return d.date; }).left,
 		    i = bisectx(data, x0, 1),
 		    d0 = data[i - 1],
-		    d1 = data[i],
-		    dTrue = x0 - d0.date > d1.date - x0 ? d1 : d0, // if is true, d1, if is false d0
+            d1 = data[i];
+	    if (d1 == null){
+	        d1 = data[i - 1];
+	    }          
+	    var dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0, // if is true, d1, if is false d0
 			xValue = dTrue.date;
 		d3.select("#thresholdplot .hover-line")
 		   .attr("d", function() {

@@ -131,8 +131,11 @@ d3.csv("data/simple_bandplot_data.csv")
     	    bisectx = d3.bisector(function(d) { return d.x; }).left,
             i = bisectx(data, x0, 1),
             d0 = data[i - 1],
-            d1 = data[i],
-            dTrue = x0 - d0.x > d1.x - x0 ? d1 : d0, // if is true, d1, if is false d0
+            d1 = data[i];
+	    if (d1 == null) {
+	        d1 = data[i - 1];
+	    }          
+	    var dTrue = x0 - d0.Date > d1.Date - x0 ? d1 : d0; // if is true, d1, if is false d0
             xValue = dTrue.x;
         d3.select("#bandplot .hover-line")
            .attr("d", function() {

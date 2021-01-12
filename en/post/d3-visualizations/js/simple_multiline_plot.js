@@ -1,5 +1,5 @@
 //Margin
-const marginMLine = { top: 10, right: 0, bottom: 25, left: 51 };
+const marginMLine = { top: 10, right: 3, bottom: 25, left: 51 };
 
 //Width and Height
 const widthMLine = 600 - marginMLine.left - marginMLine.right;
@@ -183,10 +183,19 @@ d3.csv("data/occupancy_maringa_data.csv")
             bisectDate = d3.bisector(function(d) { return d.Date; }).left,
             i = bisectDate(data, x0, 1),
             d0 = data[i - 1],
-            d1 = data[i],
-            dTrue = x0 - d0.Date > d1.Date - x0 ? d1 : d0,
-            idx = x0 - d0.Date > d1.Date - x0 ? i : i-1,
-        xDate = dTrue.Date;
+            d1 = data[i];
+        if (d1 == null){
+            d1 = data[i - 1];
+        }       
+        var dTrue = x0 - d0.Data > d1.Data - x0 ? d1 : d0, // if is true, d1, if is false d0
+            idx = x0 - d0.Date > d1.Date - x0 ? i : i-1;
+        if (data[idx] == null) {
+           var data_idx = data[idx-1],
+               xDate = data_idx.Date;
+        } else {
+           var data_idx = data[idx],
+               xDate = data_idx.Date;
+        }
         d3.select("#multilineplot .hover-line")
            .attr("d", function() {
            		var dVar = "M" + xScaleMLine(xDate) + "," + heightMLine;
@@ -213,15 +222,15 @@ d3.csv("data/occupancy_maringa_data.csv")
         d3.selectAll(".focus-per-line")
            .attr("transform", function(d, i) {
            		var totalOccupancy = function(){
-            		total = data[idx][d.name+"_total"];
+            		total = data_idx[d.name+"_total"];
             		if (Number.isNaN(total)) {
             			return "";
             		} else {
-            			return " (" + Math.round(data[idx][d.name]*total/100)+ "/" + total + ")";
+            			return " (" + Math.round(data_idx[d.name]*total/100)+ "/" + total + ")";
             		}
             }
        		d3.select(this).select('.focus-per-line text')
-             .text(d.name + ": " + data[idx][d.name].toFixed(2) + "%" + totalOccupancy())
+             .text(d.name + ": " + data_idx[d.name].toFixed(2) + "%" + totalOccupancy())
              .attr("text-anchor", function() {
               	if (xDate > medianMLine) {
               		return "end";
@@ -236,10 +245,10 @@ d3.csv("data/occupancy_maringa_data.csv")
               		return 5;
               	}
 	           })
-             .attr("y", heightMLine - yScaleMLine(data[idx][d.name]) - 12.5 - (2-i)*15.5)
+             .attr("y", heightMLine - yScaleMLine(data_idx[d.name]) - 12.5 - (2-i)*15.5)
              .attr("fill", colorMLine(d.name));
              
-       		   return "translate(" + xScaleMLine(xDate) + "," + yScaleMLine(data[idx][d.name]) +")";
+       		   return "translate(" + xScaleMLine(xDate) + "," + yScaleMLine(data_idx[d.name]) +")";
           });
         focusPerLineMLine.selectAll("circle") 
                          .attr("opacity", "1")
