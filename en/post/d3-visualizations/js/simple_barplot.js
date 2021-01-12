@@ -3,7 +3,7 @@ const marginBar = { top: 10, right: 10, bottom: 25, left: 56 };
 
 //Width and height
 const widthBar = 600 - marginBar.left - marginBar.right;
-const heightBar = 400 - marginBar.top - marginBar.bottom;
+const heightBar = 300 - marginBar.top - marginBar.bottom;
 
 //Load in the data
 d3.csv("data/month_simple_data.csv")

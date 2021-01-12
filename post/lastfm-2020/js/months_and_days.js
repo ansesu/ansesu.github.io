@@ -70,7 +70,7 @@ function plotCharts (data_path) {
 	    var subgroups = data.columns.slice(1,3)
 	    var groups = d3.map(data, function(d){return(d.category_str_pt)})
 
-	    if ((data_path==="data/month_data.csv") || (data_path === "../lastfm-2020/js/months_and_days.js")) {
+	    if ((data_path==="data/month_data.csv") || (data_path === "../lastfm-2020/data/month_data.csv")) {
 	    	var colors = ['#fb9a99','#e31a1c'];
 	    } else {
 	    	var colors = ['#a6cee3','#1f78b4'];

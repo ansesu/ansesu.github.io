@@ -151,14 +151,14 @@ function plotStreaks(data_path) {
                               return Math.sqrt(heightStreaks - yScaleStreaks(d.streak));
                            })
                            .attr("fill", function() {
-                            if (data_path == 'data/streak_artist_data.csv'){
+                            if ((data_path==="data/streak_artist_data.csv") || (data_path === "../lastfm-2020/data/streak_artist_data.csv")) {
                               return "#f16913";
                             } else {
                               return "#4d4d4d";
                             }
                            })
                           .attr("stroke", function() {
-                            if (data_path == 'data/streak_artist_data.csv'){
+                            if ((data_path==="data/streak_artist_data.csv") || (data_path === "../lastfm-2020/data/streak_artist_data.csv")) {
                               return "#f16913";
                             } else {
                               return "#4d4d4d";
