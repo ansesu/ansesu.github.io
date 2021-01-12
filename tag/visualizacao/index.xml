@@ -169,8 +169,8 @@ function reloadchart() {
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/comparacao_confirmados.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: gráfico multilinhas (com caixa de seleção para mudar categoria).&lt;p/&gt;
 &lt;h1 id=&#34;scatter-plot&#34;&gt;Scatter plot&lt;/h1&gt;
-&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;../lastfm-2020/data/streak_artist_data.csv&#39;)&#34;&gt;Artist&lt;/button&gt;
-&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;../lastfm-2020/data/streak_track_data.csv&#39;)&#34;&gt;Track&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;../lastfm-2020/data/streak_artist_data.csv&#39;)&#34;&gt;Artista&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;../lastfm-2020/data/streak_track_data.csv&#39;)&#34;&gt;Faixa&lt;/button&gt;&lt;/p&gt;
   &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;../lastfm-2020/js/streaks.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).&lt;p/&gt;
