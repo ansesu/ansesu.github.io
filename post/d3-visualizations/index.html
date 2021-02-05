@@ -733,38 +733,45 @@
 <h1 id="gráfico-de-linha">Gráfico de linha</h1>
 <div id="lineplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_line_plot.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico de linha com barra vertical interativa indicando o valor da variável.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 1: gráfico de linha com barra vertical interativa indicando o valor da variável.<p/>
+<hr class="solid">
 <div id="bandplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_bandplot.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico de linha com intervalo de confiança e com barra vertical interativa indicando o valor da variável.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 2: gráfico de linha com intervalo de confiança e com barra vertical interativa indicando o valor da variável.<p/>
+<hr class="solid">
 <div id="multilineplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_multiline_plot.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico multilinhas com barra vertical interativa indicando o valor das variáveis.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 3: gráfico multilinhas com barra vertical interativa indicando o valor das variáveis.<p/>
+<hr class="solid">
 <div id="thresholdplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_threshold_line_plot.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico de linha com intervalo de confiança e cores diferentes definidas por um limite. Valores acima do limite são coloridos de vermelho, enquanto valores abaixo desse mesmo limite são coloridos de verde. Visualização inspirada no site rt.live.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 4: gráfico de linha com intervalo de confiança e cores diferentes definidas por um limite. Valores acima do limite são coloridos de vermelho, enquanto valores abaixo desse mesmo limite são coloridos de verde. Visualização inspirada no site rt.live.<p/>
+<hr class="solid">
 <p><select id="selectButtonConfirmados"></select></p>
 <div id="comparacao_confirmados" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/comparacao_confirmados.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico multilinhas (com caixa de seleção para mudar categoria).<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 5: gráfico multilinhas (com caixa de seleção para mudar categoria).<p/>
 <h1 id="scatter-plot">Scatter plot</h1>
 <p><button style="border-radius: 4px;" onclick="plotStreaks('../lastfm-2020/data/streak_artist_data.csv')">Artista</button>
 <button style="border-radius: 4px;" onclick="plotStreaks('../lastfm-2020/data/streak_track_data.csv')">Faixa</button></p>
   <div id="streaks" style="z-index: -1000"></div>
 <script type="text/javascript" src="../lastfm-2020/js/streaks.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 6: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).<p/>
 <h1 id="gráfico-de-barra">Gráfico de barra</h1>
 <div id="simplebarplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_barplot.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras simples.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 7: gráfico de barras simples.<p/>
+<hr class="solid">
 <p><button style="border-radius: 4px;" onclick="plotCharts('../lastfm-2020/data/month_data.csv', true)">Mensal</button>
 <button style="border-radius: 4px;" onclick=" plotCharts('../lastfm-2020/data/weekday_data.csv', false)">Semanal</button></p>
   <div id="barplot" style="z-index: -1000"></div>
 <script type="text/javascript" src="../lastfm-2020/js/months_and_days.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras agrupado (com botão para troca de categoria).<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 8: gráfico de barras agrupado (com botão para troca de categoria).<p/>
+<hr class="solid">
 <div id="hours" style="z-index: -1000"></div>
 <script type="text/javascript" src="../lastfm-2020/js/hours.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras radial.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 9: gráfico de barras radial.<p/>
+<hr class="solid">
 <script type="text/javascript"> 
 function reloadchart() {
    //alert("In function");
@@ -778,21 +785,22 @@ function reloadchart() {
 <p><button style="border-radius: 4px;" onclick="reloadchart()">Reload</button></p>
 <div id="barchartrace" style="z-index: -1000"> </div>
 <script type="text/javascript" src="../lastfm-2020/js/barchart_race.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico de corrida de barras.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 10: gráfico de corrida de barras.<p/>
+<hr class="solid">
 <p><input type="checkbox" class="checkboxConfirmadosDiario" style="margin-right:5px" checked><label> <b>Média móvel</b></label></p>
 <div id="confirmados_diario" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/confirmados_diario.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: gráfico de barras com média móvel e linha do tempo adjacente (com botão para desativação da média móvel).<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 11: gráfico de barras com média móvel e linha do tempo adjacente (com botão para desativação da média móvel).<p/>
 <h1 id="gráfico-de-área">Gráfico de área</h1>
 <div id="stream_chart" style="z-index: -1000"></div>
 <script type="text/javascript" src="../lastfm-2020/js/stream_chart.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: stream chart plot.<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 12: stream chart plot.<p/>
 <h1 id="mapa">Mapa</h1>
 <p><button style="border-radius: 4px;" onclick="plotMap('cases', false)">Casos</button>
 <button style="border-radius: 4px;" onclick="plotMap('deaths', false)">Mortes</button></p>
 <div id="paranamap" style="z-index: -1000"></div>
 <script type="text/javascript" src="js/simple_map.js"> </script>
-<p style="text-align: center" class="spacedParagraph">Figura: mapa com escala de cor dependente da amplitude da variável (com botão para troca de categoria).<p/>
+<p style="text-align: center" class="spacedParagraph">Figura 13: mapa com escala de cor dependente da amplitude da variável (com botão para troca de categoria).<p/>
 <h2 id="recursos">Recursos</h2>
 <ul>
 <li>

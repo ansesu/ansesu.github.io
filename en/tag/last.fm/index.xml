@@ -111,20 +111,20 @@
 &lt;p&gt;(The figures here shown are interactive)&lt;/p&gt;
 &lt;div id=&#34;hours&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/hours.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure: number of songs listened in each period of the day in 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure 1: number of songs listened in each period of the day in 2020.&lt;p/&gt;
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotCharts(&#39;data/month_data.csv&#39;, true)&#34;&gt;Monthly&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34; plotCharts(&#39;data/weekday_data.csv&#39;, false)&#34;&gt;Weekly&lt;/button&gt;&lt;/p&gt;
   &lt;div id=&#34;barplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/months_and_days.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure: number of songs listened in each month (day of the week) in 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure 2: number of songs listened in each month (day of the week) in 2020.&lt;p/&gt;
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_artist_data.csv&#39;)&#34;&gt;Artist&lt;/button&gt;
 &lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotStreaks(&#39;data/streak_track_data.csv&#39;)&#34;&gt;Track&lt;/button&gt;&lt;/p&gt;
   &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/streaks.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure: streaks listening the same artist (track) in 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure 3: streaks listening the same artist (track) in 2020.&lt;p/&gt;
 &lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure: temporal evolution of the volume of reproduction of my top 10 artists in 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure 4: temporal evolution of the volume of reproduction of my top 10 artists in 2020.&lt;p/&gt;
 &lt;script type=&#34;text/javascript&#34;&gt; 
 function reloadchart() {
    //alert(&#34;In function&#34;);
@@ -138,7 +138,7 @@ function reloadchart() {
 &lt;p&gt;&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;reloadchart()&#34;&gt;Reload&lt;/button&gt;&lt;/p&gt;
 &lt;div id=&#34;barchartrace&#34; style=&#34;z-index: -1000&#34;&gt; &lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/barchart_race.js&#34;&gt; &lt;/script&gt;
-&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure: bar chart race for artists with more than 30 reproductions in 2020.&lt;p/&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figure 5: bar chart race for artists with more than 30 reproductions in 2020.&lt;p/&gt;
 </description>
     </item>
     

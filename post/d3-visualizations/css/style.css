@@ -126,6 +126,9 @@
   stroke: #737373;
   stroke-width: 0.75px;
 }
+hr.solid {
+  border-top: 3px solid #bbb;
+}
 .legend text {
   font-size: 13px;
   font-family: Helvetica;
@@ -202,7 +205,7 @@
   font-weight: bold;
 }
 .spacedParagraph {
-  margin-bottom:60px;
+  margin-bottom:10px;
 } 
 .tooltip-stream {
     position: absolute;
