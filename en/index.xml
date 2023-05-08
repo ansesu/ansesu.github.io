@@ -56,13 +56,13 @@
   &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/streaks.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figure 2&lt;/b&gt;: scatter plot with variable marker size according to the variable value (with buttons to alternate between categories).&lt;p/&gt;
-&lt;p&gt;As mentioned before, the choice of the most adequate type of visualization is essential. The figure below shows the track volume of my most listened artists in 2022. In this context, it makes sense using a stream chart since it conveys the idea of volume.&lt;/p&gt;
+&lt;p&gt;As another example, the figure below shows the track volume of my most listened artists in 2022. In this context, it makes sense using a stream chart since it conveys the idea of volume.&lt;/p&gt;
 &lt;p class=&#34;spacedParagraph&#34;&gt;&lt;p/&gt;
 &lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;&lt;b&gt;Figure 3&lt;/b&gt;: stream chart plot.&lt;p/&gt;
 &lt;p class=&#34;spacedParagraph&#34;&gt;&lt;p/&gt;
-&lt;p&gt;In this post, I present some figures made by using the 
+&lt;p&gt;In this following, I present some other figures made by using the 
 &lt;a href=&#34;https://d3js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3.js package&lt;/a&gt; and their respective tutorial, besides some resources that may help in learning general concepts of data visualization. The source code of the figures can be acessed in 
 &lt;a href=&#34;https://github.com/ansesu/ansesu.github.io/tree/master/post/d3-visualizations/js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this page&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- 
