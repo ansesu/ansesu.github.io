@@ -736,7 +736,7 @@ aaaaaaa
         
       
     
-  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;https://ansesu.github.io/gallery/album/2014_nagoya.jpg&#34; data-caption=&#34;Nagoya - Japan - 2014&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;https://ansesu.github.io/gallery/album/2014_nagoya.jpg&#34; data-caption=&#34;Nagoya - Japão - 2014&#34;&gt;
   &lt;img data-src=&#34;https://ansesu.github.io/gallery/album/2014_nagoya_hu3d47acd67b2863e75d35d30025182d10_482832_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
@@ -871,14 +871,6 @@ aaaaaaa
       &lt;p class=&#34;card-title&#34; style=&#34;text-align: center; box-sizing: border-box; font-size: 75%; vertical-align: middle&#34; &gt; Jamming in Sakae - Nagoya - 2014&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;!--   &lt;div class=&#34;card&#34;&gt;
-    &lt;a data-fancybox href=&#34;https://www.youtube.com/2Gy47FRpPVE&#34;&gt;
-      &lt;img class=&#34;card-img-top img-fluid&#34; src=&#34;http://img.youtube.com/vi/2Gy47FRpPVE/mqdefault.jpg&#34; style=&#34;margin-top: 0; margin-bottom: 0&#34; /&gt;
-    &lt;/a&gt;
-    &lt;div class=&#34;card-body&#34; style=&#34;padding:5%&#34;&gt;
-      &lt;p class=&#34;card-title&#34; style=&#34;text-align:center; box-sizing: border-box; font-size:80%; vertical-align: middle&#34; &gt; Lida Kai Rewind - 2016&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt; --&gt;
 &lt;/div&gt;</description>
     </item>
     
