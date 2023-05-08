@@ -1,0 +1,1198 @@
+<!DOCTYPE html><html lang="pt" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Andre S. Sunahara">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.">
+
+  
+  <link rel="alternate" hreflang="pt" href="https://ansesu.github.io/post/rt-live-maringa/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4575b4">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J21ZHHF2LH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-J21ZHHF2LH', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu1cf0b72f1e483e21040de310180038f0_4688_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu1cf0b72f1e483e21040de310180038f0_4688_192x192_fill_lanczos_center_3.png">
+
+  <link rel="canonical" href="https://ansesu.github.io/post/rt-live-maringa/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="ansesu">
+  <meta property="og:url" content="https://ansesu.github.io/post/rt-live-maringa/">
+  <meta property="og:title" content="Uma alternativa para o cálculo do número de reprodução em Maringá | ansesu">
+  <meta property="og:description" content="Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros."><meta property="og:image" content="https://ansesu.github.io/images/icon_hu1cf0b72f1e483e21040de310180038f0_4688_512x512_fill_lanczos_center_3.png">
+  <meta property="twitter:image" content="https://ansesu.github.io/images/icon_hu1cf0b72f1e483e21040de310180038f0_4688_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="pt">
+  
+    
+      <meta property="article:published_time" content="2020-07-07T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-07T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ansesu.github.io/post/rt-live-maringa/"
+  },
+  "headline": "Uma alternativa para o cálculo do número de reprodução em Maringá",
+  
+  "datePublished": "2020-07-07T00:00:00Z",
+  "dateModified": "2020-07-07T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Andre"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "ansesu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ansesu.github.io/images/icon_hu1cf0b72f1e483e21040de310180038f0_4688_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Uma alternativa para o cálculo do número de reprodução em Maringá | ansesu</title>
+
+</head>
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Pesquisar</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Pesquisar..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">ansesu</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Alterar navegação">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">ansesu</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/gallery"><span>Galeria</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Pesquisar"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Uma alternativa para o cálculo do número de reprodução em Maringá</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span ><a href="/author/andre/">Andre</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 7, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    13 minutos de leitura
+  </span>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/rt-live-maringa/#disqus_thread"></a>
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/observatorio-covid/">
+    Projeto
+  </a>
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Gostaria de deixar claro que, de maneira alguma, posso ser considerado um epidemiologista. O intuito desse post é de alguma forma poder contribuir com estimativas mais precisas para o número de reprodução em Maringá, mas conclusões devem ser tomadas mediante a utilização de uma variedade parâmetros.</p>
+<p>O número de reprodução é o número esperado de infecções decorrentes de um indivíduo que se tornou infeccioso no tempo $t$. Do ponto de vista da saúde pública, é de interesse que esse número permaneça abaixo do limiar epidêmico ($R=1$), o que indica que a epidemia está desacelerando. O número de reprodução básico $R_0$ é a estimativa para essa quantidade no início da epidemia, quando a população inteira está suscetível à doença. Porém, ao passo que parcela da população ganha imunidade e medidas de intervenção são tomadas, o número de reprodução básico não tem mais validade e a atenção muda para o cálculo do que chamamos de número de reprodução que varia no tempo $R(t)$. Como exemplo, é possível citar os números de reprodução instantâneo e efetivo. Como se bem sabe, nenhum modelo é perfeito visto que sempre existem suposições e hipóteses necessárias para que a modelagem seja realizada. Além disso, existe uma limitação inerente da natureza do dado que, sendo mais ou menos detalhado, impacta na qualidade do modelo. A seguir, vou discorrer um pouco sobre a implementação que fizemos desses dois modelos para o caso de Maringá e sobre a limitação de dados públicos disponíveis nesse caso.</p>
+<h2>Lista de Conteúdos</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#número-de-reprodução-efetivo">Número de reprodução efetivo</a></li>
+    <li><a href="#número-de-reprodução-instantâneo">Número de reprodução instantâneo</a></li>
+    <li><a href="#resultados">Resultados</a></li>
+    <li><a href="#recursos-interessantes">Recursos interessantes</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav>
+<h2 id="número-de-reprodução-efetivo">Número de reprodução efetivo</h2>
+<p>Anteriormente, no <em>website</em> 
+<a href="http://complex.pfi.uem.br/covid" target="_blank" rel="noopener">Observatório COVID-19 Maringá</a>, calculamos o número de reprodução instantâneo $R_{inst}(t)$ utilizando o pacote EpiEstim do R 
+<a href="#EpiEstim">[1]</a>. Uma breve explicação sobre esse modelo se encontra no final desta postagem. Em poucas palavras, ele estima o número de reprodução instântaneo por meio do padrão de transmissibilidade do vírus nos últimos dias. Ao acompanhar a evolução da COVID-19 em Maringá, percebemos que as estimativas desse parâmetro poderiam estar atrasadas em alguns dias. Isso acontece devido à natureza dos dados disponibilizados pela Secretaria Municipal de Saúde de Maringá, uma vez que utilizamos dados dos casos confirmados diários de COVID-19. Disso, dois principais problemas decorrem:</p>
+<ul>
+<li>Primeiro, consideramos que o número diário de casos confirmados de COVID-19 tem a mesma interpretação de número de infecções diárias por COVID-19. No entanto, sabe-se que existe um período de incubação do vírus, um atraso da notificação e, além disso, um atraso decorrente da espera pelo resultado do teste. A data de confirmação não é igual à data de infecção do indivíduo. Assim, nossas estimativas do número de reprodução instântaneo sempre estarão atrasadas em relação ao seu valor verdadeiro;</li>
+<li>O segundo problema é que, como o volume de testes varia, é certo que estamos subestimando o número de confirmados.</li>
+</ul>
+<p>Esses dois problemas podem ser resolvidos utilizando o modelo do 
+<a href="#rt_instantaneo">número de reprodução instantâneo</a> aliado a técnicas de <em>nowcasting</em> 
+<a href="#nowcast">[2]</a> e correções no número de confirmados pelo volume de testagem. Porém, para isso, seriam necessários dados de atraso para todos os confirmados e de volume de testagem diária, o que não temos. A alternativa que aqui apresento realiza essas correções de maneira unificada, isto é, por meio de um único processo que engloba todas essas considerações. Além disso, ela relaxa a necessidade de possuir a integridade dos dados de atraso de notificação. Com esse intuito, consideramos que o atraso pode ser aproximadamente constante no tempo e estimado por informações retiradas de outra base de dados. Recorremos ao método utilizado pelo <em>website</em> 
+<a href="http://rt.live" target="_blank" rel="noopener">rt.live</a> para o cálculo do número de reprodução efetivo $R_{ef}(t)$. Diferentemente do número de reprodução instantâneo, estimativas do número de reprodução efetivo advêm de simulações da epidemia como um todo, e não utilizam apenas os dados dos últimos dias. Dessa forma, o modelo pode ser denominado <strong>generativo</strong>, pois gera a curva de contágio desde o início da epidemia. Inicialmente, supomos que o número de reprodução $R_{ef}(t)$ caminha aleatoriamente, isto é,
+$$
+\log R_{ef}(t) \sim \mathcal{N}[R_{ef}(t-1), \sigma=0.1]\ ,
+$$
+em que $\sigma$ indica o quão rapidamente o número de reprodução pode variar diariamente. Além disso, supomos que existem uma parcela de indivíduos que iniciam a epidemia e estão distribuídos como
+$$
+\text{Primeiros infectados} \sim Exp(\lambda=50)\ .
+$$
+A partir disso, podemos simular a epidemia por meio da relação
+$$
+I(t) = R_{ef}(t)\sum_s I(t-s)w(s)\ ,
+$$
+sendo $I(t)$ o número de infectados no tempo $t$, $w(s)$ a distribuição de probabilidade do intervalo de tempo de geração e $s$ o número de dias anteriores. A distribuição de probabilidade $w(s)$ é a distribuição da diferença das datas de infecção entre casos primários e secundários. Utilizamos as estimativas de Nishiura et al. 
+<a href="#serial-covid">[3]</a> para gerar a distribuição $w(s)$ com média $\mu=4.7$ dias e desvio padrão $\sigma=2.9$ dias, como utilizados no 
+<a href="http://rt.live" target="_blank" rel="noopener">rt.live</a>. O primeiro erro do modelo utilizado anteriormente foi considerar que $I(t)$ é o número de infectados diários, mas, na verdade, utilizamos dados de confirmados diários. Temos estimativas para o tempo de incubação do vírus ($\approx$ 5 dias 
+<a href="#incubation">[4]</a>) e para o atraso do resultado do teste ($\approx$ 2 dias). Para incorporar o atraso da notificação, utilizamos informações do banco de dados 
+<a href="https://opendatasus.saude.gov.br/dataset/bd-srag-2020" target="_blank" rel="noopener">SRAG 2020</a> disponibilizados pelo DATASUS. A Síndrome Respiratória Aguda Grave (SRAG) é um conjunto de sintomas (febre, tosse/dor de garganta, dispineia/saturação de oxigênio/desconforto respiratório) e tem notificação obrigatória no Sistema de Informação da Vigilância Epidemiológia da Gripe (SIVEP-Gripe). Esse sistema existe desde 2009 e foi criado com intuito de coletar informações sobre SRAG na epidemia de H1N1. O preenchimento é realizado através de uma ficha cadastral que inclui dados como data de primeiro sintomas e data de notificação. Recentemente, em 21/03/2020, o SARS-CoV-2 passou a integrar o painel de vírus testados para casos de SRAG. Utilizamos os dados de casos positivados de COVID-19 em Maringá nesse banco de dados para estimar o atraso entre os primeiros sintomas e a notificação do caso. Consideramos, aqui, que o atraso de notificação é constante no tempo (uma hipótese importante). Em outras palavras, consideramos que, desde o começo da epidemia até hoje, os casos têm o mesmo atraso de notificação. Além disso, o dado que possuímos é parcial, pois nem todos os casos de COVID-19 evoluem para SRAG, mas consideramos que é uma aproximação razoável. Uma melhor solução seria utilizar a base de dados integral para todos os casos confirmados na cidade se estes fossem disponibilizados pela Secretaria de Saúde, porém, este não é o caso. A partir do banco de dados SRAG 2020, do tempo de incubação do vírus e do atraso da testagem, estimamos uma distribuição de probabilidade que denominaremos $h(s)$ sendo $s$ o número de dias anteriores à confirmação do caso. A partir dessa distribuição, realizamos uma convolução para estimar a data de infecção dos casos, ou seja,
+$$
+I(t) = I_{c}(t)*h(s)\ ,
+$$
+em que $I_{c}(t)$ o número de casos confirmados no tempo $t$.</p>
+<p>O segundo problema (de testagem) pode ser contornado utilizando uma distribuição binomial negativa com um parâmetro de exposição para cada dia. A distribuição binomial negativa é mais flexível que uma distribuição de Poisson, pois permite que a variabilidade seja diferente do parâmetro de localização do modelo. O parâmetro de exposição, por sua vez, leva em consideração as diferentes taxas de testagem diárias. Em outras palavras, ajustamos o número de casos pela quantidade de &ldquo;oportunidade&rdquo; que um evento possui. Para entender melhor, considere que a taxa possa ser escrita como
+$$
+\text{taxa} = \dfrac{\text{contagem}}{\text{exposição}}\ .
+$$
+Para ser mais didático, considere que duas pessoas frequentam determinado hospital. Uma delas frequenta 3 vezes por semana e a outra 3 vezes por ano. É evidente que as taxas são diferentes, pois estão em escalas de tempo diferentes, apesar de a contagem de idas ao hospital ser a mesma. Dessa maneira, precisamos considerar a contagem levando em consideração a exposição, para isso, reescrevemos a equação anterior como
+$$
+\text{contagem} = \text{taxa}\cdot\text{exposição}\ .
+$$
+No caso da COVID-19, a exposição é a quantidade de testes diários. Se há mais testes, é claro que possivelmente o número de casos confirmados deve ser maior. Incorporando essa informação ao modelo temos que o número de infectados pode ser escrito como
+$$
+I(t) \sim NegBin(\mu, \alpha)\ ,
+$$
+$$
+\mu = I(t) \cdot \text{exposição}\ ,
+$$
+$$
+\alpha \sim Gamma(\mu=6,\sigma=1)\ ,
+$$
+de acordo com 
+<a href="https://docs.pymc.io/api/distributions/discrete.html#pymc3.distributions.discrete.NegativeBinomial" target="_blank" rel="noopener">esta definição</a> da distribuição binomial negativa. O número de testes diários foi estimado utilizando dados dos boletins diários de acordo com a relação:
+$$
+\text{testes} = \text{número de confirmados diário} + \text{número de encerrados diário}\ .
+$$
+Completamos os dados de testagem anteriores à data de 31/03/2020 supondo que havia uma frequência uniforme de trinta testes diários, uma vez que esses dados não estavam disponíveis à época.</p>
+<p>Como já mencionamos, este modelo difere daquele para o número de reprodução instantâneo, pois gera a curva inteira de infecção de acordo com os dados e, assim, tem como condição que a curva seja quasi-contínua. Estimativas com novos dados diários mudam as estimativas de datas anteriores e, ao atualizar todas as estimativas com novas informações, considero que é um modelo que pode ser considerado mais honesto. Além disso, incorporamos as soluções para os dois problemas anteriormente constatados. Dessa forma, o número de reprodução estimado deve representar a situação atual de infectividade da COVID-19 de maneira mais próxima da realidade. Amostramos esse modelo utilizando o pacote 
+<a href="https://docs.pymc.io/" target="_blank" rel="noopener">PyMC3</a> do Python.</p>
+<h2 id="número-de-reprodução-instantâneo">Número de reprodução instantâneo</h2>
+<p>Como mencionado anteriormente, o número de reprodução básico $R_0$ do modelo SIR é uma propriedade da fase inicial da epidemia e indica o número de casos secundários médio que decorrem de um indivíduo infectado. Nesse período inicial, existe um regime exponencial de crescimento para o número de infectados $I(t)$. No entanto, em estágios mais avançados da epidemia, essa suposição não é mais verdadeira, sendo necessária a adoção de modelos alternativos. Uma opção é a escolha de abordagens que levam em conta o perfil de infectividade dos contaminados, também conhecidos como modelos <em>time-since-infection</em> 
+<a href="#time-since-infection">[5]</a>. A partir deles, é possível calcular o número de reprodução instantaneamente no tempo $t$, que apresenta a mesma interpretação do número de reprodução básico, porém tem validade para qualquer momento da epidemia. Para isso, podemos modelar a transmissão de COVID-19 como um processo de Poisson por meio de uma abordagem Bayesiana. O número de reprodução instantâneo pode ser descrito como
+$$
+R_{inst}(t) = \dfrac{I(t)}{\sum_{s=1}^{\tau} I(t-s)w(s)}\ ,
+$$
+em que $w(s)$ é o perfil de infectividade, ou distribuição do tempo de geração, e $\tau$ é a janela temporal considerada para estimar o $R_{inst}(t)$, considerando que o número de reprodução instantâneo permanece constante no intervalo $[t-\tau+1, t]$. O perfil de infectividade $w(s)$ é uma distribuição de probabilidade que depende do tempo desde a infecção por COVID-19. Dessa forma, maiores valores de $w(s)$ indicam que os infectados $I(t-s)$ estão mais suscetíveis a transmitir a doença nesse período. A distribuição $w(s)$ depende apenas em fatores biológicos individuais como características do vírus e severidade dos sintomas 
+<a href="#EpiEstim">[1]</a>. Dessa maneira, o número de reprodução instantâneo $R_{inst}(t)$ como calculado na equação acima equivale ao número médio de casos gerados pelos infectados na janela de $\tau$ dias anteriores. A verossimilhança para $I(t)$ pode ser escrita como uma distribuição de Poisson, isto é,
+$$
+\mathcal{L}[I(t)| I(t-\tau+1),\dots,I(t-1), w, R_{inst}(t)] = \dfrac{[R_{inst}(t)\Lambda(t)]^{I(t)}e^{R_{inst}(t)\Lambda(t)}}{I(t)!}\ ,
+$$
+em que
+$$
+\Lambda(t)=\sum_{s=1}^{\tau}I(t-s)w(s)\ .
+$$
+Dessa forma, supondo independência estatística entre os períodos, a verossimilhança dentro da janela $\tau$ pode ser escrita como
+$$
+\mathcal{L}[I(t-\tau+1),\dots,I(t)| w, R_{inst}(t)] = \prod_{s=t-\tau+1}^{t} \dfrac{[R_{inst}(t)\Lambda(s)]^{I(s)}e^{-R_{inst}(t)\Lambda(s)}}{I(s)}\ .
+$$
+Usando o teorema de Bayes, podemos calcular a distribuição a posteriori para estimar $R_{inst}(t)$, isto é,
+$$
+P[R_{inst}(t),I(t-\tau+1),\dots,I(t)| w ] \propto \mathcal{L}[I(t-\tau+1),\dots,I(t)| R_{inst}(t), w ] P[R_{inst}(t)]\ .
+$$
+Seguindo o procedimento proposto pelos sites 
+<a href="https://epiforecasts.io/" target="_blank" rel="noopener">epiforecasts.io</a> e 
+<a href="https://covid19br.github.io/" target="_blank" rel="noopener">covid19br</a>, consideramos que o perfil de infectividade é uma distribuição Gamma com média de 4.8 dias e desvio padrão de 2.3 dias, valores estimados em 
+<a href="#serial-covid">[3]</a> e utilizados por esses dois sites. Além disso, atribuímos incerteza ao perfil de infectividade amostrando a média e o desvio padrão de distribuições normais truncadas centradas nos valores descritos anteriormente para um total de 500 repetições. Consideramos que $R_{inst}(t)$ apresenta uma distribuição Gamma como priori, com média 2.6 e desvio padrão 2, o que leva em consideração estimativas do número de reprodução básico em Wuhan no começo da epidemia 
+<a href="#r0-wuhan">[6]</a>. Por fim, para a janela temporal $\tau$, adotamos o tempo $\tau=7$ dias uma vez que a série temporal de casos por COVID-19 aparenta uma periodicidade semanal. Aplicamos esse modelo utilizando o pacote 
+<a href="https://github.com/mrc-ide/EpiEstim" target="_blank" rel="noopener">EpiEstim</a> do R.</p>
+<p>Só lembrando: nesse modelo, consideramos que o número de infectados diário apresenta a mesma interpretação do número de confirmados diário. Sabemos, porém, que existe um atraso na confirmação dos casos. Desde o dia em que a pessoa é infectada, leva-se um tempo para o vírus incubar (cerca de cinco dias) e os sintomas se manifestarem. Além disso, também pode existir um atraso de notificação e de espera pelos resultados dos testes. Esses problemas seriam resolvidos se tivéssemos os dados referentes ao atraso de notificação e de data do começo dos sintomas para cada caso confirmado, a fim de realizar medidas de nowcasting 
+<a href="#nowcast">[2]</a>. Além disso, o modelo não leva em consideração o volume de testagem variável (isto é, que o número de testes varia diariamente), o que pode causar uma subestimação do número de reprodução instantâneo. Ainda assim, acredito que as estimativas do número de reprodução instantâneo podem transmitir informações importantes sobre o avanço da epidemia (mesmo que com atraso). Diferentemente do número de reprodução efetivo, as estimativas são mais sensíveis às variações mais recentes dos números de casos confirmados diários uma vez que não existe a condição de que a curva seja quasi-contínua.</p>
+<h2 id="resultados">Resultados</h2>
+<p>As figuras abaixo mostram, respectivamente, estimativas para o número de reprodução efetivo $R_{ef}(t)$ e instantâneo $R_{inst}(t)$ seguindo os procedimentos aqui descritos.</p>
+<!-- One of the constraints of the model is that this curve be connected and smooth. So, if new data suggests that Rt should be higher, it will pull up previous values so that the newest point is connected. Imagine a rope lying on the ground. If you pick up the end of that rope, the rope needs to slope up to your hand. The same thing is roughly happening with the model. If all of a sudden a testing center releases far more tests than were expected, the Rt curve increases which drags up previous values of Rt. Since case data is staggered in its arrival, a bunch of new cases will sometimes rewrite its view of history given the new data. This is the most honest representation of the situation although it can feel disorienting if you don’t understand why it’s happening. -->
+<!-- In the simplest terms, it searches for the most likely curve of Rt that produced the new cases per day that we observe. It does this through some neat (and powerful!) math that is beyond the scope of this FAQ. In more complex terms: we assume a seed number of people and a curve of Rt over the history of the pandemic, we then distribute those cases into the future using a known delay distribution between infection and positive report. We then scale and add noise based on known testing volumes via a negative binomial with an exposure parameter for a given day to recover an observed series. We plan on publishing our code soon, so if you’re so inclined you’ll be able to run it, too. -->
+<!-- In general, hospitalizations and deaths are more reliable than tests to see the true Rt curve. However, they are also both time-shifted fairly dramatically from the time of infection. As of this time we have not included them in our model, but we are considering ways to reliably and accurately include them to ensure the model is as accurate as possible. -->
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%">
+ <iframe
+  width="100%" height="100%"
+  src="html/rt_efetivo.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center" >Figura: evolução temporal do $R_{ef}(t)$ em Maringá.<p/>
+<a name="rt_instantaneo">
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%">
+ <iframe
+  width="100%" height="100%"
+  src="html/rt_instantaneo.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center" >Figura: evolução temporal do $R_{inst}(t)$ em Maringá.<p/>,
+<p>A figura abaixo mostra a evolução temporal das variáveis presentes no modelo generativo: i) o número de confirmados (em cinza); ii) o número de confirmados esperado (em verde); iii) o número de confirmados esperado supondo testagem uniforme (em laranja); iv) o número de infectados esperado (em roxo).</p>
+<div
+ style="padding-bottom:73%; position:relative; display:block; width: 100%">
+ <iframe
+  width="100%" height="100%"
+  src="html/modelo_generativo.html"
+  frameborder="0" scrolling="no"
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<p style="text-align: center" >Figura: evolução temporal das variáveis presentes no modelo generativo em Maringá.<p/>
+<p>O código para reprodução dessa análise está disponível em 
+<a href="https://github.com/ansesu/rtlive_maringa.git" target="_blank" rel="noopener">ansesu/rt_livemaringa</a>. O código-base e maiores detalhes sobre o modelo podem ser encontrados no repositório original 
+<a href="https://github.com/rtcovidlive/covid-model/" target="_blank" rel="noopener">rtcovidlive/covid-model</a>.</p>
+<h2 id="recursos-interessantes">Recursos interessantes</h2>
+<ul>
+<li>
+<p>
+<a href="https://youtu.be/ezmWtCFceco" target="_blank" rel="noopener">Hospitalizações por SRAG como proxy para casos graves de Covid-19 no Brasil</a></p>
+</li>
+<li>
+<p>
+<a href="http://rt.live" target="_blank" rel="noopener">rt.live</a></p>
+</li>
+<li>
+<p>
+<a href="https://epiforecasts.io/" target="_blank" rel="noopener">epiforecasts</a></p>
+</li>
+<li>
+<p>
+<a href="https://covid19br.github.io/" target="_blank" rel="noopener">Observatório COVID-19 BR</a></p>
+</li>
+</ul>
+<h2 id="referências">Referências</h2>
+<p><a name="EpiEstim"> [1] A. Cori, N. M. Ferguson, C. Fraser,  S. Cauchemez, <em>A New Framework and Software to Estimate Time-Varying Reproduction Numbers During Epidemics</em>. 
+<a href="https://doi.org/10.1093/aje/kwt133" target="_blank" rel="noopener">American Journal of Epidemiology 178, 1505&ndash;1512 (2013).</a></p>
+<p><a name="nowcast"> [2] L. S. Bastos, T. Economou, M. F. C. Gomes, D. A. M. Villela, F. C. Coelho, O. G. Cruz, O. S.
+T. Bailey, C. T. Codeço, <em>A modelling approach for correcting reporting delays in disease surveillance data</em>. 
+<a href="https://doi.org/10.1002/sim.8303" target="_blank" rel="noopener">Statistics in Medicine 38, 4363-4377 (2019)</a></p>
+<p><a name="serial-covid"> [3] H. Nishiura, N.M. Linton, A.R. Akhmetzhanov, <em>Serial interval of novel coronavirus (COVID-19) infections</em>. 
+<a href="https://doi.org/10.1016/j.ijid.2020.02.060" target="_blank" rel="noopener">International Journal of Infectious Diseases 93, 284-286 (2020).</a></p>
+<p><a name="incubation"> [4] S. A. Lauer, K. H. Grantz, Q. Bi, F. K. Jones, Q. Zheng, H. R. Meredith, A. S. Azman, N. G. Reich, J. Lessler, <em>The incubation period of coronavirus disease 2019 (COVID-19) from publicly reported confirmed cases: Estimation and application</em>. 
+<a href="https://doi.org/10.7326/M20-0504" target="_blank" rel="noopener">Annals of Internal Medicine 172, 577-582 (2020).</a></p>
+<p><a name="time-since-infection"> [5] C. Fraser, <em>Estimating Individual and Household Reproduction Numbers in an Emerging Epidemic</em>. 
+<a href="https://doi.org/10.1371/journal.pone.0000758" target="_blank" rel="noopener">PLOS ONE 2(8), e758 (2007).</a></p>
+<p><a name="r0-wuhan"> [6] S. Abbott, J. Hellewell, J. Munday, S. Funk, <em>The transmissibility of novel Coronavirus in the early stages of the 2019-20 outbreak in Wuhan: Exploring initial point-source exposure sizes and durations using scenario analysis</em>. 
+<a href="https://doi.org/10.1186/1741-7015-7-30" target="_blank" rel="noopener">Wellcome Open Research 5, 17 (2020).</a></p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/numero-de-reproducao/">Número de reprodução</a>
+  
+  <a class="badge badge-light" href="/tag/covid-19/">COVID-19</a>
+  
+  <a class="badge badge-light" href="/tag/maringa/">Maringá</a>
+  
+  <a class="badge badge-light" href="/tag/python/">Python</a>
+  
+  <a class="badge badge-light" href="/tag/r/">R</a>
+  
+  <a class="badge badge-light" href="/tag/visualizacao/">Visualização</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://ansesu.github.io/post/rt-live-maringa/&amp;text=Uma%20alternativa%20para%20o%20c%c3%a1lculo%20do%20n%c3%bamero%20de%20reprodu%c3%a7%c3%a3o%20em%20Maring%c3%a1" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://ansesu.github.io/post/rt-live-maringa/&amp;t=Uma%20alternativa%20para%20o%20c%c3%a1lculo%20do%20n%c3%bamero%20de%20reprodu%c3%a7%c3%a3o%20em%20Maring%c3%a1" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Uma%20alternativa%20para%20o%20c%c3%a1lculo%20do%20n%c3%bamero%20de%20reprodu%c3%a7%c3%a3o%20em%20Maring%c3%a1&amp;body=https://ansesu.github.io/post/rt-live-maringa/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://ansesu.github.io/post/rt-live-maringa/&amp;title=Uma%20alternativa%20para%20o%20c%c3%a1lculo%20do%20n%c3%bamero%20de%20reprodu%c3%a7%c3%a3o%20em%20Maring%c3%a1" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Uma%20alternativa%20para%20o%20c%c3%a1lculo%20do%20n%c3%bamero%20de%20reprodu%c3%a7%c3%a3o%20em%20Maring%c3%a1%20https://ansesu.github.io/post/rt-live-maringa/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://ansesu.github.io/post/rt-live-maringa/&amp;title=Uma%20alternativa%20para%20o%20c%c3%a1lculo%20do%20n%c3%bamero%20de%20reprodu%c3%a7%c3%a3o%20em%20Maring%c3%a1" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "https-ansesu-github-io" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+</section>
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Próximo</div>
+    <a href="/post/python-pep8/" rel="next">PEP8 - Melhores práticas de estilo em Python</a>
+  </div>
+  
+  
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Relacionados</h3>
+    <ul>
+      
+      <li><a href="/news/conexao-covid/">A pandemia em dados: a Covid-19 decifrada para a sociedade</a></li>
+      
+      <li><a href="/project/observatorio-covid/">Observatório COVID-19 Maringá</a></li>
+      
+      <li><a href="/post/d3-visualizations/">Visualização de dados com d3.js</a></li>
+      
+      <li><a href="/post/python-pep8/">PEP8 - Melhores práticas de estilo em Python</a></li>
+      
+      <li><a href="/publication/2020/city-size-and-the-spreading-of-covid-19-in-brazil/">City size and the spreading of COVID-19 in Brazil</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"Sem resultados","placeholder":"Pesquisar...","results":"Resultados encontrados"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projetos",
+        'publication' : "Publicações",
+        'talk' : "Palestras",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://https-ansesu-github-io.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0d53a7f39b7d6770128a54b39dad2f22.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Citação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copiar
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

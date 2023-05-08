@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>d3.js | ansesu</title>
+    <link>https://ansesu.github.io/tag/d3.js/</link>
+      <atom:link href="https://ansesu.github.io/tag/d3.js/index.xml" rel="self" type="application/rss+xml" />
+    <description>d3.js</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Sat, 05 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ansesu.github.io/images/icon_hu1cf0b72f1e483e21040de310180038f0_4688_512x512_fill_lanczos_center_3.png</url>
+      <title>d3.js</title>
+      <link>https://ansesu.github.io/tag/d3.js/</link>
+    </image>
+    
+    <item>
+      <title>Visualização de dados com d3.js</title>
+      <link>https://ansesu.github.io/post/d3-visualizations/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://ansesu.github.io/post/d3-visualizations/</guid>
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d3js.org/d3.v6.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/formatter.js&#34;&gt; &lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34;&gt;
+&lt;p&gt;De acordo com Crameri et al., &amp;ldquo;a representação precisa dos dados é essencial na comunicação científica&amp;rdquo; [1]. De fato, a escolha do tipo mais adequado de visualização de acordo com as características dos dados é imprescindível para comunicar os resultados de uma pesquisa científica. Por exemplo, o gráfico abaixo mostra a evolução temporal do número de reprodução efetivo $R(t)$ referente ao espalhamento da COVID-19 em Maringá. Ao representar valores acima de um, que indicam o aceleramento da propagação do vírus, em vermelho, e valores abaixo de um, que indicam o desaceleramento da propagação, em verde, podemos comunicar visualmente o ritmo de transmissão do vírus.&lt;/p&gt;
+&lt;p class=&#34;spacedParagraph&#34;&gt;&lt;p/&gt;
+&lt;div id=&#34;thresholdplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_threshold_line_plot.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 1&lt;/b&gt;: gráfico de linha com intervalo de confiança e cores diferentes definidas por um limite. Valores acima do limite são coloridos de vermelho, enquanto valores abaixo desse mesmo limite são coloridos de verde. Visualização inspirada no site rt.live.&lt;p/&gt;
+&lt;p&gt;O tamanho dos elementos também faz diferença quando representamos dados. A figura abaixo mostra o valor das minhas sequências ouvindo as mesmas faixas de determinado artista ou faixas únicas durante o ano de 2022. O tamanho dos marcadores varia com o tamanho da sequência, comunicando visualmente o tamanho da sequência.&lt;/p&gt;
+&lt;p class=&#34;spacedParagraph&#34;&gt;&lt;p/&gt;
+&lt;p&gt;&lt;button class=&#34;button&#34; style=&#34;border-radius: 4px; font-size: 1rem;&#34; onclick=&#34;plotStreaks(&#39;data/streak_artist_data.csv&#39;)&#34;&gt;Artista&lt;/button&gt;
+&lt;button class=&#34;button&#34; style=&#34;border-radius: 4px; font-size: 1rem;&#34; onclick=&#34;plotStreaks(&#39;data/streak_track_data.csv&#39;)&#34;&gt;Faixa&lt;/button&gt;&lt;/p&gt;
+  &lt;div id=&#34;streaks&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/streaks.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 2&lt;/b&gt;: scatter plot com tamanho do marker variável de acordo com valor da variável (com botão para troca de categoria).&lt;p/&gt;
+&lt;p&gt;Como mencionado anteriormente, a escolha do tipo de figura de acordo com as características dos dados é essencial. A figura abaixo mostra o volume de faixas dos dez artistas mais ouvidos por mim durante 2022. Nesse contexto, faz sentido utilizar um gráfico de fluxo (stream chart) uma vez que, pela sua utilização, é possível transmitir a ideia de volume.&lt;/p&gt;
+&lt;p class=&#34;spacedParagraph&#34;&gt;&lt;p/&gt;
+&lt;div id=&#34;stream_chart&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/stream_chart.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 3&lt;/b&gt;: stream chart plot.&lt;p/&gt;
+&lt;p&gt;Neste post, apresento algumas figuras confeccionadas por meio do 
+&lt;a href=&#34;https://d3js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pacote d3.js&lt;/a&gt; e os respectivos tutoriais, além de alguns recursos que podem auxiliar no aprendizado de visualização de dados em geral. O código fonte para os gráficos podem ser acessados 
+&lt;a href=&#34;https://github.com/ansesu/ansesu.github.io/tree/master/post/d3-visualizations/js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nesta página&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- De acordo com o [d3js.org](https://d3js.org/), &#34;esse pacote é uma biblioteca de Javascript para manipular documentos baseados em dados. O D3 ajuda a dar vida aos dados usando HTML, SVG e CSS.&#34;  --&gt;
+&lt;!-- A confecção de gráficos e visualizações diretamente por pacotes do Python (ou de qualquer outra linguagem de programação) é muito prática. Porém, existe um limite em relação à interatividade e responsividade quando essas imagens são exibidas em formato da web. Por isso, resolvi aprender um pouquinho sobre a biblioteca [d3.js](https://d3js.org/). Abaixo, mostro algumas visualizações que confeccionei (as figuras são interativas). --&gt;
+&lt;h1 id=&#34;gráfico-de-linha&#34;&gt;Gráfico de linha&lt;/h1&gt;
+&lt;!-- &lt;div id=&#34;lineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_line_plot.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt; &lt;b&gt;Figura 1&lt;/b&gt;: gráfico de linha com barra vertical interativa indicando o valor da variável.&lt;p/&gt; --&gt;
+&lt;!-- &lt;hr class=&#34;solid&#34;&gt;
+`` --&gt;
+&lt;!-- 
+&lt;div id=&#34;bandplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_bandplot.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura 2: gráfico de linha com intervalo de confiança e com barra vertical interativa indicando o valor da variável.&lt;p/&gt;
+
+&lt;hr class=&#34;solid&#34;&gt;
+
+&lt;div id=&#34;multilineplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_multiline_plot.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;Figura 3: gráfico multilinhas com barra vertical interativa indicando o valor das variáveis.&lt;p/&gt;
+
+&lt;hr class=&#34;solid&#34;&gt; --&gt;
+&lt;!-- &lt;hr class=&#34;solid&#34;&gt; --&gt;
+&lt;!-- &lt;select id=&#34;selectButtonConfirmados&#34;&gt;&lt;/select&gt;
+&lt;div id=&#34;comparacao_confirmados&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/comparacao_confirmados.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 3&lt;/b&gt;: gráfico multilinhas (com caixa de seleção para mudança de categoria).&lt;p/&gt; --&gt;
+&lt;p&gt;&lt;button class=&#34;button&#34; style=&#34;border-radius: 4px; font-size: 1rem;&#34; onclick=&#34;plotOcupacao(&#39;data/ocupacao.csv&#39;, false, &#39;UTI&#39;, gOcupacao1, &#39;#ocupacao1&#39;, svgOcupacao1); plotOcupacao(&#39;data/ocupacao.csv&#39;, false, &#39;UTI neonatal&#39;, gOcupacao2, &#39;#ocupacao2&#39;, svgOcupacao2); plotOcupacao(&#39;data/ocupacao.csv&#39;, false, &#39;Enfermaria&#39;, gOcupacao3, &#39;#ocupacao3&#39;, svgOcupacao3)&#34;&gt;Total&lt;/button&gt;
+&lt;button class=&#34;button&#34; style=&#34;border-radius: 4px; font-size: 1rem;&#34; onclick=&#34;plotOcupacao(&#39;data/ocupacao_covid.csv&#39;, false, &#39;UTI&#39;, gOcupacao1, &#39;#ocupacao1&#39;, svgOcupacao1); plotOcupacao(&#39;data/ocupacao_covid.csv&#39;, false, &#39;UTI neonatal&#39;, gOcupacao2, &#39;#ocupacao2&#39;, svgOcupacao2); plotOcupacao(&#39;data/ocupacao_covid.csv&#39;, false, &#39;Enfermaria&#39;, gOcupacao3, &#39;#ocupacao3&#39;, svgOcupacao3)&#34;&gt;COVID&lt;/button&gt;&lt;/p&gt;
+&lt;div style=&#34;padding-bottom: .75rem;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;ocupacao1&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;ocupacao2&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;ocupacao3&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/ocupacao.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;&lt;b&gt;Figura 4&lt;/b&gt;: figura com vários paineis (com botão para troca de categoria). Cada painel contém um gráfico de linha preenchido.&lt;p/&gt;
+&lt;h1 id=&#34;gráfico-de-barra&#34;&gt;Gráfico de barra&lt;/h1&gt;
+&lt;!-- &lt;div id=&#34;simplebarplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_barplot.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 6&lt;/b&gt;: gráfico de barras simples.&lt;p/&gt;
+ --&gt;
+&lt;!-- &lt;hr class=&#34;solid&#34;&gt; --&gt;
+&lt;!-- 
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34;plotCharts(&#39;../lastfm-2020/data/month_data.csv&#39;, true)&#34;&gt;Mensal&lt;/button&gt;
+&lt;button style=&#34;border-radius: 4px;&#34; onclick=&#34; plotCharts(&#39;../lastfm-2020/data/weekday_data.csv&#39;, false)&#34;&gt;Semanal&lt;/button&gt;
+  &lt;div id=&#34;barplot&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;../lastfm-2020/js/months_and_days.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 7&lt;/b&gt;: gráfico de barras agrupado (com botão para troca de categoria).&lt;p/&gt; --&gt;
+&lt;!-- &lt;hr class=&#34;solid&#34;&gt; --&gt;
+&lt;!-- &lt;div id=&#34;hours&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;../lastfm-2020/js/hours.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 8&lt;/b&gt;: gráfico de barras radial.&lt;p/&gt;
+ --&gt;
+&lt;!-- &lt;hr class=&#34;solid&#34;&gt; --&gt;
+&lt;script type=&#34;text/javascript&#34;&gt; 
+function reloadchart() {
+   //alert(&#34;In function&#34;);
+   var container = document.getElementById(&#34;barchartrace&#34;);
+   //alert(content);
+   container.innerHTML= null;  
+   makeChart();
+  // document.getElementById(&#34;#barchartrace&#34;).reload()
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button class=&#34;button&#34; style=&#34;border-radius: 4px; font-size: 1rem;&#34; onclick=&#34;reloadchart()&#34;&gt;Reload&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&#34;barchartrace&#34; style=&#34;z-index: -1000&#34;&gt; &lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/barchart_race.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 5&lt;/b&gt;: gráfico de corrida de barras.&lt;p/&gt;
+&lt;!-- &lt;hr class=&#34;solid&#34;&gt; --&gt;
+&lt;label class=&#34;switch&#34;&gt;
+&lt;input type=&#34;checkbox&#34; class=&#34;checkboxConfirmadosDiario&#34; checked&gt; &lt;span class=&#34;slider round&#34;&gt;&lt;/span&gt;&lt;/label&gt; &lt;span style=&#34;font-size: 22px; vertical-align: middle;&#34;&gt; Média móvel &lt;/span&gt;
+&lt;div id=&#34;confirmados_diario&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/confirmados_diario.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;&lt;b&gt;Figura 6&lt;/b&gt;: gráfico de barras com média móvel e linha do tempo adjacente (com botão para desativação da média móvel).&lt;p/&gt;
+&lt;!-- &lt;div id=&#34;mortes-idade-tempo&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/mortes_idade_tempo.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34; class=&#34;spacedParagraph&#34;&gt;&lt;b&gt;Figura 12&lt;/b&gt;: gráfico de area empilhado. A legenda é clicável permitindo a visualização de cada área separadamente.&lt;p/&gt; --&gt;
+&lt;h1 id=&#34;mapa&#34;&gt;Mapa&lt;/h1&gt;
+&lt;p&gt;&lt;button class=&#34;button&#34; style=&#34;border-radius: 4px; font-size: 1rem;&#34; onclick=&#34;plotMap(&#39;cases&#39;, false)&#34;&gt;Casos&lt;/button&gt;
+&lt;button class=&#34;button&#34; style=&#34;border-radius: 4px; font-size: 1rem;&#34; onclick=&#34;plotMap(&#39;deaths&#39;, false)&#34;&gt;Mortes&lt;/button&gt;&lt;/p&gt;
+&lt;div style=&#34;padding-bottom: .75rem;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;paranamap&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/simple_map.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;&lt;b&gt;Figura 7&lt;/b&gt;: mapa com escala de cor dependente da amplitude da variável (com botão para troca de categoria).&lt;p/&gt;
+&lt;h1 id=&#34;rede&#34;&gt;Rede&lt;/h1&gt;
+&lt;div id=&#34;nagoya_subway_network&#34; style=&#34;z-index: -1000&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;js/nagoya_subway_network.js&#34;&gt; &lt;/script&gt;
+&lt;p style=&#34;text-align: center&#34;&gt;&lt;b&gt;Figura 8&lt;/b&gt;: force-directed graph.&lt;p/&gt;
+&lt;h2 id=&#34;recursos&#34;&gt;Recursos&lt;/h2&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://colorbrewer2.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;colorbrewer2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://github.com/d3/d3-time-format#locale_format&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d3-time-format&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SVG Attribute reference&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://observablehq.com/@d3/d3v6-migration-guide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;D3 6.0 migration guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to Resize an SVG When the Window is Resized in d3.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;http://bl.ocks.org/williaster/af5b855651ffe29bdca1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scatterplot with tooltips&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://bl.ocks.org/LemoNode/a9dc1a454fdc80ff2a738a9990935e9d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multiline chart&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://bl.ocks.org/larsenmtl/e3b8b7c2ca4787f77d78f58d41c3da91&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multiline chart with mouseover&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://www.d3-graph-gallery.com/graph/barplot_basic.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Barplot&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://www.d3-graph-gallery.com/graph/barplot_button_data_hard.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Barplot with button to change input&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;http://bl.ocks.org/KatiRG/5f168b5c884b1f9c36a5&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Barplot with clickable legend&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grouped barplot&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://www.d3-graph-gallery.com/graph/circular_barplot_label.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Circular barplot&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://bl.ocks.org/jrzief/70f1f8a5d066a286da3a1e699823470f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bar chart race&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://www.d3-graph-gallery.com/graph/streamgraph_template.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Streamplot&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://bl.ocks.org/mbostock/4060954&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Streamplot with transitions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Map&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;https://bl.ocks.org/heybignick/3faf257bbbbc7743bb72310d03b86ee8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Force-directed graph&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 
+&lt;a href=&#34;http://rt.live&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rt.live&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;[1] F. Crameri, G. E. Shephard, P. J. Heron, &lt;em&gt;The misuse of colour in science communication&lt;/em&gt;. 
+&lt;a href=&#34;https://www.nature.com/articles/s41467-020-19160-7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nature Communications 11, 5444 (2020).&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] Scott, A. 
+&lt;a href=&#34;https://www.amazon.com.br/Interactive-Visualization-Scott-Andrew-Murray/dp/1449339735&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Interactive Data Visualization for the Web&lt;/em&gt;&lt;/a&gt; (O&amp;rsquo;Reilly Media, 2013)&lt;/p&gt;
+&lt;p&gt;[3] Wilke, C. O. 
+&lt;a href=&#34;https://www.amazon.com/gp/product/1492031089&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Fundamentals of Data Visualization&lt;/em&gt;&lt;/a&gt; (O&amp;rsquo;Reilly Media, 2019)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

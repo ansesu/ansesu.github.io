@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jack Sutton | ansesu</title>
+    <link>https://ansesu.github.io/en/author/jack-sutton/</link>
+      <atom:link href="https://ansesu.github.io/en/author/jack-sutton/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jack Sutton</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 23 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ansesu.github.io/images/icon_hu1cf0b72f1e483e21040de310180038f0_4688_512x512_fill_lanczos_center_3.png</url>
+      <title>Jack Sutton</title>
+      <link>https://ansesu.github.io/en/author/jack-sutton/</link>
+    </image>
+    
+    <item>
+      <title>City size and the spreading of COVID-19 in Brazil</title>
+      <link>https://ansesu.github.io/en/publication/2020/city-size-and-the-spreading-of-covid-19-in-brazil/</link>
+      <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://ansesu.github.io/en/publication/2020/city-size-and-the-spreading-of-covid-19-in-brazil/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

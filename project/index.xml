@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projetos | ansesu</title>
+    <link>https://ansesu.github.io/project/</link>
+      <atom:link href="https://ansesu.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projetos</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ansesu.github.io/images/icon_hu1cf0b72f1e483e21040de310180038f0_4688_512x512_fill_lanczos_center_3.png</url>
+      <title>Projetos</title>
+      <link>https://ansesu.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>Observatório COVID-19 Maringá</title>
+      <link>https://ansesu.github.io/project/observatorio-covid/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://ansesu.github.io/project/observatorio-covid/</guid>
+      <description>&lt;p&gt;Tesestrete&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

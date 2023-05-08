@@ -1,0 +1,409 @@
+.streaks {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: top;        
+  overflow: hidden;
+}
+.simplebarplot {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.barplot {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: top;        
+  overflow: hidden;
+}
+.hours {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.streamchart {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: auto;
+}
+.barchartrace {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.lineplot {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.bandplot {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.multilineplot {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.thresholdplot {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+
+.content {
+  display: block;
+  position: relative;
+  pointer-events: all;
+  top: 0;
+  left: 0;
+}
+.content_hours {
+  display: block;
+  position: relative;
+  pointer-events: all;
+  top: 0;
+  left: 25%;
+}
+
+.axis-title {
+  font-size: 17px;
+  font-family: Helvetica;
+  fill: #525252;
+} 
+.ci {
+  opacity: 0.1;
+  fill: #252525;
+} 
+.clock {
+  stroke: #542788;
+  stroke-width: 4px;
+  opacity: 1;
+}
+.filled {
+    fill: url(#mainGradient);
+}
+/*.focus circle {
+  fill: #F1F3F3;
+  stroke: #252525;
+  stroke-width: 1px;
+}*/
+.focus-per-line {
+  font-size: 10px;
+  font-family: Helvetica;
+}   
+.focus-per-line .circle {
+  fill: #F1F3F3;
+  stroke-width: 1px;
+}
+.hover-line {
+  stroke: #737373;
+  stroke-width: 0.75px;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+.legend {
+  font-size: 13.5px;
+  font-family: Helvetica;
+} 
+.line {
+  fill: none;
+  stroke: #252525;
+  stroke-width: 1.5;
+}
+.map {
+  stroke: #737373;
+  stroke-width: .5;
+}
+.multiline{
+  stroke-width:1.5;
+  fill: none;
+}
+.one-line {
+  fill: none;
+  stroke-width: 2.5;
+  stroke: "black";
+} 
+.outlined {
+    fill:   none;
+    stroke: url(#mainGradient);
+    stroke-width: 1.5;
+}
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+.text-clock {
+  font-family: Helvetica;
+  font-weight: 100;
+  font-size: 35px;
+}
+.tick-clock {
+  stroke: #542788;
+  stroke-width: 2;
+}
+.tooltip-text {
+  font-family: Helvetica;
+  font-size: 14px;
+}
+.tooltip-html {
+  position: absolute;
+  width:  auto;
+  height: auto;
+  pointer-events: none;
+  background-color: white;
+  font-family: Helvetica;
+  box-sizing: border-box;
+  padding: .15%;
+  z-index: 9999;
+}     
+.focus .tooltip-confirmed {
+  font-family: Helvetica;
+  font-size: 14px;
+}
+.focus .tooltip-date {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+}
+.focus-per-line text {
+  font-family: Helvetica;
+  font-size: 14px;
+}
+.focus .tooltip-y {
+  font-family: Helvetica;
+  font-size: 14px;
+}
+.focus .tooltip-x {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+}
+.spacedParagraph {
+  margin-bottom: 4rem;
+} 
+.tooltip-stream {
+    position: absolute;
+    fill: #252525;
+    font-family: Helvetica;
+}
+.xAxis {
+  font-size: 15px;
+  font-family: Helvetica;
+} 
+.xAxisBand {
+  font-size: 15px;
+  font-family: Helvetica;
+}
+.yAxis {
+  font-size: 15px;
+  font-family: Helvetica;
+} 
+.yAxis line {
+  stroke: #525252;
+}
+.xAxisStream {
+  font-size: 16px;
+  font-family: Helvetica;
+} 
+
+div {
+  display: block;
+}               
+button {
+  display: inline-block;
+  position:relative;
+  z-index: 1000;
+  font-size: 15px;
+}  
+
+#barchartrace text {
+font-size: 16px;
+font-family: Helvetica, sans-serif;
+}
+#barchartrace .title-race {
+font-size: 24px;
+font-weight: 500;
+}
+
+#barchartrace text.label{
+font-weight: 600;
+}
+
+#barchartrace text.valueLabel{
+font-weight: 300;
+}
+
+#barchartrace text.dateText{
+font-size: 30px;
+font-weight: 700;
+opacity: 0.25;
+}      
+#barchartrace .tick text {
+fill: #777777;
+}
+#barchartrace .xAxis .tick:nth-child(2) text {
+text-anchor: start;
+}
+#barchartrace .tick line {
+shape-rendering: CrispEdges;
+stroke: #dddddd;
+}
+#barchartrace .tick line.origin{
+stroke: #aaaaaa;
+}
+#barchartrace path.domain{
+display: none;
+}   
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.tooltip-date {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: .5rem;
+  vertical-align: top;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #494949;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #494949;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
+
+.button {
+  background-color: #ccc; 
+  border: none;
+  color: black;
+  padding: .1rem .5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+}
+
+.button:hover {
+  background-color: #494949;
+  color: white;
+}
+
+.button:active {
+  background-color: #494949;
+  transform: translateY(2px);
+}
+
+.select {
+  width: 100%;
+  min-width: 7rem;
+  max-width: 20rem;
+  border: .05rem solid black;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+.hr_sep {
+  color: #252525;
+  background:#252525;
+  height: .075rem;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
