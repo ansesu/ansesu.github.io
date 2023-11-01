@@ -226,7 +226,7 @@ function reloadchart() {
       <guid>https://ansesu.github.io/en/post/python-pep8/</guid>
       <description>&lt;p&gt;Recently, I had to go back to some code from my master&amp;rsquo;s degree. I realized the code was bad written and hard to read. In order to solve this problem, I decided to study what are considered the best styling practices when coding in Python. This post is therefore kind of a cheatsheet for future reference. I intend to keep updating this page as I progress my research in that matter. I used the PEP 8 from the official website 
 &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;python.org&lt;/a&gt; as resource. The PEPs, Python Enhancement Proposals, are documents created with the purpose of instructing Python users regarding standards, new features, processes or environments 
-&lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Specifically, PEP 8 points out the style standards for Python users, in order the code to be easily readable 
+&lt;a href=&#34;#pep1&#34;&gt;[1]&lt;/a&gt;. Specifically, PEP 8 points out the style standards for Python users, in order to the code to be easily readable 
 &lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt;. So, here we go!&lt;/p&gt;
 &lt;p&gt;(The code was copied and pasted from 
 &lt;a href=&#34;#pep8&#34;&gt;[2]&lt;/a&gt; although the commments and explanation may be different)&lt;/p&gt;
@@ -327,7 +327,7 @@ result = some_function_that_takes_arguments(
 &lt;/ul&gt;
 &lt;p&gt;However, for teams that prefer longer lines, and are working in a code exclusively/primarly maintained by them, if a consensus is established, there is no problem in increasing the line width up to 99 characters.&lt;/p&gt;
 &lt;p&gt;To help standardization, 
-&lt;a href=&#34;https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jupyter Noteboook Extensions&lt;/a&gt; offer an tool called ruler that displays a vertical line indicating the character threshold as specified by the user. The figure below shows a piece of my code and the &lt;span class=&#34;markup-quote&#34;&gt;ruler&lt;/span&gt; tool enabled.&lt;/p&gt;
+&lt;a href=&#34;https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jupyter Noteboook Extensions&lt;/a&gt; offer a tool called ruler that displays a vertical line indicating the character threshold as specified by the user. The figure below shows a piece of my code and the &lt;span class=&#34;markup-quote&#34;&gt;ruler&lt;/span&gt; tool enabled.&lt;/p&gt;
 
 
 
@@ -501,19 +501,6 @@ aaaaaaa
     
   &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;https://ansesu.github.io/en/gallery/album/2014_sapporo.jpg&#34; data-caption=&#34;Sapporo - Japan - 2014&#34;&gt;
   &lt;img data-src=&#34;https://ansesu.github.io/en/gallery/album/2014_sapporo_hu5318e049bc157202232793f0a5723999_328901_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;267&#34; height=&#34;190&#34;&gt;
-  &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-  &lt;a data-fancybox=&#34;gallery-album&#34; href=&#34;https://ansesu.github.io/en/gallery/album/2015_nagoya.jpg&#34; data-caption=&#34;Brazukas - Nagoya - Japan - 2015&#34;&gt;
-  &lt;img data-src=&#34;https://ansesu.github.io/en/gallery/album/2015_nagoya_hu0a7e2fc24acc3dfb688f4d352b9c6d30_135428_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
     
