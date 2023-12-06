@@ -54,18 +54,8 @@
                 href="https://ansesu.github.io/authors/"
                 />
   </url><url>
-    <loc>https://ansesu.github.io/tag/complex-systems/</loc>
+    <loc>https://ansesu.github.io/tag/ciencia-da-ciencia/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/tag/complex-systems/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/tag/complex-systems/"
-                />
   </url><url>
     <loc>https://ansesu.github.io/author/haroldo-v.-ribeiro/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
@@ -93,18 +83,8 @@
                 href="https://ansesu.github.io/author/matjaz-perc/"
                 />
   </url><url>
-    <loc>https://ansesu.github.io/tag/productivity/</loc>
+    <loc>https://ansesu.github.io/tag/produtividade/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/tag/productivity/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/tag/productivity/"
-                />
   </url><url>
     <loc>https://ansesu.github.io/publication_types/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
@@ -132,18 +112,8 @@
                 href="https://ansesu.github.io/publication/"
                 />
   </url><url>
-    <loc>https://ansesu.github.io/tag/science-of-science/</loc>
+    <loc>https://ansesu.github.io/tag/sistemas-complexos/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/tag/science-of-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/tag/science-of-science/"
-                />
   </url><url>
     <loc>https://ansesu.github.io/tags/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
@@ -262,6 +232,19 @@
                 href="https://ansesu.github.io/news/"
                 />
   </url><url>
+    <loc>https://ansesu.github.io/tag/science-of-science/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/tag/science-of-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/tag/science-of-science/"
+                />
+  </url><url>
     <loc>https://ansesu.github.io/publication/2021/association-between-productivity-and-journal-impact-across-disciplines-and-career-age/</loc>
     <lastmod>2021-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -286,6 +269,19 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://ansesu.github.io/tag/journal-impact/"
+                />
+  </url><url>
+    <loc>https://ansesu.github.io/tag/productivity/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/tag/productivity/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/tag/productivity/"
                 />
   </url><url>
     <loc>https://ansesu.github.io/news/conexao-covid/</loc>
@@ -419,6 +415,19 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://ansesu.github.io/publication/2020/city-size-and-the-spreading-of-covid-19-in-brazil/"
+                />
+  </url><url>
+    <loc>https://ansesu.github.io/tag/complex-systems/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/tag/complex-systems/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/tag/complex-systems/"
                 />
   </url><url>
     <loc>https://ansesu.github.io/author/jack-sutton/</loc>
