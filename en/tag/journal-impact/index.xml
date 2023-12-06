@@ -5,12 +5,20 @@
     <link>https://ansesu.github.io/en/tag/journal-impact/</link>
       <atom:link href="https://ansesu.github.io/en/tag/journal-impact/index.xml" rel="self" type="application/rss+xml" />
     <description>Journal impact</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ansesu.github.io/images/icon_hub95fb4585be6759ab7858960e095bb0c_3104_512x512_fill_lanczos_center_3.png</url>
       <title>Journal impact</title>
       <link>https://ansesu.github.io/en/tag/journal-impact/</link>
     </image>
+    
+    <item>
+      <title>Engrenagens do conhecimento (pt)</title>
+      <link>https://ansesu.github.io/en/news/fapesp-2021/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://ansesu.github.io/en/news/fapesp-2021/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Association between productivity and journal impact across disciplines and career age</title>
