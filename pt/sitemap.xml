@@ -262,7 +262,7 @@
                 />
   </url><url>
     <loc>https://ansesu.github.io/author/andre/</loc>
-    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -275,7 +275,7 @@
                 />
   </url><url>
     <loc>https://ansesu.github.io/post/</loc>
-    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -314,45 +314,6 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://ansesu.github.io/post/d3-visualizations/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/tag/pep8/</loc>
-    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/tag/pep8/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/tag/pep8/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/post/python-pep8/</loc>
-    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/post/python-pep8/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/post/python-pep8/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/tag/python/</loc>
-    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/tag/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/tag/python/"
                 />
   </url><url>
     <loc>https://ansesu.github.io/tag/cidades/</loc>
