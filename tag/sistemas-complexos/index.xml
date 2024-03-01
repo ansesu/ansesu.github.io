@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sistemas complexos | ansesu</title>
+    <title>Sistemas Complexos | ansesu</title>
     <link>https://ansesu.github.io/tag/sistemas-complexos/</link>
       <atom:link href="https://ansesu.github.io/tag/sistemas-complexos/index.xml" rel="self" type="application/rss+xml" />
-    <description>Sistemas complexos</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <description>Sistemas Complexos</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Wed, 23 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ansesu.github.io/images/icon_hub95fb4585be6759ab7858960e095bb0c_3104_512x512_fill_lanczos_center_3.png</url>
-      <title>Sistemas complexos</title>
+      <title>Sistemas Complexos</title>
       <link>https://ansesu.github.io/tag/sistemas-complexos/</link>
     </image>
-    
-    <item>
-      <title>Universal productivity patterns in research careers</title>
-      <link>https://ansesu.github.io/publication/2023/universal-productivity-patterns-in-research-careers/</link>
-      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://ansesu.github.io/publication/2023/universal-productivity-patterns-in-research-careers/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>City size and the spreading of COVID-19 in Brazil</title>

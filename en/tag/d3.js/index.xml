@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>d3.js | ansesu</title>
+    <title>D3.js | ansesu</title>
     <link>https://ansesu.github.io/en/tag/d3.js/</link>
       <atom:link href="https://ansesu.github.io/en/tag/d3.js/index.xml" rel="self" type="application/rss+xml" />
-    <description>d3.js</description>
+    <description>D3.js</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 05 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ansesu.github.io/images/icon_hub95fb4585be6759ab7858960e095bb0c_3104_512x512_fill_lanczos_center_3.png</url>
-      <title>d3.js</title>
+      <title>D3.js</title>
       <link>https://ansesu.github.io/en/tag/d3.js/</link>
     </image>
     

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ansesu.github.io/en/publication-type/2/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://ansesu.github.io/en/author/andre-s.-sunahara/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://ansesu.github.io/en/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -39,106 +39,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://ansesu.github.io/en/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/en/authors/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/authors/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/en/tag/complex-systems/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ansesu.github.io/en/author/haroldo-v.-ribeiro/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/author/haroldo-v.-ribeiro/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/author/haroldo-v.-ribeiro/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/en/author/matjaz-perc/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/author/matjaz-perc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/author/matjaz-perc/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/en/tag/productivity/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ansesu.github.io/en/publication_types/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/publication_types/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/publication_types/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/en/publication/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/publication/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/en/tag/science-of-science/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ansesu.github.io/en/tags/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/tags/"
-                />
-  </url><url>
-    <loc>https://ansesu.github.io/en/publication/2023/universal-productivity-patterns-in-research-careers/</loc>
-    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://ansesu.github.io/publication/2023/universal-productivity-patterns-in-research-careers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ansesu.github.io/en/publication/2023/universal-productivity-patterns-in-research-careers/"
                 />
   </url><url>
     <loc>https://ansesu.github.io/en/author/arthur-augusto-barizon-pessa/</loc>
@@ -152,6 +52,19 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://ansesu.github.io/en/author/arthur-augusto-barizon-pessa/"
+                />
+  </url><url>
+    <loc>https://ansesu.github.io/en/authors/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/authors/"
                 />
   </url><url>
     <loc>https://ansesu.github.io/en/publication/2023/complexity-of-the-covid19-pandemic-in-maringa/</loc>
@@ -180,6 +93,19 @@
                 href="https://ansesu.github.io/en/tag/covid-19/"
                 />
   </url><url>
+    <loc>https://ansesu.github.io/en/author/haroldo-v.-ribeiro/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/author/haroldo-v.-ribeiro/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/author/haroldo-v.-ribeiro/"
+                />
+  </url><url>
     <loc>https://ansesu.github.io/en/tag/maringa/</loc>
     <lastmod>2023-08-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -191,6 +117,58 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://ansesu.github.io/en/tag/maringa/"
+                />
+  </url><url>
+    <loc>https://ansesu.github.io/en/author/matjaz-perc/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/author/matjaz-perc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/author/matjaz-perc/"
+                />
+  </url><url>
+    <loc>https://ansesu.github.io/en/publication_types/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/publication_types/"
+                />
+  </url><url>
+    <loc>https://ansesu.github.io/en/publication/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/publication/"
+                />
+  </url><url>
+    <loc>https://ansesu.github.io/en/tags/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ansesu.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ansesu.github.io/en/tags/"
                 />
   </url><url>
     <loc>https://ansesu.github.io/en/news/fapesp-2021/</loc>
@@ -234,6 +212,12 @@
                 hreflang="en-us"
                 href="https://ansesu.github.io/en/news/"
                 />
+  </url><url>
+    <loc>https://ansesu.github.io/en/tag/productivity/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ansesu.github.io/en/tag/science-of-science/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ansesu.github.io/en/publication/2021/association-between-productivity-and-journal-impact-across-disciplines-and-career-age/</loc>
     <lastmod>2021-08-16T00:00:00+00:00</lastmod>
@@ -331,6 +315,9 @@
                 hreflang="en-us"
                 href="https://ansesu.github.io/en/publication/2020/city-size-and-the-spreading-of-covid-19-in-brazil/"
                 />
+  </url><url>
+    <loc>https://ansesu.github.io/en/tag/complex-systems/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ansesu.github.io/en/author/jack-sutton/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
